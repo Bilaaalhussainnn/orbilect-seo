@@ -1,4 +1,3 @@
-import { after } from "next/server";
 import { notifyLead, parseLead, saveLead } from "../../../lib/leads/server";
 
 async function readJson(request: Request): Promise<unknown> {
@@ -46,12 +45,17 @@ export async function POST(request: Request) {
     return Response.json({ accepted: false, error: message }, { status: 400 });
   }
 
+  let saved: Awaited<ReturnType<typeof saveLead>>;
   try {
-    const { isNew, code } = await saveLead(lead);
-    if (isNew) after(() => notifyLead(lead.id));
-    return Response.json({ accepted: true, id: lead.id, code }, { status: isNew ? 201 : 200 });
+    saved = await saveLead(lead);
   } catch (error) {
     console.error("Lead save failed", lead.id, error instanceof Error ? error.message : "Unknown error");
     return Response.json({ accepted: false, error: "Lead storage is unavailable." }, { status: 503 });
   }
+
+  const teamNotified = saved.emailStatus === "accepted" || await notifyLead(lead.id);
+  return Response.json(
+    { accepted: true, id: lead.id, code: saved.code, teamNotified },
+    { status: saved.isNew ? 201 : 200 },
+  );
 }

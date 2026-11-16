@@ -27,6 +27,7 @@ export default function LeadPanel({
 
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
   const [error, setError] = useState("");
+  const [receipt, setReceipt] = useState("");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -36,7 +37,7 @@ export default function LeadPanel({
     setError("");
 
     try {
-      await submitLead(form, source, window.location.pathname);
+      setReceipt(await submitLead(form, source, window.location.pathname));
       form.reset();
       setStatus("sent");
     } catch (error) {
@@ -109,7 +110,7 @@ export default function LeadPanel({
         </div>
 
         {status === "sent" ? (
-          <p className={styles.formNote} role="status">Thank you for submitting your details. One of our product strategists will be in touch within the next 24 hours.</p>
+          <p className={styles.formNote} role="status">{receipt}</p>
         ) : (
           <form className={styles.form} onSubmit={handleSubmit} aria-busy={status === "sending"}>
             <label>

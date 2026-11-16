@@ -122,14 +122,14 @@ export async function saveLead(lead: Lead) {
     body: JSON.stringify(lead),
   });
   const rows: StoredLead[] = await response.json();
-  if (rows[0]) return { isNew: true, code: rows[0].inquiry_code };
+  if (rows[0]) return { isNew: true, code: rows[0].inquiry_code, emailStatus: rows[0].email_status };
 
   const lookup = await database(new URLSearchParams({ id: "eq." + lead.id, limit: "1" }));
   const [existing]: StoredLead[] = await lookup.json();
   if (!existing || !Object.entries(lead).every(([key, value]) => existing[key as keyof Lead] === value)) {
     throw new Error("Submission identifier conflict");
   }
-  return { isNew: false, code: existing.inquiry_code };
+  return { isNew: false, code: existing.inquiry_code, emailStatus: existing.email_status };
 }
 
 export async function listLeads(offset: number) {
@@ -140,14 +140,17 @@ export async function listLeads(offset: number) {
 }
 
 async function sendNotification(lead: StoredLead) {
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.RESEND_API_KEY?.trim();
   const from = process.env.RESEND_FROM_EMAIL?.trim() ||
     process.env.LEAD_NOTIFICATION_FROM?.trim();
   const to = [...new Set((process.env.LEAD_EMAILS?.trim() || process.env.LEAD_NOTIFICATION_TO || "")
     .split(",").map((address) => address.trim().toLowerCase()).filter(Boolean))];
 
-  if (!key || !from || !to.length || to.length > 50 || to.some((address) => !emailPattern.test(address))) {
-    throw new Error("Lead email configuration is incomplete");
+  if (!key) throw new Error("Missing RESEND_API_KEY");
+  if (!from) throw new Error("Missing RESEND_FROM_EMAIL or LEAD_NOTIFICATION_FROM");
+  if (!to.length) throw new Error("Missing LEAD_EMAILS or LEAD_NOTIFICATION_TO");
+  if (to.length > 50 || to.some((address) => !emailPattern.test(address))) {
+    throw new Error("Invalid lead notification recipient list");
   }
 
   const subject = lead.source === "starter-offer"
@@ -204,6 +207,8 @@ export async function notifyLead(id: string) {
   const claimedAt = new Date().toISOString();
   const expiredAt = new Date(Date.now() - 120_000).toISOString();
 
+  let emailId: string | null = null;
+
   try {
     const claim = await database(new URLSearchParams({
       id: "eq." + id,
@@ -215,9 +220,7 @@ export async function notifyLead(id: string) {
       body: JSON.stringify({ email_status: "pending", email_claimed_at: claimedAt }),
     });
     const [lead]: StoredLead[] = await claim.json();
-    if (!lead) return;
-
-    let emailId: string | null = null;
+    if (!lead) return false;
     let emailError: string | null = null;
 
     try {
@@ -239,4 +242,6 @@ export async function notifyLead(id: string) {
   } catch (error) {
     console.error("Could not process lead notification", id, error instanceof Error ? error.message : "Unknown error");
   }
+
+  return emailId !== null;
 }

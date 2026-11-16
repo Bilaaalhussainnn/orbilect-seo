@@ -16,6 +16,7 @@ function OfferForPage({ pathname }: { pathname: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
   const [error, setError] = useState("");
+  const [receipt, setReceipt] = useState("");
   const [preview, setPreview] = useState(0);
   const Icon = previewIcons[preview];
 
@@ -39,7 +40,7 @@ function OfferForPage({ pathname }: { pathname: string }) {
     setStatus("sending");
 
     try {
-      await submitLead(event.currentTarget, "starter-offer", pathname);
+      setReceipt(await submitLead(event.currentTarget, "starter-offer", pathname));
       setStatus("sent");
     } catch (error) {
       setStatus("idle");
@@ -67,9 +68,7 @@ function OfferForPage({ pathname }: { pathname: string }) {
 
           {status === "sent" ? (
             <p className={styles.auditSuccess} role="status">
-              <strong>Audit request received.</strong>
-              <br />
-              Thank you for submitting your details. One of our product strategists will be in touch within the next 24 hours.
+              {receipt}
             </p>
           ) : (
             <form onSubmit={submitAudit} aria-busy={status === "sending"}>

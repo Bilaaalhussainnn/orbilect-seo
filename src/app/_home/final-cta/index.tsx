@@ -36,6 +36,7 @@ export default function FinalCta({
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const [error, setError] = useState("");
+  const [receipt, setReceipt] = useState("");
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -55,7 +56,7 @@ export default function FinalCta({
         if (request === "Custom SEO quotation") source = "custom-plan-proposal";
       }
 
-      await submitLead(form, source, window.location.pathname);
+      setReceipt(await submitLead(form, source, window.location.pathname));
 
       form.reset();
       setStatus("success");
@@ -161,7 +162,7 @@ export default function FinalCta({
           </button>
 
           <div className={styles.feedback} role="status">
-            {status === "success" && "Thank you for submitting your details. One of our product strategists will be in touch within the next 24 hours."}
+            {status === "success" && receipt}
             {status === "error" && error}
           </div>
         </form>
