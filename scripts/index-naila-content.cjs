@@ -1,39 +1,12 @@
-const { spawn } = require("node:child_process");
-const { once } = require("node:events");
-const { writeFile, rename } = require("node:fs/promises");
+const { access, readFile, writeFile, rename } = require("node:fs/promises");
 const path = require("node:path");
 const { parse } = require("next/dist/compiled/node-html-parser");
 
 const canonicalOrigin = "https://orbilectseo.com";
 const destination = path.join(__dirname, "../src/lib/naila/public-content.json");
-const next = require.resolve("next/dist/bin/next");
+const buildApp = path.join(__dirname, "../.next/server/app");
+const standalone = path.join(__dirname, "../.next/standalone");
 const clean = text => text.replace(/\s+/g, " ").trim();
-
-function localServer() {
-  const server = spawn(process.execPath, [next, "start", "--hostname", "127.0.0.1", "--port", "0"], {
-    stdio: ["ignore", "pipe", "inherit"],
-    env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },
-  });
-  const ready = new Promise((resolve, reject) => {
-    let output = "";
-    const timeout = setTimeout(() => reject(new Error("Naila index server did not start.")), 30_000);
-    const finish = result => { clearTimeout(timeout); return result; };
-    server.stdout.on("data", chunk => {
-      output += chunk;
-      const url = output.match(/Local:\s+(http:\/\/127\.0\.0\.1:\d+)/)?.[1];
-      if (url && output.includes("Ready")) resolve(finish(url));
-    });
-    server.once("error", error => reject(finish(error)));
-    server.once("exit", () => reject(finish(new Error("Naila index server exited."))));
-  });
-  return { server, ready };
-}
-
-async function request(origin, route) {
-  const response = await fetch(origin + route, { redirect: "error", signal: AbortSignal.timeout(20_000) });
-  if (!response.ok) throw new Error(route + " returned HTTP " + response.status);
-  return response.text();
-}
 
 function indexPage(html, route) {
   const root = parse(html);
@@ -79,34 +52,40 @@ function indexPage(html, route) {
   return { path: route, title, sections };
 }
 
+async function writeIndex(destination, contents) {
+  const temporary = destination + ".tmp";
+  await writeFile(temporary, contents, { mode: 0o644 });
+  await rename(temporary, destination);
+}
+
 async function run() {
-  const { server, ready } = localServer();
-  try {
-    const origin = await ready;
-    const sitemap = parse(await request(origin, "/sitemap.xml"));
-    const urls = sitemap.querySelectorAll("loc").map(node => new URL(node.text.trim()));
-    if (!urls.length || urls.some(url => url.origin !== canonicalOrigin || url.search || url.hash ||
+  const sitemap = parse(await readFile(path.join(buildApp, "sitemap.xml.body"), "utf8"));
+  const urls = sitemap.querySelectorAll("loc").map(node => new URL(node.text.trim()));
+  if (!urls.length || urls.some(url => url.origin !== canonicalOrigin || url.search || url.hash ||
       /^\/(?:api|admin)(?:\/|$)/.test(url.pathname))) throw new Error("Unexpected public sitemap entries.");
-    const routes = [...new Set(urls.map(url => url.pathname))];
-    for (const policy of ["/privacy-policy", "/terms-and-conditions"]) {
-      if (!routes.includes(policy)) throw new Error("Missing policy in sitemap: " + policy);
-    }
-    const pages = [];
-    for (let start = 0; start < routes.length; start += 8) {
-      pages.push(...await Promise.all(routes.slice(start, start + 8).map(async route =>
-        indexPage(await request(origin, route), route))));
-    }
-    const temporary = destination + ".tmp";
-    await writeFile(temporary, "[" + pages.map(page => JSON.stringify(page)).join(",\n") + "]\n", { mode: 0o644 });
-    await rename(temporary, destination);
-    console.log("Indexed " + pages.length + " public pages for Naila, including Privacy and Terms.");
-  } finally {
-    if (server.exitCode === null && server.signalCode === null) {
-      const closed = once(server, "close");
-      server.kill();
-      await closed;
-    }
+
+  const routes = [...new Set(urls.map(url => url.pathname))];
+  for (const policy of ["/privacy-policy", "/terms-and-conditions"]) {
+    if (!routes.includes(policy)) throw new Error("Missing policy in sitemap: " + policy);
   }
+
+  const pages = [];
+  for (let start = 0; start < routes.length; start += 8) {
+    pages.push(...await Promise.all(routes.slice(start, start + 8).map(async route => {
+      const filename = route === "/" ? "index.html" : route.slice(1) + ".html";
+      const html = await readFile(path.join(buildApp, filename), "utf8");
+      return indexPage(html, route);
+    })));
+  }
+
+  const contents = "[" + pages.map(page => JSON.stringify(page)).join(",\n") + "]\n";
+  await writeIndex(destination, contents);
+  const hasStandalone = await access(path.join(standalone, "server.js")).then(() => true, error => {
+    if (error.code === "ENOENT") return false;
+    throw error;
+  });
+  if (hasStandalone) await writeIndex(path.join(standalone, "src/lib/naila/public-content.json"), contents);
+  console.log("Indexed " + pages.length + " public pages for Naila from build files.");
 }
 
 run().catch(error => { console.error(error.message); process.exitCode = 1; });
