@@ -296,7 +296,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
               <strong>Naila</strong>
               <span>
                 Your guide to{" "}
-                <span className={styles.taglineAccent}>SEO and digital growth</span>
+                <span key={open ? "open" : "minimized"} className={styles.taglineAccent}>SEO and digital growth</span>
               </span>
             </div>
             {mode !== "human" && <details className={styles.chatOptions} ref={optionsMenu} onBlur={event => {

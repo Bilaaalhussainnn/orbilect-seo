@@ -2,7 +2,7 @@ const service = "/services/ecommerce-management";
 export const staffingSupportAnswers = {
   roles: {
     question: "What customer support roles can I offshore?",
-    answer: "We can recruit ecommerce customer support agents for live chat, email, phone, multilingual coverage, or a multichannel role. We can also scope an AI chatbot and its handoff to human agents.",
+    answer: "For businesses looking for affordable offshore support, we can recruit ecommerce customer support agents for live chat, email, phone, multilingual coverage, or a multichannel role. We can also scope an AI chatbot and its handoff to human agents.",
     href: "/staffing#customer-support-offshoring",
   },
   cost: {

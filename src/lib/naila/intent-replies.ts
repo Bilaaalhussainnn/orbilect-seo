@@ -7,7 +7,7 @@ import { blogIndex, faqEntries } from "./intent-content";
 import type { Reply } from "./answers";
 
 const pricingChecklist = { text: "Open pricing checklist", href: "/pricing#pricing-checklist" };
-const callback = { text: "Request a callback", href: "/contact?request=Callback%20request#request-proposal" };
+const callback = { text: "Open our Contact page", href: "/contact?request=Callback%20request#request-proposal" };
 const quote = { text: "Get a quote", href: "/pricing#pricing-checklist" };
 const terms = { text: "View Terms", href: "/terms-and-conditions" };
 const audit = { text: "Request a free SEO audit", href: "/#free-audit" };
@@ -72,7 +72,7 @@ export function resolveIntent(message: string, previousMessage: string, fallback
 function customerOperationsReply(q: string): Reply | undefined {
   const aboutStaffing = /\b(?:offshor\w*|outsourc\w*|staff\w*|hire|hiring|dedicated)\b/.test(q);
   const aboutSupport = /\b(?:customer support|customer service|support agents?|live chat agents?|email agents?|phone agents?|voice agents?|contact cent(?:er|re))\b/.test(q);
-  const aboutStore = /\b(?:ecommerce|store|shopify|woocommerce|magento|shoppers?)\b/.test(q);
+  const aboutStore = /\b(?:ecommerce|stores?|shopify|woocommerce|magento|shoppers?)\b/.test(q);
   const respond = ({ answer, href }: { answer: string; href: string }): Reply => ({
     text: answer,
     actions: [{ text: "Read more", href }],
@@ -80,7 +80,7 @@ function customerOperationsReply(q: string): Reply | undefined {
 
   if ((aboutStore || aboutStaffing) && /\bprivacy (?:policy|rules)\b/.test(q)) return respond(ecommerce.privacy);
   if (aboutStaffing && aboutSupport && /\b(?:agreement|terms|cancellation|notice)\b/.test(q)) return respond(ecommerce.terms);
-  if (aboutStaffing && aboutSupport && pricingWords.test(q)) return respond(staffing.cost);
+  if (aboutStaffing && pricingWords.test(q)) return respond(staffing.cost);
   if (aboutSupport && /\b(?:trained|training|typing|mock chats?|screening)\b/.test(q)) return respond(ecommerce.training);
   if (aboutSupport && /\b(?:multilingual|languages?|bilingual)\b/.test(q)) return respond(staffing.multilingual);
   if (aboutStaffing && aboutSupport) return respond(staffing.roles);
@@ -94,23 +94,53 @@ function customerOperationsReply(q: string): Reply | undefined {
   if (aboutStore && aboutSupport) return respond(ecommerce.support);
 }
 
+const staffingTopic = /\b(?:staffing|offshor\w*|outsourc\w*)\b/;
+const serviceIntro = "Sure. Which of our services do you need help with?";
+const marketingTopic = /\b(?:digital marketing|online marketing)\b/;
+
+function conversationalReply(q: string, previous: string): Reply | undefined {
+  const jobSeeker = /\b(?:look(?:ing)? (?:for|to apply for) (?:a )?(?:job|work)|job (?:openings?|vacanc(?:y|ies)|applications?|opportunities)|vacanc(?:y|ies)|(?:need|want) (?:help (?:with|finding) )?(?:a |with a )?job|(?:help me find|apply for) (?:a )?job|are you hiring|any openings|work (?:for|at) (?:you|orbilect)|(?:send|submit) (?:my |a )?(?:cv|r[eé]sum[eé]))\b/;
+  if (jobSeeker.test(q)) {
+    if (/\b(?:cv|r[eé]sum[eé])\b/.test(q)) {
+      return { text: "When a position opens, the listing will tell you how to apply and where to send your CV. Please check our Careers page for the latest status.", actions: [{ text: "Visit Careers", href: "/careers#openings" }] };
+    }
+    return { text: "Unfortunately, we don’t have any vacancies right now. Please keep an eye on our Careers page and official social channels. We’ll post new openings and application details there.", actions: [{ text: "Visit Careers", href: "/careers#openings" }] };
+  }
+  if (/^(?:(?:please )?(?:i (?:need|want|would like)|i'd like|looking for) (?:(?:some|your) )?(?:help|assistance|support)|(?:can|could|would|will) you (?:please )?help(?: me)?|help(?: me)?(?: please)?)[.!?\s]*$/.test(q)) {
+    return { text: serviceIntro, actions: [{ text: "Explore our services", href: "/services" }] };
+  }
+  if (marketingTopic.test(q) && !pricingWords.test(q) &&
+    !/\b(?:privacy|terms|refund|blog|article|guide link|marketing agency|jobs?|careers)\b/.test(q)) {
+    return {
+      text: "Sure, let me guide you through digital marketing. It means using online channels such as search, social media, paid ads, and email to reach customers and measure what leads to enquiries or sales. Are you looking to bring in more leads, grow online sales, or reach a new audience?",
+      actions: [{ text: "Explore digital marketing", href: "/services/digital-marketing" }],
+    };
+  }
+  if (marketingTopic.test(previous) && /^(?:(?:what|where) (?:would you do|should i start)(?: first)?|how (?:do|would) (?:we|you) start)[.!?\s]*$/.test(q)) {
+    return { text: "I’d start with one goal and check what you’re already measuring. If you want more enquiries, for example, we can review where leads come from and whether the landing page makes it easy to contact you.", actions: [{ text: "Explore digital marketing", href: "/services/digital-marketing" }] };
+  }
+  if (staffingTopic.test(previous) && /^(?:how much(?: (?:does|would|will) (?:it|that) cost)?|(?:what(?:'s| is) (?:the )?)?(?:price|pricing|cost|rates?)|and (?:the )?(?:price|cost|rates?))[.!?\s]*$/.test(q)) {
+    return { text: staffing.cost.answer, actions: [{ text: "Explore offshore staffing", href: staffing.cost.href }] };
+  }
+}
+
 function classify(q: string, previous: string, fallback: (q: string) => Reply): Reply {
   if (!/[a-z0-9]/.test(q) || /^(?:what(?: the)?|how|why|where|can you|do you|i was wondering)[?.!\s]*$/.test(q)) return { text: clarify };
   if (/\b(?:hungry|weather forecast|tell me a joke|who won the game|what is your favorite food)\b/.test(q)) return { text: unrelated };
   if (/\b(?:call\s?back|(?:contact|call|phone|email|reach) me|(?:get in touch|reach out|follow up) with me|(?:reach out|speak) to me)\b/.test(q)) {
-    return { text: "Yes. Use our contact form to leave your details, preferred contact method, and a good time to reach you. Our team can follow up from there.", actions: [callback] };
+    return { text: "Sure, kindly leave your details on our Contact page and one of our product strategists will get back to you within 24 hours.", actions: [callback] };
   }
   if (/\b(?:calculators?|cost estimators?|quote tools?|pricing tools?)\b/.test(q)) {
     return { text: "We have a pricing checklist you can use to select the work you need and request a tailored quote. It won’t generate an instant total.", actions: [pricingChecklist] };
   }
-  const exactSiteAnswer = findPublicAnswer(q, true);
-  if (exactSiteAnswer) return exactSiteAnswer;
   const policy = findPolicyAnswer(q, previous);
   if (policy) return policy;
   if (/\b(?:privacy policy|terms (?:and conditions|of service))\b/.test(q)) {
     const passage = findPublicPassage(q, true);
     if (passage) return passage;
   }
+  const conversation = conversationalReply(q, previous);
+  if (conversation) return conversation;
   const aboutReputation = /\b(?:review|reviews|rate|feedback|testimonial)\b/.test(q);
   const aboutPerson = /\b(?:chat|agent|representative|naila)\b/.test(q);
   if (aboutReputation && aboutPerson && /\b(?:leave|rate|give|submit|write)\b/.test(q) && !/\b(?:your services|orbilect seo services)\b/.test(q)) {
@@ -122,6 +152,16 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   }
   const serviceIntent = customerOperationsReply(q);
   if (serviceIntent) return serviceIntent;
+  if (!pricingWords.test(q) && !/\b(?:blog|article|guide link|privacy|terms|refund)\b/.test(q)) {
+    if (/\b(?:google ads|ppc|pay[- ]per[- ]click|paid search)\b/.test(q)) {
+      return { text: "Yes, we can help with paid search. PPC means paying for clicks on your ads. We can review which searches you target, where clicks land, and whether those clicks lead to enquiries or sales. Are you starting a campaign or improving an existing one?", actions: [{ text: "Explore PPC management", href: "/services/ppc-management" }] };
+    }
+    if (/\b(?:redesign\w*|rebuild\w*)\b.*\b(?:website|site)\b|\b(?:website|site) (?:redesign|rebuild)\b/.test(q)) {
+      return { text: "Yes, we can help redesign your website. We’ll review how customers move through it, what works on mobile, and which pages need to keep their search visibility. What would you most like the new site to do better?", actions: [{ text: "Explore website redesign", href: "/services/website-redesign" }] };
+    }
+  }
+  const exactSiteAnswer = findPublicAnswer(q, true);
+  if (exactSiteAnswer) return exactSiteAnswer;
   if (/\b(?:live chat|human (?:agent|rep|representative|support)|(?:talk|speak|chat|connect|transfer) (?:me )?(?:to|with) (?:a |an |your )?(?:live )?(?:human|person|agent|rep(?:resentative)?|someone)|(?:is|any) (?:an? )?(?:agent|representative) available)\b/.test(q)) {
     return { text: "Live chat depends on availability. If a team member is available, they’ll join this chat. You can also call us at +1 (646) 640-0070.", actions: [call] };
   }
@@ -160,6 +200,9 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
       actions: [{ text: "Visit Orbilect SEO", href: "https://orbilectseo.com/" }],
     };
   }
+  if (staffingTopic.test(q)) {
+    return { text: "Sure. Our staffing service is for businesses looking for affordable offshore support. We can help you find dedicated agents for live chat, email, phone, or multiple channels. What kind of coverage does your team need?", actions: [{ text: "Explore offshore staffing", href: "/staffing#customer-support-offshoring" }] };
+  }
   const aboutPromo = promoWords.test(q) && !/\b(?:what|which) services\b/.test(q);
   if (timeWords.test(q) && (aboutPromo || (promoWords.test(previous) && /\b(?:it|that|the offer)\b/.test(q)))) return { text: expiry };
   const cheaper = /\b(?:under|below|less than|lower than|cheaper than)\s*(?:usd\s*)?\$?\s*6(?:00|50)\b/.test(q);
@@ -193,6 +236,9 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   }
   if (/\b(?:what|which) (?:website |ecommerce )?platforms\b/.test(q)) {
     return { text: "We can scope work on WordPress, Shopify, WooCommerce, Magento / Adobe Commerce, Webflow, Wix, Squarespace, BigCommerce, Framer, and custom sites. Tell me your platform and whether you need a build, redesign, migration, or SEO." };
+  }
+  if (/\b(?:free (?:seo )?audit|audit my (?:site|website))\b/.test(q)) {
+    return { text: "Yes, you can request a free SEO audit. Share your website and tell us what you’d like customers to find. We’ll review what may be holding the site back and flag where to start.", actions: [audit] };
   }
   const siteAnswer = findPublicAnswer(q);
   if (siteAnswer) return siteAnswer;

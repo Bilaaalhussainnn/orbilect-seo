@@ -74,6 +74,17 @@
   padding-inline: .2em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  display: inline-block;
+  max-inline-size: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .identity .taglineAccent { animation: typeTagline 700ms steps(22, end) both; }
+}
+
+@keyframes typeTagline {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
 }
 
 /* Fit the Naila tagline in compact widgets. */
