@@ -1,0 +1,42 @@
+.section { --blue: #004aad; --ink: #111923; --line: #d7e0ee; color: var(--ink); background: #fff; padding-block: clamp(2.007rem, 4.38vw, 4.015rem); }
+.wrap { width: min(90%, 1320px); margin-inline: auto; }
+.heading { max-width: 52rem; }
+.heading .eyebrow { margin: 0 0 1rem; padding-bottom: .85rem; border-bottom: 1px solid var(--line); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.heading h2 { margin: 0; font-size: clamp(1.68rem, 3.6vw, 2.5rem); line-height: 1.1; letter-spacing: -.045em; font-weight: 800; }
+.heading h2 span { color: var(--blue); }
+.heading h2 + p, .detail p { margin: .65rem 0 0; color: #405168; line-height: 1.65; }
+.levels, .tabs { display: flex; flex-wrap: wrap; gap: .6rem; }
+.levels { margin: 1.6rem 0 1.15rem; padding: 0; list-style: none; }
+.levels li { display: flex; align-items: center; gap: .6rem; }
+.levels li:not(:last-child)::after { content: "→"; color: var(--blue); }
+.section button { cursor: pointer; font: inherit; font-size: .875rem; font-weight: 650; color: inherit; }
+.levels button, .tabs button { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .5rem .8rem; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+.section button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+.section :is(button, summary):focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); align-items: start; gap: 1rem; margin-top: .8rem; }
+.branches { display: grid; gap: .6rem; }
+.branches details, .panel { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.branches details[open] { border-color: var(--blue); }
+.branches summary { display: flex; align-items: center; gap: .75rem; padding: .85rem; list-style: none; cursor: pointer; font-weight: 750; }
+.branches summary::-webkit-details-marker { display: none; }
+.branches summary::after { content: "+"; margin-left: auto; color: var(--blue); }
+.branches details[open] summary::after { content: "−"; }
+.branches summary svg { flex: none; color: var(--blue); }
+.branches small { display: block; color: #405168; font-weight: 400; }
+.branches ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; margin: 0; padding: 0 .75rem .75rem; list-style: none; }
+.branches button { width: 100%; min-height: 44px; text-align: left; padding: .4rem .6rem; border: 1px solid transparent; border-radius: 7px; background: #f3f5f8; }
+.branches button:hover, .tabs button:hover, .levels button:hover { border-color: var(--blue); }
+.panel { background: #fff; }
+.scene { display: grid; place-items: center; position: relative; min-height: clamp(165px, 22vw, 245px); perspective: 720px; background: linear-gradient(#fff1 1px, transparent 1px), linear-gradient(90deg, #fff1 1px, transparent 1px), radial-gradient(ellipse, #004aad66, transparent 72%), #0b1019; background-size: 28px 28px, 28px 28px, auto, auto; }
+.orbit { position: absolute; width: 72%; height: 48%; border: 1px solid var(--blue); border-radius: 50%; transform: rotate(-17deg); }
+.rig { position: relative; width: clamp(75px, 10vw, 106px); aspect-ratio: 1; transform-style: preserve-3d; transform: rotateX(calc(12deg + var(--pitch, 0deg))) rotateY(calc(-20deg + var(--yaw, 0deg))) rotateZ(-9deg); transition: transform .2s ease; }
+.face, .middle, .back { position: absolute; inset: 0; border: 1px solid #fff4; border-radius: 16px; }
+.face { display: grid; place-items: center; background: var(--blue); color: #fff; transform: translateZ(18px); animation: enter .45s ease-out both; }
+.middle { background: #18263a; transform: translate3d(10px, 8px, -3px); }
+.back { background: #101824; transform: translate3d(20px, 16px, -22px); }
+.detail { padding: 1.15rem; }
+.detail h3 { margin: 0; font-size: 1.035rem; }
+@keyframes enter { from { opacity: .5; transform: translateZ(42px) rotateY(-55deg); } to { opacity: 1; transform: translateZ(18px); } }
+@media (max-width: 740px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .branches ul { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .face { animation: none; } .rig { transition: none; transform: rotateX(12deg) rotateY(-20deg) rotateZ(-9deg); } }

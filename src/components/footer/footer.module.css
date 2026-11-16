@@ -1,0 +1,126 @@
+.footer {
+  background: #000;
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #242a33;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+.inner { width: min(100% - 48px, 1340px); margin-inline: auto; }
+.main { display: grid; grid-template-columns: minmax(245px, 1fr) minmax(0, 1.8fr); gap: clamp(26px, 6vw, 92px); padding-block: clamp(34px, 6vw, 78px) clamp(26px, 4vw, 46px); }
+.brand { display: grid; justify-items: center; align-content: start; gap: 11px; }
+.brand img { display: block; width: 174px; height: auto; }
+.brand p { margin: 0 0 3px; max-width: 37ch; color: #c2c9d5; font-size: 13px; line-height: 1.65; }
+.footer a { color: #d5dbe5; font-size: 13px; text-decoration: none; }
+.footer a { border-radius: 4px; }
+.footer a:not([aria-label="Orbilect SEO home"]):is(:hover, :focus-visible) { color: #fff; background: #004aad; }
+.footer a:focus-visible { outline: 2px solid #004aad; outline-offset: 4px; }
+.contact { display: inline-flex; align-items: center; gap: 8px; }
+.contact svg { color: #004aad; }
+.social { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.social a { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #353c48; border-radius: 50%; }
+.social a:hover { color: #fff; background: #004aad; border-color: #004aad; }
+.navigation { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.group h2 { margin: 5px 0 13px; color: #fff; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.group a, .legal a { display: inline-block; padding: 3px 6px; }
+.group ul { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.legal { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid #292e38; padding: 15px 0 24px; color: #b8c0cc; font-size: 12px; }
+.legal p { margin: 0; }
+.legal nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; }
+.legal nav a { font-size: 12px; }
+@media (max-width: 775px) {
+  
+.inner { width: calc(100% - 32px); }
+  .main { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 445px) {
+  .navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 8px; }
+  .navigation .group:last-child { grid-column: 1 / -1; }
+}
+
+
+/* Marketing footer update */
+.footer > :first-child { opacity: .58; }
+.brand { justify-items: start; text-align: left; }
+.contact { padding: 3px 6px; }
+.contact:is(:hover,:focus-visible) svg { color: #000; background: #fff; border-radius: 3px; }
+.group[data-continued] { padding-top: 39px; }
+@media (max-width:775px) { .brand { justify-items:center; text-align:center; } }
+
+
+/* Orbilect marketing bubbles */
+.footer > [data-marketing-bubbles] { opacity: 1; }
+.footer [data-marketing-art] { left: 0; top: 53%; opacity: .68; }
+.footer .main { padding-bottom: clamp(102px, 11vw, 148px); }
+.footer [data-marketing-labels] {
+  inset: auto auto 69px clamp(16px, 5vw, 84px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: min(530px, calc(100% - 32px));
+}
+.footer [data-marketing-labels] span { position: static; }
+@media (max-width: 640px) {
+  .footer .main { padding-bottom: 132px; }
+  .footer [data-marketing-labels] { bottom: 106px; }
+}
+
+
+/* Round marketing background orbs */
+.footer { background:radial-gradient(ellipse at 83% 76%, #092449 0%, #040b17 48%, #000 77%); }
+.footer .main { padding-bottom:clamp(26px,4vw,46px); }
+.footer [data-growth-orbs] { opacity:.23; }
+.footer [data-growth-orbs] > div:nth-child(1) { top:13%; left:44%; }
+.footer [data-growth-orbs] > div:nth-child(2) { top:21%; right:5%; }
+.footer [data-growth-orbs] > div:nth-child(3) { bottom:9%; left:56%; }
+.footer [data-growth-orbs] > div:nth-child(4) { bottom:8%; right:14%; }
+.footer .group h2 a { color:#fff; font:inherit; padding:0; }
+.footer .group h2 a:is(:hover,:focus-visible) { color:#004aad; background:none; }
+@media (max-width:700px) {
+  .footer [data-growth-orbs] { opacity:.16; }
+  .footer [data-growth-orbs] > div:nth-child(1) { top:24%; left:44%; }
+  .footer [data-growth-orbs] > div:nth-child(2) { top:39%; right:4%; }
+  .footer [data-growth-orbs] > div:nth-child(3) { bottom:24%; left:30%; }
+  .footer [data-growth-orbs] > div:nth-child(4) { bottom:10%; right:6%; }
+}
+
+/* Compact ambient marketing bubbles */
+.footer [data-growth-orbs] { opacity: .12; }
+.footer [data-growth-orbs] > div {
+  width: clamp(35px, 4.1vw, 64px);
+  padding: 3px;
+  opacity: 1;
+  animation: soft-footer-orb 22s ease-in-out infinite alternate;
+}
+.footer [data-growth-orbs] b { font-size: clamp(6px, .55vw, 8px); }
+.footer [data-growth-orbs] strong { font-size: clamp(9px, 1vw, 15px); }
+.footer [data-growth-orbs] > div:nth-child(1) { top: 43%; left: 37%; right: auto; }
+.footer [data-growth-orbs] > div:nth-child(2) { top: 26%; left: 58%; right: auto; animation-delay: -5s; }
+.footer [data-growth-orbs] > div:nth-child(3) { top: auto; bottom: 29%; left: 76%; right: auto; animation-delay: -11s; }
+.footer [data-growth-orbs] > div:nth-child(4) { top: auto; bottom: 33%; left: auto; right: 2.5%; animation-delay: -16s; }
+@keyframes soft-footer-orb {
+  from { transform: translateX(-2px); }
+  to { transform: translateX(3px); }
+}
+.footer .contact:is(:hover, :focus-visible) { background: #004aad; }
+.footer .contact:is(:hover, :focus-visible) svg {
+  color: #000;
+  background: transparent;
+  border-radius: 0;
+}
+@media (max-width: 775px) {
+  .footer [data-growth-orbs] { opacity: .08; }
+  .footer [data-growth-orbs] > div:nth-child(1) { top: 20%; left: 10%; }
+  .footer [data-growth-orbs] > div:nth-child(2) { top: 29%; left: auto; right: 7%; }
+  .footer [data-growth-orbs] > div:nth-child(3) { bottom: 29%; left: 47%; }
+  .footer [data-growth-orbs] > div:nth-child(4) { bottom: 19%; right: 5%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer [data-growth-orbs] > div { animation: none; }
+}
+
+/* Navigation and blog hero refinements */
+.footer { background: radial-gradient(ellipse at 83% 76%, #071426, #03070d 48%, #000 78%); }
+.footer [data-marketing-art] { opacity: .38; }

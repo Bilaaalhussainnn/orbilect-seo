@@ -1,0 +1,6 @@
+/* Section headings on the Newsroom and Blogs landing pages. */
+div.index { display: contents; }
+
+.index h2 {
+  font-size: clamp(1.375rem, 1.12rem + 1vw, 1.875rem) !important;
+}

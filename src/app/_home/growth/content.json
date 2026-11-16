@@ -1,0 +1,132 @@
+{
+  "work": [
+    [
+      "shopify",
+      "Ecommerce · Shopify",
+      "Helping an ecommerce brand improve its visibility on Shopify",
+      "Collection pages, product metadata, and internal linking."
+    ],
+    [
+      "dental",
+      "Healthcare · Local SEO",
+      "Helping a dental practice reach patients nearby",
+      "Service pages, local listings, and appointment journeys."
+    ],
+    [
+      "saas",
+      "Software · B2B SEO",
+      "Helping a SaaS platform get found for high-intent searches",
+      "Use-case pages, keyword mapping, and content refreshes."
+    ],
+    [
+      "real-estate",
+      "Real estate · Website redesign",
+      "Helping a property firm turn search visits into enquiries",
+      "Property landing pages, mobile UX, and enquiry paths."
+    ],
+    [
+      "automotive",
+      "Automotive · Technical SEO",
+      "Helping an automotive retailer make its inventory easier to find",
+      "Inventory indexing, category structure, and redirects."
+    ],
+    [
+      "fitness",
+      "Fitness · Local SEO",
+      "Helping a fitness studio reach more local searchers",
+      "Location pages, business listings, and class discovery."
+    ],
+    [
+      "education",
+      "Education · On-page SEO",
+      "Helping a training provider attract course enquiries",
+      "Course-page copy, metadata, and search intent."
+    ],
+    [
+      "hospitality",
+      "Hospitality · Content SEO",
+      "Helping a boutique hotel reach guests planning their stay",
+      "Destination content, room pages, and booking paths."
+    ],
+    [
+      "fashion",
+      "Fashion · Ecommerce SEO",
+      "Helping a fashion retailer improve collection-page discovery",
+      "Collection copy, category linking, and duplicate URL review."
+    ],
+    [
+      "finance",
+      "Finance · On-page SEO",
+      "Helping a financial advisory firm clarify its services in search",
+      "Service-page structure, topic research, and clearer calls to action."
+    ],
+    [
+      "logistics",
+      "Logistics · B2B SEO",
+      "Helping a logistics provider get found for specialist services",
+      "Industry landing pages, route coverage, and lead tracking."
+    ],
+    [
+      "restaurant",
+      "Food · Local SEO",
+      "Helping a restaurant make its menu easier to find",
+      "Menu structure, location information, and reservation paths."
+    ],
+    [
+      "home-services",
+      "Home services · Local SEO",
+      "Helping a home services business reach customers in its service area",
+      "Location pages, local citations, and enquiry tracking."
+    ],
+    [
+      "marketplace",
+      "Marketplace · Technical SEO",
+      "Helping a marketplace organize search visibility across its listings",
+      "Faceted navigation, crawl paths, and indexable categories."
+    ],
+    [
+      "manufacturing",
+      "Manufacturing · B2B SEO",
+      "Helping a manufacturer get discovered for specialist products",
+      "Product specifications, category pages, and internal links."
+    ],
+    [
+      "beauty",
+      "Beauty · Ecommerce SEO",
+      "Helping a beauty brand improve product discovery",
+      "Product copy, structured data, and collection navigation."
+    ]
+  ],
+  "process": [
+    [
+      "discovery",
+      "Discovery call",
+      "We start by understanding your business, who you want to reach, and what you want your website to do better. We’ll discuss your products or services, target markets, current SEO efforts, and the outcomes that matter to you, such as qualified enquiries, bookings, or product sales."
+    ],
+    [
+      "nda",
+      "Confidentiality and NDA",
+      "We agree on how confidential information will be handled and sign an NDA before exchanging sensitive materials. We also identify which reports and accounts are relevant to the engagement and agree how to share access with the people who need it."
+    ],
+    [
+      "assessment",
+      "Initial SEO assessment",
+      "We review how search engines discover your website, which pages currently attract visitors, and where competitors have stronger coverage. That gives us a starting point for prioritizing technical fixes, keyword opportunities, and pages that could better serve your customers."
+    ],
+    [
+      "scope",
+      "Proposal and scope",
+      "We turn the assessment into a proposal that spells out the recommended work, deliverables, timeline, and pricing. You can review what we’ll tackle first, ask questions about the trade-offs, and approve the scope before we schedule kickoff."
+    ],
+    [
+      "payment",
+      "Invoice and payment",
+      "Once you approve the scope, we send an invoice that reflects the agreed work and payment terms. After payment is confirmed, we coordinate the kickoff date and share what we need from your team to get started."
+    ],
+    [
+      "kickoff",
+      "Official kickoff",
+      "At kickoff, we confirm access, review the agreed priorities, and record a baseline for organic visibility and relevant traffic. Then we begin the work, agree on how updates will be shared, and use that baseline to track progress over time."
+    ]
+  ]
+}

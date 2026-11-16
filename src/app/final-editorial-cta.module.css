@@ -1,0 +1,122 @@
+.cta {
+  --blue: #004aad;
+  background: #000;
+  color: #fff;
+  padding-block: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+.inner {
+  width: min(92%, 1400px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(110px, 14vw, 170px) auto;
+  gap: clamp(.85rem, 3.5vw, 3rem);
+  align-items: center;
+}
+.copy h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.305rem, 1.96vw, 1.68rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+.copy h2 span {
+  color: #fff;
+  background: var(--blue);
+  padding-inline: .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.copy p { margin: .55rem 0 0; color: #c9cdd4; font-size: .875rem; line-height: 1.55; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 44px;
+  padding: .45rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  font-size: .8125rem;
+  font-weight: 750;
+  transition: color .22s, background-color .22s;
+}
+.button:hover { color: #fff; background: #000; }
+.button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.button svg { flex: none; transition: transform .22s; }
+.button:hover svg { transform: translate(2px, -2px); }
+.scene {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 102px;
+  perspective: 580px;
+  background: radial-gradient(ellipse, #004aad38, transparent 72%);
+}
+.orbit {
+  position: absolute;
+  width: 95%;
+  height: 53%;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+.rig {
+  position: relative;
+  width: clamp(50px, 6vw, 66px);
+  aspect-ratio: 1;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(12deg + var(--pitch, 0deg)))
+    rotateY(calc(-19deg + var(--yaw, 0deg))) rotateZ(-14deg);
+  transition: transform .24s ease-out;
+  animation: float 4.8s ease-in-out infinite;
+}
+.face, .middle, .back {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff42;
+  border-radius: 13px;
+}
+.face { display: grid; place-items: center; color: #fff; background: var(--blue); transform: translateZ(15px); }
+.middle { background: #172130; transform: translate3d(10px, 7px, -3px); }
+.back { background: #101824; transform: translate3d(20px, 14px, -21px); }
+@keyframes float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+@media (max-width: 640px) {
+  .inner { grid-template-columns: minmax(0, 1fr) 82px; }
+  .scene { grid-column: 2; grid-row: 1 / span 2; }
+  .button { grid-column: 1; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rig { animation: none; transition: none; transform: rotateX(12deg) rotateY(-19deg) rotateZ(-14deg); }
+  .button, .button svg { transition: none; }
+  .button:hover svg { transform: none; }
+}
+
+/* Shared CTA typography */
+.cta .copy h2 {
+  color: #fff !important;
+  font-size: clamp(1.305rem, 1.96vw, 1.68rem) !important;
+  line-height: 1.2 !important;
+}
+
+.cta .copy h2 span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: #004aad !important;
+  padding-inline: .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.cta .copy p {
+  color: #c9cdd4 !important;
+  font-size: .875rem !important;
+  line-height: 1.55 !important;
+}
+/* End shared CTA typography */

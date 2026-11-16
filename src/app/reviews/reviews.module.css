@@ -1,0 +1,64 @@
+.section { background: #fff; color: #101823; padding-block: clamp(42px, 6vw, 80px); scroll-margin-top: 80px; }
+.directory { background: #f3f5f8; }
+.wrap { width: min(1280px, calc(100% - 40px)); margin-inline: auto; }
+.header { max-width: 730px; margin-bottom: 2rem; }
+.header h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.04em; margin: 0 0 .8rem; }
+.header h2 span { color: #004aad; }
+.header p:not(:first-child) { line-height: 1.65; color: #3b4658; }
+.cta { margin-top: .7rem; }
+
+.cards { padding: 0; margin: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.card { background: #fff; border: 1px solid #cbd5e3; border-radius: 10px; box-shadow: 0 3px 0 #004aad; padding: 1rem; min-width: 0; scroll-margin-top: 95px; }
+.platformRow { display: grid; gap: .6rem; }
+.platformTitle { display: flex; align-items: center; gap: .7rem; }
+.platformTitle img { width: 32px; height: 32px; object-fit: contain; flex: none; }
+.platformTitle h3 { font-size: .97rem; margin: 0; }
+.card p, .card a, .card button { font-size: .85rem; line-height: 1.35; margin: 0; }
+.card p { color: #46566c; }
+.card a, .card button { color: #004aad; }
+.card a { display: inline-flex; gap: .35rem; align-items: center; min-height: 40px; width: fit-content; text-underline-offset: .18em; }
+.card button { background: none; border: 0; cursor: pointer; display: block; text-decoration: underline; padding: .45rem 0; font-family: inherit; }
+
+.transparency { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(1rem, 6vw, 4.5rem); align-items: start; }
+.principles { list-style: none; padding: 0; margin: 0; }
+.principles li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .8rem; padding: .85rem 0; border-top: 1px solid #c5d3e2; }
+.principles svg { color: #004aad; }
+.principles h3 { margin: 0 0 .25rem; font-size: .95rem; }
+.principles p { margin: 0; color: #3b4658; line-height: 1.6; font-size: .85rem; }
+@media (max-width: 760px) { .transparency { grid-template-columns: minmax(0, 1fr); } .transparency .header { margin-bottom: 0; } }
+@media (max-width: 840px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+
+.feedbackHeader { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: .75rem 2rem; margin-bottom: 1.5rem; }
+.feedbackHeader .header { margin-bottom: 0; }
+.feedbackHeader .header p:last-child { margin-bottom: 0; }
+.feedbackAction { display: flex; align-items: center; gap: .65rem; padding: .7rem; border: 1px solid #d0deed; border-radius: 11px; background: #fff; perspective: 400px; }
+.feedbackAction .cta { margin-top: 0; }
+.feedbackArt { display: grid; place-items: center; width: 42px; height: 42px; flex: none; position: relative; border-radius: 8px; color: #fff; background: #004aad; box-shadow: 0 4px 0 #052957; transform: rotateX(10deg) rotateY(-15deg) rotate(-8deg); transition: transform .28s ease; }
+.feedbackAction:is(:hover, :focus-within) .feedbackArt { transform: translate3d(0, -3px, 5px) rotateY(12deg); }
+.cards { perspective: 1200px; }
+.card {
+  position: relative;
+  isolation: isolate;
+  transition: transform .26s ease, box-shadow .26s ease, border-color .26s ease, background-color .26s ease;
+}
+.card:is(:hover, :focus-within, :target) { background-color: #fafdff; border-color: #5187c3; box-shadow: 0 4px 0 #004aad, 0 14px 28px #0b356522; }
+.card:target { outline: 2px solid #004aad35; outline-offset: 3px; }
+.platformTitle img { transition: transform .26s ease; }
+.card:is(:hover, :focus-within, :target) .platformTitle img { transform: scale(1.13) rotate(-7deg); }
+@media (hover: hover) {
+  .card:hover { transform: translateY(-4px) rotateX(4deg); }
+}
+@media (max-width: 760px) {
+  .feedbackHeader { grid-template-columns: minmax(0, 1fr); }
+  .feedbackAction { width: fit-content; max-width: 100%; }
+}
+@media (max-width: 360px) {
+  .feedbackAction { padding: 0; border: 0; background: transparent; }
+  .feedbackArt { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feedbackArt, .card, .platformTitle img { transition: none; }
+  .feedbackAction:is(:hover, :focus-within) .feedbackArt,
+  .card:hover, .card:is(:hover, :focus-within, :target) .platformTitle img { transform: none; }
+}

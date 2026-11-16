@@ -1,0 +1,46 @@
+.section {
+  background: radial-gradient(ellipse at 78% 40%, #edf4ff, transparent 57%), #fff;
+}
+
+.logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  object-fit: contain;
+  border: 1px solid #e1e8f3;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.preview { min-width: 0; }
+.device { box-shadow: 0 5px 0 #d3e0f0, 0 10px 0 #e7eef8, 0 24px 32px rgb(13 45 90 / 14%); }
+.device p { margin: 0; color: #414d5d; font-size: 14px; line-height: 1.65; }
+
+.workstreams, .steps { display: flex; flex-wrap: wrap; gap: 8px; }
+.workstreams { margin-bottom: 12px; }
+.workstreams button, .steps li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #cdd6e2;
+  border-radius: 8px;
+  color: #10141a;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+.workstreams button { min-height: 44px; padding: 6px 12px; cursor: pointer; }
+.workstreams button:hover { border-color: var(--blue); }
+.workstreams button[aria-pressed="true"] { background: var(--blue); color: #fff; border-color: var(--blue); }
+.workstreams button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.workstream { margin-top: 12px; }
+.workstream h3 { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.workstream h3 svg { color: var(--blue); flex: none; }
+.steps { list-style: none; margin: 15px 0 0; padding: 0; }
+.steps li { padding: 4px 8px; background: #eff3f8; }
+.cta { margin-top: clamp(16px, 4vw, 30px); max-width: 100%; }
+
+@media (max-width: 760px) {
+  .device { transform: none; }
+}

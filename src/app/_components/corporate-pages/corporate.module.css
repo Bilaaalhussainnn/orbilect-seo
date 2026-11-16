@@ -1,0 +1,61 @@
+.hero, .section {
+  --blue: #004aad;
+  padding: clamp(2.007rem, 3.65vw, 3.467rem) clamp(1rem, 5vw, 4rem);
+}
+.hero {
+  padding-block: clamp(2.555rem, 5.11vw, 4.38rem);
+  color: #f7faff;
+  background:
+    linear-gradient(#9abbf513 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, #9abbf513 1px, transparent 1px) 0 0 / 48px 48px,
+    radial-gradient(ellipse at top right, #152f56, #090d16 72%);
+}
+.wrap { width: min(100%, 76rem); margin-inline: auto; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .82fr); gap: clamp(1.3rem, 4vw, 3.5rem); align-items: center; }
+.brand { display: flex; align-items: center; gap: .55rem; margin-bottom: 1.6rem; font-size: 1.062rem; font-weight: 700; }
+.brand strong, .accentWord, .heading h2 span { color: var(--blue); }
+.eyebrow { margin: 0 0 1rem; padding-bottom: .65rem; border-bottom: 1px solid currentColor; border-bottom-color: color-mix(in srgb, currentColor 24%, transparent); font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.hero h1, .heading h2 { margin: 0 0 .7rem; line-height: 1.12; letter-spacing: -.045em; }
+.hero h1 { font-size: clamp(1.68rem, 1.305rem + 2.12vw, 2.84rem); text-wrap: balance; }
+.heading h2 { font-size: clamp(1.386rem, 1.035rem + 1.485vw, 2.12rem); }
+.word, .accentWord { display: inline-block; }
+.character { animation: type-in 1ms var(--delay) both; }
+@keyframes type-in { from { opacity: 0; } to { opacity: 1; } }
+.intro { max-width: 37rem; margin: 0; color: #c6d3e6; line-height: 1.65; }
+.action { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; margin-top: 1rem; padding: .55rem .95rem; border: 1px solid #fff; border-radius: 999px; background: #fff; color: #111923; font-size: .85rem; font-weight: 700; text-decoration: none; }
+.action:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+.hero :is(a, button):focus-visible { outline: 2px solid #a9ceff; outline-offset: 3px; }
+
+.preview { min-width: 0; }
+.stage { display: grid; min-height: clamp(10rem, 23vw, 16rem); place-items: center; perspective: 720px; background: radial-gradient(ellipse, #2369bb55, transparent 68%); }
+.tilt, .model { transform-style: preserve-3d; transition: transform .35s ease; }
+.model { position: relative; width: clamp(9rem, 19vw, 14rem); aspect-ratio: 1.55; transform: rotateX(12deg) rotateY(var(--angle)); }
+.back, .middle, .face { position: absolute; inset: 0; display: grid; place-items: center; border: 1px solid #8cbaff90; border-radius: .9rem; }
+.back { background: #0d203d; transform: translate3d(16px, 13px, -22px); }
+.middle { background: #173961; transform: translate3d(8px, 7px, 0); }
+.face { background: linear-gradient(145deg, #2b77ce, #004aad 65%, #083472); transform: translateZ(22px); box-shadow: 0 12px 24px #0006; }
+.faceContent { display: grid; justify-items: center; gap: .45rem; padding: .55rem; text-align: center; font-size: .83rem; font-weight: 700; animation: reveal .25s ease-out both; }
+@keyframes reveal { from { opacity: 0; translate: 0 4px; } to { opacity: 1; translate: 0 0; } }
+.controls { display: flex; justify-content: center; flex-wrap: wrap; gap: .4rem; }
+.controls button { min-height: 44px; padding: .4rem .65rem; border: 1px solid #3e5879; border-radius: .55rem; background: #111c2e; color: #fff; font: inherit; font-size: .78rem; cursor: pointer; }
+.controls button:hover, .controls button[aria-pressed="true"] { background: var(--blue); border-color: #83b3ef; }
+
+.section { background: #fff; color: #111923; }
+.heading { max-width: 46rem; margin-bottom: 1.25rem; }
+.topics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+.topics article { padding: 1rem; border: 1px solid #d5e2f1; border-top: 2px solid var(--blue); border-radius: .65rem; background: linear-gradient(140deg, #fff, #f1f6ff); }
+.topics h3 { margin: 0 0 .45rem; font-size: 0.94rem; line-height: 1.35; }
+.topics p { margin: 0; color: #445267; font-size: .9rem; line-height: 1.65; }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .stage:hover .tilt { transform: rotateY(15deg) rotateX(-8deg) translateY(-4px); }
+}
+@media (max-width: 850px) {
+  .heroGrid { grid-template-columns: minmax(0, 1fr); }
+  .preview { width: min(100%, 32rem); margin-inline: auto; }
+}
+@media (max-width: 620px) { .topics { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) {
+  .character, .faceContent { animation: none; }
+  .model, .tilt { transition: none; }
+}

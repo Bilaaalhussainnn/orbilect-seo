@@ -1,0 +1,55 @@
+.section {
+  color: #fff;
+  padding-block: clamp(2.75rem, 6vw, 5.5rem);
+  background:
+    linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px) 0 0 / 40px 40px,
+    radial-gradient(ellipse at 86% 12%, #102647, transparent 65%),
+    #08121e;
+}
+.wrap { width: min(1280px, calc(100% - 40px)); margin-inline: auto; }
+.header { max-width: 720px; margin-bottom: clamp(1.4rem, 4vw, 2.6rem); }
+.header h2 { font-size: clamp(1.65rem, 3.4vw, 2.4rem); letter-spacing: -.045em; margin: 0; }
+.header h2 span { background: #004aad; color: #fff; padding-inline: .15em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.header p:last-child, .body p { color: #d6e1ee; line-height: 1.65; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: clamp(.85rem, 4vw, 3rem); margin-bottom: clamp(1.3rem, 3vw, 2.4rem); }
+.sizes h3, .group h3 { margin: 0 0 .65rem; font-size: 1.1rem; }
+.sizeOptions { display: flex; flex-wrap: wrap; gap: .4rem; }
+.sizeOptions button {
+  min-height: 38px; text-align: left; padding: .42rem .62rem; background: #12243a; border: 1px solid #4b7197;
+  color: #fff; font: inherit; font-size: .81rem; border-radius: 5px; cursor: pointer; transition: color .2s, background-color .2s;
+}
+.sizeOptions button:is(:hover, [aria-pressed="true"]) { background: #004aad; border-color: #6c9bcc; }
+.sizeOptions button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.sizeCopy { max-width: 62ch; color: #d6e1ee; line-height: 1.65; animation: open .25s ease both; }
+.stage { display: grid; place-items: center; min-height: 217px; padding: 12px 14px 18px; perspective: 760px; background: radial-gradient(ellipse at center, #0a3061a8, transparent 74%); }
+.rig { width: min(100%, 350px); transform-style: preserve-3d; transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform .3s ease; }
+.stack { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; transform-style: preserve-3d; }
+.stack li {
+  --plane: 1; display: flex; align-items: center; min-height: 42px; gap: 10px; padding: .55rem .7rem;
+  border: 1px solid #577ea6; background: #112743; color: #fff; border-radius: 8px; box-shadow: 0 4px 0 #031025, 0 8px 15px #0005;
+  font-size: .84rem; font-weight: 600; transform: translateZ(calc(15px * var(--plane))) rotate(-5deg);
+  animation: rise .42s calc(.08s * var(--plane)) ease both;
+}
+.stack li:nth-child(2) { --plane: 2; margin-inline-start: 5%; }
+.stack li:nth-child(3) { --plane: 3; margin-inline-start: 10%; background: #004aad; }
+.stack li svg { flex: none; }
+.industries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem clamp(.75rem, 2vw, 1.5rem); align-items: start; }
+@keyframes rise { from { opacity: .35; translate: 0 10px; } }
+.group details { background: #101d30; border: 1px solid #364d6a; border-radius: 8px; }
+.group details[open] { border-color: #5286bf; }
+.group summary { display: flex; min-height: 44px; justify-content: space-between; align-items: center; gap: .6rem; cursor: pointer; list-style: none; padding: .55rem .8rem; font-size: .92rem; font-weight: 650; }
+.group summary::-webkit-details-marker { display: none; }
+.group details[open] summary { background: #004aad; color: #fff; border-radius: 7px 7px 0 0; }
+.group summary svg { flex: none; transition: transform .2s; }
+.group details[open] summary svg { transform: rotate(45deg); }
+.group summary:focus-visible, .body a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.body { padding: .7rem .8rem .85rem; animation: open .2s ease both; }
+.body p { margin: 0 0 .55rem; font-size: .85rem; }
+.body p:last-child { margin-bottom: 0; }
+.body strong { color: #fff; }
+.body a { display: inline-flex; align-items: center; gap: .35rem; color: #fff; font-size: .86rem; text-underline-offset: .2em; }
+@keyframes open { from { opacity: .5; transform: translateY(-3px); } }
+@media (max-width: 760px) { .layout { grid-template-columns: minmax(0, 1fr); } .stage { min-height: 190px; } }
+@media (max-width: 560px) { .industries { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .body, .sizeCopy, .stack li { animation: none; } .group summary svg, .rig, .sizeOptions button { transition: none; } }

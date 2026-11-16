@@ -1,0 +1,231 @@
+.light, .reviews, .black {
+  --blue: #004aad;
+  padding-block: clamp(39.42px, 5.84vw, 78.84px);
+  font-family: var(--font-poppins, "Poppins"), sans-serif;
+}
+.light { background: #fff; color: #12161d; }
+.reviews { background: #f5f6f8; color: #12161d; }
+.black { background: #08090b; color: #fff; }
+.wrap { width: min(1280px, calc(100% - clamp(36px, 10vw, 144px))); margin-inline: auto; }
+.head { max-width: 780px; }
+.head h2 { margin: 0; font-size: clamp(23.52px, 3.6vw, 40px); line-height: 1.12; letter-spacing: -.045em; }
+.head h2 > span { color: var(--blue); background: transparent; padding: 0; }
+.black .head h2 > span {
+  color: #fff;
+  background: var(--blue);
+  padding-inline: .12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.head p { margin: 16px 0 0; line-height: 1.7; }
+.head .eyebrow {
+  margin: 0 0 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.split, .offerGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: clamp(24px, 6vw, 78px); }
+.split { margin-top: 32px; }
+.choices { display: grid; gap: 6px; }
+.choices button, .reviewControls button { font: inherit; cursor: pointer; }
+.choices button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 0;
+  border-left: 2px solid transparent;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  transition: background .2s, transform .2s;
+}
+.choices button svg { flex: none; color: var(--blue); }
+.choices button[aria-pressed="true"] { border-color: var(--blue); background: #004aad10; font-weight: 600; }
+.choices button:hover { transform: translateX(3px); }
+.choices button:focus-visible, .reviewControls button:focus-visible, .cta:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.preview { perspective: 900px; }
+.sequence { display: grid; gap: 12px; transform: rotateY(-5deg); }
+.sequence > div {
+  padding: 16px 18px;
+  border: 1px solid #d5dee9;
+  border-radius: 12px;
+  background: #f8faff;
+  box-shadow: 0 5px 0 #dce6f2;
+  animation: growthLift .35s ease-out backwards;
+}
+.sequence > div:nth-child(2) { animation-delay: .07s; }
+.sequence > div:nth-child(3) { animation-delay: .14s; border-color: var(--blue); }
+.sequence small, .chatMessages small { display: block; margin-bottom: 4px; font-weight: 600; }
+.sequence small { color: var(--blue); }
+.sequence p, .reviewCopy p { margin: 0; line-height: 1.6; }
+
+.reviewControls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.reviewControls button {
+  min-height: 44px;
+  padding: 8px 13px;
+  border: 1px solid #687487;
+  border-radius: 99px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+}
+.reviewControls button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+.reviewCopy { max-width: 850px; margin-top: 20px; padding-left: 16px; border-left: 3px solid var(--blue); }
+.reviewCopy > div { animation: growthLift .3s ease-out; }
+.reviewCopy h3 { margin: 0 0 7px; }
+.reviewCopy p + p { margin-top: 8px; }
+
+.offerGrid { align-items: center; }
+.price { margin: 20px 0 0; font-weight: 600; }
+.price strong { font-size: clamp(23.52px, 4vw, 38.4px); }
+.included { margin: 12px 0 24px; padding-left: 1.2em; line-height: 1.65; }
+.included li + li { margin-top: 5px; }
+.cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 9px 14px; border: 1px solid #fff; border-radius: 99px; color: #fff; text-decoration: none; }
+.cta:hover { background: var(--blue); border-color: var(--blue); }
+.chatLabel { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.chatDemo .reviewControls { margin-top: 12px; }
+.chatMessages { margin-top: 15px; perspective: 700px; }
+.chatMessages p { max-width: 87%; margin: 0 0 10px; padding: 12px 15px; border: 1px solid #53647a; border-radius: 12px; background: #141a23; line-height: 1.5; animation: growthLift .38s ease-out backwards; }
+.chatMessages p + p { margin-left: auto; background: #004aad; border-color: #004aad; animation-delay: .12s; }
+.chatMessages small { color: #e3ebf8; }
+
+@keyframes growthLift { from { opacity: .2; transform: translateY(10px) rotateX(-8deg); } }
+@media (max-width: 760px) {
+  .split, .offerGrid { grid-template-columns: 1fr; }
+  .sequence { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sequence, .choices button:hover { transform: none; }
+  .sequence > div, .reviewCopy > div, .chatMessages p { animation: none; }
+  .choices button { transition: none; }
+}
+
+/* Automotive service explorer */
+.serviceExplorer {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: start;
+  gap: clamp(24px, 5vw, 68px);
+  margin-top: 30px;
+}
+.servicePicker { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.servicePicker button {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 64px;
+  padding: 10px;
+  border: 1px solid #d6dce5;
+  border-radius: 10px;
+  background: #fff;
+  color: #12161d;
+  text-align: left;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.servicePicker button > svg { color: #004aad; }
+.servicePicker button[aria-pressed="true"] {
+  border-color: #004aad;
+  background: #004aad;
+  color: #fff;
+}
+.servicePicker button[aria-pressed="true"] svg { color: #fff; }
+.serviceArrow { opacity: 0; }
+.servicePicker button:is(:hover, :focus-visible, [aria-pressed="true"]) .serviceArrow { opacity: 1; }
+.servicePicker button:focus-visible { outline: 2px solid #004aad; outline-offset: 3px; }
+@media (hover: hover) { .servicePicker button:hover { transform: translateY(-2px); } }
+
+.serviceStage { min-width: 0; }
+.serviceStory { animation: serviceEnter .32s ease-out; }
+.searchMock {
+  padding: 14px 16px;
+  border: 1px solid #d6dce5;
+  border-radius: 14px;
+  background: #f4f6f9;
+}
+.searchMock > span, .bookingPath small { display: block; margin-bottom: 5px; color: #004aad; font-weight: 600; }
+.searchMock > div { display: flex; align-items: center; gap: 9px; }
+.searchMock svg { flex: none; color: #004aad; }
+.bookingPath { position: relative; margin: 0 0 0 21px; padding: 10px 0 0 24px; list-style: none; }
+.bookingPath::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 14px 0;
+  width: 2px;
+  background: #004aad;
+  transform-origin: top;
+  animation: serviceTrace .45s ease-out;
+}
+.bookingPath li { position: relative; padding: 12px 0 4px; line-height: 1.55; }
+.bookingPath li::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #004aad;
+}
+.bookingPath p { margin: 0; }
+
+.typedPrice { color: #fff; transition: color .2s ease; }
+.price:hover .typedPrice { color: #004aad; }
+.typedPrice > span { color: inherit; }
+.typedPrice[data-play] > span { animation-name: priceType; animation-fill-mode: none; }
+
+@keyframes priceType { from, to { opacity: 0; } }
+@keyframes serviceEnter { from { opacity: .35; transform: translateY(8px); } }
+@keyframes serviceTrace { from { transform: scaleY(0); } }
+
+@media (max-width: 760px) {
+  .serviceExplorer { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .servicePicker button, .typedPrice { transition: none; }
+  .servicePicker button:hover { transform: none; }
+  .serviceStory, .bookingPath::before, .typedPrice[data-play] > span { animation: none; }
+}
+/* End Automotive service explorer */
+
+/* Automotive price line */
+.priceBadge {
+  display: inline-block;
+  padding: .08em .35em;
+  border-radius: .24em;
+  background: #004aad;
+  color: #fff;
+  font: inherit;
+  white-space: nowrap;
+}
+
+.priceForReaders {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.price[data-price-playing] .priceLetter,
+.price[data-price-playing] .priceBadge {
+  animation-name: revealPriceText;
+  animation-fill-mode: none;
+}
+.price[data-price-playing] .priceBadge { animation-duration: 300ms; }
+
+@keyframes revealPriceText { from, to { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .price[data-price-playing] :is(.priceLetter, .priceBadge) { animation: none; }
+}

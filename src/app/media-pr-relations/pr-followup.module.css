@@ -1,0 +1,140 @@
+.root { --blue: #004aad; --ink: #101824; --line: #d8e3f1; color: var(--ink); }
+.root :where(h2, h3, p) { margin: 0; }
+.root h2 { font-size: clamp(1.764rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.08; letter-spacing: -.05em; }
+.root h2 span { color: var(--blue); }
+.root h3 { font-size: 1.035rem; font-weight: 700; line-height: 1.35; }
+.root p { color: #405168; line-height: 1.7; margin-top: .7rem; max-width: 58ch; }
+.inner { width: min(86%, 1320px); margin-inline: auto; }
+.split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.75rem, 6vw, 6rem); align-items: center; }
+.dark, .white { padding-block: clamp(2.555rem, 5.11vw, 5.11rem); }
+.dark {
+  color: #f8fbff;
+  background:
+    linear-gradient(#b5ceff12 1px, transparent 1px),
+    linear-gradient(90deg, #b5ceff12 1px, transparent 1px),
+    radial-gradient(ellipse at 80% 50%, #142c50, #0b111c 62%);
+  background-size: 48px 48px, 48px 48px, auto;
+}
+.dark h2 span {
+  color: white; background: var(--blue); padding-inline: .12em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.dark p { color: #c6d4e7; }
+.white { background: white; }
+.press > :first-child { grid-column: 2; grid-row: 1; }
+.press > :last-child { grid-column: 1; grid-row: 1; }
+.options { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.4rem; }
+.options button {
+  display: inline-flex; align-items: center; gap: .45rem; min-height: 44px;
+  padding: .6rem .8rem; border: 1px solid var(--line); border-radius: 10px;
+  color: inherit; background: transparent; font: inherit; font-size: .85rem;
+  font-weight: 600; text-align: left; cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.options svg { flex: none; }
+.dark .options button { border-color: #3d5574; background: #111e31; }
+.options button:hover { border-color: #497cb7; }
+.root .options button[aria-pressed="true"] { color: white; background: var(--blue); border-color: #6399d7; }
+.detail { margin-top: 1.4rem; min-height: 8rem; padding: 1rem 0 .25rem 1rem; border-left: 2px solid var(--blue); }
+.reveal, .glyph { animation: enter .38s ease both; }
+.root :is(a, button):focus-visible { outline: 2px solid #679ff2; outline-offset: 4px; }
+
+.scene, .lightScene {
+  --rx: 0deg; --ry: 0deg;
+  position: relative; isolation: isolate; min-height: clamp(245px, 34vw, 410px);
+  display: grid; place-items: center; perspective: 840px;
+  background: radial-gradient(ellipse, #1769cb43 0%, transparent 66%);
+}
+.lightScene { background: radial-gradient(ellipse, #d5e6ff 0%, transparent 70%); }
+.orbit { position: absolute; width: 90%; height: 58%; border: 1px solid #6096d05c; border-radius: 50%; transform: rotate(-16deg); }
+.orbit + .orbit { width: 71%; height: 73%; transform: rotate(30deg); border-style: dashed; }
+.camera {
+  position: relative; width: clamp(130px, 17vw, 208px); aspect-ratio: 1;
+  transform-style: preserve-3d; transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform .22s ease-out;
+}
+.stack { position: absolute; inset: 0; transform-style: preserve-3d; animation: float 6s ease-in-out infinite; }
+.back, .middle, .face { position: absolute; inset: 0; border-radius: 25%; border: 1px solid #759bd982; }
+.back { background: #0b1424; transform: translate3d(28px, 25px, -38px); }
+.middle { background: #132c50; transform: translate3d(14px, 12px, -19px); }
+.face {
+  display: grid; place-items: center;
+  background: linear-gradient(145deg, #0059c8, #102344 82%); color: white;
+  transform: translateZ(4px); box-shadow: inset 0 0 0 8px #7db7ff12, 0 14px 32px #06102155;
+}
+.lightScene .face { background: linear-gradient(145deg, #fff, #d9e9ff); color: var(--blue); }
+.lightScene .middle { background: #82afe9; }
+.lightScene .back { background: #004aad; }
+.glyph { display: grid; place-items: center; }
+@keyframes enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(-6px) rotateX(12deg) rotateY(-20deg) rotateZ(-7deg); }
+  50% { transform: translateY(8px) rotateX(7deg) rotateY(-13deg) rotateZ(-4deg); }
+}
+
+.cta {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 46px;
+  padding: .7rem 1.15rem; border: 1px solid var(--ink); border-radius: 999px;
+  background: var(--ink); color: white; text-decoration: none; font-weight: 700;
+  margin-top: 1.2rem; transition: color .2s, background-color .2s;
+}
+.cta:hover { background: white; color: var(--ink); }
+.cta svg { flex: none; transition: transform .2s; }
+.cta:hover svg { transform: rotate(45deg); }
+.news { padding-block: clamp(1.825rem, 3.65vw, 3.285rem); background: #eef4fc; border-block: 1px solid var(--line); }
+.banner { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
+.banner .cta { margin: 0; }
+@media (max-width: 800px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .press > :first-child, .press > :last-child { grid-column: auto; grid-row: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root * { animation: none; transition: none; }
+  .camera { transform: none; }
+  .stack { transform: rotateX(10deg) rotateY(-18deg) rotateZ(-6deg); }
+}
+
+/* Black Newsroom CTA */
+.root .news {
+  background: #000;
+  color: #fff;
+  border-block-color: #242424;
+}
+
+.root .news h2 span {
+  color: #fff;
+  background: #004aad;
+  padding-inline: .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.root .news p {
+  color: #c9cdd4;
+}
+
+.root .news .cta {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.root .news .cta:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Compact Newsroom CTA */
+.root .news { padding-block: clamp(1.75rem, 4vw, 3rem); }
+.root .news h2 { font-size: clamp(1.305rem, 2vw, 1.68rem); }
+.root .news p { font-size: .875rem; margin-top: .45rem; }
+.root .news .cta {
+  font-size: .8125rem;
+  min-height: 44px;
+  padding: .45rem .85rem;
+  gap: .4rem;
+}
+.root .news .cta svg { width: 14px; height: 14px; }

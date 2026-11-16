@@ -1,0 +1,21 @@
+:global([data-orbilect-contact-grid]) {
+  background: linear-gradient(#9bbcf416 1px,transparent 1px),
+    linear-gradient(90deg,#9bbcf416 1px,transparent 1px),
+    radial-gradient(ellipse at 79% 18%,#17375e 0%,#112037 43%,#0b1019 82%) !important;
+  background-size: 52px 52px,52px 52px,auto !important;
+}
+.title { position: relative; display: block; color: #fff; }
+.title .reserve { display: block; opacity: 0; }
+.title .visible { position: absolute; inset: 0; display: block; color: #fff; }
+.title .accent { color: #004aad !important; }
+.title .cursor {
+  display: inline-block;
+  width: .075em;
+  height: .76em;
+  margin-left: .08em;
+  background: currentColor;
+  vertical-align: -.015em;
+  animation: blink .75s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .title .cursor { display: none; } }

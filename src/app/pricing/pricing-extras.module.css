@@ -1,0 +1,36 @@
+.ranges, .staffing { --blue: #004aad; color: #10141a; padding-block: clamp(42.34px, 5.84vw, 73px); scroll-margin-top: 90px; }
+.ranges { background: #f2f5f9; }
+.staffing { background: #fff; }
+.wrap { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.eyebrow { max-width: 650px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #ccd5e2; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.wrap h2 { margin: 0; font-size: 25.2px; line-height: 1.2; letter-spacing: -.035em; }
+.wrap h2 span, .amount strong { color: var(--blue); }
+.intro { max-width: 680px; margin: 12px 0 24px; color: #435164; font-size: 14px; line-height: 1.7; }
+.group { margin-top: 12px; border: 1px solid #ccd5e2; border-radius: 10px; background: #fff; }
+.group summary { display: flex; justify-content: space-between; gap: 8px; min-height: 44px; align-items: center; padding: 9px 14px; border-radius: 9px; cursor: pointer; list-style: none; font-size: 14px; font-weight: 700; }
+.group summary::-webkit-details-marker { display: none; }
+.group summary:hover { background: var(--blue); color: #fff; }
+.group[open] summary span { transform: rotate(45deg); }
+.entries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 14px 12px; gap: 8px 16px; }
+.entry { padding-block: 12px; border-top: 1px solid #d4dce7; }
+.entry h3 { margin: 0; font-size: 15.98px; line-height: 1.3; }
+.entry p { margin: 6px 0 0; color: #435164; font-size: 13px; line-height: 1.55; }
+.amount { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 8px; }
+.amount strong { font-size: 16.2px; }
+.timing strong { color: #10141a; }
+.roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.role { display: flex; align-items: center; justify-content: space-between; gap: 9px; min-height: 60px; padding: 10px 13px; border: 1px solid #cbd5e2; border-radius: 8px; color: #10141a; text-decoration: none; }
+.role > span { display: grid; gap: 3px; }
+.role small { font-size: 12px; }
+.role svg { flex: none; }
+.role:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+.cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 18px; padding: 6px 13px; border-radius: 999px; background: #10141a; color: #fff; font-size: 13px; font-weight: 650; text-decoration: none; }
+.cta:hover { background: var(--blue); }
+.wrap :is(a, summary):focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 36px); }
+  .entries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .entries, .roles { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,159 @@
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  perspective: 950px;
+  color: #004aad;
+}
+.tilt {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  width: min(82%, 900px);
+  aspect-ratio: 256 / 190;
+  transform: translate(-50%, -50%) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transform-style: preserve-3d;
+  transition: transform .2s ease-out;
+}
+.board {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #004aad;
+  border-radius: 4%;
+  background: linear-gradient(145deg, #002759, #061426 72%);
+  box-shadow: 0 0 55px #004aad42, inset 0 0 48px #004aad52;
+  transform-style: preserve-3d;
+  animation: float-board 16s ease-in-out infinite alternate;
+}
+.edge {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #004aad;
+  border-radius: inherit;
+  background: #001b3c;
+  transform: translateZ(-12px);
+}
+
+.marketingChart { position:absolute; inset:5%; width:90%; height:90%; transform:translateZ(12px); }
+.bars { transform-origin:center 84%; animation:bar-motion 6s ease-in-out infinite alternate; }
+.trend { stroke-dasharray:100; animation:trend-motion 6s ease-in-out infinite; }
+.searchTile { position:absolute; top:9%; left:9%; display:flex; align-items:center; gap:8px; padding:7px 11px; border:1px solid #004aad; border-radius:10px; color:#fff; background:linear-gradient(135deg,#004aad,#061426); transform:translateZ(32px); }
+.searchTile i { display:block; width:clamp(12px,3vw,37px); height:3px; background:#fff; opacity:.65; border-radius:3px; }
+@keyframes bar-motion { from { transform:scaleY(.75); } to { transform:scaleY(1); } }
+@keyframes trend-motion { 0% { stroke-dashoffset:100; } 45%,100% { stroke-dashoffset:0; } }
+@keyframes float-board {
+  from { transform: translateY(-14px) rotateX(48deg) rotateZ(-24deg) rotateY(-12deg); }
+  to { transform: translateY(15px) rotateX(56deg) rotateZ(-12deg) rotateY(4deg); }
+}
+@keyframes signal { to { stroke-dashoffset: -100; } }
+@media (max-width: 760px) {
+  .tilt { width: 105%; left: 61%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tilt { transition: none; transform: translate(-50%, -50%); }
+  .board, .bars, .trend { animation: none; }
+  .board { transform: rotateX(48deg) rotateZ(-24deg); }
+}
+
+
+/* Orbilect marketing bubbles */
+.board {
+  background: radial-gradient(ellipse at 25% 10%, #004aad, transparent 64%),
+              linear-gradient(145deg, #032046, #050a13 80%);
+}
+.marketingChart :is(.trend, circle) { stroke: #2870c2; }
+.marketingChart circle { fill: #2870c2; }
+.searchTile { color: #6d9ed7; background: linear-gradient(140deg, #003777, #061426); }
+.searchTile i { background: #2866aa; }
+
+.bubbles { position: absolute; inset: 0; z-index: 1; }
+.bubbles span {
+  position: absolute;
+  padding: 7px 13px;
+  border: 1px solid #004aad;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(140deg, #004aad, #06162e 85%);
+  box-shadow: 0 6px 18px #0006;
+  font-size: clamp(10px, 1.15vw, 15px);
+  font-weight: 600;
+  white-space: nowrap;
+  animation: orbilect-bubble-drift 6s ease-in-out infinite alternate;
+}
+.bubbles span:nth-child(1) { top: 15%; left: 16%; }
+.bubbles span:nth-child(2) { top: 19%; right: 10%; animation-delay: -2s; }
+.bubbles span:nth-child(3) { bottom: 20%; left: 10%; animation-delay: -4s; }
+.bubbles span:nth-child(4) { bottom: 16%; right: 13%; animation-delay: -1s; }
+@keyframes orbilect-bubble-drift {
+  from { transform: translate(0, 3px); }
+  to { transform: translate(7px, -8px); }
+}
+@media (max-width: 640px) {
+  .bubbles span:nth-child(1) { top: 8%; left: 23%; }
+  .bubbles span:nth-child(2) { top: 13%; right: 5%; }
+  .bubbles span:nth-child(3) { bottom: 15%; left: 5%; }
+  .bubbles span:nth-child(4) { bottom: 10%; right: 5%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bubbles span { animation: none; }
+}
+
+
+/* Round marketing background orbs */
+.growthOrbs { position:absolute; inset:0; pointer-events:none; }
+.growthOrbs > div {
+  position:absolute; display:grid; align-content:center; justify-items:center;
+  width:clamp(106px,12vw,177px); aspect-ratio:1; gap:.17em; padding:12px;
+  border-radius:50%; border:1px solid #52769c77; text-align:center; color:#fff;
+  background:radial-gradient(circle at 31% 16%, #233953, #111e2e 58%, #061122);
+  box-shadow:inset 0 1px 2px #ffffff22, 0 14px 36px #0005;
+  animation:orbilect-float-orb 8s ease-in-out infinite alternate;
+}
+.growthOrbs b { color:#cbd7e5; font-size:clamp(10px,1vw,15px); line-height:1.12; }
+.growthOrbs strong { font-size:clamp(20px,2.3vw,37px); line-height:1.12; }
+.growthOrbs svg { width:49%; height:auto; color:#004aad; overflow:visible; }
+.growthOrbs > div:nth-child(1) { top:5%; left:18%; }
+.growthOrbs > div:nth-child(2) { top:8%; right:9%; animation-delay:-2s; }
+.growthOrbs > div:nth-child(3) { bottom:10%; left:13%; animation-delay:-4s; }
+.growthOrbs > div:nth-child(4) { bottom:11%; right:14%; animation-delay:-6s; }
+@keyframes orbilect-float-orb {
+  from { transform:translate(-6px,8px); }
+  to { transform:translate(9px,-12px); }
+}
+@media (max-width:700px) {
+  .growthOrbs > div:nth-child(1) { left:17%; }
+  .growthOrbs > div:nth-child(2) { right:5%; }
+  .growthOrbs > div:nth-child(3) { left:5%; }
+  .growthOrbs > div:nth-child(4) { right:5%; }
+}
+@media (max-height:540px) { .growthOrbs > div { opacity:.48; } }
+@media (prefers-reduced-motion:reduce) { .growthOrbs > div { animation:none; } }
+
+/* Compact ambient marketing bubbles */
+.growthOrbs > div {
+  width: clamp(56px, 5.6vw, 96px);
+  padding: 6px;
+  gap: 2px;
+  opacity: .44;
+  box-shadow: inset 0 1px 1px #ffffff12, 0 6px 16px #0003;
+  animation: soft-hero-orb 13s ease-in-out infinite alternate;
+}
+.growthOrbs b { font-size: clamp(7px, .65vw, 10px); font-weight: 600; }
+.growthOrbs strong { font-size: clamp(12px, 1.3vw, 21px); }
+.growthOrbs svg { width: 40%; }
+.growthOrbs > div:nth-child(1) { top: 9%; left: 17%; }
+.growthOrbs > div:nth-child(2) { top: 12%; right: 10%; }
+.growthOrbs > div:nth-child(3) { bottom: 13%; left: 9%; }
+.growthOrbs > div:nth-child(4) { bottom: 11%; right: 11%; }
+@keyframes soft-hero-orb {
+  from { transform: translate(-3px, 2px); }
+  to { transform: translate(4px, -4px); }
+}
+@media (max-width: 640px) {
+  .growthOrbs > div { opacity: .29; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .growthOrbs > div { animation: none; }
+}

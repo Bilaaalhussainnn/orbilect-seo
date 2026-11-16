@@ -1,0 +1,231 @@
+.section {
+  background: #090b10;
+  color: #fff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 7vw, 108px);
+  width: min(calc(100% - 48px), 1320px);
+  margin-inline: auto;
+  padding-block: clamp(39.42px, 5.84vw, 78.84px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #c7d0df;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.copy h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.copy h2 span { color: #004AAD; }
+
+.intro {
+  max-width: 48ch;
+  margin: 16px 0 22px;
+  color: #bec8d8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.preview {
+  --line: #375678;
+  --surface: #142a44;
+  min-width: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.controls button,
+.chartHeader button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 7px 12px;
+  border: 1px solid #354257;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.controls button:hover { border-color: #004AAD; }
+.controls button[aria-pressed="true"] { background: #004AAD; border-color: #004AAD; }
+
+.controls button:focus-visible,
+.chartHeader button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.chartHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+  color: #bec8d8;
+  font-size: 11px;
+}
+
+.chartHeader button { border-color: transparent; padding-inline: 7px; }
+.chartHeader button:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  fill: none;
+}
+
+.grid { stroke: #283344; stroke-width: 1; }
+.trace { stroke: #004AAD; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.sweep { stroke: #004AAD; stroke-width: 2; opacity: 0; }
+
+.findings { min-height: 118px; padding-top: 10px; }
+.findings h3 { margin: 0; color: #fff; font-size: 15.98px; line-height: 1.35; }
+.findings ul { display: grid; gap: 7px; margin: 10px 0 0; padding: 0; list-style: none; }
+.findings li { display: flex; align-items: center; gap: 8px; color: #c7d0df; font-size: 13px; }
+.findings li svg { flex-shrink: 0; color: #004AAD; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .trace { stroke-dasharray: 1; animation: draw 1.15s ease-out both; }
+  .sweep { animation: scan 1.15s ease-out both; }
+  .findings { animation: enter 320ms ease-out both; }
+
+  @keyframes draw {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes scan {
+    0% { opacity: 0; transform: translateX(0); }
+    18% { opacity: .85; }
+    100% { opacity: 0; transform: translateX(416px); }
+  }
+
+  @keyframes enter {
+    from { opacity: .4; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@media (max-width: 820px) {
+  .layout { grid-template-columns: minmax(0, 1fr); width: min(calc(100% - 36px), 640px); }
+  .copy h2 { font-size: clamp(23.52px, 4.8vw, 32px); }
+}
+
+
+/* Orbilect 3D audit finish */
+.section {
+  background:
+    linear-gradient(#ffffff0b 1px, transparent 1px) 0 0 / 42px 42px,
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px) 0 0 / 42px 42px,
+    radial-gradient(ellipse at 88% 0%, #004aad34, transparent 65%), #090b10;
+}
+
+.preview { isolation: isolate; }
+
+.model {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 26vw, 350px);
+  touch-action: pan-y;
+  background: radial-gradient(ellipse at 50% 67%, #004aad36, transparent 67%);
+}
+
+.model canvas { touch-action: pan-y; }
+.modelFallback { display: grid; place-items: center; height: 100%; font-size: 13px; }
+.findings { padding-top: 0; }
+
+@media (max-width: 1024px) {
+  .layout { gap: 32px; }
+}
+
+@media (max-width: 820px) {
+  .layout { gap: 30px; }
+  .model { height: clamp(225px, 48vw, 330px); }
+}
+
+@media (max-width: 480px) {
+  .controls { gap: 6px; }
+  .controls button { padding-inline: 9px; font-size: 11px; }
+  .model { height: 230px; pointer-events: none; }
+}
+
+.auditCta svg { transition: transform .25s ease; }
+.auditCta:is(:hover, :focus-visible) svg { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) { .auditCta svg { transition: none; } }
+
+.scanDeck {
+  display: grid;
+  grid-template-columns: minmax(110px, .7fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(.8rem, 2vw, 2rem);
+  padding: clamp(1rem, 2.7vw, 2.2rem);
+  border: 1px solid #39567c;
+  border-radius: 1rem;
+  background: linear-gradient(125deg, #1a3255, #0a172a);
+  box-shadow: 0 19px 40px #0006;
+}
+
+.scanMark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 135px;
+  overflow: hidden;
+  border-radius: .75rem;
+  border: 1px solid #45628b;
+  background:
+    linear-gradient(#92baff16 1px, transparent 1px) 0 0 / 19px 19px,
+    linear-gradient(90deg, #92baff16 1px, transparent 1px) 0 0 / 19px 19px,
+    #111d31;
+}
+
+.scanTarget {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 1rem;
+  background: linear-gradient(150deg, #2472dd, #003980);
+  color: #fff;
+  transform: rotate(-8deg) skewX(-7deg);
+  box-shadow: 6px 8px 0 #06274f, 12px 15px 22px #0007;
+}
+
+.scanBeam {
+  position: absolute;
+  inset: 0 8% auto;
+  height: 2px;
+  background: #8dcaff;
+  box-shadow: 0 0 14px #5297ff;
+  animation: scan-down 1.4s ease-out both;
+}
+@keyframes scan-down { from { top: 9%; opacity: .2; } 45% { opacity: 1; } to { top: 90%; opacity: 0; } }
+@media (max-width: 420px) {
+  .scanDeck { grid-template-columns: minmax(0, 1fr); }
+  .scanMark { min-height: 100px; }
+}
+@media (prefers-reduced-motion: reduce) { .scanBeam { animation: none; display: none; } }

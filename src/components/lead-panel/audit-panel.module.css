@@ -1,0 +1,47 @@
+button.trigger:is(:hover, :focus-visible) {
+  background: #004aad !important;
+  border-color: #004aad !important;
+  color: #fff !important;
+}
+
+dialog.drawer {
+  color: #f7f9fc;
+  color-scheme: dark;
+}
+
+dialog.drawer h2,
+dialog.drawer h2 span,
+dialog.drawer label,
+dialog.drawer [role="status"] {
+  color: #f7f9fc !important;
+}
+
+dialog.drawer p {
+  color: #cbd4e1 !important;
+}
+
+dialog.drawer [role="alert"] {
+  color: #ffc8c8 !important;
+}
+
+dialog.drawer :is(input, textarea) {
+  color: #fff;
+  border-color: #697584;
+}
+
+dialog.drawer :is(input, textarea)::placeholder {
+  color: #aab5c4;
+  opacity: 1;
+}
+
+dialog.drawer .privacy {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+dialog.drawer .privacy a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

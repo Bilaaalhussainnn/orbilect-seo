@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88">
+  <!-- The Y! mark uses letterforms from the Yahoo! 2019 wordmark. -->
+  <rect width="88" height="88" rx="18" fill="#fff"/>
+  <g fill="#7d2eff" transform="translate(11 10) scale(.9)">
+    <path d="M0 17.862476 17.333309 58.665153 11.016382 73.375367H26.43973L49.517908 17.862476H34.191712L24.90649 41.312207 15.741158 17.862476Z"/>
+    <path d="M52 36.60035h17.1664L84.33766 0H67.23525Z" transform="translate(-10 3)"/>
+    <circle cx="51.5" cy="52.638536" r="9.535335" transform="translate(-10 0)"/>
+  </g>
+</svg>

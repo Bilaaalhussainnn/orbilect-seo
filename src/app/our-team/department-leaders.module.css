@@ -1,0 +1,102 @@
+.section {
+  --blue: #004aad;
+  padding: clamp(1.825rem, 3.65vw, 3.285rem) clamp(1rem, 5vw, 4rem);
+  background: #fff;
+  color: #111923;
+}
+
+.wrap { width: min(100%, 76rem); margin-inline: auto; }
+.heading { margin-bottom: clamp(1.25rem, 3vw, 2rem); }
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.47rem, 1.08rem + 1.62vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+.heading h2 span { color: var(--blue); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.8rem, 2vw, 1.4rem);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(8rem, .72fr) minmax(0, 1.28fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "portrait identity" "portrait copy";
+  column-gap: 1.15rem;
+  row-gap: .65rem;
+  min-width: 0;
+  padding: clamp(.85rem, 2vw, 1.3rem);
+  border: 1px solid #dce6f2;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #fff 45%, #f4f8fe);
+}
+
+.portrait {
+  grid-area: portrait;
+  position: relative;
+  align-self: start;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: .65rem;
+  background: #e4eaf2;
+}
+
+.portrait img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+}
+
+.identity { grid-area: identity; align-self: center; min-width: 0; }
+.identity h3 {
+  margin: 0 0 .2rem;
+  font-size: clamp(1.034rem, 0.94rem + 0.36vw, 1.26rem);
+  line-height: 1.2;
+}
+.identity p {
+  margin: 0;
+  color: var(--blue);
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.copy { grid-area: copy; min-width: 0; }
+.copy p {
+  margin: 0;
+  color: #445267;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+.copy blockquote {
+  margin: .85rem 0 0;
+  padding: .65rem .75rem;
+  border-radius: .45rem;
+  background: #eaf2ff;
+  color: #143b70;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+@media (max-width: 1020px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .card { grid-template-columns: minmax(0, 10rem) minmax(0, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .card {
+    grid-template-columns: clamp(4.25rem, 22vw, 6rem) minmax(0, 1fr);
+    grid-template-areas: "portrait identity" "copy copy";
+    gap: .75rem;
+  }
+}

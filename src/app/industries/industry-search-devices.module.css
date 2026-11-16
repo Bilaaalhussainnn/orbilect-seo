@@ -1,0 +1,94 @@
+.detailHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(18px, 5vw, 72px);
+}
+
+.preview { min-width: 0; }
+.stage { position: relative; width: 100%; max-width: 590px; aspect-ratio: 1.55; margin-inline: auto; perspective: 1000px; }
+.rig { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(5deg) rotateY(-11deg); transition: transform .4s ease; }
+.laptop, .phone { position: absolute; transform-style: preserve-3d; }
+.laptop { inset: 8% 17% 18% 4%; transform: translateZ(8px); animation: laptopFloat 4.8s ease-in-out infinite alternate; }
+.phone { --lag: 180ms; inset: 21% 3% 5% auto; width: 24%; transform: translateZ(46px) rotateY(8deg); animation: phoneFloat 4.8s ease-in-out infinite alternate; }
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 3px solid #252c38;
+  border-radius: 10px;
+  background: #fff;
+  color: #17202c;
+  box-shadow: 4px 5px 0 #10141b, 0 12px 22px #0006;
+}
+.phone .screen { border-radius: 14px; }
+.keyboard {
+  position: absolute;
+  top: 100%;
+  left: -6%;
+  width: 112%;
+  height: 17%;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(#8b95a3, #303a49 58%, #151922);
+  transform: rotateX(55deg);
+  transform-origin: top center;
+}
+.chrome { display: flex; align-items: center; gap: 5%; padding: 3% 5%; background: #e9edf3; }
+.chrome > i { width: 8%; height: 4px; background: radial-gradient(circle, #758195 34%, transparent 48%) 0 0 / 33.33% 100%; }
+.address { position: relative; flex: 1; min-width: 0; height: 1.5em; overflow: hidden; border-radius: 9px; background: #fff; font-size: clamp(5px, 0.81vw, 10px); }
+.address span { position: absolute; inset: 0 .5em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.viewport { position: relative; flex: 1; min-height: 0; }
+.search, .site { position: absolute; inset: 0; overflow: hidden; }
+.searchAddress, .search { visibility: hidden; animation: searchView 4.5s steps(1, end) var(--lag, 0ms) both; }
+.siteAddress, .site { animation: websiteView 4.5s steps(1, end) var(--lag, 0ms) both; }
+.search { padding: 5% 8%; }
+.google { display: block; color: #004aad; text-align: center; font-size: clamp(12px, 2vw, 24.36px); line-height: 1.2; }
+.query { margin: 4% 0; padding: 4px 7px; border: 1px solid #ccd4df; border-radius: 99px; overflow: hidden; white-space: nowrap; font-size: clamp(6px, 1.035vw, 12px); }
+.query span { animation: letterIn 80ms steps(1, end) both; animation-delay: calc(220ms + var(--letter) * 36ms + var(--lag, 0ms)); }
+.result { animation: resultIn 4.5s steps(1, end) var(--lag, 0ms) both; font-size: clamp(6px, 0.9vw, 12px); }
+.result small, .result strong { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.result strong { color: #004aad; }
+.result i { display: block; width: 75%; height: 2px; margin-top: 3px; background: #d4dce6; }
+.result i + i { width: 52%; }
+.nav { display: flex; align-items: center; gap: 7%; height: 15%; padding-inline: 6%; }
+.nav b, .nav i { width: 14%; height: 2px; background: #66768a; }
+.nav b { width: 23%; height: 4px; margin-right: auto; background: #004aad; }
+.siteHero { display: grid; align-content: center; justify-items: start; gap: 5px; height: 59%; padding: 5% 8%; background: #112744 center / cover; color: #fff; }
+.siteHero strong { max-width: 16ch; font-size: clamp(8px, 1.6vw, 21.6px); line-height: 1.15; overflow-wrap: anywhere; }
+.siteHero i { width: 23%; height: 5px; border-radius: 4px; background: #004aad; }
+.siteCards { display: flex; gap: 5%; height: 15%; margin: 4% 6%; }
+.siteCards i { flex: 1; border-radius: 3px; background: #e4eaf2; }
+.phone .chrome { padding: 8% 5%; }
+.phone .chrome > i { display: none; }
+.phone :is(.address, .query, .result) { font-size: clamp(4px, 0.63vw, 8px); }
+.phone .google { font-size: clamp(8px, 1.35vw, 15.04px); }
+.phone .siteHero strong { font-size: clamp(6px, 0.9vw, 12px); }
+
+.replay { display: flex; align-items: center; gap: 6px; margin: 4px auto 12px; padding: 6px 8px; border: 0; background: transparent; color: inherit; font: inherit; font-size: 12px; cursor: pointer; }
+.replay:focus-visible { outline: 2px solid #004aad; outline-offset: 3px; }
+@media (hover: hover) { .stage:hover .rig { transform: rotateX(0) rotateY(4deg); } }
+@media (max-width: 780px) { .detailHero { grid-template-columns: 1fr; } .stage { max-width: 440px; } }
+@media (prefers-reduced-motion: reduce) {
+  .rig { transition: none; }
+  .laptop, .phone, .query span, .search, .result, .site, .address span { animation: none; }
+}
+@keyframes laptopFloat { to { transform: translate3d(0, -5px, 8px); } }
+@keyframes phoneFloat { to { transform: translate3d(0, 4px, 46px) rotateY(8deg); } }
+@keyframes letterIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes resultIn { 0% { visibility: hidden; } 55%, 100% { visibility: visible; } }
+@keyframes searchView { 0% { visibility: visible; } 83%, 100% { visibility: hidden; } }
+@keyframes websiteView { 0% { visibility: hidden; } 83%, 100% { visibility: visible; } }
+
+/* Google device screen finish */
+
+.screen[data-google-preview] {
+  border-color: #53657d;
+  box-shadow: inset 0 0 0 1px #a3b2c6, 4px 5px 0 #10141b, 0 12px 24px #0006;
+}
+.laptop:has([data-google-preview]) .keyboard {
+  background:
+    repeating-linear-gradient(90deg, #ffffff24 0 1px, transparent 1px 7px) center 23% / 68% 29% no-repeat,
+    linear-gradient(#8b95a3, #303a49 58%, #151922);
+}

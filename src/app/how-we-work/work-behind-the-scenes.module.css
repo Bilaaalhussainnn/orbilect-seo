@@ -1,0 +1,146 @@
+.confidentiality, .support {
+  --blue: #004aad;
+  --text: #f5f8ff;
+  --muted: #c5cfdf;
+  --line: #2c405e;
+  padding: clamp(2.044rem, 3.65vw, 3.467rem) clamp(1rem, 5vw, 4rem);
+  color: var(--text);
+}
+
+.confidentiality {
+  background:
+    linear-gradient(#99bfff0b 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(90deg, #99bfff0b 1px, transparent 1px) 0 0 / 44px 44px,
+    radial-gradient(ellipse at top right, #132c50, #0a101a 68%);
+}
+
+.support { background: #090a0c; }
+.wrap { width: min(100%, 76rem); margin-inline: auto; }
+.header { max-width: 44rem; margin-bottom: 1.4rem; }
+.eyebrow {
+  margin: 0 0 .8rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.header h2 {
+  margin: 0 0 .55rem;
+  font-size: clamp(1.386rem, 1.08rem + 1.485vw, 2.08rem);
+  letter-spacing: -.045em;
+  line-height: 1.18;
+}
+.header h2 span {
+  padding-inline: .14em;
+  color: white;
+  background: var(--blue);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.header > p:last-child, .safeguards p, .detail p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.safeguards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+.safeguards article {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: .7rem;
+  background: #111c2e;
+}
+.safeguards svg { color: #a6c8ff; margin-bottom: .45rem; }
+.safeguards h3, .detail h3 { margin: 0 0 .35rem; line-height: 1.25; }
+.safeguards h3 { font-size: 0.94rem; }
+.privacyLink { display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem; color: var(--text); font-size: .86rem; }
+.privacyLink:hover { color: #a6c8ff; }
+
+.layout { display: grid; grid-template-columns: minmax(12rem, .35fr) minmax(0, 1fr); gap: 1rem; }
+.options { display: grid; align-content: start; gap: .45rem; }
+.options button {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  min-height: 44px;
+  padding: .55rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: #121823;
+  color: var(--text);
+  font: inherit;
+  font-size: .84rem;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+.options svg { flex: none; }
+.options button:hover, .options button[aria-pressed="true"] { background: var(--blue); }
+.options button:focus-visible, .privacyLink:focus-visible { outline: 2px solid #b9d6ff; outline-offset: 3px; }
+
+.panel {
+  display: grid;
+  grid-template-columns: minmax(8rem, .36fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(.8rem, 2.5vw, 1.7rem);
+  padding: clamp(.9rem, 2.6vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  background: linear-gradient(135deg, #111e31, #0c1018 72%);
+}
+.stage {
+  display: grid;
+  min-height: 9rem;
+  place-items: center;
+  perspective: 620px;
+  background: radial-gradient(ellipse, #004aad62, transparent 68%);
+}
+.model {
+  position: relative;
+  width: clamp(4.5rem, 8vw, 6rem);
+  aspect-ratio: 1;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(12deg + var(--tilt-x, 0deg)))
+    rotateY(calc(var(--angle, -18deg) + var(--tilt-y, 0deg)));
+  transition: transform .3s ease-out;
+}
+.rear, .middle, .face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #8bbcff7a;
+  border-radius: .85rem;
+}
+.rear { background: #102340; transform: translate3d(11px, 11px, -18px); box-shadow: 0 12px 24px #0008; }
+.middle { background: #163b6d; transform: translate3d(6px, 6px, 0); }
+.face { background: linear-gradient(145deg, #246ec9, #004aad 60%, #06316e); color: white; transform: translateZ(18px); }
+.face svg, .enter { animation: appear .24s ease-out both; }
+.detail h3 { font-size: clamp(0.987rem, 0.94rem + 0.495vw, 1.305rem); }
+.detail .department { margin-bottom: .35rem; color: #a6c8ff; font-size: .76rem; font-weight: 700; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 850px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .options { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .safeguards { grid-template-columns: minmax(0, 1fr); }
+  .options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .panel { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
+  .stage { min-height: 6.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .model, .options button { transition: none; }
+  .face svg, .enter { animation: none; }
+}

@@ -1,0 +1,48 @@
+.carousel { --gap: .75rem; min-width: 0; margin-block: 1.35rem .3rem; }
+.viewport { min-width: 0; overflow: hidden; }
+.track { display: flex; width: max-content; animation: slide-right 40s linear infinite; }
+.platforms { display: flex; flex: none; margin: 0; padding: .3rem var(--gap) .4rem 0; list-style: none; gap: var(--gap); }
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .35rem;
+  box-sizing: border-box;
+  width: 154px;
+  min-height: 32px;
+  padding: .2rem;
+  color: inherit;
+  font-size: .75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.tile img { display: block; flex: none; object-fit: contain; border-radius: 3px; }
+.tile:is(:hover, :focus-visible) span { text-decoration: underline; text-underline-offset: .2em; }
+.tile:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+.carousel[data-size="large"] .tile {
+  width: 187px;
+  min-height: 58px;
+  padding: .55rem .7rem;
+  gap: .65rem;
+  background: #fff;
+  color: #101823;
+  border: 1px solid #d2dbe7;
+  border-radius: 9px;
+  box-shadow: 0 3px 0 #004aad;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+@keyframes slide-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.carousel:has(.tile:focus-visible) .viewport { overflow-x: auto; }
+.carousel:has(.tile:focus-visible) .track { animation: none; }
+.carousel:has(.tile:focus-visible) .platforms[aria-hidden="true"] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport { overflow-x: auto; }
+  .track { animation: none; }
+  .platforms[aria-hidden="true"] { display: none; }
+}

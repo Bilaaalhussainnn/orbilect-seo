@@ -1,0 +1,207 @@
+.comparison, .why {
+  --blue: #004aad;
+  --line: #dadce0;
+  --muted: #48515c;
+  padding-block: clamp(2.737rem, 5.84vw, 5.11rem);
+  color: #11151a;
+}
+
+.comparison { background: #fff; }
+.why { background: #f4f5f6; }
+
+.container {
+  width: min(calc(100% - clamp(2rem, 8vw, 9rem)), 86rem);
+  margin-inline: auto;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(1.575rem, 3.6vw, 32px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.heading span { color: var(--blue); }
+
+.intro {
+  max-width: 65ch;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.table {
+  width: 100%;
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.table th, .table td {
+  padding: clamp(0.65rem, 2vw, 1.25rem);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+.table thead th {
+  background: #f4f5f6;
+  font-weight: 700;
+}
+
+.table thead th:first-child { width: 23%; }
+.table thead th:last-child { color: var(--blue); }
+.table tbody th { font-weight: 600; }
+
+.table tbody td {
+  color: var(--muted);
+  font-size: 0.881rem;
+  line-height: 1.6;
+}
+
+.impact {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  border-inline-start: 3px solid var(--blue);
+  background: #f4f5f6;
+}
+
+.impact svg { flex-shrink: 0; color: var(--blue); }
+.impact p { margin: 0; color: var(--muted); line-height: 1.65; }
+.impact strong { color: #11151a; }
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .heading, .intro { text-align: center; }
+  .intro { margin-inline: auto; }
+}
+
+@media (max-width: 600px) {
+  .table { font-size: 0.8125rem; }
+  .table th, .table td { padding: 0.65rem 0.4rem; }
+  .table tbody td { font-size: 0.8125rem; }
+  .table thead th:first-child { width: 25%; }
+}
+
+
+/* Why choose Orbilect SEO editorial layout */
+.why {
+  background: #f8f8f8;
+  border-top: 1px solid #e3e3e3;
+}
+
+.whyLayout {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.75fr) minmax(0, 2fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.whyLead {
+  position: sticky;
+  top: 7rem;
+  padding-top: 0.6rem;
+}
+
+.whyLead h2 { max-width: 14ch; }
+.whyLead .intro { max-width: 36ch; }
+
+.whyList {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #d7d7d7;
+  list-style: none;
+}
+
+.whyRow {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) minmax(7rem, 0.46fr);
+  align-items: start;
+  gap: clamp(0.9rem, 2vw, 1.75rem);
+  padding-block: clamp(1.45rem, 3vw, 2.5rem);
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.whySymbol {
+  margin-top: 0.1rem;
+  color: var(--blue);
+}
+
+.whyCopy h3 {
+  margin: 0;
+  font-size: clamp(1.012rem, 1.6vw, 1.35rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.whyCopy p {
+  max-width: 56ch;
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.881rem;
+  line-height: 1.65;
+}
+
+.whyDeliverable {
+  display: grid;
+  gap: 0.3rem;
+  padding-inline-start: 0.8rem;
+  border-inline-start: 2px solid var(--blue);
+  line-height: 1.45;
+}
+
+.whyDeliverable span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.whyDeliverable strong {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .whyRow {
+      animation: why-row-reveal 1s ease-out both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 90%;
+    }
+  }
+}
+
+@keyframes why-row-reveal {
+  from { opacity: 0.45; transform: translateY(0.85rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .whyLayout { grid-template-columns: minmax(0, 1fr); }
+  .whyLead { position: static; padding-top: 0; }
+  .whyLead h2 { max-width: none; }
+  .whyLead .intro { max-width: 54ch; }
+}
+
+@media (max-width: 640px) {
+  .whyRow {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  .whyDeliverable {
+    padding: 0.55rem 0 0;
+    border-inline-start: 0;
+    border-top: 2px solid var(--blue);
+  }
+}

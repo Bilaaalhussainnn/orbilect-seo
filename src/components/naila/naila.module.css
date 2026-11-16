@@ -1,0 +1,294 @@
+.widget, .blocked { position: fixed; z-index: 80; inset: auto 1rem 1rem auto; font: 500 11px/1.55 var(--font-poppins, Poppins), sans-serif; color: #111823; }
+.widget button, .widget input, .widget textarea { font: inherit; }
+.widget button { cursor: pointer; }
+.widget button:disabled { cursor: default; opacity: .55; }
+.widget :focus-visible { outline: 2px solid #408bf0; outline-offset: 2px; }
+.launch { display: grid; justify-items: center; gap: 5px; padding: 0; border: 0; background: transparent; margin-left: auto; }
+.launch span, .peek { padding: 6px 10px; border-radius: 8px; background: #080b10; color: #fff; box-shadow: 0 5px 18px #0003; }
+.launch img { border: 3px solid #004aad; border-radius: 50%; background: #004aad; }
+.peek { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; animation: appear .22s ease-out; }
+.peek button { display: grid; place-items: center; border: 0; color: white; background: transparent; }
+.panel { width: min(370px, calc(100vw - 2rem)); max-height: min(665px, calc(100vh - 2rem)); max-height: min(665px, calc(100dvh - 2rem)); display: flex; flex-direction: column; border-radius: 18px; overflow: hidden; border: 1px solid #19273f; background: #fff; box-shadow: 0 20px 55px #00132f44; animation: appear .22s ease-out; }
+.header { display: flex; align-items: center; gap: 6px; background: #080b10; color: white; padding: 8px 10px; }
+.header img { border-radius: 50%; }
+.header strong { margin-right: auto; }
+.header button { display: grid; place-items: center; border: 1px solid #38516e; border-radius: 8px; background: #101921; color: #fff; width: 32px; height: 32px; }
+.header button[aria-pressed="true"] { background: #004aad; }
+.thread { min-height: 4rem; height: 235px; flex: 1 1 auto; overflow: auto; overscroll-behavior: contain; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.naila, .visitor { border-radius: 10px; padding: 8px 10px; max-width: 95%; white-space: pre-line; overflow-wrap: anywhere; }
+.naila { align-self: flex-start; background: #f0f5fc; }
+.visitor { align-self: flex-end; background: #004aad; color: white; }
+.thread p, .error { margin: 3px 0 0; }
+.action, .options button[type="submit"], .composer button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 5px 8px; border: 1px solid #004aad; border-radius: 7px; background: #004aad; color: #fff; text-decoration: none; }
+.action { margin: 5px 5px 0 0; }
+.action:visited { color: white; }
+.options { padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 6px 10px; overflow: auto; max-height: 35dvh; flex: 0 0 auto; border-top: 1px solid #dae5f3; }
+.options > strong, .options label:has(input[type="email"]), .options label:has(textarea) { width: 100%; }
+.options label { display: flex; align-items: center; gap: 5px; }
+.options input[type="checkbox"] { accent-color: #004aad; }
+.options input[type="email"], .options textarea, .composer input { min-width: 0; flex: 1; border-radius: 7px; border: 1px solid #9db2cb; padding: 7px; background: #fff; color: #101720; }
+.options textarea { min-height: 45px; }
+.options button, .tools button, .back { border: 1px solid #d3dfef; color: #004aad; background: #f1f6fe; border-radius: 7px; padding: 4px 7px; }
+.tools { display: flex; flex-wrap: wrap; gap: 5px; padding: 6px 10px; border-top: 1px solid #dce6f3; }
+.tools button { display: inline-flex; align-items: center; gap: 4px; }
+.back { align-self: flex-start; margin: 0 0 6px 12px; }
+.composer { display: flex; gap: 6px; padding: 0 10px 7px; }
+.footer { background: #080b10; text-align: center; padding: 4px; }
+.footer a { display: inline-flex; align-items: center; gap: 3px; color: white; text-decoration: none; }
+.footer img { border-radius: 50%; }
+.error { color: #9a2437; padding: 2px 12px; }
+.typing { display: flex; gap: 4px; padding: 5px; }
+.typing i { width: 4px; height: 4px; border-radius: 50%; background: #004aad; animation: pulse .75s alternate infinite; }
+.typing i:nth-child(2) { animation-delay: .15s; }
+.typing i:nth-child(3) { animation-delay: .3s; }
+.blocked { padding: 8px 10px; border-radius: 8px; background: #080b10; color: #fff; }
+@keyframes pulse { to { opacity: .25; transform: translateY(-3px); } }
+@keyframes appear { from { opacity: 0; transform: translateY(5px); } }
+@media (prefers-reduced-motion: reduce) { .panel, .peek, .typing i { animation: none; } }
+
+/* Naila action row and header */
+.panel {
+  width: min(410px, calc(100vw - 2rem));
+  max-height: min(700px, calc(100dvh - 2rem));
+}
+.thread { height: 260px; }
+.identity { display: grid; gap: 2px; min-width: 0; margin-right: auto; }
+.identity span { color: #c5d2e5; }
+.tools { flex-wrap: nowrap; }
+.tools button {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;
+  min-height: 34px;
+  color: #fff;
+  background: #080b10;
+  border-color: #080b10;
+}
+.tools button svg { flex: 0 0 14px; }
+.tools button:hover { background: #004aad; border-color: #004aad; }
+
+/* Naila tagline highlight */
+.identity [data-typewriter-accent] {
+  color: #fff !important;
+  background: #004AAD;
+  padding-inline: .2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Keep the Naila tagline on one line */
+.header > img,
+.header > button {
+  flex-shrink: 0;
+}
+
+.identity {
+  flex: 1 1 0;
+  container-type: inline-size;
+}
+
+.identity > span {
+  font-size: 11px;
+  font-size: min(11px, 4.8cqi);
+  font-weight: 600;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.identity [data-typewriter-accent] {
+  color: #fff !important;
+  background: #004AAD;
+}
+
+/* Black Naila form buttons */
+.panel .options button,
+.panel .back,
+.panel .tools button,
+.panel .composer button {
+  background: #080b10;
+  border-color: #080b10;
+  color: #fff;
+}
+.panel :is(.options button, .back, .tools button, .composer button):not(:disabled):is(:hover, :focus-visible) {
+  background: #000;
+  border-color: #000;
+  box-shadow: inset 0 0 0 1px #fff4;
+}
+
+.panel .back {
+  background-color: #004AAD;
+  border-color: #004AAD;
+  color: #fff;
+}
+
+.tools .quoteLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 34px;
+  padding: 4px 7px;
+  border: 1px solid #080b10;
+  border-radius: 7px;
+  background: #080b10;
+  color: #fff;
+  text-decoration: none;
+}
+.tools .quoteLink:is(:hover, :focus-visible) { background: #004aad; border-color: #004aad; }
+
+/* Naila sender colors and portrait */
+.thread .naila { background: #080b10; color: #fff; }
+.thread .visitor { background: #004aad; color: #fff; }
+.thread .sender { display: flex; align-items: center; gap: 7px; }
+.thread .sender img { border-radius: 50%; flex: none; }
+
+
+/* Naila message text bubbles */
+.thread :is(.naila, .visitor) { background: transparent; color: #151922; padding: 0; }
+.thread .sender { margin: 0 0 4px; }
+.thread .sender time { font-weight: 400; color: #596576; white-space: nowrap; }
+.thread .visitor .sender { justify-content: flex-end; }
+.thread :is(.naila, .visitor) > p { box-sizing: border-box; width: fit-content; max-width: 100%; margin: 0; padding: 8px 10px; border-radius: 10px; color: #fff; }
+.thread .naila > p { background: #080b10; }
+.thread .visitor > p { background: #004aad; margin-inline-start: auto; }
+
+/* Naila portrait motion and sizing */
+.widget .launch img {
+  width: 68px;
+  height: 68px;
+  box-sizing: border-box;
+  object-fit: cover;
+  transform: rotate(-8deg);
+  transition: transform 260ms ease-out;
+}
+.widget .launch:focus-visible img { transform: translateY(-3px) rotate(0deg) scale(1.04); }
+@media (hover: hover) {
+  .widget .launch:hover img { transform: translateY(-3px) rotate(0deg) scale(1.04); }
+}
+.widget .panel { width: min(420px, calc(100vw - 2rem)); }
+.widget .thread { height: clamp(145px, 42vh, 305px); }
+@media (prefers-reduced-motion: reduce) {
+  .widget .launch img,
+  .widget .launch:focus-visible img,
+  .widget .launch:hover img { transform: none; transition: none; }
+}
+
+/* Stationary launcher ring */
+.widget .launch .launchPortrait {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border: 3px solid #004aad;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 32% 24%, #075bb8, #061951 75%);
+  box-shadow: none;
+}
+
+.widget .launch .launchPortrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  /* Isolate the figure from the blue backdrop in the existing portrait. */
+  clip-path: polygon(0% 100%, 4% 91%, 10% 83%, 23% 78%, 28% 68%, 29% 58%, 23% 54%, 18% 49%, 15% 42%, 15% 34%, 19% 27%, 19% 21%, 23% 14%, 29% 9%, 39% 5%, 48% 2%, 56% 3%, 64% 6%, 71% 11%, 75% 18%, 77% 25%, 77% 36%, 79% 44%, 78% 52%, 75% 59%, 71% 65%, 66% 71%, 64% 77%, 67% 83%, 79% 89%, 86% 100%);
+  transform-origin: 50% 84%;
+  transform: translateY(2px) rotate(-7deg) scale(1.07);
+  transition: transform 260ms ease-out;
+}
+
+.widget .launch:focus-visible .launchPortrait img {
+  transform: rotate(0deg) scale(1.07);
+}
+
+@media (hover: hover) {
+  .widget .launch:hover .launchPortrait img {
+    transform: rotate(0deg) scale(1.07);
+  }
+}
+
+.widget .peek {
+  width: max-content;
+  max-width: min(260px, calc(100vw - 2rem));
+  box-sizing: border-box;
+  margin-left: auto;
+}
+.widget .peek button:first-child { text-align: left; }
+.widget .peek button:last-child { flex: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .widget .launch .launchPortrait img,
+  .widget .launch:focus-visible .launchPortrait img,
+  .widget .launch:hover .launchPortrait img {
+    transform: scale(1.07);
+    transition: none;
+  }
+}
+
+/* Naila header options */
+.header .chatOptions {
+  position: relative;
+  flex: none;
+  z-index: 2;
+}
+
+.chatOptions summary {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #38516e;
+  border-radius: 8px;
+  background: #101921;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+.chatOptions summary::-webkit-details-marker { display: none; }
+.chatOptions[open] summary { background: #004aad; }
+
+.chatOptionsList {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: -38px;
+  width: 150px;
+  max-width: calc(100vw - 3rem);
+  box-sizing: border-box;
+  padding: 4px;
+  border: 1px solid #dce6f3;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 24px #00132f33;
+}
+
+.header .chatOptionsList :is(button, a) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 34px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+  color: #111823;
+  text-decoration: none;
+  text-align: left;
+}
+.header .chatOptionsList :is(button, a):is(:hover, :focus-visible) {
+  background: #004aad;
+  color: #fff;
+}
+
+/* Human Naila portrait outline. Keep the launcher ring stationary. */
+.widget .launch .launchPortrait img {
+  clip-path: polygon(10% 100%, 10% 91%, 13% 83%, 24% 74%, 22% 67%, 24% 60%, 28% 56%, 25% 50%, 25% 43%, 27% 36%, 25% 30%, 27% 24%, 30% 18%, 35% 12%, 42% 7%, 48% 5%, 55% 5%, 62% 7%, 68% 12%, 72% 19%, 73% 28%, 75% 36%, 75% 44%, 74% 51%, 70% 57%, 66% 61%, 66% 66%, 69% 73%, 72% 77%, 77% 82%, 79% 90%, 82% 100%);
+}

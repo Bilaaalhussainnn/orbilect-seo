@@ -1,0 +1,159 @@
+.section {
+  --blue: #004aad;
+  background: #fff;
+  color: #10141a;
+  padding-block: clamp(43.8px, 5.84vw, 78.84px);
+  scroll-margin-top: 90px;
+}
+.wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.header { max-width: 660px; margin-bottom: 32px; }
+.eyebrow {
+  margin: 0 0 18px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #d2d9e3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.header h2 { margin: 0; font-size: 25.2px; line-height: 1.2; letter-spacing: -.035em; }
+.header h2 span { color: var(--blue); }
+.header p:last-child, .note { color: #445164; font-size: 14px; line-height: 1.7; }
+.figure {
+  margin: 0;
+  padding: clamp(15px, 3.8vw, 40px);
+  border: 1px solid #d4dce8;
+  border-radius: 14px;
+  background: #fff;
+}
+.figure figcaption { font-size: 15.98px; font-weight: 700; }
+.axisTitle { margin: 5px 0 24px; color: #445164; font-size: 12px; }
+.chart {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 8px;
+  height: clamp(180px, 33vw, 320px);
+  margin-bottom: 47px;
+}
+.ticks { display: flex; flex-direction: column; justify-content: space-between; color: #445164; font-size: 11px; text-align: right; }
+.ticks span:first-child { transform: translateY(-50%); }
+.ticks span:last-child { transform: translateY(50%); }
+.plot { position: relative; min-width: 0; border-left: 1px solid #b7c2d1; }
+.grid, .columns { position: absolute; inset: 0; }
+.grid > span { position: absolute; inset-inline: 0; border-top: 1px solid #d9e0ea; }
+.grid > .baseline { border-top: 1px dashed #687d9c; }
+.columns {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(4px, 2vw, 24px);
+  padding: 0 clamp(5px, 2vw, 20px);
+  margin: 0;
+  list-style: none;
+}
+.columns li { position: relative; display: flex; align-items: end; justify-content: center; }
+.bar {
+  position: relative;
+  width: min(72%, 88px);
+  background: var(--blue);
+  border-radius: 5px 5px 0 0;
+  transform-origin: bottom;
+  animation: grow .45s ease-out both;
+}
+.value { position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); color: #10141a; font-size: 12px; font-weight: 700; }
+.month { position: absolute; top: calc(100% + 9px); font-size: 11px; font-weight: 600; white-space: nowrap; }
+.note { margin: 0; font-size: 12px; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 32px); }
+  .chart { grid-template-columns: 23px minmax(0, 1fr); column-gap: 5px; }
+  .month { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bar { animation: none; }
+}
+
+.columns { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.ticks { position: relative; display: block; }
+.ticks span { position: absolute; right: 0; top: calc(var(--tick-index, 0) * 100% / 3); transform: translateY(-50%); }
+.ticks span:nth-child(2) { --tick-index: 1; }
+.ticks span:nth-child(3) { --tick-index: 2; }
+.ticks span:nth-child(4) { --tick-index: 3; }
+.ticks span:first-child, .ticks span:last-child { transform: translateY(-50%); }
+.chart { grid-template-columns: 39px minmax(0, 1fr); }
+.metricControls { display: flex; flex-wrap: wrap; gap: 7px; margin: 15px 0; }
+.metricControls button {
+  min-height: 40px; padding: 6px 12px; border: 1px solid #b8c4d4;
+  border-radius: 999px; color: #10141a; background: #fff; font: inherit;
+  font-size: 12px; cursor: pointer;
+}
+.metricControls button[aria-pressed="true"] { background: var(--blue); color: #fff; border-color: var(--blue); }
+.barButton {
+  display: flex; justify-content: center; align-items: flex-end;
+  width: 100%; height: 100%; padding: 0; border: 0;
+  color: inherit; background: transparent; cursor: pointer;
+}
+.barButton[aria-pressed="true"] .bar { box-shadow: inset 0 0 0 2px #062e66; }
+.barButton:focus-visible, .metricControls button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.monthDetail {
+  margin: 0 0 16px; padding: 12px 15px; border-left: 3px solid var(--blue);
+  background: #f1f5fa; color: #10141a; font-size: 13px; line-height: 1.6;
+}
+.monthDetail p { margin: 4px 0 0; }
+.compareSection { background: #f4f6f9; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 20px; font-size: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--blue); }
+.legend span:nth-child(2) i, .paidBar { background: #63748c; }
+.paired li { gap: 3px; }
+.paired .bar { width: min(42%, 41px); }
+@media (max-width: 640px) {
+  .chart { grid-template-columns: 30px minmax(0, 1fr); }
+  .columns { gap: 3px; padding-inline: 4px; }
+  .value, .month { font-size: 9px; }
+}
+
+/* Dark theme for the On-page SEO progression chart */
+.section[id="on-page-progression"] {
+  background: #090b10;
+  color: #fff;
+}
+.section[id="on-page-progression"] .eyebrow { border-color: #444d5b; }
+.section[id="on-page-progression"] .header h2 span {
+  color: #fff;
+  background: var(--blue);
+  padding-inline: .14em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.section[id="on-page-progression"] :is(.header p:last-child, .axisTitle, .ticks, .note) {
+  color: #cbd3df;
+}
+.section[id="on-page-progression"] .figure {
+  background: #111620;
+  border-color: #384354;
+}
+.section[id="on-page-progression"] .plot { border-color: #75839a; }
+.section[id="on-page-progression"] .grid > span { border-color: #354154; }
+.section[id="on-page-progression"] .grid > span:last-child { border-color: #75839a; }
+.section[id="on-page-progression"] .value { color: #fff; }
+.section[id="on-page-progression"] .bar {
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 32%);
+}
+.section[id="on-page-progression"] .barButton[aria-pressed="true"] .bar {
+  box-shadow: inset 0 0 0 2px #dce7f8;
+}
+.section[id="on-page-progression"] .metricControls button {
+  background: #19212e;
+  color: #fff;
+  border-color: #56657c;
+}
+.section[id="on-page-progression"] .metricControls button[aria-pressed="true"] {
+  background: var(--blue);
+  border-color: #9caec8;
+}
+.section[id="on-page-progression"] .monthDetail {
+  background: #19212e;
+  color: #eef3fa;
+}
+.section[id="on-page-progression"] button:focus-visible { outline-color: #fff; }

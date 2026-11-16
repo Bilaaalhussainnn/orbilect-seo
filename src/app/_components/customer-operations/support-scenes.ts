@@ -1,0 +1,11 @@
+import { Bot, Globe2, Headset, Layers, Mail, MessagesSquare } from "lucide-react";
+import type { Scene } from "./interactive-section";
+
+export const supportScenes = [
+  { label: "Live chat", icon: MessagesSquare, title: "Help shoppers choose and check out", copy: "Answer product, sizing, stock, and shipping questions before a sale. During checkout, help shoppers apply published offers or find the right delivery option.", checks: ["Product guidance", "Checkout questions", "Concurrent chat"] },
+  { label: "Email support", icon: Mail, title: "Keep orders and returns moving", copy: "Respond to order changes, delivery delays, returns, and refund questions. Agents use your templates and policies, keep a record in your help desk, and escalate exceptions.", checks: ["Ticket ownership", "Order updates", "Returns follow-up"] },
+  { label: "Phone and voice", icon: Headset, title: "Resolve complex questions by phone", copy: "Give customers a direct way to discuss order problems or product details. Agents verify callers as agreed, document the outcome, and follow your escalation rules.", checks: ["Call handling", "Verification", "Escalations"] },
+  { label: "Multichannel", icon: Layers, title: "One agent trained across your queues", copy: "A cross-trained agent can handle live chat, email, and phone in your agreed coverage window, with a shared view of the customer’s order and support history.", checks: ["Queue prioritization", "Shared ticket history", "Coverage planning"] },
+  { label: "Multilingual", icon: Globe2, title: "Match languages to the markets you serve", copy: "Tell us the languages, fluency level, and coverage hours you need. We assess candidates in the requested channels and confirm availability for each language.", checks: ["Written and spoken checks", "Market-specific training", "Language routing"] },
+  { label: "AI chat", icon: Bot, title: "Answer routine questions with an AI chat agent", copy: "We can build a chatbot that answers from approved product and policy content. When a conversation needs account verification, a refund decision, or human judgment, it hands off to your team.", checks: ["Approved product knowledge", "Human handoff", "Quality review"] },
+] satisfies Scene[];

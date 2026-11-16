@@ -1,0 +1,231 @@
+
+.scene {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-width: 0;
+  padding-top: 24px;
+}
+
+.devices {
+  position: relative;
+  padding: 0 40px 12px 0;
+}
+
+.laptop {
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 25px 35px #0008);
+}
+
+.screen {
+  overflow: hidden;
+  aspect-ratio: 1.62;
+  border: 7px solid #252c37;
+  border-radius: 16px 16px 5px 5px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #697589, inset 0 0 0 1px #000;
+}
+
+.browserBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  background: #edf0f5;
+  color: #646d7c;
+  font-size: 8px;
+}
+
+.dots { color: #8b96a7; letter-spacing: 2px; }
+
+.laptopBase {
+  position: relative;
+  width: 108%;
+  height: 12px;
+  margin-left: -4%;
+  border-radius: 2px 2px 60% 60%;
+  background: linear-gradient(#c3cbd6, #5c687a 48%, #202837);
+}
+
+.laptopBase::after {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  width: 16%;
+  height: 4px;
+  border-radius: 0 0 8px 8px;
+  background: #343e4e;
+  content: "";
+}
+
+.searchPage { padding: 14px 12px; color: #27303d; }
+.searchBar { display: flex; align-items: center; gap: 10px; }
+.searchBar > svg:first-child { width: 22px; height: 22px; flex-shrink: 0; }
+.searchBar > span {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-height: 27px;
+  padding: 0 10px;
+  border: 1px solid #d7dce4;
+  border-radius: 20px;
+  font-size: 10px;
+}
+.caret { height: 12px; border-left: 1px solid #004AAD; margin-left: 2px; }
+.results { display: grid; grid-template-columns: 1.7fr 1fr; gap: 12px; margin-top: 17px; }
+.results[data-visible="false"], .mobileResult[data-visible="false"] { visibility: hidden; }
+.result { position: relative; }
+.domain { display: block; color: #607066; font-size: 8px; }
+.result strong { display: block; color: #004AAD; font-size: 11px; font-weight: 500; margin-top: 5px; }
+.result p { margin: 5px 0; color: #59616e; font-size: 8px; line-height: 1.5; }
+.stars { color: #b27800; font-size: 10px; }
+.stars span { color: #707683; font-size: 7px; }
+.sitelinks { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 9px; color: #004AAD; font-size: 8px; }
+.profile { display: grid; align-content: start; gap: 5px; padding: 7px; border: 1px solid #e2e5eb; border-radius: 8px; font-size: 8px; }
+.profile strong { font-size: 12px; color: #263143; }
+.profileVisual { display: grid; place-items: center; height: 48px; border-radius: 5px; background: linear-gradient(135deg, #dce5f1, #f4f6f9); color: #004AAD; }
+.profileActions { display: flex; flex-wrap: wrap; gap: 4px; color: #004AAD; }
+.profileActions span { padding: 3px 5px; border: 1px solid #dce3ef; border-radius: 10px; }
+.open { color: #42674e; font-size: 7px; }
+.skeleton { display: grid; gap: 6px; margin-top: 17px; }
+.skeleton i { width: 90%; height: 4px; border-radius: 3px; background: #e6e9ef; }
+.skeleton i:first-child { width: 65%; background: #bacbe7; }
+.cursor { position: absolute; left: 60%; top: 20px; color: #101827; fill: #fff; }
+
+.phone {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  width: 26%;
+  height: 86%;
+  overflow: hidden;
+  border: 5px solid #242c39;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #697589, 0 18px 40px #0008;
+}
+
+.phoneNotch { position: absolute; z-index: 2; top: 4px; left: 29%; width: 42%; height: 8px; border-radius: 8px; background: #151b25; }
+.mobileSearch { padding: 24px 9px 8px; color: #27303d; }
+.mobileSearch > svg { display: block; width: 22px; height: 22px; margin: 0 auto 12px; }
+.mobileQuery { display: flex; justify-content: space-between; min-height: 22px; padding: 5px; border: 1px solid #dce1e9; border-radius: 12px; font-size: 8px; }
+.mobileResult { display: grid; gap: 6px; margin-top: 14px; font-size: 7px; }
+.mobileResult strong { color: #004AAD; font-size: 11px; }
+.mobileResult p { margin: 0; line-height: 1.5; }
+.mobileMap { display: grid; place-items: center; height: 45px; background: #e7edf6; color: #004AAD; border-radius: 6px; }
+
+.website { height: 100%; padding: 14px; background: #f4f2ef; color: #182132; }
+.siteNav { display: flex; justify-content: space-between; font-size: 9px; font-weight: 600; }
+.siteNav span:last-child { font-size: 7px; font-weight: 400; }
+.siteContent { display: grid; justify-items: start; gap: 9px; margin-top: 20px; }
+.siteContent > span:first-child { font-size: 6px; letter-spacing: .14em; }
+.siteContent strong { font-size: clamp(14.1px, 1.6vw, 21.84px); line-height: 1.1; font-weight: 500; }
+.siteButton { display: inline-flex; gap: 9px; align-items: center; padding: 6px 9px; background: #004AAD; color: #fff; border-radius: 20px; font-size: 7px; }
+.products { display: flex; gap: 9px; margin-top: 14px; }
+.products i { width: 28%; height: 35px; border-radius: 8px; background: linear-gradient(135deg, #b5c0ce, #e3e7ed); }
+.phone .website { padding: 24px 9px 9px; }
+.phone .siteNav span:last-child { display: none; }
+.phone .siteContent strong { font-size: 14.1px; }
+.phone .siteButton { font-size: 6px; padding: 5px; }
+.phone .siteButton svg { display: none; }
+.phone .products { gap: 4px; }
+.phone .products i { height: 27px; }
+
+.caption { margin: 26px 0 0; color: #8795aa; font-size: 10px; text-align: center; }
+.caption span { color: #ced7e5; }
+.boutique { height: 245px; width: 100%; }
+.canvas { width: 100%; height: 100%; background: transparent; }
+.canvas canvas { display: block; }
+.loading { height: 100%; }
+
+@media (max-width: 900px) {
+  .scene { max-width: 620px; margin-inline: auto; padding-top: 28px; }
+}
+@media (max-width: 480px) {
+  .devices { padding-right: 27px; }
+  .screen { border-width: 4px; }
+  .browserBar { height: 19px; font-size: 6px; }
+  .searchPage { padding: 8px; }
+  .searchBar > span { min-height: 22px; }
+  .results { gap: 7px; margin-top: 10px; }
+  .result strong { font-size: 9px; }
+  .result p, .sitelinks { font-size: 6px; }
+  .profile { padding: 4px; font-size: 6px; gap: 3px; }
+  .profileVisual { height: 26px; }
+  .profile strong { font-size: 9px; }
+  .profileActions { display: none; }
+  .skeleton { margin-top: 8px; gap: 4px; }
+  .phone { border-width: 3px; border-radius: 15px; }
+  .mobileSearch { padding: 19px 5px 5px; }
+  .mobileSearch > svg { width: 17px; height: 17px; margin-bottom: 7px; }
+  .mobileResult { gap: 4px; margin-top: 7px; }
+  .mobileMap { height: 26px; }
+  .siteContent { margin-top: 10px; gap: 6px; }
+  .products { margin-top: 9px; }
+  .products i { height: 22px; }
+  .phone .siteContent strong { font-size: 11px; }
+  .phone .products { display: none; }
+  .boutique { height: 210px; }
+}
+
+/* Orbilect store-first composition */
+.scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding-top: 8px;
+}
+
+.devices {
+  flex: 0 0 auto;
+  width: min(60%, 330px);
+  box-sizing: border-box;
+  padding: 0 27px 12px 0;
+  margin: 0 0 0 auto;
+}
+
+.boutique {
+  width: 100%;
+  height: clamp(410px, 37vw, 550px);
+  margin-top: 12px;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .scene {
+    max-width: 700px;
+    padding-top: 22px;
+  }
+
+  .devices {
+    width: min(58%, 300px);
+    margin-right: 5%;
+  }
+
+  .boutique {
+    height: clamp(380px, 62vw, 500px);
+  }
+}
+
+@media (max-width: 540px) {
+  .devices {
+    width: 68%;
+    max-width: 270px;
+    padding-right: 22px;
+    margin-right: 3%;
+  }
+
+  .boutique {
+    height: 360px;
+    margin-top: 8px;
+  }
+}

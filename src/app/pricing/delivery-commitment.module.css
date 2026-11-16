@@ -1,0 +1,76 @@
+.section {
+  --blue: #004aad;
+  --ink: #101722;
+  --line: #d4deeb;
+  color: var(--ink);
+  background: #fff;
+  padding-block: clamp(42.34px, 5.84vw, 80.3px);
+  scroll-margin-top: 90px;
+}
+.wrap { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.header { max-width: 650px; margin-bottom: clamp(25px, 5vw, 50px); }
+.header .eyebrow {
+  margin: 0 0 17px; padding-bottom: 13px; border-bottom: 1px solid var(--line);
+  font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+}
+.header h2 { margin: 0; font-size: 25.2px; line-height: 1.2; letter-spacing: -.035em; }
+.header h2 span { color: var(--blue); }
+.header > p:last-child, .explanation p { color: #435164; font-size: 14px; line-height: 1.7; }
+.layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: start; gap: clamp(26px, 7vw, 96px); }
+.controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.controls button {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center;
+  gap: 8px; min-height: 52px; padding: 10px 12px; border: 1px solid var(--line);
+  border-radius: 8px; background: #f6f8fc; color: var(--ink); font: inherit;
+  font-size: 13px; font-weight: 650; text-align: left; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.controls button > svg:first-child { color: var(--blue); }
+.controls button:is(:hover, [aria-pressed="true"]) { background: var(--blue); border-color: var(--blue); color: #fff; }
+.controls button:is(:hover, [aria-pressed="true"]) > svg:first-child { color: inherit; }
+.controls button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.explanation { margin-top: 21px; padding-left: 13px; border-left: 3px solid var(--blue); }
+.explanation h3 { margin: 0; font-size: 17.1px; line-height: 1.35; }
+.explanation p { margin: 6px 0 0; }
+.stage { min-width: 0; padding: 9px 17px 21px 4px; perspective: 950px; }
+.stack { position: relative; transform: rotateX(5deg) rotateY(-7deg); transition: transform .32s ease; }
+.stack::before, .stack::after {
+  content: ""; position: absolute; inset: 0; border: 1px solid #a9bed9;
+  border-radius: 14px; pointer-events: none;
+}
+.stack::before { background: #d9e7f8; transform: translate(15px, 14px); }
+.stack::after { background: #eaf1fc; transform: translate(7px, 7px); }
+.document {
+  position: relative; z-index: 1; min-width: 0;
+  padding: clamp(16px, 3vw, 28px); border: 1px solid #43618a; border-radius: 14px;
+  background: linear-gradient(140deg, #19375c, #0c182a 68%);
+  color: #fff; box-shadow: 0 14px 28px #102f591f;
+  animation: document-in .42s cubic-bezier(.2,.75,.25,1) both;
+}
+.document header { display: flex; gap: 11px; align-items: center; }
+.icon { display: grid; place-items: center; flex: 0 0 40px; height: 40px; border-radius: 8px; background: var(--blue); }
+.document header p { margin: 0 0 3px; color: #cbdaf0; font-size: 11px; }
+.document h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+.document dl { margin: 17px 0 0; }
+.document dl div { display: grid; grid-template-columns: minmax(76px, .5fr) minmax(0, 1.5fr); gap: 8px; padding-block: 10px; border-top: 1px solid #ffffff30; }
+.document dt { color: #cbdaf0; font-size: 12px; }
+.document dd { margin: 0; font-size: 13px; line-height: 1.45; overflow-wrap: anywhere; }
+@keyframes document-in {
+  from { opacity: .65; transform: translate(7px, 8px) scale(.98); }
+  to { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@media (hover: hover) { .stage:hover .stack { transform: rotateX(2deg) rotateY(-2deg) translateY(-4px); } }
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 36px); }
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .stack { transform: none; }
+}
+@media (max-width: 380px) {
+  .controls button { grid-template-columns: auto minmax(0, 1fr); }
+  .controls button > svg:last-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage .stack, .stage:hover .stack { transform: none; transition: none; }
+  .document { animation: none; }
+  .controls button { transition: none; }
+}

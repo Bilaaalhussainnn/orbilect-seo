@@ -1,0 +1,52 @@
+.costs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(20px, 4vw, 38px);
+}
+.costs :is(article, form) {
+  min-width: 0;
+  padding: clamp(14px, 3vw, 24px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  box-shadow: 0 4px 0 var(--layer);
+}
+.costs h3 { color: var(--ink); font-size: 1rem; margin: 0 0 7px; }
+.costs strong { display: block; width: fit-content; padding: .24em .5em; border-radius: 5px; color: #fff; background: var(--brand); font-size: clamp(1.1rem, 2.4vw, 1.45rem); }
+.costs p, .costs label { color: var(--copy); font-size: .85rem; line-height: 1.6; }
+.costs label { display: grid; gap: 6px; margin-top: .65rem; }
+.costs :is(select, input) {
+  max-width: 100%;
+  width: 100%;
+  color-scheme: dark;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--card);
+  padding: .4rem .6rem;
+  font: inherit;
+}
+.costs a { color: var(--ink); font-size: .85rem; text-underline-offset: .2em; }
+.costs input { max-width: 12rem; }
+.costs .proposalButton { width: fit-content; max-width: 100%; margin-top: 1rem; }
+
+.comparison { padding-block: clamp(2.5rem, 6vw, 5rem); color: #101823; background: #fff; }
+.comparison h2 span { color: #004aad; }
+.comparison header { max-width: 730px; }
+.table thead svg { vertical-align: middle; margin-right: .2rem; }
+.tableFrame { border: 1px solid #cbd3df; border-radius: 12px; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; font-size: clamp(.77rem, 1.3vw, .9rem); }
+.table th, .table td { padding: clamp(7px, 2vw, 17px); vertical-align: top; overflow-wrap: anywhere; line-height: 1.55; }
+.table th:first-child { width: 22%; }
+.table thead { background: #004aad; color: #fff; }
+.table tbody tr { border-top: 1px solid #cbd3df; }
+.table tbody tr:nth-child(even) { background: #f3f5f7; }
+.table tbody tr:hover { background: #e8edf3; }
+
+@media (max-width: 640px) {
+  .costs { grid-template-columns: minmax(0, 1fr); }
+  .table th:first-child { width: 24%; }
+}

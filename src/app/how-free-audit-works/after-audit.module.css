@@ -1,0 +1,133 @@
+.section {
+  --blue: #004aad;
+  --line: #d3e0f0;
+  padding: clamp(2.007rem, 3.65vw, 3.467rem) clamp(1rem, 5vw, 4rem);
+  background: #f3f7fc;
+  color: #111923;
+}
+
+.walkthrough {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.sequence {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .4rem;
+  padding: .6rem;
+  border-bottom: 1px solid var(--line);
+  border-radius: 1rem 1rem 0 0;
+  background: #eaf1fb;
+}
+
+.sequence button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+  min-height: 44px;
+  padding: .5rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: #fff;
+  color: #14223a;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 600;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.sequence button span { flex: 1; }
+.sequence svg { flex: none; }
+.sequence button:hover { border-color: var(--blue); }
+.sequence button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+.sequence button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.stage {
+  position: relative;
+  display: grid;
+  min-height: clamp(13rem, 24vw, 18rem);
+  place-items: center;
+  overflow: hidden;
+  border-radius: 0 0 0 1rem;
+  perspective: 780px;
+  background:
+    radial-gradient(#a8caff2e 1px, transparent 1px) 0 0 / 17px 17px,
+    radial-gradient(ellipse at center, #1e477b, #0b1424 74%);
+}
+
+.orbit {
+  position: absolute;
+  width: min(76%, 25rem);
+  height: 60%;
+  border: 1px solid #7badf05c;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: rotate(-16deg);
+}
+
+.model {
+  position: relative;
+  width: clamp(9.5rem, 45%, 14rem);
+  aspect-ratio: 1.6;
+  transform-style: preserve-3d;
+  transform: translate3d(var(--x, 0px), var(--y, 0px), 0)
+    rotateX(calc(12deg + var(--rx, 0deg))) rotateY(calc(-19deg + var(--ry, 0deg)));
+  transition: transform .26s cubic-bezier(.2,.75,.3,1);
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: .45rem;
+  padding: .8rem;
+  border: 1px solid #759acb;
+  border-radius: .8rem;
+  background: #142b4b;
+  color: #fff;
+  transition: transform .55s cubic-bezier(.2,.72,.22,1), border-color .3s ease;
+}
+
+.card[data-depth="0"] {
+  transform: translate3d(-12px, -12px, 30px);
+  border-color: #92bcf4;
+  background: linear-gradient(145deg, #2c75ce, #004aad 65%, #06346f);
+  box-shadow: 0 9px 20px #020d2580;
+}
+.card[data-depth="1"] { transform: translate3d(2px, 1px, 4px); background: #234d80; }
+.card[data-depth="2"] { transform: translate3d(15px, 13px, -20px); background: #1a395f; }
+.card[data-depth="3"] { transform: translate3d(28px, 25px, -44px); }
+.cardIcon { display: grid; place-items: center; width: 2.35rem; aspect-ratio: 1; border-radius: .45rem; background: #ffffff24; }
+.card strong { font-size: .9rem; line-height: 1.2; }
+.cardMark { width: 36%; height: 2px; background: #b8d7ff8c; }
+
+.detail { display: grid; align-content: center; min-width: 0; padding: clamp(1.1rem, 3.5vw, 2.4rem); }
+.detail h3 { margin: 0 0 .6rem; font-size: clamp(1.035rem, 0.94rem + 0.63vw, 1.395rem); line-height: 1.25; }
+.detail p { margin: 0; color: #445267; font-size: .93rem; line-height: 1.65; }
+.readout { animation: arrive .32s ease-out both; }
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .walkthrough { grid-template-columns: minmax(0, 1fr); }
+  .stage { min-height: 12rem; border-radius: 0; }
+}
+@media (max-width: 600px) {
+  .sequence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sequence .arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .model, .card, .sequence button { transition: none; }
+  .readout { animation: none; }
+}

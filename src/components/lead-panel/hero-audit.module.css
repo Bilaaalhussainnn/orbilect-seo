@@ -1,0 +1,32 @@
+.action {
+  display: block;
+  margin-block-start: .85rem;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.action button {
+  max-width: 100%;
+  min-height: 44px;
+}
+
+.row[data-hero-actions] {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: clamp(.45rem, 1.2vw, .9rem);
+  width: fit-content;
+  max-width: 100%;
+  margin-block-start: .85rem;
+}
+
+.row[data-hero-actions] > :is(a, .action),
+.row[data-hero-actions] > .action > button {
+  min-width: 0;
+  margin: 0;
+  white-space: normal;
+  text-align: start;
+}
+
+.row[data-hero-actions] > .action { flex-shrink: 1; }
+.row[data-hero-actions] > a { overflow-wrap: anywhere; }

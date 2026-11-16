@@ -1,0 +1,74 @@
+.screen {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  container-type: inline-size;
+  background: #fff;
+  color: #182333;
+  font-family: var(--font-poppins, "Poppins"), sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqw;
+  padding: 2.4cqw 4cqw;
+  background: #e9eef5;
+}
+.toolbar > i { flex: none; width: 1.25cqw; aspect-ratio: 1; border-radius: 50%; background: #7e8ea2; }
+.toolbar > span {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  padding: .5cqw 2cqw;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #fff;
+  font-size: clamp(4px, 2.5cqw, 12px);
+  line-height: 1.3;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.body { display: grid; align-content: start; gap: 3cqw; padding: 5cqw 8cqw; overflow: hidden; }
+.google { justify-self: center; font-size: clamp(9px, 7.5cqw, 33px); font-weight: 600; line-height: 1; letter-spacing: -.055em; }
+.google i { font-style: normal; color: #4285f4; }
+.google i:nth-child(2), .google i:nth-child(6) { color: #ea4335; }
+.google i:nth-child(3) { color: #b47a00; }
+.google i:nth-child(5) { color: #188038; }
+
+.query {
+  display: flex;
+  align-items: center;
+  gap: 2.5cqw;
+  min-width: 0;
+  min-height: 1.55em;
+  padding: .6cqw 2.5cqw;
+  border: 1px solid #cbd5e1;
+  border-radius: 99px;
+  font-size: clamp(4px, 3.2cqw, 13px);
+}
+.magnifier { flex: none; width: .48em; aspect-ratio: 1; border: 1px solid #627187; border-radius: 50%; }
+.queryText, .result strong { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.result { display: grid; gap: 1cqw; padding-top: 1.5cqw; border-top: 1px solid #e4e9ef; font-size: clamp(4px, 3cqw, 12px); }
+.result strong { color: #004aad; }
+.result i { height: max(1px, .55cqw); width: 78%; border-radius: 99px; background: #dbe3ee; }
+.result i + i { width: 56%; }
+
+.screen[data-animate] .letter { animation: holdLetter linear; }
+.screen[data-animate] .result { animation: showResult .2s ease var(--result-delay) backwards; }
+@keyframes holdLetter { from, to { opacity: 0; } }
+@keyframes showResult { from { opacity: 0; } to { opacity: 1; } }
+
+@container (max-width: 90px) {
+  .toolbar > i { display: none; }
+  .body { gap: 4cqw; padding-inline: 5cqw; }
+  .magnifier { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen[data-animate] :is(.letter, .result) { animation: none; }
+}

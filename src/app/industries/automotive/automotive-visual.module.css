@@ -1,0 +1,39 @@
+.studio {
+  position: relative;
+  isolation: isolate;
+  height: clamp(245px, 31vw, 390px);
+  overflow: hidden;
+  border: 1px solid #ffffff24;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 50% 44%, #004aad33, transparent 62%),
+    linear-gradient(155deg, #121822, #080b10 72%);
+}
+
+.studio::before {
+  content: "";
+  position: absolute;
+  inset: auto 16% 10%;
+  height: 12%;
+  border-radius: 50%;
+  background: #0009;
+  filter: blur(14px);
+}
+
+.fallback {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(47%, 180px);
+  aspect-ratio: 1;
+  border: 12px solid #181b21;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotateY(-20deg);
+  background:
+    radial-gradient(circle, #343d49 0 14%, transparent 15%),
+    repeating-conic-gradient(#b1bdcd 0 8deg, #101721 8deg 36deg);
+  box-shadow: 0 0 0 2px #78879a, 12px 12px 24px #000a;
+}
+
+@media (max-width: 480px) {
+  .studio { height: 245px; }
+}

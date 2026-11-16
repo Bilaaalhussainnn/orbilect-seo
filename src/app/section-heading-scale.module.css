@@ -1,0 +1,9 @@
+.scope { display: contents; }
+
+.scope h2 {
+  font-size: clamp(1.375rem, 1.12rem + 1vw, 1.875rem) !important;
+}
+
+.scope [data-industries-index] :is([data-site-eyebrow], :global(.orbilect-section-label)) {
+  display: none !important;
+}

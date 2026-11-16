@@ -1,0 +1,80 @@
+.growthLayout {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.console { min-width: 0; }
+.rail, .trackButtons { display: flex; flex-wrap: wrap; gap: .45rem; }
+.rail { margin-block-end: .95rem; }
+.rail button, .trackButtons button {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 44px;
+  padding: .45rem .7rem;
+  font: inherit;
+  font-size: .75rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  border: 1px solid #b7c9e0;
+  background: #fff;
+  color: #0e1d34;
+  cursor: pointer;
+}
+.rail button[aria-pressed="true"], .trackButtons button[aria-pressed="true"] {
+  background: #004aad;
+  color: #fff;
+  border-color: #4e83c5;
+}
+.rail button:focus-visible, .trackButtons button:focus-visible {
+  outline: 2px solid #539aff;
+  outline-offset: 3px;
+}
+.growthPanel, .teamCard {
+  min-width: 0;
+  padding: clamp(1.2rem, 3vw, 2.4rem);
+  border: 1px solid #37547c;
+  border-radius: 1rem;
+  background:
+    linear-gradient(90deg, #81b1e514 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(#81b1e514 1px, transparent 1px) 0 0 / 22px 22px,
+    radial-gradient(ellipse at 95% 0, #1c3e6b, #0d192d 68%);
+  box-shadow: 0 20px 50px #071a3329;
+  color: #fff;
+}
+.growthPanel { animation: panel-in .32s ease-out both; }
+@keyframes panel-in { from { opacity: .5; translate: 0 7px; } to { opacity: 1; translate: 0; } }
+.tileIcon {
+  display: inline-grid;
+  width: 47px;
+  height: 47px;
+  place-items: center;
+  border: 1px solid #78affe;
+  border-radius: .7rem;
+  background: #004aad;
+  color: white;
+  box-shadow: 0 4px 0 #041934;
+}
+.growthPanel h3, .teamCard h3 { margin: .9rem 0 .45rem; line-height: 1.25; }
+.growthPanel p, .teamCard p { color: #d0dded; font-size: .86rem; line-height: 1.6; }
+.metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .45rem; padding: 0; list-style: none; }
+.metrics li { padding: .55rem; border: 1px solid #48638a; background: #0c1b30; border-radius: .5rem; font-size: .72rem; }
+.metrics span { display: block; color: #9ecbff; font-weight: 700; }
+.textLink { display: inline-flex; gap: .3rem; align-items: center; color: #d6e9ff; font-size: .82rem; }
+.location { display: flex; align-items: start; gap: .5rem; }
+.location svg { flex-shrink: 0; margin-block-start: .2rem; }
+.trackGrid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(1.4rem, 4vw, 4rem); margin-block-start: clamp(1.6rem, 4vw, 3.5rem); }
+.teamCard {
+  min-height: 330px;
+  height: 100%;
+  border-color: #3e526b;
+  background: radial-gradient(ellipse at 100% 0, #1b3454, transparent 52%),
+    linear-gradient(155deg, #131e2d, #0b121c 75%);
+}
+.trackButtons button { background: #0c1b30; color: white; border-color: #48638a; }
+.stepDetail { min-height: 3.5em; }
+@media (max-width: 860px) { .growthLayout { grid-template-columns: minmax(0,1fr); } }
+@media (max-width: 690px) { .trackGrid { grid-template-columns: minmax(0,1fr); } }
+@media (prefers-reduced-motion: reduce) { .growthPanel { animation: none; } }

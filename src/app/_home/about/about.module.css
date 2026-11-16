@@ -1,0 +1,234 @@
+.about {
+  background: #f8f3e9;
+  color: #111318;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  width: min(calc(100% - 48px), 1320px);
+  margin-inline: auto;
+  padding-block: clamp(43.8px, 5.84vw, 76.65px);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #004aad;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+.copy h2 span { color: #004aad; }
+
+.intro {
+  max-width: 58ch;
+  margin: 14px 0 22px;
+  color: #4d4a44;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.copy h3 {
+  margin: 0 0 7px;
+  font-size: 15.04px;
+  font-weight: 600;
+}
+
+.reasons {
+  padding: 0;
+  margin: 0 0 23px;
+  list-style: none;
+}
+
+.reasons li {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding-block: 11px;
+  border-bottom: 1px solid #e4dccd;
+}
+
+.reasonIcon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background: #e8edf6;
+  color: #004aad;
+}
+
+.reasons strong { font-size: 13px; }
+
+.reasons p {
+  margin: 3px 0 0;
+  color: #4d4a44;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.about .aboutCta {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-color: #101318;
+}
+
+.about .aboutCta:is(:hover, :focus-visible) {
+  background: #004aad;
+  border-color: #004aad;
+  color: #fff;
+}
+
+.about .aboutCta:is(:hover, :focus-visible) > span {
+  background: #fff;
+  color: #004aad;
+}
+
+.about .aboutCta:focus-visible {
+  outline: 2px solid #004aad;
+  outline-offset: 4px;
+}
+
+.visual {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+}
+
+.callouts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.callouts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid #e4dccd;
+  border-radius: 999px;
+  background: #fffcf6;
+  box-shadow: 0 6px 16px #352d1b0d;
+  color: #292822;
+  font-size: 11px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.callouts span:nth-child(2) { animation-delay: -1.5s; }
+.callouts span:nth-child(3) { animation-delay: -3s; }
+.callouts svg { color: #004aad; flex-shrink: 0; }
+
+.store { width: 100%; min-width: 0; }
+
+.store > div {
+  width: 100%;
+  max-width: none;
+  height: clamp(430px, 43vw, 610px);
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.store canvas { display: block; background: transparent; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    width: min(calc(100% - 40px), 690px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .copy h2 { font-size: clamp(25.2px, 4.8vw, 32px); }
+  .store > div { height: clamp(310px, 70vw, 490px); }
+}
+
+@media (max-width: 540px) {
+  .inner { width: calc(100% - 36px); }
+  .about .aboutCta {
+    min-height: 44px;
+    padding: 4px 13px 4px 4px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .about .aboutCta > span {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .about .aboutCta > span svg { width: 14px; height: 14px; }
+  .callouts span { padding: 7px 9px; font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callouts span { animation: none; }
+}
+
+/* About light-grey finish */
+.about {
+  background: #f1f3f5;
+}
+
+.intro,
+.reasons p {
+  color: #434b57;
+}
+
+.reasons li {
+  border-bottom-color: #d8dfe7;
+}
+
+.reasonIcon {
+  background: #e1e7ee;
+  color: #00275d;
+}
+
+.callouts {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0 4px;
+}
+
+.callouts span {
+  background: #fff;
+  border-color: #d8dfe7;
+  color: #19212d;
+  box-shadow: 0 6px 16px #1023430d;
+}
+
+.callouts svg {
+  color: #00275d;
+}
+
+.callouts span:nth-child(4) { animation-delay: -2s; }
+.callouts span:nth-child(5) { animation-delay: -3.5s; }
+
+@media (max-width: 540px) {
+  .callouts { gap: 7px; }
+  .callouts span { max-width: 100%; }
+}
+/* End About light-grey finish */

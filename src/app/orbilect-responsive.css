@@ -1,0 +1,55 @@
+/* Shared scale for public pages. New sections should use these tokens. */
+:root {
+  --site-hero-title: clamp(1.75rem, 1.25rem + 1.55vw, 2.65rem);
+  --site-section-title: clamp(1.4rem, 1.1rem + 1vw, 2.15rem);
+  --site-card-title: clamp(1.05rem, .95rem + .45vw, 1.4rem);
+  --site-subheading: clamp(.95rem, .9rem + .25vw, 1.15rem);
+  --site-body: .9375rem;
+  --site-lead: clamp(.9rem, .83rem + .25vw, 1rem);
+  --site-label: .75rem;
+  --site-action: .875rem;
+  --site-hero-space: clamp(2.25rem, 4.8vw, 4.75rem);
+  --site-section-space: clamp(2.5rem, 5.2vw, 5.25rem);
+  --orbilect-h1-size: var(--site-hero-title);
+}
+
+body { font-size: var(--site-body); }
+
+/* The H1 rule replaces the previous site-wide override. Other defaults defer to component styles. */
+body h1 { font-size: var(--site-hero-title) !important; }
+:where(main) :where(h2) { font-size: var(--site-section-title); }
+:where(main) :where(h3) { font-size: var(--site-card-title); }
+:where(main) :where(h4, h5, h6) { font-size: var(--site-subheading); }
+:where(main) :where([data-site-lead]) { font-size: var(--site-lead); }
+:where(main) :where([data-site-section]) { padding-block: var(--site-section-space); }
+:where(main) :where([data-site-hero]) { padding-block: var(--site-hero-space); }
+
+@media (max-width: 1024px), (max-width: 1366px) and (pointer: coarse) {
+  body :is(h1, h2, h3, h4, h5, h6) {
+    text-align: center !important;
+    margin-inline: auto;
+    overflow-wrap: anywhere;
+  }
+
+  html body :is([data-site-eyebrow], .orbilect-section-label),
+  main :is([data-site-lead], h1 + p, [data-site-heading] + p),
+  main section header > :is(h2, h3) + p {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+}
+
+/* Keep decorative motion inside the homepage viewport without creating a scroll container. */
+@media (max-width: 1024px), (max-width: 1366px) and (pointer: coarse) {
+  [data-home-page] {
+    min-inline-size: 0;
+    overflow-x: clip;
+  }
+}
+
+/* Navigation and blog hero refinements */
+:root {
+  --site-menu-offset: clamp(10px, 2.4vw, 34px);
+  --site-menu-size: 48px;
+  --site-menu-clearance: calc(var(--site-menu-offset) + var(--site-menu-size) + 32px);
+}

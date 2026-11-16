@@ -1,0 +1,11 @@
+.menu[open] {
+  background: radial-gradient(ellipse at 83% 72%, #071124, transparent 58%), #050609;
+}
+.menu [data-marketing-art] { opacity: .25; }
+.menu [data-growth-orbs] { opacity: .2; }
+.menu .links { width: min(100%, 850px); gap: .7rem clamp(.7rem, 3vw, 2.4rem); }
+.menu .links a { font-size: clamp(19px, 2.1vw, 34px); }
+@media (max-width: 640px) {
+  .menu .links { gap: .38rem .85rem; }
+  .menu .links a { font-size: clamp(16px, 4.2vw, 22px); }
+}

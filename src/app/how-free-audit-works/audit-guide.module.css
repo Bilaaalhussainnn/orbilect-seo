@@ -1,0 +1,113 @@
+.section {
+  --blue: #004aad;
+  --ink: #111923;
+  --muted: #445267;
+  --line: #d3e0f0;
+  padding: clamp(2.007rem, 3.65vw, 3.467rem) clamp(1rem, 5vw, 4rem);
+  background: #fff;
+  color: var(--ink);
+}
+.dark {
+  --ink: #f7faff;
+  --muted: #c5d1e3;
+  --line: #334967;
+  background:
+    linear-gradient(#9abbf512 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, #9abbf512 1px, transparent 1px) 0 0 / 48px 48px,
+    radial-gradient(ellipse at top right, #173359, #0a0d14 70%);
+}
+.hero { padding-block: clamp(2.555rem, 5.11vw, 4.38rem); }
+.wrap { width: min(100%, 76rem); margin-inline: auto; }
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+}
+.heading { max-width: 49rem; margin-bottom: 1.3rem; }
+.eyebrow {
+  margin: 0 0 1rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.hero h1, .heading h2 { margin: 0 0 .7rem; letter-spacing: -.045em; line-height: 1.14; }
+.hero h1 { font-size: clamp(1.764rem, 1.395rem + 2.08vw, 2.84rem); }
+.heading h2 { font-size: clamp(1.386rem, 1.035rem + 1.53vw, 2.12rem); }
+.heading h2 span { color: var(--blue); }
+.dark .heading h2 span {
+  padding-inline: .13em;
+  background: var(--blue);
+  color: #fff;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.heading > p:last-child, .heroGrid > div:first-child > p:not([data-site-eyebrow]), .process p, .findings dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1rem; margin-top: 1rem; }
+.link { display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; color: #fff; font-size: .88rem; }
+.link:hover { color: #a9ceff; }
+
+.scene {
+  min-width: 0;
+  padding: .65rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: radial-gradient(ellipse at center, #17365c, #101827 74%);
+}
+.placeholder { min-height: 12rem; }
+.controls { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; }
+.controls button {
+  min-height: 44px;
+  padding: .45rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: #111c2e;
+  color: #fff;
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.controls button:hover, .controls button[aria-pressed="true"] { background: var(--blue); border-color: #83b3ef; }
+.section :is(a, button, summary):focus-visible { outline: 2px solid #6fa9ef; outline-offset: 3px; }
+
+.process { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; margin: 0; padding: 0; list-style: none; }
+.process li { padding: 1rem; border: 1px solid var(--line); border-top: 2px solid var(--blue); border-radius: .65rem; background: linear-gradient(145deg, #fff, #eff5ff); }
+.process h3 { margin: 0 0 .4rem; font-size: 0.987rem; }
+.process p, .findings dd { font-size: .9rem; }
+
+.report { background: #f3f7fc; scroll-margin-top: 5rem; }
+.findings { display: grid; gap: .5rem; }
+.findings details { border: 1px solid var(--line); border-radius: .65rem; background: #fff; }
+.findings summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .7rem;
+  min-height: 44px;
+  padding: .7rem .9rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.findings summary::-webkit-details-marker { display: none; }
+.findings details[open] summary { color: var(--blue); }
+.toggle::before { content: "+"; color: var(--blue); font-size: 1.08rem; }
+.findings details[open] .toggle::before { content: "−"; }
+.findings dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: 0; padding: 0 .9rem .9rem; }
+.findings dl div { padding: .75rem; border-top: 1px solid var(--line); background: #f7faff; }
+.findings dt { margin-bottom: .3rem; color: var(--blue); font-size: .82rem; font-weight: 700; }
+
+@media (max-width: 850px) {
+  .heroGrid { grid-template-columns: minmax(0, 1fr); }
+  .scene { width: min(100%, 32rem); margin-inline: auto; }
+}
+@media (max-width: 640px) {
+  .process, .findings dl { grid-template-columns: minmax(0, 1fr); }
+}

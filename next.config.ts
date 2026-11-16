@@ -6,4 +6,10 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
 };
 
-export default nextConfig;
+export default {
+  ...nextConfig,
+  env: {
+    ...nextConfig.env,
+    ORBILECT_COPYRIGHT_YEAR: String(new Date().getUTCFullYear()),
+  },
+};

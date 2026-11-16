@@ -1,0 +1,17 @@
+.grid[aria-labelledby="services-page-title"] {
+  padding-block: clamp(2.15rem, 4.1vw, 3.5rem);
+  background:
+    linear-gradient(rgba(155, 188, 244, .085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 188, 244, .085) 1px, transparent 1px),
+    radial-gradient(ellipse at 79% 18%, #17375e 0%, #112037 43%, #0b1019 82%);
+  background-size: 52px 52px, 52px 52px, auto;
+}
+
+.heroLayout { gap: clamp(1.25rem, 4vw, 3.5rem); }
+.heroPreview {
+  width: min(100%, 27rem);
+  justify-self: center;
+}
+@media (max-width: 560px) {
+  .heroPreview { width: min(100%, 20rem); }
+}

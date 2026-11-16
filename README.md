@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orbilect SEO
 
-## Getting Started
+Next.js App Router site for `https://orbilectseo.com`. Use Node.js 20.9 or newer.
 
-First, run the development server:
+## Development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the localhost URL printed by Next.js. Keep service credentials in your local `.env.local` or your host's environment variables.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verify the production build before pushing
 
-## Learn More
+```bash
+npm run seo:verify
+```
 
-To learn more about Next.js, take a look at the following resources:
+This builds the current source and starts a temporary production server on a free loopback port. It checks the sitemap against the App Router, then checks rendered pages for HTTP errors, indexing directives, distinct titles and descriptions, canonicals, headings, social metadata, supported structured data fields, internal links, and local images. It closes its own server when the audit finishes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To check an already running build or the published site, pass its explicit URL:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+node scripts/check-orbilect-search.cjs http://127.0.0.1:3000
+```
 
-## Deploy on Vercel
+## Maintaining search metadata
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Shared metadata, structured data, and the canonical origin are in `src/lib/orbilect-search.ts`. Keep titles and descriptions specific to the content of each page.
+- The sitemap lists the public static routes in `src/app/sitemap.ts`. When adding, removing, or renaming one, update that list. Published blog guides come from the same validated records that generate the article pages. Add a catalogue entry, publication record, and article body together for each new guide.
+- `src/app/robots.ts` sets crawler access and points to the sitemap. Server authorization for administrative functions belongs in those routes.
+- Set dates from the actual editorial records. Only add sitemap `lastmod` if it represents a meaningful content update.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## After your page edits and deployment
+
+1. Configure the published site on `https://orbilectseo.com` and redirect alternate domain variants to the equivalent canonical URLs. Run the checker against that public origin and verify that the host does not add an indexing block.
+2. Submit `https://orbilectseo.com/sitemap.xml` from Google Search Console and Bing Webmaster Tools. Use URL Inspection on the homepage and representative service and article pages after deployment.
+3. Check the homepage and a published article in Google's Rich Results Test. The local audit verifies the HTML and structured data it receives. Indexing, sitelinks, rich results, and rankings are determined by each search engine.

@@ -1,0 +1,63 @@
+:root {
+  --orbilect-blue: #004aad;
+  --orbilect-dark: #05070a;
+  --orbilect-white: #ffffff;
+  --orbilect-silver: #c4cad3;
+
+  --heading-1: var(--site-hero-title);
+  --heading-2: var(--site-section-title);
+  --heading-3: var(--site-card-title);
+  --heading-4: var(--site-subheading);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--orbilect-dark);
+  color: var(--orbilect-white);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+/* Orbilect smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--site-header-offset, 88px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* Orbilect scroll experience */
+html.lenis {
+  scroll-behavior: auto;
+}
+
+[data-orbilect-scroll-heading] {
+  animation: none !important;
+  transform-origin: center bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}

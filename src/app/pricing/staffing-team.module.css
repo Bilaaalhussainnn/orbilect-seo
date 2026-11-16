@@ -1,0 +1,133 @@
+.section {
+  --blue: #004aad;
+  --ink: #101722;
+  --line: #d5dfec;
+  background: #fff;
+  color: var(--ink);
+  padding-block: clamp(40.88px, 5.84vw, 78.84px);
+  scroll-margin-top: 90px;
+}
+.wrap { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.header { max-width: 660px; margin-bottom: 30px; }
+.header .eyebrow {
+  margin: 0 0 16px; padding-bottom: 13px; border-bottom: 1px solid var(--line);
+  font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+}
+.header h2 { margin: 0; font-size: 25.2px; line-height: 1.2; letter-spacing: -.035em; }
+.header h2 span { color: var(--blue); }
+.header > p:last-child, .detail p { color: #435164; font-size: 14px; line-height: 1.7; }
+.workspace { display: grid; grid-template-columns: minmax(225px, .72fr) minmax(0, 1.5fr); gap: clamp(15px, 4vw, 52px); }
+.roles { display: grid; gap: 6px; align-content: start; }
+.roles button {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center;
+  gap: 10px; min-height: 44px; padding: 9px 12px;
+  border: 1px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--ink); font: inherit; font-size: 13px;
+  font-weight: 650; text-align: left; cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.roles button > svg:first-child { color: var(--blue); }
+.roles button:is(:hover, [aria-pressed="true"]) { background: var(--blue); border-color: var(--blue); color: #fff; }
+.roles button:is(:hover, [aria-pressed="true"]) > svg:first-child { color: inherit; }
+.preview {
+  min-width: 0; align-self: start; padding: clamp(14px, 3vw, 30px);
+  border: 1px solid var(--line); border-radius: 15px;
+  background: #f7f9fc; box-shadow: 0 16px 40px #1017220b;
+}
+.diagram {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(8px, .32fr) minmax(0, 1.5fr) minmax(8px, .32fr) minmax(0, 1fr);
+  align-items: center; padding: 18px 12px; perspective: 650px; border-radius: 9px;
+  background: radial-gradient(circle, #c6d5e9 1px, transparent 1px) 0 0 / 13px 13px, #edf3fa;
+}
+.node, .specialist {
+  display: grid; align-content: center; justify-items: center; gap: 6px; min-height: 68px;
+  padding: 7px 4px; border: 1px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--blue); text-align: center;
+  font-size: 11px; font-weight: 650; overflow-wrap: anywhere;
+}
+.specialist {
+  min-height: 90px; background: var(--blue); color: #fff; border-color: transparent;
+  box-shadow: 0 6px 0 #00367d, 0 9px 16px #004aad32;
+  animation: seat-in .45s cubic-bezier(.2,.75,.25,1) both;
+}
+.connector { position: relative; height: 1px; background: #9bb3d3; }
+.connector::after {
+  content: ""; position: absolute; top: -2px; left: 0; width: 5px; height: 5px;
+  background: var(--blue); border-radius: 50%; animation: pass .48s .18s ease-out both;
+}
+.connector:nth-child(4)::after { animation-delay: .39s; }
+.detail { margin-top: 18px; }
+.detail h3 { margin: 0; font-size: 18px; }
+.detail p { margin: 5px 0 12px; }
+.detail dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.detail dl > div { padding-top: 9px; border-top: 1px solid var(--line); }
+.detail dt { color: var(--blue); font-size: 11px; font-weight: 700; }
+.detail dd { margin: 4px 0 0; font-size: 13px; line-height: 1.5; }
+.cta {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  margin-top: 18px; padding: 8px 14px; border-radius: 999px;
+  background: var(--ink); color: #fff; font-size: 13px; font-weight: 650; text-decoration: none;
+}
+.cta:hover { background: var(--blue); }
+.section :is(button, a):focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@keyframes seat-in {
+  from { opacity: .45; transform: translateZ(-24px) rotateY(-22deg); }
+  to { opacity: 1; transform: translateZ(0) rotateY(0); }
+}
+@keyframes pass {
+  from { left: 0; opacity: 0; }
+  25% { opacity: 1; }
+  to { left: calc(100% - 5px); opacity: 0; }
+}
+@media (max-width: 780px) {
+  .wrap { width: calc(100% - 36px); }
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .roles button { grid-template-columns: auto minmax(0, 1fr); }
+  .roles button > svg:last-child { display: none; }
+}
+@media (max-width: 400px) {
+  .roles button { gap: 6px; padding-inline: 7px; font-size: 12px; }
+  .diagram { padding-inline: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .specialist, .connector::after { animation: none; }
+  .roles button { transition: none; }
+  .connector::after { display: none; }
+}
+
+/* Standalone staffing theme */
+.section[data-theme="dark"] {
+  --ink: #f5f8ff;
+  --line: #33445e;
+  color: var(--ink);
+  background: linear-gradient(120deg, #002b66 0%, #004aad 58%, #003779 100%);
+}
+.section[data-theme="dark"] .header h2 span {
+  color: #fff;
+  background: var(--blue);
+  padding-inline: .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.section[data-theme="dark"] :is(.header > p:last-child, .detail p) { color: #c6d2e4; }
+.section[data-theme="dark"] .roles button { background: #101827; }
+.section[data-theme="dark"] .roles button > svg:first-child { color: #adcaf3; }
+.section[data-theme="dark"] .roles button:is(:hover, [aria-pressed="true"]) {
+  background: var(--blue);
+  border-color: #7ba5df;
+  color: #fff;
+}
+.section[data-theme="dark"] .roles button:is(:hover, [aria-pressed="true"]) > svg:first-child { color: #fff; }
+.section[data-theme="dark"] .preview {
+  background: linear-gradient(150deg, #131f32, #0b111c);
+  box-shadow: 0 16px 40px #0005;
+}
+.section[data-theme="dark"] .diagram {
+  background: radial-gradient(circle, #3b5071 1px, transparent 1px) 0 0 / 13px 13px, #0b1422;
+}
+.section[data-theme="dark"] .node { background: #17243a; color: #e1ebfa; }
+.section[data-theme="dark"] .detail dt { color: #adcaf3; }
+.section[data-theme="dark"] .cta { background: #fff; color: #101722; }
+.section[data-theme="dark"] .cta:hover { background: var(--blue); color: #fff; }
+.section[data-theme="dark"] :is(button, a):focus-visible { outline-color: #fff; }

@@ -1,0 +1,502 @@
+[
+  {
+    "question": "What details do you take from a free audit form?",
+    "href": "/privacy-policy#information",
+    "match": "when you request an audit or proposal"
+  },
+  {
+    "question": "Does your hosting provider process my IP address?",
+    "href": "/privacy-policy#information",
+    "match": "hosting and security services"
+  },
+  {
+    "question": "What business information do you keep when I become a client?",
+    "href": "/privacy-policy#information",
+    "match": "if you become a client"
+  },
+  {
+    "question": "Can Orbilect get project information from systems I authorize?",
+    "href": "/privacy-policy#sources-and-project-access",
+    "match": "we receive information directly"
+  },
+  {
+    "question": "What information do you use from a job application?",
+    "href": "/privacy-policy#sources-and-project-access",
+    "match": "for staffing or careers enquiries"
+  },
+  {
+    "question": "What controls apply when you process customer data on our instructions?",
+    "href": "/privacy-policy#sources-and-project-access",
+    "match": "where we handle information on your instructions"
+  },
+  {
+    "question": "What records do you keep when a customer pays an invoice?",
+    "href": "/privacy-policy#investment-and-promotions",
+    "match": "we keep relevant invoice"
+  },
+  {
+    "question": "Who handles my direct-debit details?",
+    "href": "/privacy-policy#investment-and-promotions",
+    "match": "if you authorize direct debit"
+  },
+  {
+    "question": "What do you do with candidate interviews and assessment results?",
+    "href": "/privacy-policy#offshore-staffing-privacy",
+    "match": "we use business contact details"
+  },
+  {
+    "question": "Are smartwatches or paper allowed on the staffing floor?",
+    "href": "/privacy-policy#offshore-staffing-privacy",
+    "match": "personal phones, smartwatches"
+  },
+  {
+    "question": "How is international access to our staffing data arranged?",
+    "href": "/privacy-policy#offshore-staffing-privacy",
+    "match": "before granting offshore access"
+  },
+  {
+    "question": "Can I withdraw permission to use my testimonial in the future?",
+    "href": "/privacy-policy#reviews-and-communications",
+    "match": "withdrawing permission for future use"
+  },
+  {
+    "question": "What does Naila send to the chat endpoint when I type a message?",
+    "href": "/privacy-policy#naila",
+    "match": "when you message naila"
+  },
+  {
+    "question": "How long does the Naila session cookie last?",
+    "href": "/privacy-policy#naila",
+    "match": "expires after up to 24 hours"
+  },
+  {
+    "question": "Who handles a transcript I ask Naila to email?",
+    "href": "/privacy-policy#naila",
+    "match": "if you ask us to email one"
+  },
+  {
+    "question": "Who can read my chat when I request live help?",
+    "href": "/privacy-policy#naila",
+    "match": "if you request live help"
+  },
+  {
+    "question": "Can Naila track which page sent me to your website?",
+    "href": "/privacy-policy#naila",
+    "match": "if optional visit tracking is enabled"
+  },
+  {
+    "question": "What legal bases might you use to process personal data?",
+    "href": "/privacy-policy#purposes",
+    "match": "where applicable law requires a legal basis"
+  },
+  {
+    "question": "Which companies might receive information about my enquiry?",
+    "href": "/privacy-policy#sharing",
+    "match": "relevant information may be available"
+  },
+  {
+    "question": "Can you disclose my information in response to a legal requirement?",
+    "href": "/privacy-policy#sharing",
+    "match": "we may disclose information"
+  },
+  {
+    "question": "Which providers handle website enquiries and notifications?",
+    "href": "/privacy-policy#platforms-and-communications",
+    "match": "supabase for configured enquiry"
+  },
+  {
+    "question": "How long does the website store my cookie preference?",
+    "href": "/privacy-policy#cookies",
+    "match": "for up to 180 days"
+  },
+  {
+    "question": "Do optional analytics and marketing start disabled?",
+    "href": "/privacy-policy#cookies",
+    "match": "optional analytics and marketing start disabled"
+  },
+  {
+    "question": "How do I change the cookie categories I allowed?",
+    "href": "/privacy-policy#cookies",
+    "match": "use cookie settings"
+  },
+  {
+    "question": "Does asking for an audit put me on your marketing list?",
+    "href": "/privacy-policy#newsletter",
+    "match": "submitting an audit or proposal request"
+  },
+  {
+    "question": "Will invoices still come through if I unsubscribe from marketing?",
+    "href": "/privacy-policy#newsletter",
+    "match": "essential messages about an enquiry"
+  },
+  {
+    "question": "Do you retain all personal information for a fixed period?",
+    "href": "/privacy-policy#retention",
+    "match": "as long as reasonably needed"
+  },
+  {
+    "question": "Can deleted data remain in backup copies?",
+    "href": "/privacy-policy#retention",
+    "match": "copies in backups"
+  },
+  {
+    "question": "Can people or providers outside my country handle my information?",
+    "href": "/privacy-policy#security",
+    "match": "countries other than your own"
+  },
+  {
+    "question": "What rights might I have over my personal information?",
+    "href": "/privacy-policy#rights",
+    "match": "depending on where you live"
+  },
+  {
+    "question": "How do I ask you for a copy or deletion of my data?",
+    "href": "/privacy-policy#rights",
+    "match": "with the request and the email address"
+  },
+  {
+    "question": "What should I do if a child sent you personal details?",
+    "href": "/privacy-policy#children",
+    "match": "if you believe a child"
+  },
+  {
+    "question": "What is the difference between the NDA and the service agreement?",
+    "href": "/terms-and-conditions#agreement",
+    "match": "the nda covers confidentiality"
+  },
+  {
+    "question": "What happens when I add work outside the agreed scope?",
+    "href": "/terms-and-conditions#scope",
+    "match": "outside the agreed scope"
+  },
+  {
+    "question": "Why is a 40 percent deposit normally due before work starts?",
+    "href": "/terms-and-conditions#fees",
+    "match": "reserves specialist time"
+  },
+  {
+    "question": "When is the final project balance normally due before access transfers?",
+    "href": "/terms-and-conditions#fees",
+    "match": "the remaining balance"
+  },
+  {
+    "question": "Will you ever ask for my CVV or complete payment card number?",
+    "href": "/terms-and-conditions#fees",
+    "match": "staff never ask"
+  },
+  {
+    "question": "Is my recurring invoice due every 30 calendar days?",
+    "href": "/terms-and-conditions#recurring-and-late-payments",
+    "match": "30 calendar days"
+  },
+  {
+    "question": "Is day 31 a grace day and can a late fee start on day 32?",
+    "href": "/terms-and-conditions#recurring-and-late-payments",
+    "match": "final grace day"
+  },
+  {
+    "question": "How much notice do you give before increasing a recurring price?",
+    "href": "/terms-and-conditions#recurring-and-late-payments",
+    "match": "advance notice of a price change"
+  },
+  {
+    "question": "What is included in the 600 dollar website design promotion?",
+    "href": "/terms-and-conditions#limited-time-offers",
+    "match": "current offers include website design or redesign"
+  },
+  {
+    "question": "Do I need to pay the Starter offer in full?",
+    "href": "/terms-and-conditions#limited-time-offers",
+    "match": "promotional offers are payable in full"
+  },
+  {
+    "question": "When does the refund window start if there are no credentials?",
+    "href": "/terms-and-conditions#refunds",
+    "match": "for a deliverable without credentials"
+  },
+  {
+    "question": "What should I include in an email to ask for a refund?",
+    "href": "/terms-and-conditions#refunds",
+    "match": "send all refund requests"
+  },
+  {
+    "question": "Can I still raise a billing concern after the internal refund window?",
+    "href": "/terms-and-conditions#chargebacks",
+    "match": "we can still review concerns"
+  },
+  {
+    "question": "What happens to unused prepaid staffing months if I leave?",
+    "href": "/terms-and-conditions#staffing-and-delivery",
+    "match": "we refund unused prepaid months"
+  },
+  {
+    "question": "Can I interview my offshore specialist before choosing them?",
+    "href": "/terms-and-conditions#offshore-staffing-terms",
+    "match": "you can interview the shortlisted candidates"
+  },
+  {
+    "question": "What does the complimentary 12-month bug support exclude?",
+    "href": "/terms-and-conditions#support",
+    "match": "new features, third-party outages"
+  },
+  {
+    "question": "Why does agentic AI development cost more than a standard chatbot?",
+    "href": "/terms-and-conditions#agentic-ai-fees",
+    "match": "agentic ai development costs more"
+  },
+  {
+    "question": "Are OpenAI and other API usage fees billed separately?",
+    "href": "/terms-and-conditions#agentic-ai-fees",
+    "match": "provider’s usage, subscription and licensing charges"
+  },
+  {
+    "question": "What happens during the audit stage of the SEO timeline?",
+    "href": "/",
+    "answer": "We benchmark current visibility and identify fixes for the service, product, and location pages that matter most."
+  },
+  {
+    "question": "What do you check after publishing SEO changes?",
+    "href": "/",
+    "answer": "We check discovery, crawling, and indexing on the relevant search engines and monitor how priority pages perform."
+  },
+  {
+    "question": "What do you measure during the final SEO timeline stage?",
+    "href": "/",
+    "answer": "We compare search impressions, clicks, and tracked enquiries or sales over time to prioritize the next work."
+  },
+  {
+    "question": "Which four search engines are shown on the SEO timeline?",
+    "href": "/",
+    "answer": "Google, Bing, Yahoo!, and Yandex are shown in the SEO timeline. The markets and engines we target are agreed for each project."
+  },
+  {
+    "question": "Does an SEO timeline give me a guaranteed date for rankings?",
+    "href": "/",
+    "answer": "No. It describes the order of the work and measurement. Ranking and traffic shifts depend on the site, competition, and when changes go live."
+  },
+  {
+    "question": "How is ecommerce management different from ecommerce SEO?",
+    "href": "/services/ecommerce-management",
+    "answer": "Ecommerce SEO improves organic discovery of products and categories. Ecommerce management can also cover storefront development, day-to-day store operations, marketing, and customer support."
+  },
+  {
+    "question": "Can you scope advertisements and organic acquisition for the same online store?",
+    "href": "/services/ecommerce-management",
+    "answer": "Yes. We can scope paid media and organic work alongside storefront improvements. The proposal sets the channels, measurement, and responsibilities."
+  },
+  {
+    "question": "What is an order-management workflow in ecommerce?",
+    "href": "/services/ecommerce-management",
+    "answer": "It covers how a store receives, confirms, tracks, and routes order changes and support cases. We can define who monitors it and when a case needs approval."
+  },
+  {
+    "question": "Can I ask for help with inventory visibility during a store build?",
+    "href": "/services/ecommerce-management",
+    "answer": "Yes. Discuss your catalogue, stock sources, and workflow with us so we can scope the views and integrations your team needs."
+  },
+  {
+    "question": "Can a WooCommerce store use my existing WordPress site?",
+    "href": "/services/ecommerce-management",
+    "answer": "WooCommerce runs on WordPress. We can review the existing site, hosting, extensions, and migration or redesign needs before quoting."
+  },
+  {
+    "question": "Can you develop a storefront on Adobe Commerce or Magento?",
+    "href": "/services/ecommerce-management",
+    "answer": "Yes. Tell us about the catalogue, storefront requirements, and existing integrations so we can scope the Magento or Adobe Commerce work."
+  },
+  {
+    "question": "Can a store CRM track customer conversations and order context?",
+    "href": "/services/ecommerce-management",
+    "answer": "We can scope a custom CRM with the appropriate customer, order, and support information, approved integrations, and role-based access."
+  },
+  {
+    "question": "Can a live chat specialist help before a shopper buys?",
+    "href": "/services/ecommerce-management",
+    "answer": "Yes. A trained specialist can answer product, stock, sizing, and shipping questions, based on your approved policies."
+  },
+  {
+    "question": "What customer questions can agents handle at checkout?",
+    "href": "/services/ecommerce-management",
+    "answer": "They can explain delivery options, published offers, and checkout steps. Billing disputes or sensitive account changes follow your escalation rules."
+  },
+  {
+    "question": "What happens when a buyer needs post-purchase help?",
+    "href": "/services/ecommerce-management",
+    "answer": "An agent can answer approved shipping, tracking, returns, or exchange questions and escalate exceptions such as refund approvals."
+  },
+  {
+    "question": "How do you assess written accuracy before an ecommerce agent goes live?",
+    "href": "/services/ecommerce-management",
+    "answer": "We use timed product or order queries to assess typing speed, accuracy, and comprehension. The standard depends on the role and expected workload."
+  },
+  {
+    "question": "What does product training for store support cover?",
+    "href": "/services/ecommerce-management",
+    "answer": "Training covers your catalogue, order and return policies, tools, tone, and escalation procedures before an agent handles live cases."
+  },
+  {
+    "question": "What happens during mock chats in ecommerce agent training?",
+    "href": "/services/ecommerce-management",
+    "answer": "Agents work through simulated customer cases. Trainers review accuracy, tone, and policy compliance before they approve live work."
+  },
+  {
+    "question": "Can one dedicated staff member handle calls, email, and live chat?",
+    "href": "/staffing",
+    "answer": "We can scope a multichannel specialist. Tell us the channels, volume, schedule, skills, and languages you need so we can assess candidates."
+  },
+  {
+    "question": "How can I propose a 15 dollar hourly rate for a human support agent?",
+    "href": "/staffing",
+    "answer": "Select the role in the customer support offshoring section and enter your proposed hourly USD amount. The button opens the proposal form with the details filled in for your review."
+  },
+  {
+    "question": "Does your staffing form treat my suggested rate as an accepted quote?",
+    "href": "/staffing",
+    "answer": "No. It’s a budget proposal. We review it against skills, languages, hours, tools, and supervision before confirming a written quote."
+  },
+  {
+    "question": "Can I request technical support instead of a general customer support agent?",
+    "href": "/staffing",
+    "answer": "Yes. Choose technical support in the offshoring enquiry and describe the products, troubleshooting steps, and escalation needs."
+  },
+  {
+    "question": "Can I leave the hourly rate blank when requesting an AI chatbot project?",
+    "href": "/staffing",
+    "answer": "Yes. The chatbot and agentic AI options are project enquiries. We quote them after reviewing the workflow and integrations."
+  },
+  {
+    "question": "What is a knowledge-based AI chat agent?",
+    "href": "/services/ecommerce-management",
+    "answer": "It answers customer questions from approved material such as product descriptions and policies. Cases needing verification, an exception, or a decision can be handed to a person."
+  },
+  {
+    "question": "What is an agentic workflow in ecommerce support?",
+    "href": "/services/ecommerce-management",
+    "answer": "It can take approved actions in connected systems, such as retrieving order details and opening a ticket. The scope sets permissions, review points, and escalation limits."
+  },
+  {
+    "question": "When should an AI agent escalate an ecommerce request to a human?",
+    "href": "/services/ecommerce-management",
+    "answer": "Set escalation rules for cases such as failed identity checks, refund exceptions, or issues outside the approved policies and tool permissions."
+  },
+  {
+    "question": "Can an automated ecommerce workflow issue refunds on its own?",
+    "href": "/services/ecommerce-management",
+    "answer": "Refund permissions and approvals depend on the agreed workflow. We define what the agent can do and which decisions require a human."
+  },
+  {
+    "question": "Do you have a page for private feedback about completed project work?",
+    "href": "/reviews",
+    "answer": "Yes. The Reviews page links to available public platforms and provides a way to share feedback privately with our team."
+  },
+  {
+    "question": "Does your reviews section list public directories and business profiles?",
+    "href": "/reviews",
+    "answer": "Yes. It shows platforms where businesses manage their reputation. The Reviews page shows which public feedback options are available."
+  },
+  {
+    "question": "Where can I confirm whether a specific public review link is available?",
+    "href": "/reviews",
+    "answer": "Open the Reviews page and check the available links. Showing a platform in the logo carousel does not establish that we have an active review profile there."
+  },
+  {
+    "question": "Why does consistent business information matter for online reputation?",
+    "href": "/reviews",
+    "answer": "Accurate names, addresses, contact details, and links help people find the right business and use the correct channels to contact or review it."
+  },
+  {
+    "question": "How do you turn recurring review comments into improvements?",
+    "href": "/reviews",
+    "answer": "We look for common themes, identify where friction occurs, and use the findings to improve pages, support, or service delivery."
+  },
+  {
+    "question": "Does a rating of a human chat agent become a public company review?",
+    "href": "/reviews",
+    "answer": "No. The chat rating is private support feedback. Public reviews about Orbilect SEO services are handled through the Reviews page."
+  },
+  {
+    "question": "Is the site’s public reviews page only for enterprise clients?",
+    "href": "/reviews",
+    "answer": "No. We work with small businesses, growing teams, and enterprise organizations. The Reviews page gives visitors relevant ways to share feedback."
+  },
+  {
+    "question": "What is an original asset for a digital PR campaign?",
+    "href": "/services/digital-pr",
+    "answer": "It is something a publication can cite, such as a study, guide, original analysis, or a source that provides useful expert commentary."
+  },
+  {
+    "question": "How do you pick publications for a digital PR pitch?",
+    "href": "/services/digital-pr",
+    "answer": "We consider relevance, audience fit, editorial standards, and whether the story or asset adds value to the publication."
+  },
+  {
+    "question": "What can I measure besides links from a digital PR campaign?",
+    "href": "/services/digital-pr",
+    "answer": "You can track relevant coverage, mentions, referral visits, and enquiries when tracking is available."
+  },
+  {
+    "question": "Is earned digital PR coverage guaranteed?",
+    "href": "/services/digital-pr",
+    "answer": "No. Publishers decide whether and how to cover a pitch. The project scope can define the research, materials, outreach, and reporting we deliver."
+  },
+  {
+    "question": "What should we map before changing URLs during a redesign?",
+    "href": "/services/website-redesign",
+    "answer": "Map old URLs to their most relevant destinations. Discuss redirects, internal links, and sitemap updates before launch."
+  },
+  {
+    "question": "Why would a paid campaign need its own landing page?",
+    "href": "/services/landing-page-design",
+    "answer": "A focused page can match the ad’s message and give visitors a clear next step. Track the action the campaign is designed to produce."
+  },
+  {
+    "question": "How do you tell whether a conversion change has helped?",
+    "href": "/services/conversion-rate-optimization",
+    "answer": "Agree on a baseline and measurement method, then compare relevant actions such as qualified enquiries, checkouts, or sales."
+  },
+  {
+    "question": "Why might leads in my CRM differ from conversions in analytics?",
+    "href": "/services/marketing-analytics",
+    "answer": "Systems can count different events or attribute them differently. Agree on definitions and reconcile activity with actual leads or sales."
+  },
+  {
+    "question": "Which Search Console property covers subdomains and protocols?",
+    "href": "/blogs/how-to-submit-your-website-to-google-search-console",
+    "answer": "A Domain property covers subdomains and protocols for the domain. It requires DNS ownership verification."
+  },
+  {
+    "question": "Should redirected URLs be in an XML sitemap?",
+    "href": "/blogs/how-to-create-and-submit-an-xml-sitemap",
+    "answer": "Ordinarily the sitemap should list final, canonical, indexable URLs. Update outdated entries when pages move or redirect."
+  },
+  {
+    "question": "Can I choose any verification method for a Google Business Profile?",
+    "href": "/blogs/how-to-set-up-your-google-business-profile",
+    "answer": "Google determines which verification methods are available. Use one offered for your profile and provide accurate evidence of your business."
+  },
+  {
+    "question": "Where do I send a project proposal if I’m unsure about the service category?",
+    "href": "/contact",
+    "answer": "Use the Contact page. Pick the closest service or the option to get help choosing and describe what you want to accomplish."
+  },
+  {
+    "question": "Can I request a free audit before sharing website credentials?",
+    "href": "/how-free-audit-works",
+    "answer": "Yes. The free audit starts from your public site and information you provide. If paid work needs access, agree the scope and permissions separately."
+  },
+  {
+    "question": "Can organic search, paid media, and the website be handled together?",
+    "href": "/about",
+    "answer": "Yes. Orbilect SEO can plan organic search, paid campaigns, conversion improvements, websites, and ecommerce work around the same business goals."
+  },
+  {
+    "question": "Where can I find current vacancies and the official application process?",
+    "href": "/careers",
+    "answer": "Visit the Careers page for current openings and application instructions. Use the listed application channel for any role you pursue."
+  },
+  {
+    "question": "Where do I find the correct WhatsApp contact for a specific Orbilect office?",
+    "href": "/contact#global-locations",
+    "answer": "Open the office listing in the global locations section of the Contact page. Pakistan has its own local WhatsApp contact."
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "path": "/",
+    "title": "Orbilect SEO",
+    "description": "Orbilect SEO helps businesses attract qualified traffic and turn more visits into enquiries and sales through organic SEO, PPC and paid social, email marketing, conversion optimization, and landing page and website design and redesign. Orbilect SEO is a product of Orbilect Labs."
+  },
+  {
+    "path": "/about",
+    "title": "About Orbilect SEO",
+    "description": "Meet the Orbilect Labs team behind Orbilect SEO and see how we plan search, paid marketing, website design and conversion work."
+  },
+  {
+    "path": "/blogs",
+    "title": "SEO & Digital Marketing Blog",
+    "description": "Read practical Orbilect SEO guides on search indexing, XML sitemaps, ecommerce SEO, Google Business Profile, website performance, and paid search."
+  },
+  {
+    "path": "/blogs/what-is-search-engine-optimization",
+    "title": "What Is Search Engine Optimization?",
+    "description": "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement."
+  },
+  {
+    "path": "/careers",
+    "title": "Careers",
+    "description": "Get to know the teams at Orbilect SEO, check for current job openings, and learn what we look for in applicants."
+  },
+  {
+    "path": "/contact",
+    "title": "Contact Orbilect SEO",
+    "description": "Talk with Orbilect SEO about search visibility, paid search, or a website redesign. Share your project goals and request a tailored proposal."
+  },
+  {
+    "path": "/corporate-social-responsibility",
+    "title": "Corporate Social Responsibility",
+    "description": "Explore the principles that guide Orbilect SEO’s approach to people, accessibility, and responsible operations."
+  },
+  {
+    "path": "/how-free-audit-works",
+    "title": "How a Free SEO Audit Works",
+    "description": "See what Orbilect SEO checks in a free SEO audit, including crawlability, indexing, priority pages, and opportunities for qualified search traffic."
+  },
+  {
+    "path": "/how-we-work",
+    "title": "Our SEO Process",
+    "description": "See how Orbilect SEO scopes the work, prioritizes technical and content changes, measures progress, and reports on qualified traffic and enquiries."
+  },
+  {
+    "path": "/industries",
+    "title": "SEO Services by Industry",
+    "description": "Find SEO strategies for ecommerce, healthcare, real estate, SaaS, automotive, hospitality, and other industries. Explore what we prioritize for each market."
+  },
+  {
+    "path": "/industries/automotive",
+    "title": "Automotive SEO for Dealerships, Repair Shops and Parts Retailers",
+    "description": "Grow automotive search visibility with SEO for dealer inventory, repair services, parts catalogs, and local markets."
+  },
+  {
+    "path": "/industries/ecommerce",
+    "title": "SEO for Ecommerce Brands & Online Retailers",
+    "description": "See how Orbilect SEO helps online retailers improve product discovery, organize category pages, and guide shoppers from search to checkout."
+  },
+  {
+    "path": "/industries/education",
+    "title": "Education SEO Services",
+    "description": "Improve search visibility for schools, training providers, and course creators with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/finance",
+    "title": "Finance SEO Services",
+    "description": "Improve search visibility for accounting and financial services firms with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/healthcare",
+    "title": "Healthcare SEO Services",
+    "description": "Improve search visibility for clinics and healthcare practices with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/home-services",
+    "title": "Home Services SEO Services",
+    "description": "Improve search visibility for local trades and home service companies with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/hospitality",
+    "title": "Hospitality SEO Services",
+    "description": "Improve search visibility for hotels, venues, and hospitality operators with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/logistics",
+    "title": "Logistics SEO Services",
+    "description": "Improve search visibility for freight, warehousing, and fulfillment providers with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/manufacturing",
+    "title": "Manufacturing SEO Services",
+    "description": "Improve search visibility for manufacturers and industrial suppliers with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/professional-services",
+    "title": "Professional Services SEO Services",
+    "description": "Improve search visibility for consultancies and specialist firms with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/real-estate",
+    "title": "Real Estate SEO Services",
+    "description": "Improve search visibility for brokerages, agents, and property businesses with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/industries/saas",
+    "title": "SaaS SEO Services",
+    "description": "Improve search visibility for software companies and subscription platforms with technical SEO, useful content, and clearer conversion paths."
+  },
+  {
+    "path": "/media-pr-relations",
+    "title": "Media & PR Relations",
+    "description": "Contact Orbilect SEO for press enquiries, interviews, expert commentary, and brand asset requests."
+  },
+  {
+    "path": "/newsroom",
+    "title": "Orbilect SEO Newsroom",
+    "description": "Read company announcements, product briefings, and updates from Orbilect SEO and Orbilect Labs."
+  },
+  {
+    "path": "/newsroom/erp-platform",
+    "title": "An ERP platform that connects orders, inventory, and invoicing",
+    "description": "Inside the Orbilect Labs ERP platform and the handoffs it brings into one workspace."
+  },
+  {
+    "path": "/newsroom/large-language-model",
+    "title": "How Orbilect Labs approaches language model development",
+    "description": "A look at the LLM work and the role of task-specific evaluation before a model enters a workflow."
+  },
+  {
+    "path": "/newsroom/naila-ai",
+    "title": "How Naila AI handles routine questions and hands off complex cases",
+    "description": "Explore the support assistant’s approach to approved knowledge, conversation context, and human handoff."
+  },
+  {
+    "path": "/newsroom/orbilect-create",
+    "title": "Orbilect Create turns a website brief into an editable first draft",
+    "description": "A look at how Orbilect Labs brings AI-assisted site creation, editing, and responsive previews into one workspace."
+  },
+  {
+    "path": "/newsroom/orbilect-reviews",
+    "title": "Inside Orbilect Reviews, a directory for comparing service providers",
+    "description": "A closer look at Orbilect Labs’ approach to company profiles, client reviews, and shortlisting."
+  },
+  {
+    "path": "/our-team",
+    "title": "Our Team",
+    "description": "Meet Orbilect SEO’s leadership, delivery specialists and support teams, and see how they work together across search, design and development."
+  },
+  {
+    "path": "/pricing",
+    "title": "SEO & Digital Marketing Pricing",
+    "description": "Compare Orbilect SEO plans and see how scope, technical work, content, and campaign management affect the investment for your business."
+  },
+  {
+    "path": "/reviews",
+    "title": "Orbilect SEO Reviews and Online Reputation",
+    "description": "Review Orbilect SEO services, explore public review options, or send feedback privately."
+  },
+  {
+    "path": "/privacy-policy",
+    "title": "Privacy Policy",
+    "description": "How Orbilect SEO handles enquiries, cookies, newsletter subscriptions, and privacy requests."
+  },
+  {
+    "path": "/services",
+    "title": "SEO & Digital Marketing Services",
+    "description": "Explore technical SEO, on-page SEO, off-page SEO, ecommerce SEO, PPC management, content strategy, and website redesign for your business."
+  },
+  {
+    "path": "/services/bing-advertising",
+    "title": "Microsoft Advertising & Bing Ads Management",
+    "description": "Review Bing Ads structure, Microsoft Advertising targeting, search terms, campaign budgets, and conversion tracking against your paid search goals."
+  },
+  {
+    "path": "/services/chatgpt-advertising",
+    "title": "ChatGPT Advertising Services",
+    "description": "Explore campaign planning and readiness for advertising in ChatGPT, including audience, message, landing pages, and how to measure results where available."
+  },
+  {
+    "path": "/services/conversion-rate-optimization",
+    "title": "Conversion Rate Optimization Services",
+    "description": "Find friction in forms, product pages, and lead journeys. Prioritize conversion tests around customer intent, usability, and measurable outcomes."
+  },
+  {
+    "path": "/services/digital-marketing",
+    "title": "Digital Marketing Services",
+    "description": "Plan digital campaigns around audience, landing pages, conversion tracking, and reporting so your team can see which channels bring qualified enquiries."
+  },
+  {
+    "path": "/services/digital-pr",
+    "title": "Digital PR & Outreach Services",
+    "description": "Plan relevant media and editorial outreach around useful research, expertise, or company news, with a clear scope and coverage review."
+  },
+  {
+    "path": "/services/ecommerce-management",
+    "title": "Ecommerce Management Services",
+    "description": "Explore storefront design, ecommerce customer support and training, inventory, custom CRM, and agentic AI workflows."
+  },
+  {
+    "path": "/services/ecommerce-seo",
+    "title": "Ecommerce SEO Services",
+    "description": "Make products easier to find with collection and product-page SEO, stronger internal linking, product schema, and a plan for filters and duplicate URLs."
+  },
+  {
+    "path": "/services/email-marketing",
+    "title": "Email Marketing Services",
+    "description": "Plan email campaigns and automations around audience segments, clear messages, landing pages, and measurable customer actions."
+  },
+  {
+    "path": "/services/hire-seo-content-writer",
+    "title": "Hire a Dedicated SEO Content Writer",
+    "description": "Scope a dedicated SEO writer who can work within your editorial process on briefs, drafts, service pages, and revisions."
+  },
+  {
+    "path": "/services/landing-page-design",
+    "title": "Landing Page Design Services",
+    "description": "Create focused landing pages that match ad or search intent, explain your offer clearly, and give visitors a measurable next step."
+  },
+  {
+    "path": "/services/marketing-analytics",
+    "title": "Marketing Analytics & Attribution Services",
+    "description": "Validate conversion tracking, review attribution, and build reports that connect campaigns to qualified enquiries, leads, and sales."
+  },
+  {
+    "path": "/services/off-page-seo",
+    "title": "Off-Page SEO Services",
+    "description": "Review backlink quality, reclaim useful links, clean up citations, and plan relevant outreach to strengthen your visibility beyond your own website."
+  },
+  {
+    "path": "/services/on-page-seo",
+    "title": "On-Page SEO Services",
+    "description": "Improve page titles, headings, internal links, content, and search intent alignment so customers can find the right page and act on it."
+  },
+  {
+    "path": "/services/paid-social-advertising",
+    "title": "Paid Social Advertising Services",
+    "description": "Improve paid social campaigns with audience planning, creative testing, landing page alignment, and conversion tracking tied to business goals."
+  },
+  {
+    "path": "/services/ppc-management",
+    "title": "PPC Management Services",
+    "description": "Improve paid search performance with tighter campaign targeting, relevant ad copy, conversion tracking, and landing pages aligned to what visitors searched."
+  },
+  {
+    "path": "/services/seo-content-writing",
+    "title": "SEO Content Writing Services",
+    "description": "Get search-focused landing pages, service pages, and editorial content planned around customer questions, clear briefs, and relevant internal links."
+  },
+  {
+    "path": "/services/social-media-marketing",
+    "title": "Social Media Marketing Services",
+    "description": "Plan organic social content around the channels customers use, the questions they ask, and the engagement or enquiries you can measure."
+  },
+  {
+    "path": "/services/technical-seo",
+    "title": "Technical SEO Audit & Services",
+    "description": "Identify crawl and indexing barriers, audit redirects and canonicals, and prioritize improvements to site structure, performance, and structured data."
+  },
+  {
+    "path": "/services/website-redesign",
+    "title": "Website Redesign & SEO Migration",
+    "description": "Redesign your website around clearer navigation, mobile usability, and conversions. Plan redirects and preserve important search landing pages during launch."
+  },
+  {
+    "path": "/staffing",
+    "title": "Offshore SEO & Digital Marketing Staffing",
+    "description": "Build a dedicated team for SEO, content, paid media, or analytics. Explore specialist roles and how Orbilect SEO scopes staffing and onboarding."
+  },
+  {
+    "path": "/terms-and-conditions",
+    "title": "Terms and Conditions",
+    "description": "Orbilect SEO service terms, project scope, revisions, refunds, delivery, and SEO estimates."
+  },
+  {
+    "path": "/blogs/how-to-submit-your-website-to-google-search-console",
+    "title": "How to Submit Your Website to Google Search Console",
+    "description": "A practical walkthrough of ownership verification, sitemap submission, and common Search Console errors."
+  },
+  {
+    "path": "/blogs/how-to-set-up-your-google-business-profile",
+    "title": "How to Set Up Your Google Business Profile",
+    "description": "A step-by-step guide to setup, verification, and profile optimization, with fixes for common problems."
+  },
+  {
+    "path": "/blogs/how-to-create-and-submit-an-xml-sitemap",
+    "title": "How to Create and Submit an XML Sitemap",
+    "description": "Decide which URLs belong in your sitemap, submit it, and identify errors."
+  },
+  {
+    "path": "/blogs/how-long-does-google-take-to-index-a-website",
+    "title": "How Long Does Google Take to Index a Website?",
+    "description": "Understand how discovery, crawling, and indexing work and what can delay each one."
+  },
+  {
+    "path": "/blogs/seo-vs-aeo-vs-geo",
+    "title": "SEO vs AEO vs GEO",
+    "description": "Compare search optimization, answer engine optimization, and generative engine optimization."
+  },
+  {
+    "path": "/blogs/the-on-page-seo-checklist-for-business-websites",
+    "title": "The On-Page SEO Checklist for Business Websites",
+    "description": "Prioritize titles, headings, internal links, and content that answers what visitors came to find."
+  },
+  {
+    "path": "/blogs/how-to-build-a-wordpress-website",
+    "title": "How to Build a WordPress Website",
+    "description": "Choose a domain, hosting, theme, and page builder, then prepare your site for launch."
+  },
+  {
+    "path": "/blogs/10-web-hosting-platforms-compared",
+    "title": "10 Web Hosting Platforms Compared",
+    "description": "Compare hosting by renewal cost, backups, support, performance, and site requirements."
+  },
+  {
+    "path": "/blogs/how-to-build-a-squarespace-website",
+    "title": "How to Build a Squarespace Website",
+    "description": "Choose a template, structure the site, connect a domain, and check mobile layouts."
+  },
+  {
+    "path": "/blogs/how-to-build-a-webflow-website",
+    "title": "How to Build a Webflow Website",
+    "description": "Plan responsive layouts, set up collections, and check redirects and metadata before launch."
+  },
+  {
+    "path": "/blogs/how-to-build-a-wix-website",
+    "title": "How to Build a Wix Website",
+    "description": "Choose an editor, set up core pages, connect your domain, and configure your search settings."
+  },
+  {
+    "path": "/blogs/how-to-build-a-framer-website",
+    "title": "How to Build a Framer Website",
+    "description": "Use components and CMS collections to launch a responsive marketing site."
+  },
+  {
+    "path": "/blogs/how-to-build-a-shopify-store",
+    "title": "How to Build a Shopify Store",
+    "description": "Organize products, payments, shipping, and storefront settings for launch."
+  },
+  {
+    "path": "/blogs/how-to-build-a-woocommerce-store",
+    "title": "How to Build a WooCommerce Store",
+    "description": "Set up a catalogue, configure checkout, and test payments and order emails."
+  },
+  {
+    "path": "/blogs/how-to-improve-your-website-conversion-rate",
+    "title": "How to Improve Your Website Conversion Rate",
+    "description": "Use analytics and customer feedback to identify friction and prioritize experiments."
+  },
+  {
+    "path": "/blogs/ppc-vs-organic-search",
+    "title": "PPC vs Organic Search",
+    "description": "Compare timelines, costs, and how each channel contributes to qualified leads."
+  },
+  {
+    "path": "/blogs/how-to-tell-whether-ppc-is-profitable",
+    "title": "How to Tell Whether PPC Is Profitable",
+    "description": "Compare campaign cost with lead quality, margin, and the revenue campaigns generate."
+  },
+  {
+    "path": "/blogs/meta-ads-in-2026",
+    "title": "Meta Ads in 2026",
+    "description": "Review changes to campaign setup, creative testing, and measurement."
+  },
+  {
+    "path": "/blogs/how-to-write-a-landing-page-that-converts",
+    "title": "How to Write a Landing Page That Converts",
+    "description": "Match the offer to visitor intent and make the next action easy to find."
+  },
+  {
+    "path": "/blogs/how-to-track-leads-and-sales-in-ga4",
+    "title": "How to Track Leads and Sales in GA4",
+    "description": "Define useful events, validate tracking, and assess lead and sales performance."
+  },
+  {
+    "path": "/blogs/how-to-audit-a-google-ads-account",
+    "title": "How to Audit a Google Ads Account",
+    "description": "Review search terms, conversion tracking, ads, and where your budget goes."
+  },
+  {
+    "path": "/blogs/why-real-estate-businesses-need-seo",
+    "title": "Why Real Estate Businesses Need SEO",
+    "description": "Build visibility around neighborhoods, listings, and the questions local buyers ask."
+  },
+  {
+    "path": "/blogs/seo-vs-paid-advertising-for-clinics",
+    "title": "SEO vs Paid Advertising for Clinics",
+    "description": "Compare local discovery, short-term demand, and how each channel contributes to bookings."
+  },
+  {
+    "path": "/blogs/how-customer-support-fits-into-us-services-exports",
+    "title": "How Customer Support Fits Into US Services Exports",
+    "description": "Explain when cross-border support contracts count as services exports and which country records them."
+  },
+  {
+    "path": "/blogs/how-saas-companies-use-seo-to-generate-demos",
+    "title": "How SaaS Companies Use SEO to Generate Demos",
+    "description": "Connect educational and comparison content with relevant demo and trial paths."
+  },
+  {
+    "path": "/blogs/how-ecommerce-brands-grow-with-category-page-seo",
+    "title": "How Ecommerce Brands Grow With Category Page SEO",
+    "description": "Improve collection pages and clarify how customers browse and find products."
+  },
+  {
+    "path": "/blogs/how-local-service-businesses-turn-search-into-enquiries",
+    "title": "How Local Service Businesses Turn Search Into Enquiries",
+    "description": "Use service pages, reviews, and location information to help customers get in touch."
+  },
+  {
+    "path": "/blogs/when-to-hire-an-seo-team-or-an-agency",
+    "title": "When to Hire an SEO Team or an Agency",
+    "description": "Compare staffing, scope, ownership, and how to evaluate the investment."
+  },
+  {
+    "path": "/blogs/how-ai-search-changes-content-discovery",
+    "title": "How AI Search Changes Content Discovery",
+    "description": "Explore citations, summaries, and how to track AI-driven discovery."
+  },
+  {
+    "path": "/blogs/how-to-build-an-ai-chatbot-for-customer-support",
+    "title": "How to Build an AI Chatbot for Customer Support",
+    "description": "Plan the knowledge base, escalation rules, evaluation, and rollout."
+  },
+  {
+    "path": "/blogs/how-to-use-ai-for-keyword-research",
+    "title": "How to Use AI for Keyword Research",
+    "description": "Group search topics, assess intent, and verify suggestions against real data."
+  },
+  {
+    "path": "/blogs/where-human-review-fits-in-ai-assisted-content",
+    "title": "Where Human Review Fits in AI-Assisted Content",
+    "description": "Define editorial checks for accuracy, sources, and customer usefulness."
+  },
+  {
+    "path": "/blogs/what-ai-agents-can-do-for-small-businesses",
+    "title": "What AI Agents Can Do for Small Businesses",
+    "description": "Match business workflows to realistic automation opportunities and oversight needs."
+  },
+  {
+    "path": "/blogs/how-ai-appointment-booking-works",
+    "title": "How AI Appointment Booking Works",
+    "description": "Explore scheduling rules, calendar availability, and confirmation workflows."
+  },
+  {
+    "path": "/blogs/how-to-evaluate-an-ai-website-builder",
+    "title": "How to Evaluate an AI Website Builder",
+    "description": "Review responsive layout, accessibility, editing controls, and export options."
+  },
+  {
+    "path": "/blogs/what-is-digital-marketing",
+    "title": "What Is Digital Marketing?",
+    "description": "See how search, email, paid media, social, and analytics work together."
+  },
+  {
+    "path": "/blogs/what-google-search-updates-mean-for-site-owners",
+    "title": "What Google Search Updates Mean for Site Owners",
+    "description": "Understand what to check before attributing traffic changes to a search update."
+  },
+  {
+    "path": "/blogs/what-privacy-changes-mean-for-marketing-analytics",
+    "title": "What Privacy Changes Mean for Marketing Analytics",
+    "description": "Explore consent, first-party data, and the limits of attribution."
+  },
+  {
+    "path": "/blogs/what-core-web-vitals-tell-you-about-your-website",
+    "title": "What Core Web Vitals Tell You About Your Website",
+    "description": "Use performance metrics to prioritize issues that affect real visitors."
+  },
+  {
+    "path": "/blogs/how-to-build-a-digital-marketing-plan-for-a-small-business",
+    "title": "How to Build a Digital Marketing Plan for a Small Business",
+    "description": "Set measurable goals, choose channels, and build a realistic publishing and testing schedule."
+  },
+  {
+    "path": "/blogs/how-search-and-social-platforms-are-changing-product-discovery",
+    "title": "How Search and Social Platforms Are Changing Product Discovery",
+    "description": "Compare how customers find and evaluate products across platforms."
+  }
+]

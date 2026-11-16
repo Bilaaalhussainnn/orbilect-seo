@@ -1,0 +1,92 @@
+[data-globe-office-actions] {
+  margin-block-start: 12px !important;
+}
+
+[data-globe-office-actions] a[data-globe-office-phone],
+[data-globe-office-actions] a[data-globe-office-phone] span {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+
+[data-globe-office-phone] svg {
+  width: 16px;
+  height: 16px;
+}
+
+[data-globe-office-actions] [data-globe-office-icons] a {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+
+[data-globe-office-icons] a svg {
+  width: 16px;
+  height: 16px;
+}
+
+[data-globe-office-actions] [data-globe-office-icons] a:is(:hover, :focus-visible) {
+  background-color: #004aad;
+  border-color: #004aad !important;
+  color: #fff !important;
+}
+
+[data-globe-office-icons] a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-globe-office-icons] a { transition: none; }
+}
+
+/* BEGIN Globe icon finish */
+[data-globe-office-actions] {
+  row-gap: 24px !important;
+}
+
+[data-globe-office-actions] [data-globe-office-icons] a {
+  background-color: #fff;
+  border-color: #fff !important;
+  color: #080b10 !important;
+}
+
+[data-globe-office-actions] [data-globe-office-icons] a:is(:hover, :focus-visible) {
+  background-color: #004aad;
+  border-color: #004aad !important;
+  color: #fff !important;
+}
+/* END Globe icon finish */
+
+/* BEGIN Hide globe photo captions */
+[data-globe-photo-caption],
+:is(dialog, [role="dialog"], [aria-modal="true"], [class*="modal" i], [class*="popup" i]):has([data-globe-office-actions]) figcaption,
+:is(dialog, [role="dialog"], [aria-modal="true"], [class*="modal" i], [class*="popup" i]):has([data-globe-office-actions]) :is(p, small, span, div)[class*="caption" i]:not(:has(img, a, button, [data-globe-office-actions])),
+:is(dialog, [role="dialog"], [aria-modal="true"], [class*="modal" i], [class*="popup" i]):has([data-globe-office-actions]) :is(img, picture, div:has(img)):not(:has([data-globe-office-actions])) + :is(p, small, span):not(:has(a, button, svg)),
+:is(dialog, [role="dialog"], [aria-modal="true"], [class*="modal" i], [class*="popup" i]):has([data-globe-office-actions]) figure:has(img) + :is(p, small, span):not(:has(a, button, svg)) {
+  display: none !important;
+}
+/* END Hide globe photo captions */
+
+/* BEGIN Globe popup solid black */
+html body [data-globe-office-panel] {
+  background:
+    linear-gradient(#7baaff14 1px, transparent 1px) 0 0 / 36px 36px,
+    linear-gradient(90deg, #7baaff14 1px, transparent 1px) 0 0 / 36px 36px,
+    linear-gradient(135deg, #10294d 0%, #0a172b 52%, #050b15 100%)
+    !important;
+}
+
+html body [data-globe-office-panel] :has(+ [data-globe-office-city]) {
+  margin-block-end: 0 !important;
+}
+
+html body [data-globe-office-panel] [data-globe-office-city] {
+  margin-block: 0 !important;
+  padding-block: 0 36px !important;
+}
+/* END Globe popup solid black */

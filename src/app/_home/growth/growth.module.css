@@ -1,0 +1,100 @@
+.dark { background: #090b10; color: #fff; }
+.light { background: #fff; color: #111318; }
+.wrap { width: min(calc(100% - 48px), 1320px); margin-inline: auto; padding-block: clamp(40.88px, 5.84vw, 78.84px); }
+.wrap h1, .wrap h2 { margin: 0; line-height: 1.14; letter-spacing: -.045em; font-weight: 600; text-wrap: balance; }
+.wrap h1 { font-size: clamp(30.24px, 4vw, 44px); }
+.wrap h2 { font-size: clamp(23.52px, 4vw, 32px); }
+.wrap h1 span, .wrap h2 span, .eyebrow { color: #004aad; }
+.dark .eyebrow, .dark h2 span { color: #8dbbff; }
+.eyebrow { margin: 0 0 8px; font-size: 11px; font-weight: 600; }
+.intro, .note, .cardCopy > p:last-child { color: #4a5464; line-height: 1.7; font-size: 14px; }
+.dark .intro, .dark .note, .dark .cardCopy > p:last-child { color: #bac6d8; }
+.intro { max-width: 62ch; margin: 14px 0 0; }
+.note { margin: 20px 0 0; font-size: 12px; }
+.workGrid, .processGrid { display: grid; gap: 20px; margin: 28px 0; }
+.workGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.processGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; list-style: none; }
+.workCard, .processCard { min-width: 0; overflow: hidden; border-radius: 20px; border: 1px solid #dce3ec; }
+.workCard { border-color: #283346; background: #111722; }
+.processCard { background: #f7f9fc; }
+.workCard img, .processCard img { width: 100%; height: auto; display: block; }
+.cardCopy { padding: clamp(16px, 3vw, 25px); }
+.cardCopy h3 { margin: 0; font-size: clamp(15.98px, 1.6vw, 20.7px); font-weight: 600; line-height: 1.35; }
+.cardCopy > p:last-child { margin: 8px 0 0; }
+.auditWrap { padding-top: 0; }
+.audit {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 32px; align-items: center; padding: clamp(20px, 5vw, 58px);
+  border: 1px solid #365176; border-radius: 26px;
+  background: radial-gradient(ellipse at 95% 5%, #004aad48, transparent 65%), #101722;
+}
+.audit .intro { margin-bottom: 20px; }
+.auditChecks details { border-top: 1px solid #536680; padding-block: 13px; }
+.auditChecks details:last-child { border-bottom: 1px solid #536680; }
+.auditChecks summary { cursor: pointer; padding: 6px; font-size: 14px; }
+.auditChecks summary:focus-visible { outline: 2px solid #8dbbff; outline-offset: 4px; }
+.auditChecks p { margin: 8px 6px 2px; color: #bac6d8; font-size: 13px; line-height: 1.65; }
+@media (prefers-reduced-motion: no-preference) {
+  .workCard img { transition: transform 340ms ease; }
+  .workCard:hover img { transform: scale(1.035); }
+  .auditChecks details[open] p { animation: reveal 240ms ease both; }
+  @keyframes reveal { from { opacity: 0; translate: 0 -4px; } to { opacity: 1; translate: 0 0; } }
+}
+@media (max-width: 900px) {
+  .audit { grid-template-columns: minmax(0, 1fr); }
+  .processGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 36px); }
+  .workGrid, .processGrid { grid-template-columns: minmax(0, 1fr); }
+  .audit { gap: 22px; }
+}
+
+
+/* Interactive audit CTA */
+.auditSection { padding-block: clamp(29.2px, 5.11vw, 64.24px); }
+.auditSection .audit { background: #10141b; border-color: #26334a; }
+.auditSection .audit h2 span { color: #004AAD; }
+.auditEyebrow { margin: 0 0 10px; color: #e4e8ef; font-size: 12px; font-weight: 600; }
+.auditInteractive { min-width: 0; }
+.auditChoices { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.auditChoices button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #38475e;
+  border-radius: 999px;
+  background: #161d28;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.auditChoices button[aria-pressed="true"] {
+  background: #004AAD;
+  border-color: #004AAD;
+}
+.auditChoices button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.auditResult {
+  min-height: 210px;
+  padding: clamp(16px, 3vw, 24px);
+  border: 1px solid #2c3950;
+  border-radius: 16px;
+  background: #0c1017;
+}
+.auditBadge { color: #c1c9d7; font-size: 11px; }
+.auditResult h3 { margin: 8px 0; color: #fff; font-size: 16.2px; line-height: 1.3; }
+.auditResult p { color: #c1c9d7; font-size: 13px; line-height: 1.65; }
+.auditResult ul { display: grid; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+.auditResult li { display: flex; align-items: center; gap: 8px; color: #e5e9f1; font-size: 12px; }
+.auditResult li svg { flex-shrink: 0; color: #004AAD; }
+@media (prefers-reduced-motion: no-preference) {
+  .auditChoices button { transition: background-color 180ms ease, border-color 180ms ease; }
+  .auditResultContent { animation: auditPreviewIn 280ms ease-out both; }
+  @keyframes auditPreviewIn {
+    from { opacity: .35; transform: translateY(7px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#101824"/><stop offset="1" stop-color="#12294b"/></linearGradient>
+    <linearGradient id="tile" x2="1" y2="1"><stop stop-color="#1d63ba"/><stop offset="1" stop-color="#004AAD"/></linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#7d9bc0" stroke-opacity=".18"/></pattern>
+  </defs>
+  <path fill="url(#surface)" d="M0 0h800v500H0z"/>
+  <path fill="url(#grid)" d="M0 0h800v500H0z"/>
+  <circle cx="605" cy="250" r="174" fill="none" stroke="#648fc8" stroke-opacity=".4"/>
+  <circle cx="605" cy="250" r="212" fill="none" stroke="#648fc8" stroke-opacity=".24"/>
+  <ellipse cx="400" cy="386" rx="215" ry="35" fill="#004aad" opacity=".15"/>
+  <g transform="translate(269 112) rotate(8 130 130)">
+    <rect x="8" y="12" width="262" height="262" rx="48" fill="#001c45" opacity=".55"/>
+    <rect width="262" height="262" rx="48" fill="url(#tile)" stroke="#8ebaff" stroke-opacity=".5"/>
+    <path transform="translate(46 46) scale(1.7)" d="M36 42h28v36H36z M43 42V25h14v17 M41 58h18" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

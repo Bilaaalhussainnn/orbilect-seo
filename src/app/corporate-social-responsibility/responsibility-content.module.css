@@ -1,0 +1,228 @@
+.light, .dark {
+  --accent: #004aad;
+  --line: #dce1e7;
+  --copy: #404a58;
+  padding-block: clamp(2.007rem, 4.38vw, 3.65rem);
+  background: #fff;
+  color: #111923;
+}
+.dark { --line: #373737; --copy: #c9cdd4; background: #000; color: #fff; }
+.inner { width: min(86%, 1320px); margin-inline: auto; }
+.heading { max-width: 46rem; }
+.label {
+  margin: 0 0 .85rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.512rem, 2.8vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  font-weight: 800;
+}
+.heading h2 span { color: var(--accent); }
+.dark .heading h2 span {
+  color: #fff;
+  background: var(--accent);
+  padding-inline: .12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.intro, .cards p { color: var(--copy); line-height: 1.65; }
+.intro { margin: .75rem 0 0; font-size: 0.881rem; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cards li {
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
+  border-radius: 12px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.cards li:hover { transform: translateY(-3px); border-color: var(--accent); }
+.cards h3 { margin: 0; font-size: 0.94rem; line-height: 1.35; font-weight: 700; }
+.cards p { margin: .45rem 0 0; font-size: .875rem; }
+@media (prefers-reduced-motion: reduce) {
+  .cards li { transition: none; }
+  .cards li:hover { transform: none; }
+}
+
+/* CSR section layouts */
+
+/* Values */
+.light[aria-labelledby="business-ethics"] .inner {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 6vw, 6rem);
+}
+
+.light[aria-labelledby="business-ethics"] .cards {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin: 0;
+}
+
+.light[aria-labelledby="business-ethics"] .cards li {
+  padding: 1rem 0 1rem 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  border-radius: 0;
+}
+
+.light[aria-labelledby="business-ethics"] .cards li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.light[aria-labelledby="business-ethics"] .cards li:hover {
+  border-left-color: var(--accent);
+  transform: none;
+}
+
+/* Governance */
+.dark[aria-labelledby="corporate-governance"] .cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 2.25rem;
+}
+
+.dark[aria-labelledby="corporate-governance"] .cards li {
+  position: relative;
+  padding: 1.35rem clamp(.85rem, 3vw, 2.5rem) .35rem 0;
+  border: 0;
+  border-top: 1px solid var(--accent);
+  border-radius: 0;
+  transform: none;
+}
+
+.dark[aria-labelledby="corporate-governance"] .cards li:last-child {
+  padding-right: 0;
+}
+
+.dark[aria-labelledby="corporate-governance"] .cards li::before {
+  content: "";
+  position: absolute;
+  inset: -5px auto auto 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px #000;
+}
+
+.dark[aria-labelledby="corporate-governance"] .cards li:hover h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: .3em;
+}
+
+/* Stakeholders */
+.light[aria-labelledby="stakeholders"] .cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 1.75rem;
+  border-top: 2px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+}
+
+.light[aria-labelledby="stakeholders"] .cards li {
+  padding: clamp(1rem, 2.6vw, 2rem);
+  border: 0;
+  border-radius: 0;
+  transition: background-color .2s ease;
+}
+
+.light[aria-labelledby="stakeholders"] .cards li:nth-child(even) {
+  border-left: 1px solid var(--line);
+}
+
+.light[aria-labelledby="stakeholders"] .cards li:nth-child(n+3) {
+  border-top: 1px solid var(--line);
+}
+
+.light[aria-labelledby="stakeholders"] .cards h3 {
+  color: var(--accent);
+}
+
+.light[aria-labelledby="stakeholders"] .cards li:hover {
+  background: #f5f6f8;
+  transform: none;
+}
+
+@media (max-width: 740px) {
+  .light[aria-labelledby="business-ethics"] .inner,
+  .dark[aria-labelledby="corporate-governance"] .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dark[aria-labelledby="corporate-governance"] .cards {
+    margin-top: 1.5rem;
+    padding-left: 5px;
+  }
+
+  .dark[aria-labelledby="corporate-governance"] .cards li {
+    padding: 0 0 1.35rem 1.1rem;
+    border-top: 0;
+    border-left: 1px solid var(--accent);
+  }
+
+  .dark[aria-labelledby="corporate-governance"] .cards li:last-child {
+    padding-bottom: 0;
+  }
+
+  .dark[aria-labelledby="corporate-governance"] .cards li::before {
+    inset: .3rem auto auto -5px;
+  }
+}
+
+@media (max-width: 520px) {
+  .light[aria-labelledby="stakeholders"] .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .light[aria-labelledby="stakeholders"] .cards li:nth-child(n) {
+    border-left: 0;
+  }
+
+  .light[aria-labelledby="stakeholders"] .cards li + li {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .light[aria-labelledby="stakeholders"] .cards li { transition: none; }
+}
+/* End CSR section layouts */
+
+/* CSR scroll reveals */
+@media (prefers-reduced-motion: no-preference) {
+  .heading[data-csr-visible] {
+    animation: csrReveal .52s cubic-bezier(.2,.65,.3,1) both;
+  }
+
+  .cards li[data-csr-visible] {
+    animation: csrReveal .45s cubic-bezier(.2,.65,.3,1) both;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  .cards li:nth-child(2) { --reveal-delay: 55ms; }
+  .cards li:nth-child(3) { --reveal-delay: 110ms; }
+  .cards li:nth-child(4) { --reveal-delay: 165ms; }
+}
+
+@keyframes csrReveal {
+  from { opacity: 0; translate: 0 14px; }
+  to { opacity: 1; translate: 0 0; }
+}

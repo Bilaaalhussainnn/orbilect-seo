@@ -1,0 +1,100 @@
+.page { background: #fff; color: #141923; font-family: var(--font-poppins, "Poppins"), sans-serif; }
+.wrap { width: min(1180px, calc(100% - clamp(36px, 10vw, 144px))); margin-inline: auto; }
+.hero {
+  padding-block: clamp(42.34px, 6.57vw, 80.3px);
+  color: #fff;
+  background:
+    linear-gradient(#ffffff0c 1px, transparent 1px) 0 0 / 36px 36px,
+    linear-gradient(90deg, #ffffff0c 1px, transparent 1px) 0 0 / 36px 36px,
+    radial-gradient(ellipse at 85% 20%, #004aad48, transparent 65%), #080b10;
+}
+.hero h1 { margin: 0; font-size: 36px; line-height: 1.14; letter-spacing: -.045em; }
+.hero h1 span { background: #004aad; padding-inline: .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hero h1 + p { max-width: 62ch; margin: 16px 0 0; color: #d8e2f0; line-height: 1.65; }
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-top: 18px; }
+.links a { color: inherit; }
+.copy { min-width: 0; }
+.copy a { color: #004aad; text-underline-offset: 3px; }
+.copy section { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #d9e0e9; scroll-margin-top: 90px; }
+.copy h2 { margin: 0 0 10px; font-size: 25.2px; line-height: 1.2; letter-spacing: -.035em; }
+.copy h2 > span { color: #004aad; }
+.copy p { margin: 0 0 12px; line-height: 1.7; overflow-wrap: anywhere; }
+
+/* Interactive legal heroes */
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); align-items: center; gap: clamp(24px, 6vw, 88px); }
+.legalVisual { min-width: 0; }
+.legalStage { display: grid; place-items: center; min-height: clamp(180px, 25vw, 270px); perspective: 800px; }
+.legalObject {
+  position: relative;
+  width: clamp(105px, 16vw, 155px);
+  aspect-ratio: .88;
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(-18deg);
+  transition: transform .45s ease;
+}
+.legalStage[data-view="1"] .legalObject { transform: rotateX(5deg) rotateY(15deg); }
+.legalStage[data-view="2"] .legalObject { transform: rotateX(-8deg) rotateY(-5deg); }
+.legalFace, .legalDepth { position: absolute; inset: 0; border-radius: 13px; }
+.legalDepth { background: #003575; transform: translate3d(8px, 8px, -14px); }
+.legalFace {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(150deg, #155ab3, #0a192e 82%);
+  border: 1px solid #829bc0;
+  box-shadow: 0 14px 26px #0008;
+}
+.legalFace svg { width: 55%; height: 55%; stroke-width: 1.35; }
+.legalStage[data-kind="privacy"] :is(.legalFace, .legalDepth) {
+  clip-path: polygon(50% 0, 97% 16%, 90% 62%, 77% 79%, 50% 100%, 23% 79%, 10% 62%, 3% 16%);
+}
+.legalStage[data-kind="terms"] .legalFace {
+  background: linear-gradient(145deg, #edf3fb, #9eafc5);
+  color: #004aad;
+  clip-path: polygon(0 0, 74% 0, 100% 22%, 100% 100%, 0 100%);
+}
+.legalStage[data-kind="terms"] .legalFace::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 26%;
+  height: 22%;
+  background: #7388a6;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+.legalTile {
+  position: absolute;
+  right: -24px;
+  bottom: 10%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  aspect-ratio: 1;
+  border: 1px solid #8daace;
+  border-radius: 9px;
+  background: #004aad;
+  transform: translateZ(35px);
+  animation: legalTileIn .35s ease-out;
+}
+.legalTile svg { width: 20px; height: 20px; }
+.legalControls { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; }
+.legalControls button {
+  min-height: 44px;
+  padding: 7px 10px;
+  border: 1px solid #7588a2;
+  border-radius: 99px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.legalControls button[aria-pressed="true"] { border-color: #004aad; background: #004aad; }
+.legalControls button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.legalCaption { margin: 10px 0 0; text-align: center; color: #d8e2f0; font-size: 13px; line-height: 1.5; }
+@keyframes legalTileIn { from { opacity: .35; transform: translate3d(0, 7px, 4px); } }
+@media (max-width: 780px) { .heroGrid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .legalObject { transition: none; }
+  .legalTile { animation: none; }
+}
+/* End Interactive legal heroes */

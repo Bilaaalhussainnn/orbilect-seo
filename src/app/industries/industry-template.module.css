@@ -1,0 +1,26 @@
+.letter {
+  animation: industryTyping linear;
+  animation-duration: var(--letter-duration);
+}
+@keyframes industryTyping { from, to { opacity: 0; } }
+
+.related { padding-block: clamp(29.2px, 4.38vw, 52.56px); background: #f5f6f8; color: #12161d; }
+.related h2 { margin: 0; }
+.related h2 span { color: #004aad; }
+.related ul { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 0; padding: 0; list-style: none; }
+.related a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 7px 13px;
+  border: 1px solid #bdc8d7;
+  border-radius: 99px;
+  color: #12161d;
+  text-decoration: none;
+}
+.related a:hover { background: #004aad; border-color: #004aad; color: #fff; }
+.related a:focus-visible { outline: 2px solid #004aad; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .letter { animation: none; }
+}

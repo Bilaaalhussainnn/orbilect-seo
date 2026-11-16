@@ -1,0 +1,25 @@
+.hero .action { margin-top: 1.25rem; }
+
+.example {
+  display: grid;
+  gap: .18rem;
+  margin: .85rem 0 0;
+  color: #ccd5e3;
+  font-size: .8rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.hero + :global(#industries) {
+  background: #fff !important;
+  color: #131923 !important;
+}
+.hero + :global(#industries) :is(h2, h3, p):not(dialog *) { color: #131923 !important; }
+.hero + :global(#industries) h2:not(dialog *) span { color: #004aad !important; }
+.hero + :global(#industries) a[href^="/industries/"] {
+  background: #f7f9fc !important;
+  border-color: #dce3ec !important;
+  color: #131923 !important;
+}
+.hero + :global(#industries) a[href^="/industries/"] :is(h3, p) { color: #131923 !important; }
+.hero + :global(#industries) a[href^="/industries/"] span { color: #004aad !important; }

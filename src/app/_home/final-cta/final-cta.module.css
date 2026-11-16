@@ -1,0 +1,335 @@
+.section {
+  --blue: #004aad;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 18% 82%, #004aad50, transparent 46%),
+    linear-gradient(118deg, #05070b 12%, #0a1221 56%, #102b55 100%);
+  padding: clamp(2.92rem, 5.84vw, 5.84rem) 0;
+}
+
+.layout {
+  width: min(calc(100% - clamp(2rem, 8vw, 9rem)), 86rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.section h2 {
+  margin: 0;
+  max-width: 19ch;
+  font-size: clamp(1.575rem, 4vw, 32px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.section h2 span {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.17em;
+}
+
+.intro, .stageCopy, .feedback {
+  color: #c3cede;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.intro { margin: 1.15rem 0 0; }
+.preview { margin-top: 1.5rem; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(0.25rem); }
+}
+
+.stageButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stageButtons button {
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid #ffffff40;
+  border-radius: 999px;
+  background: #0c1626;
+  color: #fff;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.stageButtons button:hover,
+.stageButtons button[aria-pressed="true"],
+.submit:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.stageCopy { margin: 0.75rem 0 0; animation: reveal 250ms ease-out; }
+
+.form {
+  padding: clamp(1.125rem, 3vw, 2rem);
+  border: 1px solid #ffffff26;
+  border-radius: 1.25rem;
+  background: #0b1423a8;
+}
+
+.form h3 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.125rem, 2.4vw, 1.386rem);
+  line-height: 1.3;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.fields label {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  min-width: 0;
+  font-size: 0.8125rem;
+  font-weight: 550;
+}
+
+.fields label span { display: contents; color: #c3cede; }
+.full { grid-column: 1 / -1; }
+
+.fields :is(input, select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0.65rem;
+  border: 1px solid #ffffff38;
+  border-radius: 0.6rem;
+  background: #080e19;
+  color: #fff;
+  color-scheme: dark;
+  font: inherit;
+  font-size: 15.04px;
+}
+
+.fields textarea { resize: vertical; }
+.section :is(button, input, select, textarea):focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.submit { margin-top: 1.15rem; max-width: 100%; }
+.submit:disabled { opacity: 0.65; cursor: wait; }
+.feedback { min-height: 1.5rem; margin-top: 0.65rem; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .fields { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stageCopy { animation: none; }
+  .stageButtons button { transition: none; }
+}
+
+
+/* Final CTA black and white revision */
+.section {
+  background: #000;
+}
+
+.section h2 span {
+  color: #004aad;
+  text-decoration: none;
+}
+
+.layout {
+  align-items: start;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.form {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.form h3 {
+  margin-bottom: 0.4rem;
+}
+
+.requiredNote {
+  margin: 0 0 1.25rem;
+  color: #c3cede;
+  font-size: 0.8125rem;
+}
+
+.fields :is(input, select, textarea) {
+  background: #fff;
+  color: #101318;
+  color-scheme: light;
+  border: 1px solid #d9dce1;
+}
+
+.fields input::placeholder {
+  color: #5f6670;
+}
+
+.stageVisual {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.stageIcon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background: #004aad;
+  animation: reveal 240ms ease-out both;
+}
+
+.stageTrack {
+  height: 3px;
+  border-radius: 999px;
+  background: #2b2f38;
+  overflow: hidden;
+}
+
+.stageFill {
+  height: 100%;
+  border-radius: inherit;
+  background: #004aad;
+  transition: width 380ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.stageCount {
+  color: #c3cede;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.stageButtons button {
+  background: #111317;
+}
+
+@media (min-width: 781px) and (max-width: 900px) {
+  .layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fields { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stageIcon { animation: none; }
+  .stageFill { transition: none; }
+}
+
+/* Final CTA field typography and service chevron */
+.fields :is(input, select, textarea) {
+  font-family: var(--font-poppins, "Poppins"), sans-serif;
+  font-weight: 400;
+}
+
+.fields :is(input, textarea)::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  color: #5f6670;
+  opacity: 1;
+}
+
+.fields select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-inline-end: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='m3.5 6 4.5 4.5L12.5 6' stroke='%23101318' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 1rem 1rem;
+}
+
+.fields select:invalid {
+  font-size: 12px;
+  color: #5f6670;
+}
+
+.fields select option {
+  font-size: 15.04px;
+  font-weight: 400;
+  color: #101318;
+}
+
+
+/* Light contact page form */
+.section.contactSection {
+  background: #f2f4f7;
+  color: #11151c;
+}
+
+.contactSection .form {
+  padding: clamp(1.125rem, 3vw, 2rem);
+  border: 1px solid #d7dde6;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.contactSection .requiredNote,
+.contactSection .feedback {
+  color: #485465;
+}
+
+.contactSection .fields :is(input, select, textarea) {
+  background-color: #fff;
+  border-color: #aeb8c7;
+}
+
+.section.contactSection :is(button, input, select, textarea):focus-visible {
+  outline-color: #004aad;
+}
+
+.contactSection .submit {
+  background: #10141b;
+  border-color: #10141b;
+  color: #fff;
+}
+
+.contactSection .submit:hover {
+  background: #004aad;
+  border-color: #004aad;
+}
+
+@media (max-width: 900px) {
+  .contactSection .layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Seamless white contact form */
+.section.contactSection {
+  background: #fff;
+}
+
+.section.contactSection .form {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.section.contactSection .form .submit:is(:hover, :focus-visible) {
+  background: #004aad;
+  border-color: #004aad;
+  color: #fff;
+}
