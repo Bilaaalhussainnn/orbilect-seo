@@ -87,8 +87,10 @@ export default function CookieConsent() {
 
   return (
     <section className={styles.banner} aria-labelledby="cookie-heading" data-lenis-prevent="">
-      <p id="cookie-heading" className={styles.title} data-reveal="off">Cookie choices</p>
-      <p>Choose whether to allow optional analytics and marketing cookies. We’ll remember your choice. <Link href="/privacy-policy#cookies">Read about cookies</Link>.</p>
+      <div className={styles.summary}>
+        <p id="cookie-heading" className={styles.title} data-reveal="off">Cookie <span>choices</span></p>
+        <p>Choose optional analytics and marketing cookies. We’ll remember your choice. <Link href="/privacy-policy#cookies">Read about cookies</Link>.</p>
+      </div>
       {managing && (
         <fieldset className={styles.options}>
           <legend>Optional categories</legend>

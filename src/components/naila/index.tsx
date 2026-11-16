@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ArrowUpRight, Calculator, Ellipsis, Mail, Minus, Send, X } from "lucide-react";
 import { type Action } from "../../lib/naila/answers";
 import { scopes, services } from "../../lib/naila/quote";
-import OrbilectHeroType from "../../app/_components/orbilect-hero-type";
 import Link from "next/link";
 import { transcriptName } from "../../lib/naila/transcript-name";
 import { HumanChatPanel } from "./human-chat-panel";
@@ -349,7 +348,10 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
             <Image src="/naila/naila-portrait.webp" alt="" width={34} height={34} />
             <div className={styles.identity}>
               <strong>Naila</strong>
-              <OrbilectHeroType lead="Your guide to" accent="SEO and digital growth" />
+              <span>
+                Your guide to{" "}
+                <span className={styles.taglineAccent}>SEO and digital growth</span>
+              </span>
             </div>
             {mode !== "human" && <details className={styles.chatOptions} ref={optionsMenu} onBlur={event => {
               if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;

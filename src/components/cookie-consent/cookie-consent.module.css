@@ -43,3 +43,65 @@
 .actions { margin-top: 8px; gap: 6px; }
 .actions button { padding-inline: 8px; }
 /* End Compact global cookie prompt */
+
+
+/* Compact cookie banner with the site grid. */
+.banner {
+  width: min(460px, calc(100vw - 24px));
+  padding: 10px 12px;
+  background:
+    linear-gradient(#ffffff0d 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(90deg, #ffffff0d 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(145deg, #101f34, #080b10);
+}
+
+.banner .summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 12px;
+}
+
+.banner .title {
+  margin: 0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.banner .title span {
+  padding: 0.06em 0.24em;
+  border-radius: 0.22em;
+  background: var(--orbilect-blue, #004aad);
+  color: #fff;
+}
+
+.banner .summary > p:not(.title) {
+  flex: 1 1 15rem;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.banner .actions { margin-top: 7px; gap: 5px; }
+
+.banner .actions button {
+  min-height: 36px;
+  padding: 4px 7px;
+  border-color: #ffffff78;
+  background: #090e17;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.banner .actions button:hover {
+  border-color: var(--orbilect-blue, #004aad);
+  background: var(--orbilect-blue, #004aad);
+}
+
+@media (max-width: 380px) {
+  .banner .actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .banner .actions button { padding-inline: 3px; }
+}

@@ -68,15 +68,15 @@
 .tools button:hover { background: #004aad; border-color: #004aad; }
 
 /* Naila tagline highlight */
-.identity [data-typewriter-accent] {
-  color: #fff !important;
-  background: #004AAD;
+.identity .taglineAccent {
+  color: #fff;
+  background: var(--orbilect-blue, #004aad);
   padding-inline: .2em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* Keep the Naila tagline on one line */
+/* Fit the Naila tagline in compact widgets. */
 .header > img,
 .header > button {
   flex-shrink: 0;
@@ -89,15 +89,10 @@
 
 .identity > span {
   font-size: 11px;
-  font-size: min(11px, 4.8cqi);
+  font-size: clamp(10px, 4.8cqi, 11px);
   font-weight: 600;
   line-height: 1.45;
-  white-space: nowrap;
-}
-
-.identity [data-typewriter-accent] {
-  color: #fff !important;
-  background: #004AAD;
+  white-space: normal;
 }
 
 /* Black Naila form buttons */
