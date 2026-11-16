@@ -161,28 +161,37 @@ async function sendNotification(lead: StoredLead) {
     ["Source page", lead.source_page], ["Service", lead.service], ["Email", lead.email],
     ["Phone", lead.phone ?? "—"], ["Website", lead.website],
   ];
-  const body = JSON.stringify({
-    from, to, reply_to: lead.email, subject,
+  const text = [
+    "Inquiry code: " + lead.inquiry_code, "Lead ID: " + lead.id, "Form: " + lead.form_name, "Page: " + lead.source_page,
+    "Service: " + lead.service, "Name: " + (lead.name ?? "—"), "Email: " + lead.email,
+    "Phone: " + (lead.phone ?? "—"), "Website: " + lead.website, "", lead.message,
+  ].join("\n");
+  const senderAddress = from.match(/<([^<>]+)>$/)?.[1].trim() ?? from;
+  const plainBody = JSON.stringify({ from: senderAddress, to, subject, text });
+  let body = JSON.stringify({
+    from, to, reply_to: lead.email, subject, text,
     html: leadNotificationCard(subject, lead.name ?? "—", details, lead.message),
     attachments: [transcriptBrandAttachment],
-    text: [
-      "Inquiry code: " + lead.inquiry_code, "Lead ID: " + lead.id, "Form: " + lead.form_name, "Page: " + lead.source_page,
-      "Service: " + lead.service, "Name: " + (lead.name ?? "—"), "Email: " + lead.email,
-      "Phone: " + (lead.phone ?? "—"), "Website: " + lead.website, "", lead.message,
-    ].join("\n"),
   });
 
+  const send = (payload: string) => fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + key,
+      "Content-Type": "application/json",
+      "Idempotency-Key": "orbilect-seo-lead/" + lead.id,
+    },
+    body: payload,
+    signal: AbortSignal.timeout(5000),
+  }).catch(() => null);
+
   for (let attempt = 0; attempt < 2; attempt += 1) {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + key,
-        "Content-Type": "application/json",
-        "Idempotency-Key": "orbilect-seo-lead/" + lead.id,
-      },
-      body,
-      signal: AbortSignal.timeout(5000),
-    }).catch(() => null);
+    let response = await send(body);
+    // A 422 rejects the request before sending. Strip optional fields and retry once.
+    if (response?.status === 422 && body !== plainBody) {
+      body = plainBody;
+      response = await send(body);
+    }
 
     if (response?.ok) {
       const result = await response.json();
@@ -194,7 +203,10 @@ async function sendNotification(lead: StoredLead) {
       const result = await response?.json().catch(() => null);
       const reason = typeof result?.name === "string" && /^[a-z_]{1,60}$/.test(result.name)
         ? " (" + result.name + ")" : "";
-      throw new Error("Resend send failed: " + (response?.status ?? "network error") + reason);
+      const requestId = response?.headers.get("x-request-id");
+      const logReference = requestId && /^[a-z\d_-]{1,120}$/i.test(requestId) ? " [request " + requestId + "]" : "";
+      const format = body === plainBody ? " after plain-text fallback" : "";
+      throw new Error("Resend send failed: " + (response?.status ?? "network error") + reason + format + logReference);
     }
 
     await new Promise((resolve) => setTimeout(resolve, 600));
