@@ -32,7 +32,5 @@ export async function submitLead(form: HTMLFormElement, source: LeadSource, page
 
   attempts.delete(form);
 
-  const reference = typeof result.code === "string" ? " Reference: " + result.code + "." : "";
-  const followUp = result.teamNotified === false ? " For urgent requests, email info@orbilectseo.com." : "";
-  return "We received your request." + reference + followUp;
+  return "Thanks for reaching out to us, we'll be in touch with you in the next 24 hours.";
 }
