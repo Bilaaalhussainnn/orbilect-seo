@@ -1,3 +1,4 @@
+import { isNailaSiteRequest } from "@/lib/naila/request-origin";
 import { NextRequest, after } from "next/server";
 import { sendNailaMail, teamEmail } from "../../../../lib/naila/server";
 
@@ -15,7 +16,7 @@ function referrer(value: unknown) {
 }
 
 export async function POST(request: NextRequest) {
-  if (process.env.NAILA_VISITS_ENABLED !== "1" || request.headers.get("origin") !== request.nextUrl.origin ||
+  if (process.env.NAILA_VISITS_ENABLED !== "1" || !isNailaSiteRequest(request) ||
       !/^1[01]$/.test(request.cookies.get("orbilect_cookie_choices_v1")?.value ?? "")) {
     return new Response(null, { status: 204 });
   }

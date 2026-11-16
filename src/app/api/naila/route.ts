@@ -1,3 +1,4 @@
+import { isNailaSiteRequest } from "@/lib/naila/request-origin";
 import { chatIdPattern, humanChat, humanChatAvailable, humanChatHistory } from "@/lib/naila/human-chat";
 import { transcriptAvatarAttachment, transcriptBrandAttachment, transcriptCtaAttachment, transcriptSocialAttachments } from "../../../lib/naila/transcript-avatar";
 import { after } from "next/server";
@@ -36,7 +37,7 @@ function session(request: NextRequest): Session {
 function respond(request: NextRequest, state: Session, payload: object, status = 200) {
   const token = Buffer.from(JSON.stringify(state)).toString("base64url");
   const cookie = cookieName + "=" + token + "." + stamp(token) + "; Path=/api/naila; Max-Age=" + day +
-    "; HttpOnly; SameSite=Strict" + (request.nextUrl.protocol === "https:" ? "; Secure" : "");
+    "; HttpOnly; SameSite=Strict" + ((request.nextUrl.protocol === "https:" || request.headers.get("origin")?.startsWith("https://")) ? "; Secure" : "");
   const headers = new Headers({ "Set-Cookie": cookie, "Cache-Control": "no-store" });
   const timeZone = process.env.VERCEL === "1" ? request.headers.get("x-vercel-ip-timezone") : null;
   if (timeZone) headers.set("x-naila-timezone", timeZone);
@@ -81,7 +82,7 @@ function emailList(value: unknown) {
 }
 
 export async function POST(request: NextRequest) {
-  if (request.headers.get("origin") !== request.nextUrl.origin ||
+  if (!isNailaSiteRequest(request) ||
       request.headers.get("content-type")?.split(";")[0] !== "application/json") {
     return Response.json({ error: "Invalid request." }, { status: 403 });
   }
