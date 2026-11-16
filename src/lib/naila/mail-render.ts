@@ -38,21 +38,22 @@ export function transcriptPlainText(transcript: string) {
 
 const intro = "Thanks for chatting with Naila. Here’s a copy of your conversation with Orbilect SEO.";
 
-function transcriptLayout(title: string, body: string) {
+function brandedMailLayout(title: string, subtitle: string, body: string, accent: string, linkLogo: boolean) {
   const safeTitle = escapeMail(title);
-  const displayTitle = safeTitle.replace("Chat Transcript",
-    '<span style="color:#004aad">Chat Transcript</span>');
+  const safeAccent = escapeMail(accent);
+  const displayTitle = safeTitle.replace(safeAccent, '<span style="color:#004aad">' + safeAccent + "</span>");
+  const logo = '<img src="cid:orbilect-seo-wordmark" width="212" height="56" alt="Orbilect SEO" style="display:block;border:0">';
+  const brand = linkLogo ? '<a href="' + home + '" style="text-decoration:none">' + logo + "</a>" : logo;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${safeTitle}</title></head>
 <body style="margin:0;background:#f3f4f6;color:#151922;font-family:Poppins,Arial,sans-serif">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#fff;border:1px solid #dce0e5;border-radius:14px">
 <tr><td style="padding:18px 23px;border-bottom:2px solid #004aad">
-<a href="${home}" style="color:#151922;font-size:20px;font-weight:700;text-decoration:none">
-<img src="cid:orbilect-seo-wordmark" width="212" height="56" alt="Orbilect SEO" style="display:block;border:0"></a>
+${brand}
 </td></tr>
 <tr><td style="padding:25px 23px 21px">
 <h1 style="font-size:26px;line-height:1.25;margin:0 0 10px;color:#151922">${displayTitle}</h1>
-<p style="font-size:14px;line-height:1.55;color:#4e5664;margin:0 0 23px">${intro}</p>${body}</td></tr>
+<p style="font-size:14px;line-height:1.55;color:#4e5664;margin:0 0 23px">${escapeMail(subtitle)}</p>${body}</td></tr>
 </table></td></tr></table></body></html>`;
 }
 
@@ -92,5 +93,23 @@ export function transcriptCard(title: string, transcript: string) {
 </table></td></tr>`;
   }).join("");
   const messages = rows ? `<table role="presentation" width="100%" cellspacing="0" cellpadding="0">${rows}</table>` : `<p>${paragraph(transcript)}</p>`;
-  return transcriptLayout(title, messages + transcriptFooter());
+  return brandedMailLayout(title, intro, messages + transcriptFooter(), "Chat Transcript", true);
+}
+
+
+export function leadNotificationCard(title: string, name: string, details: [string, string][], message: string) {
+  const rows = details.map(([label, value]) =>
+    `<tr><td style="padding:3px 0;color:#fff;overflow-wrap:anywhere"><strong>${escapeMail(label)}:</strong> ${paragraph(value)}</td></tr>`
+  ).join("");
+  const body = `<table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+<tr><td style="padding-bottom:14px"><strong>Customer full name</strong><br>
+<span style="display:inline-block;margin-top:5px;padding:8px 12px;border-radius:9px;background:#080b10;color:#fff">${paragraph(name)}</span></td></tr>
+<tr><td bgcolor="#004aad" style="padding:12px 14px;border-radius:10px;background:#004aad;color:#fff">
+<strong>Website visitor details</strong>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-top:5px">${rows}</table>
+</td></tr>
+<tr><td style="padding-top:16px"><strong>Customer message</strong><br>
+<span style="display:inline-block;margin-top:5px;padding:8px 12px;border-radius:9px;background:#080b10;color:#fff;overflow-wrap:anywhere">${paragraph(message || "—")}</span>
+</td></tr></table>`;
+  return brandedMailLayout(title, "A visitor submitted an inquiry through an Orbilect SEO form.", body, "Inquiry", false);
 }

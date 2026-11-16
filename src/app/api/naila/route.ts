@@ -1,3 +1,5 @@
+import { recordChatEvent } from "@/lib/naila/chat-archive";
+import { closingMessage, declinesHelp, idleWarning } from "@/lib/naila/conversation";
 import { isNailaSiteRequest } from "@/lib/naila/request-origin";
 import { chatIdPattern, humanChat, humanChatAvailable, humanChatHistory } from "@/lib/naila/human-chat";
 import { transcriptAvatarAttachment, transcriptBrandAttachment, transcriptCtaAttachment, transcriptSocialAttachments } from "../../../lib/naila/transcript-avatar";
@@ -131,6 +133,24 @@ export async function POST(request: NextRequest) {
         return respond(request, state, { error: "Live support is temporarily unavailable." }, 503);
       }
     }
+    const archiveId = typeof input?.chatId === "string" && chatIdPattern.test(input.chatId) ? input.chatId : "";
+    const archiveOwner = stamp("archive:" + state.id);
+    if (input?.action === "chat-warning" || input?.action === "chat-close") {
+      const warning = input.action === "chat-warning";
+      const reason = input.reason;
+      if (!archiveId || (!warning && reason !== "inactive" && reason !== "last-tab" && reason !== "declined")) {
+        return respond(request, state, { error: "Invalid conversation event." }, 400);
+      }
+      const cycle = typeof input.cycle === "number" && Number.isSafeInteger(input.cycle) ? input.cycle : 0;
+      const event = warning
+        ? { eventId: "warning:" + cycle, kind: "warning" as const, replyText: idleWarning }
+        : { eventId: "closing", kind: "close" as const, reason, replyText: closingMessage };
+      const humanId = typeof input.humanId === "string" && chatIdPattern.test(input.humanId) ? input.humanId : "";
+      const humanOwner = humanId ? stamp("human:" + state.id) : undefined;
+      after(() => recordChatEvent({ ...event, chatId: archiveId, owner: archiveOwner,
+        humanId: !warning ? humanId || undefined : undefined, humanOwner }));
+      return respond(request, state, { saved: true });
+    }
     const emails = emailList(input?.email);
     if (input?.action === "transcript") {
       if (process.env.NAILA_TRANSCRIPT_EMAILS_ENABLED !== "1") {
@@ -182,8 +202,18 @@ export async function POST(request: NextRequest) {
       const key = hashChatId(input.chatId);
       if (process.env.NAILA_WEEKLY_REPORTS_ENABLED === "1") after(() => countChat(key));
     }
-    return respond(request, state, answer(input.text, input.humor !== false,
-      typeof input.previousMessage === "string" ? input.previousMessage.slice(0, 1000) : ""));
+    const shouldClose = declinesHelp(input.text);
+    const reply = shouldClose ? { text: closingMessage, endChat: true } :
+      answer(input.text, input.humor !== false,
+        typeof input.previousMessage === "string" ? input.previousMessage.slice(0, 1000) : "");
+    const eventId = typeof input.turnId === "string" && chatIdPattern.test(input.turnId) ? input.turnId : randomUUID();
+    if (archiveId) after(async () => {
+      await recordChatEvent({ chatId: archiveId, owner: archiveOwner, eventId, kind: "turn",
+        visitorText: input.text, replyText: shouldClose ? undefined : reply.text });
+      if (shouldClose) await recordChatEvent({ chatId: archiveId, owner: archiveOwner,
+        eventId: "closing", kind: "close", replyText: closingMessage, reason: "declined" });
+    });
+    return respond(request, state, reply);
   } catch {
     return respond(request, state, { error: "Please check your request and try again." }, 400);
   }

@@ -1,3 +1,5 @@
+import { leadNotificationCard } from "../naila/mail-render";
+import { transcriptBrandAttachment } from "../naila/transcript-avatar";
 import { leadSources, proposalServices, type LeadSource } from "./sources";
 
 export type Lead = {
@@ -148,11 +150,18 @@ async function sendNotification(lead: StoredLead) {
     throw new Error("Lead email configuration is incomplete");
   }
 
+  const subject = lead.source === "starter-offer"
+    ? "Orbilect SEO $500 Promo Inquiry - " + lead.inquiry_code
+    : "Orbilect SEO Inquiry - " + lead.service + " - " + lead.inquiry_code;
+  const details: [string, string][] = [
+    ["Inquiry code", lead.inquiry_code], ["Lead ID", lead.id], ["Form", lead.form_name],
+    ["Source page", lead.source_page], ["Service", lead.service], ["Email", lead.email],
+    ["Phone", lead.phone ?? "—"], ["Website", lead.website],
+  ];
   const body = JSON.stringify({
-    from, to, reply_to: lead.email,
-    subject: lead.source === "starter-offer"
-      ? "Orbilect SEO $500 Promo Inquiry - " + lead.inquiry_code
-      : "Orbilect SEO Inquiry - " + lead.service + " - " + lead.inquiry_code,
+    from, to, reply_to: lead.email, subject,
+    html: leadNotificationCard(subject, lead.name ?? "—", details, lead.message),
+    attachments: [transcriptBrandAttachment],
     text: [
       "Inquiry code: " + lead.inquiry_code, "Lead ID: " + lead.id, "Form: " + lead.form_name, "Page: " + lead.source_page,
       "Service: " + lead.service, "Name: " + (lead.name ?? "—"), "Email: " + lead.email,

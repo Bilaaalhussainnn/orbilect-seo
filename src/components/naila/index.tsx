@@ -10,8 +10,8 @@ import Link from "next/link";
 import { transcriptName } from "../../lib/naila/transcript-name";
 import { HumanChatPanel } from "./human-chat-panel";
 import styles from "./naila.module.css";
+import { useNailaConversation, type Message } from "./use-conversation";
 
-type Message = { role: "Naila" | "You"; text: string; actions?: Action[]; sentAt?: number };
 type Mode = "chat" | "services" | "scope" | "transcript" | "proposal" | "human";
 const welcome: Message = { role: "Naila", text: "Hi, I’m Naila 👋 Ask me about Orbilect SEO, compare plans, or tell me what you’re building." };
 const referrerText = "See our pricing";
@@ -57,22 +57,14 @@ function unseenReplyActions(history: Message[], actions?: Action[]) {
   return unique.length ? unique : undefined;
 }
 
-const chatStorageKey = "orbilect:naila:chat:v1";
 const quoteHref = "/pricing#pricing-checklist";
-const idleMinimized = "I’m minimizing this chat for now. You can reopen it and pick up right where we left off.";
-const idleWarning = "Still have questions? I’m here to help.";
 
 export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?: boolean }) {
   const [open, setOpen] = useState(false);
   const [peek, setPeek] = useState(false);
   const [timeZone, setTimeZone] = useState<string>();
-  const [messages, setMessages] = useState<Message[]>([welcome]);
-  const [lastActivity, setLastActivity] = useState(0);
-  const [warned, setWarned] = useState(false);
+  const { messages, closing, clearClosing, current, start, add, finish, touch, attachHumanChat } = useNailaConversation(welcome);
   const [notice, setNotice] = useState("");
-  const [restored, setRestored] = useState(false);
-  const activity = useRef(0);
-  const chatReportId = useRef("");
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [blocked, setBlocked] = useState(false);
@@ -152,79 +144,29 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
   }, [messages, busy, open]);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(chatStorageKey);
-      if (raw) {
-        interacted.current = true;
-        const saved = JSON.parse(raw);
-        if (saved && Array.isArray(saved.messages) && saved.messages.length > 0) {
-          const savedDraft = typeof saved.draft === "string" ? saved.draft : "";
-          const savedTime = Number.isFinite(saved.at) ? Math.min(saved.at, Date.now()) : Date.now();
-          activity.current = savedTime;
-          chatReportId.current = typeof saved.reportId === "string" ? saved.reportId : "";
-          setTimeZone(typeof saved.timeZone === "string" ? saved.timeZone : undefined);
-          setLastActivity(savedTime);
-          const history: Message[] = saved.messages;
-          setMessages(history.some(message => message.role === "You") ? history :
-            history.filter(message => message.text !== idleWarning && message.text !== idleMinimized));
-          setText(savedDraft);
-        }
-      }
-    } catch {}
-    setRestored(true);
-  }, []);
-
-  useEffect(() => {
-    if (!restored || !lastActivity) return;
-    try {
-      localStorage.setItem(chatStorageKey, JSON.stringify({ draft: text, at: lastActivity, messages, warned, reportId: chatReportId.current, timeZone }));
-    } catch {}
-  }, [restored, lastActivity, messages, warned, timeZone, text]);
-
-  const hasVisitorMessage = messages.some(message => message.role === "You");
-
-  useEffect(() => {
-    if (!open || !hasVisitorMessage || !lastActivity || busy || mode !== "chat" || text.trim()) return;
-    function checkIdle() {
-      if (activity.current !== lastActivity || requesting.current) return;
-      const now = Date.now();
-      const elapsed = now - lastActivity;
-      if (elapsed >= 300_000) {
-        activity.current = 0;
-        setMessages(items => [...items, { role: "Naila", text: idleMinimized, sentAt: now }]);
-        setPeek(false);
-        setNotice("");
-        setOpen(false);
-      } else if (elapsed >= 180_000 && !warned) {
-        setWarned(true);
-        setMessages(items => [...items, { role: "Naila", text: idleWarning, sentAt: now }]);
-      }
-    }
-
-    const timeout = window.setTimeout(checkIdle,
-      Math.max(0, lastActivity + (warned ? 300_000 : 180_000) - Date.now()));
-    document.addEventListener("visibilitychange", checkIdle);
-    return () => {
-      window.clearTimeout(timeout);
-      document.removeEventListener("visibilitychange", checkIdle);
-    };
-  }, [open, hasVisitorMessage, lastActivity, warned, busy, mode, text]);
-
-  function touchChat() {
-    const now = Date.now();
-    activity.current = now;
-    setLastActivity(now);
-    setWarned(false);
+    if (!closing) return;
+    setPeek(false);
     setNotice("");
-  }
+    setText("");
+    setError("");
+    setDetails("");
+    setEmail("");
+    setSelection([]);
+    setScope("");
+    setMode("chat");
+    try { sessionStorage.removeItem("orbilect:naila:human-conversation"); } catch {}
+    const timer = window.setTimeout(() => {
+      setOpen(false);
+      clearClosing();
+    }, 2200);
+    return () => window.clearTimeout(timer);
+  }, [closing, clearClosing]);
 
   function show() {
-    if (blocked) return;
-    const openedAt = Date.now();
-    setMessages(items => items[0] === welcome ? [{ ...welcome, sentAt: openedAt }, ...items.slice(1)] : items);
+    if (blocked || closing) return;
+    start();
     interacted.current = true;
     setPeek(false);
-    touchChat();
     setOpen(true);
   }
   const optionsMenu = useRef<HTMLDetailsElement>(null);
@@ -242,14 +184,15 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
     setError("");
     setMode(next);
   }
-  function reply(text: string, actions?: Action[]) {
+  function reply(text: string, actions?: Action[], expectedId?: string) {
     const sentAt = Date.now();
-    setMessages(items => [...items, { role: "Naila", text, actions: unseenReplyActions(items, actions), sentAt }]);
+    if (!add(items => ({ role: "Naila", text, actions: unseenReplyActions(items, actions), sentAt }), false, expectedId)) return;
     chime();
   }
 
   async function run(payload: Record<string, unknown>) {
-    if (requesting.current || blocked) return;
+    const activeId = current.current?.id;
+    if (requesting.current || blocked || !activeId || closing) return;
     requesting.current = true;
     setBusy(true);
     setError("");
@@ -261,6 +204,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
       const requestTimeZone = response.headers.get("x-naila-timezone");
       if (requestTimeZone) setTimeZone(requestTimeZone);
       const data = await response.json();
+      if (current.current?.id !== activeId) return;
       if (data.blocked) {
         setBlocked(true);
         setOpen(false);
@@ -269,17 +213,19 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
         return;
       }
       if (!response.ok) throw Error(data.error ?? "Naila is unavailable. Please try again.");
-      if (payload.action === "quote") {
+      if (data.endChat) {
+        finish("declined", activeId);
+      } else if (payload.action === "quote") {
         const base = data.monthlyUsd === null ? "" : "Your plan starts at $" + data.monthlyUsd.toLocaleString("en-US") + " USD/month. ";
         reply("Alright. " + base + (data.manual ? "The custom scope needs a specialist’s review." : "We can review the deliverables with you."),
-          [{ text: referrerText, href: "/pricing#seo-plans" }]);
+          [{ text: referrerText, href: "/pricing#seo-plans" }], activeId);
         setPanel("proposal");
       } else {
-        reply(data.text, data.actions);
+        reply(data.text, data.actions, activeId);
         if (payload.action !== "message") { setPanel("chat"); setDetails(""); }
       }
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Please try again.");
+      if (current.current?.id === activeId) setError(cause instanceof Error ? cause.message : "Please try again.");
     } finally {
       setBusy(false);
       requesting.current = false;
@@ -289,18 +235,18 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
   function submit(event: FormEvent) {
     event.preventDefault();
     const message = text.replace(/\p{Extended_Pictographic}|\p{Regional_Indicator}|[\uFE0F\u20E3\u200D]/gu, "").trim();
-    if (!message || busy || requesting.current) return;
-    touchChat();
-    setMessages(items => [...items, { role: "You", text: message, sentAt: Date.now() }]);
-    chatReportId.current ||= crypto.randomUUID();
-    void run({ previousMessage: [...messages].reverse().find(item => item.role === "You")?.text ?? "", action: "message", chatId: chatReportId.current, text: message });
+    if (!message || busy || requesting.current || closing) return;
+    const active = add(() => ({ role: "You", text: message, sentAt: Date.now() }), true);
+    if (!active) return;
+    const previousMessage = [...active.messages].reverse().find(item => item.role === "You")?.text ?? "";
+    void run({ previousMessage, action: "message", chatId: active.id, turnId: crypto.randomUUID(), text: message });
     setText("");
   }
 
   async function sendDetails(event: FormEvent) {
     event.preventDefault();
     if (busy) return;
-    touchChat();
+    touch();
     if (mode === "transcript") {
       const transcript = messages.map(item => "[" + item.role + (item.sentAt ? "|" + formatChatTime(item.sentAt, timeZone) : "") + "] " + item.text.replace(/\n/g, "\n  ") + (item.actions?.map(link => "\n" + link.text + ": " + link.href).join("") ?? "")).join("\n\n");
       if (transcript.length > 6500) {
@@ -328,7 +274,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
     <div className={styles.widget} data-lenis-prevent="">
       {(peek || notice) && !open && (
         <div className={styles.peek} role="status">
-          <button type="button" onClick={show}>{notice === idleWarning ? <>Still have questions?<br />I’m here to help.</> : notice || "Need help with SEO?"}</button>
+          <button type="button" onClick={show}>{notice || "Need help with SEO?"}</button>
           <button type="button" aria-label="Dismiss Naila greeting" onClick={close}><X size={14} /></button>
         </div>
       )}
@@ -377,7 +323,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
           {mode === "human" ? <HumanChatPanel
             history={messages.map(({ role, text }) => ({ role: role === "You" ? "visitor" : "assistant", text }))}
             onClosed={() => { if (!open) setNotice("Rate your support chat"); }}
-            onBack={() => setPanel("chat")} /> : <>
+            onBack={() => setPanel("chat")} onActivity={touch} onSession={attachHumanChat} /> : <>
           <div className={styles.thread} ref={thread} role="log" aria-label="Conversation" aria-live="polite">
             {messages.map((item, index) => (
               <div key={index} className={item.role === "You" ? styles.visitor : styles.naila}>
@@ -429,8 +375,8 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
           {mode !== "chat" && <button className={styles.back} type="button" onClick={() => setPanel("chat")}>Back to chat</button>}
           <form className={styles.composer} onSubmit={submit}>
             <input ref={input} value={text} placeholder="What can I help you with?" aria-label="Type a message" maxLength={1000}
-              onChange={event => { setText(event.currentTarget.value); touchChat(); }} />
-            <button type="submit" aria-label="Send message" disabled={busy || !text.trim()}><Send size={16} /></button>
+              onChange={event => setText(event.currentTarget.value)} />
+            <button type="submit" aria-label="Send message" disabled={busy || closing || !text.trim()}><Send size={16} /></button>
           </form>
           </>}
           <footer className={styles.footer}><a href="https://orbilectlabs.com"><Image src="/naila/orbilect-labs.jpg" alt="" width={18} height={18} />Powered by Orbilect Labs</a></footer>

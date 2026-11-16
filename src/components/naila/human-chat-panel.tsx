@@ -21,10 +21,12 @@ async function request(action: string, chatId: string, payload: object = {}): Pr
   return data;
 }
 
-export function HumanChatPanel({ history, onClosed, onBack }: {
+export function HumanChatPanel({ history, onClosed, onBack, onActivity, onSession }: {
   history: HumanMessage[];
   onClosed: () => void;
   onBack: () => void;
+  onActivity: () => void;
+  onSession: (id: string) => void;
 }) {
   const [id, setId] = useState("");
   const [chat, setChat] = useState<HumanConversation>();
@@ -86,6 +88,7 @@ export function HumanChatPanel({ history, onClosed, onBack }: {
   async function submit(event: FormEvent, action: string, payload: object) {
     event.preventDefault();
     if (busy) return;
+    onActivity();
     const chatId = id || (pendingId.current ||= crypto.randomUUID());
     setBusy(true);
     revision.current += 1;
@@ -95,6 +98,7 @@ export function HumanChatPanel({ history, onClosed, onBack }: {
       const result = await request(action, chatId, payload);
       setChat(result);
       setId(chatId);
+      onSession(chatId);
       try { sessionStorage.setItem(conversationKey, chatId); } catch {}
       if (action === "visitor-message") setText("");
     } catch (cause) {
