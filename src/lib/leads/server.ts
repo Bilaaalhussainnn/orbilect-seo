@@ -206,7 +206,17 @@ async function sendNotification(lead: StoredLead) {
       const requestId = response?.headers.get("x-request-id");
       const logReference = requestId && /^[a-z\d_-]{1,120}$/i.test(requestId) ? " [request " + requestId + "]" : "";
       const format = body === plainBody ? " after plain-text fallback" : "";
-      throw new Error("Resend send failed: " + (response?.status ?? "network error") + reason + format + logReference);
+      const providerMessage = typeof result?.message === "string"
+        ? result.message
+            .split(key).join("[redacted]")
+            .replace(/\bre_[a-z0-9_-]+/gi, "[redacted]")
+            .replace(/[^\s<>"'(),;]+@[^\s<>"'(),;]+/g, "[email]")
+            .replace(/\s+/g, " ")
+            .trim()
+            .slice(0, 240)
+        : "";
+      const detail = providerMessage ? " — " + providerMessage : "";
+      throw new Error("Resend send failed: " + (response?.status ?? "network error") + reason + format + logReference + detail);
     }
 
     await new Promise((resolve) => setTimeout(resolve, 600));
