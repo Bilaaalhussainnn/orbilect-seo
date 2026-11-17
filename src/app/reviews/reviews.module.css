@@ -18,6 +18,12 @@
 .card a, .card button { color: #004aad; }
 .card a { display: inline-flex; gap: .35rem; align-items: center; min-height: 40px; width: fit-content; text-underline-offset: .18em; }
 .card button { background: none; border: 0; cursor: pointer; display: block; text-decoration: underline; padding: .45rem 0; font-family: inherit; }
+.rightfirmsProfile { display: grid; justify-items: center; gap: .6rem; }
+.rightfirmsProfile h3 { margin: 0; font-size: .97rem; }
+.rightfirmsProfile a:focus-visible { outline: 2px solid #004aad; outline-offset: 4px; border-radius: 4px; }
+.rightfirmsBadge { display: inline-block; position: relative; width: 150px; max-width: 100%; }
+.rightfirmsBadge img { display: block; width: 100%; height: auto; }
+.rightfirmsYear { position: absolute; left: 0; right: 0; bottom: 15%; font-size: 12px; text-align: center; color: #1a5efc; font-family: Arial, sans-serif; font-weight: 700; }
 
 .transparency { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(1rem, 6vw, 4.5rem); align-items: start; }
 .principles { list-style: none; padding: 0; margin: 0; }

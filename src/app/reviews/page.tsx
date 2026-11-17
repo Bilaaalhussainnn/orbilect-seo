@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import GlobalLocations from "@/components/global-locations";
 import { ArrowUpRight, ClipboardList, MessageSquare, ShieldCheck } from "lucide-react";
 import TechnologyStack from "../_home/technology-stack";
@@ -54,7 +55,7 @@ export default function ReviewsPage() {
           </div>
 
           <ul className={styles.cards} role="list">
-            {reviewPlatforms.map((platform) => {
+            {reviewPlatforms.filter((platform) => platform.id !== "softwareworld").map((platform) => {
               const profile = profiles.get(platform.id);
               const label = platform.id === "google" ? "Google Business Account" : platform.label;
               const action = platform.id === "bing" || platform.id === "yelp" ? "View listing" : "Leave a review";
@@ -70,6 +71,19 @@ export default function ReviewsPage() {
                 {profile?.embedUrl && <ReviewEmbed label={platform.label} url={profile.embedUrl} />}
               </li>;
             })}
+            <li id="review-rightfirms" className={styles.card}>
+              <div className={styles.rightfirmsProfile}>
+                <h3>RightFirms</h3>
+                <a href="https://www.rightfirms.co/company/orbilect-seo" target="_blank" rel="noopener noreferrer"
+                  aria-label="View Orbilect SEO’s profile on RightFirms (opens in a new tab)">
+                  <span className={styles.rightfirmsBadge}>
+                    <Image src="/review-platforms/rightfirms-company.webp" alt="View our profile on RightFirms"
+                      width={1084} height={1129} unoptimized />
+                    <span className={styles.rightfirmsYear}>2026</span>
+                  </span>
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
