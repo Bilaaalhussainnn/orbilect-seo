@@ -129,7 +129,7 @@ function searchableSections() {
   return index;
 }
 
-export function findPublicPassage(question: string, policyOnly = false): Reply | undefined {
+export function findPublicPassage(question: string, policyPath?: typeof privacyPath | typeof termsPath): Reply | undefined {
   const query = tokens(question);
   if (query.length < 2) return;
   const overlap = (set: Set<string>) => query.filter(word => set.has(word)).length;
@@ -137,7 +137,7 @@ export function findPublicPassage(question: string, policyOnly = false): Reply |
   let best: { section: IndexedSection; text: string; score: number } | undefined;
   let second: typeof best;
   for (const section of searchableSections()) {
-    if (policyOnly && !section.href.startsWith(privacyPath) && !section.href.startsWith(termsPath)) continue;
+    if (policyPath && section.href !== policyPath && !section.href.startsWith(policyPath + "#")) continue;
     const headingHits = overlap(section.headings);
     const titleHits = overlap(section.title);
     for (const { text, words } of section.evidence) {

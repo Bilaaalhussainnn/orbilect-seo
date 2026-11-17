@@ -34,8 +34,8 @@ const serviceDetails = [
 const ignored = new Set("a the an i im you your my it is are or of for to and on in how what can do does will with me about".split(" "));
 const words = (text: string) => [...new Set(text.toLowerCase().match(/[a-z0-9]+/g) ?? [])].filter(word => !ignored.has(word));
 
-export function answer(message: string, humor: boolean, previousMessage = ""): Reply {
-  return resolveIntent(message, previousMessage, question => answerQuestion(question, humor));
+export function answer(message: string, humor: boolean, recentMessages: readonly string[] = []): Reply {
+  return resolveIntent(message, recentMessages, question => answerQuestion(question, humor));
 }
 
 function answerQuestion(message: string, humor: boolean): Reply {

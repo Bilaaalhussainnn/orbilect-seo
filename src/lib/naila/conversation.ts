@@ -6,9 +6,11 @@ export type CloseReason = "declined" | "inactive" | "last-tab";
 
 export function declinesHelp(message: string) {
   const text = message.toLowerCase().replace(/[’‘;]/g, "'").trim()
-    .replace(/^(?:hi|hello|hey)[\s,.!]+/, "").replace(/[.!?,]+$/g, "").trim();
+    .replace(/^(?:hi|hello|hey)[\s,.!]+/, "").replace(/[.!?,]+$/g, "").trim()
+    .replace(/^(?:no[, ]+)?(?:thanks|thank you)[,!. ]+(?=that|i |nothing|bye)/, "")
+    .replace(/^no[, ]+(?=that|nothing|i )/, "");
   return /^(?:no(?:[ ,]+(?:thanks|thank you|i'm (?:good|all set)))?|nope|not (?:now|right now))$/.test(text) ||
-    /^(?:i(?:'m| am) (?:good|all set|fine)|that(?:'s| is) all|nothing else)(?:[ ,]+(?:thanks|thank you))?$/.test(text) ||
-    /^(?:no[ ,]+)?(?:i\s+)?(?:don'?t|do not) (?:need|want) (?:any |further |more )?(?:help|assistance|support)(?: right now)?(?:[ ,]+(?:thanks|thank you))?$/.test(text) ||
+    /^(?:i(?:'m| am) (?:good|all set|fine)|that(?:'s| is|'ll| will)(?: be)? all|nothing (?:else|more)|bye|goodbye)(?: for now)?(?:[ ,.]+(?:thanks|thank you|bye|goodbye))*$/.test(text) ||
+    /^(?:no[ ,]+)?(?:i\s+)?(?:don'?t|do not) (?:need|want) (?:(?:any |further |more ){0,2})(?:help|assistance|support|anything(?: else)?)(?: right now)?(?:[ ,]+(?:thanks|thank you))?$/.test(text) ||
     /^(?:please )?(?:end|close|stop) (?:this|the) chat$/.test(text);
 }

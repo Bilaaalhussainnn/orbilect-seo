@@ -203,9 +203,12 @@ export async function POST(request: NextRequest) {
       if (process.env.NAILA_WEEKLY_REPORTS_ENABLED === "1") after(() => countChat(key));
     }
     const shouldClose = declinesHelp(input.text);
+    const recentMessages = Array.isArray(input.recentMessages)
+      ? input.recentMessages.slice(-5).filter((item: unknown): item is string => typeof item === "string")
+        .map((item: string) => item.slice(0, 400))
+      : typeof input.previousMessage === "string" ? [input.previousMessage.slice(0, 400)] : [];
     const reply = shouldClose ? { text: closingMessage, endChat: true } :
-      answer(input.text, input.humor !== false,
-        typeof input.previousMessage === "string" ? input.previousMessage.slice(0, 1000) : "");
+      answer(input.text, input.humor !== false, recentMessages);
     const eventId = typeof input.turnId === "string" && chatIdPattern.test(input.turnId) ? input.turnId : randomUUID();
     if (archiveId) after(async () => {
       await recordChatEvent({ chatId: archiveId, owner: archiveOwner, eventId, kind: "turn",

@@ -2,7 +2,7 @@ import { ecommerceOperationsAnswers as ecommerce, staffingSupportAnswers as staf
 import { paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming } from "../payment-policy";
 import { businessDescription, internationalWhatsApp, pakistanAddress, pakistanWhatsApp } from "../site-identity";
 import { findPublicAnswer, suggestPublicPage } from "./public-knowledge";
-import { findPolicyAnswer, findPublicPassage } from "./site-content";
+import { findPolicyAnswer, findPublicPassage, privacyPath, termsPath } from "./site-content";
 import { blogIndex, faqEntries } from "./intent-content";
 import type { Reply } from "./answers";
 
@@ -57,7 +57,22 @@ function withBlog(text: string, q: string, preferred?: string): Reply {
   return { text, actions: post ? [{ text: post.title, href: "/blogs/" + post.slug }] : undefined };
 }
 
-export function resolveIntent(message: string, previousMessage: string, fallback: (q: string) => Reply): Reply {
+const topic = /\b(?:seo|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audit|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
+const pricingFollowup = /^(?:(?:and|so)\s+)?(?:how much(?: (?:does|would|will) (?:this|that|it) (?:cost|be))?|what(?:'s| is) (?:the )?(?:cost|price|investment)(?: of (?:this|that|it))?|(?:what|how) about (?:the )?(?:cost|pricing|price)|and the (?:cost|price))[.!?\s]*$/;
+const followupOnly = /^(?:thanks(?: so much)?|thank you(?: so much)?|(?:ok(?:ay)?|sure|understood|got it|sounds good|great|perfect|that makes sense)(?:[, ]+(?:thanks|thank you))?|(?:yes|no)(?: please)?)[.!?\s]*$/;
+
+function previousTopic(recentMessages: readonly string[]) {
+  let latest = "";
+  for (const message of [...recentMessages].reverse()) {
+    const turn = normalize(message.trim());
+    if (!turn || followupOnly.test(turn) || pricingFollowup.test(turn)) continue;
+    if (topic.test(turn) || platforms.test(turn)) return turn;
+    latest ||= turn;
+  }
+  return latest;
+}
+
+export function resolveIntent(message: string, recentMessages: readonly string[], fallback: (q: string) => Reply): Reply {
   const input = message.trim();
   const greetingMatch = input.match(greeting);
   const prefix = greetingMatch
@@ -65,8 +80,8 @@ export function resolveIntent(message: string, previousMessage: string, fallback
     : "";
   const q = normalize(greetingMatch ? input.slice(greetingMatch[0].length).replace(/^[\s,.!?—-]+/, "").replace(/^naila(?: ai)?(?=$|[\s,.!?—-])[\s,.!?—-]*/i, "") : input);
   if (!q && prefix) return { text: prefix + "How can I help you?" };
-  const reply = classify(q, normalize(previousMessage), fallback);
-  return prefix ? { ...reply, text: prefix + reply.text } : reply;
+  const reply = classify(q, previousTopic(recentMessages), fallback);
+  return prefix && reply.text !== serviceIntro ? { ...reply, text: prefix + reply.text } : reply;
 }
 
 function customerOperationsReply(q: string): Reply | undefined {
@@ -95,7 +110,7 @@ function customerOperationsReply(q: string): Reply | undefined {
 }
 
 const staffingTopic = /\b(?:staffing|offshor\w*|outsourc\w*)\b/;
-const serviceIntro = "Sure. Which of our services do you need help with?";
+const serviceIntro = "Sure, I’m here to help. What do you need help with?";
 const marketingTopic = /\b(?:digital marketing|online marketing)\b/;
 
 function conversationalReply(q: string, previous: string): Reply | undefined {
@@ -108,6 +123,12 @@ function conversationalReply(q: string, previous: string): Reply | undefined {
   }
   if (/^(?:(?:please )?(?:i (?:need|want|would like)|i'd like|looking for) (?:(?:some|your) )?(?:help|assistance|support)|(?:can|could|would|will) you (?:please )?help(?: me)?|help(?: me)?(?: please)?)[.!?\s]*$/.test(q)) {
     return { text: serviceIntro, actions: [{ text: "Explore our services", href: "/services" }] };
+  }
+  if (/\b(?:can you|do you|what can you)\b.*\b(?:read|access|answer from|know about)\b.*\b(?:site|website|pages?)\b/.test(q)) {
+    return { text: "I can answer from the public pages in our sitemap, including our services, blog, Privacy Policy, and Terms and Conditions. I can link you to the source. What would you like to look up?", actions: [{ text: "Read Privacy Policy", href: privacyPath }, terms] };
+  }
+  if (marketingTopic.test(previous) && /^(?:(?:i|we) (?:want|need) )?(?:more leads|more enquir(?:ies|ys)|more inquiries|(?:more|grow) (?:online )?sales|(?:reach|a) (?:new|wider) audiences?)[.!?\s]*$/.test(q)) {
+    return { text: "Got it. What do you sell, and where are your customers based? That’ll help us work out which channels and landing pages are worth looking at first.", actions: [{ text: "Explore digital marketing", href: "/services/digital-marketing" }] };
   }
   if (marketingTopic.test(q) && !pricingWords.test(q) &&
     !/\b(?:privacy|terms|refund|blog|article|guide link|marketing agency|jobs?|careers)\b/.test(q)) {
@@ -125,6 +146,8 @@ function conversationalReply(q: string, previous: string): Reply | undefined {
 }
 
 function classify(q: string, previous: string, fallback: (q: string) => Reply): Reply {
+  if (/^(?:thanks|thank you)(?: so much)?[.!?\s]*$/.test(q)) return { text: "You’re welcome!" };
+  if (followupOnly.test(q)) return { text: "Sounds good. I’m here if you have another question." };
   if (!/[a-z0-9]/.test(q) || /^(?:what(?: the)?|how|why|where|can you|do you|i was wondering)[?.!\s]*$/.test(q)) return { text: clarify };
   if (/\b(?:hungry|weather forecast|tell me a joke|who won the game|what is your favorite food)\b/.test(q)) return { text: unrelated };
   if (/\b(?:call\s?back|(?:contact|call|phone|email|reach) me|(?:get in touch|reach out|follow up) with me|(?:reach out|speak) to me)\b/.test(q)) {
@@ -133,11 +156,23 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   if (/\b(?:calculators?|cost estimators?|quote tools?|pricing tools?)\b/.test(q)) {
     return { text: "We have a pricing checklist you can use to select the work you need and request a tailored quote. It won’t generate an instant total.", actions: [pricingChecklist] };
   }
-  const policy = findPolicyAnswer(q, previous);
+  const context = topic.test(q) || platforms.test(q) ? q : previous;
+  const policy = findPolicyAnswer(q, context);
   if (policy) return policy;
-  if (/\b(?:privacy policy|terms (?:and conditions|of service))\b/.test(q)) {
-    const passage = findPublicPassage(q, true);
-    if (passage) return passage;
+  const policyPage = /\bprivacy policy\b/.test(q) ? privacyPath
+    : /\bterms (?:and conditions|of service)\b/.test(q) ? termsPath : undefined;
+  if (policyPage) {
+    const link = { text: policyPage === privacyPath ? "Read Privacy Policy" : "Read Terms and Conditions", href: policyPage };
+    if (/^(?:privacy policy|terms and conditions|terms of service)[.!?\s]*$/.test(q) ||
+      /\b(?:where (?:is|are|can)|(?:show|send|share|link) me|link to|can i (?:read|see))\b/.test(q)) {
+      return { text: "Of course. Here’s the published page. If you have a question about a specific part, I can help you find it.", actions: [link] };
+    }
+    return findPublicPassage(q, policyPage) ?? { text: "I can’t confirm that from the text I found. Here’s the published page so you can check the details.", actions: [link] };
+  }
+  const auditTopic = /\b(?:audits?|seo audits?)\b/;
+  if (/\b(?:free (?:seo )?audits?|audit my (?:site|website))\b/.test(q) ||
+      (auditTopic.test(context) && pricingFollowup.test(q))) {
+    return { text: "Yes, you can request a free SEO audit. Share your website and tell us what you’d like customers to find. We’ll review what may be holding the site back and flag where to start.", actions: [audit] };
   }
   const conversation = conversationalReply(q, previous);
   if (conversation) return conversation;
@@ -207,15 +242,14 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   if (timeWords.test(q) && (aboutPromo || (promoWords.test(previous) && /\b(?:it|that|the offer)\b/.test(q)))) return { text: expiry };
   const cheaper = /\b(?:under|below|less than|lower than|cheaper than)\s*(?:usd\s*)?\$?\s*6(?:00|50)\b/.test(q);
   if (aboutPromo || cheaper) return { text: promotion, actions: [audit] };
-  const platform = (q.match(platforms) ?? previous.match(platforms))?.[1];
-  const directPriceQuestion =
+  const platform = (q.match(platforms) ?? (pricingFollowup.test(q) ? context.match(platforms) : null))?.[1];
+  const directPriceQuestion = pricingFollowup.test(q) ||
     /^(?:pricing|price(?:s)?|cost(?:s)?|rates|fees|investment)[?!\.\s]*$/.test(q) ||
-    /\b(?:how much|what(?:'s| is| are) (?:the |your |our )?(?:(?:regular|monthly|starting|seo|service|plan|starter|essential) )*(?:prices?|pricing|costs?|fees?|rates?|investment)|(?:show|send|tell|give|share)(?: me| us)? (?:the |your )?(?:prices?|pricing|rates?)|(?:what|how much) do you charge|(?:do|does) .{1,60} (?:cost|charge))\b/.test(q);
+    /\b(?:how much|what(?:'s| is| are) (?:the |your |our )?(?:(?:regular|monthly|starting|estimated|seo|service|plan|starter|essential) )*(?:prices?|pricing|costs?|fees?|rates?|investment)|(?:show|send|tell|give|share)(?: me| us)? (?:the |your )?(?:prices?|pricing|rates?)|(?:what|how much) do you charge|(?:do|does) .{1,60} (?:cost|charge))\b/.test(q);
   if (directPriceQuestion && !/\b(?:what is|define|what does) (?:an? )?(?:ad spend|cost per click|cost per acquisition)\b/.test(q)) {
-    const context = q + " " + previous;
     if (/\bessential(?: seo)?\b/.test(context)) return { text: investment + " Essential SEO is $1,500 USD per 30-day billing cycle. We can confirm what is included for your site.", actions: [quote] };
     if (/\bstarter(?: seo)?\b/.test(context)) return { text: investment + " Regular Starter SEO starts at $650 USD. The written quote confirms what’s included and the billing schedule.", actions: [quote] };
-    if (platform || /\b(?:ppc|ads|migration|redesign|website build|building a website|ecommerce|technical seo|local seo|google business profile)\b/.test(context)) {
+    if (platform || /\b(?:ppc|ads|paid search|migration|redesign|website build|building a website|ecommerce|technical seo|local seo|google business profile|digital marketing|online marketing|chatbots?|crm|landing pages?)\b/.test(context)) {
       const work = platform ? "For " + platformNames[platform.replace(/woo\s+commerce/, "woocommerce")] + " work" : "For that service";
       return { text: investment + " " + work + ", we quote based on your site, scope, and goals. What would you like us to handle?", actions: [quote] };
     }
@@ -236,9 +270,6 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   }
   if (/\b(?:what|which) (?:website |ecommerce )?platforms\b/.test(q)) {
     return { text: "We can scope work on WordPress, Shopify, WooCommerce, Magento / Adobe Commerce, Webflow, Wix, Squarespace, BigCommerce, Framer, and custom sites. Tell me your platform and whether you need a build, redesign, migration, or SEO." };
-  }
-  if (/\b(?:free (?:seo )?audit|audit my (?:site|website))\b/.test(q)) {
-    return { text: "Yes, you can request a free SEO audit. Share your website and tell us what you’d like customers to find. We’ll review what may be holding the site back and flag where to start.", actions: [audit] };
   }
   const siteAnswer = findPublicAnswer(q);
   if (siteAnswer) return siteAnswer;

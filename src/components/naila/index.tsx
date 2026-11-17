@@ -238,8 +238,9 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
     if (!message || busy || requesting.current || closing) return;
     const active = add(() => ({ role: "You", text: message, sentAt: Date.now() }), true);
     if (!active) return;
-    const previousMessage = [...active.messages].reverse().find(item => item.role === "You")?.text ?? "";
-    void run({ previousMessage, action: "message", chatId: active.id, turnId: crypto.randomUUID(), text: message });
+    const recentMessages = active.messages.filter(item => item.role === "You")
+      .slice(-5).map(item => item.text.slice(0, 400));
+    void run({ recentMessages, action: "message", chatId: active.id, turnId: crypto.randomUUID(), text: message });
     setText("");
   }
 
