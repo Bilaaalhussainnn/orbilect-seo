@@ -4,6 +4,7 @@ import CareersTitle from "./careers-title";
 import CareersStructure from "./careers-structure";
 import CareersClosing from "./careers-closing";
 import WorkplaceIntegrity from "./workplace-integrity";
+import CareersJobs from "./careers-jobs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check, Users } from "lucide-react";
@@ -51,8 +52,9 @@ export default function CareersPage() {
             <Users size={26} aria-hidden="true" />
             <div>
               <p className={styles.eyebrow} data-site-eyebrow="">Current openings</p>
-              <h2 id="careers-openings">No open positions <span>right now</span></h2>
-              <p>We’re currently not hiring. When a vacancy opens, we’ll publish the job details and application instructions here and share the opening on our official social channels.</p>
+              <h2 id="careers-openings">Explore your <span>next opportunity</span></h2>
+              <p>Check our live Mustakbil job board for available roles, requirements, and application instructions.</p>
+              <Link href="#mustakbil-jobs" className={styles.action}>View current opportunities <ArrowUpRight size={16} aria-hidden="true" /></Link>
             </div>
           </div>
         </div>
@@ -78,6 +80,7 @@ export default function CareersPage() {
 
       <CareersStaffing />
       <WorkplaceIntegrity />
+      <CareersJobs />
       <CareersClosing />
     </main>
   );
