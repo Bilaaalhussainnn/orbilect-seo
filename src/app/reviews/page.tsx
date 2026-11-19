@@ -57,14 +57,22 @@ export default function ReviewsPage() {
           <ul className={styles.cards} role="list">
             {reviewPlatforms.filter((platform) => platform.id !== "softwareworld").map((platform) => {
               const profile = profiles.get(platform.id);
+              const isTechBehemoths = platform.id === "techbehemoths";
+              const reviewUrl = isTechBehemoths ? "https://techbehemoths.com/company/orbilect-seo" : profile?.reviewUrl;
               const label = platform.id === "google" ? "Google Business Account" : platform.label;
               const action = platform.id === "bing" || platform.id === "yelp" ? "View listing" : "Leave a review";
               return <li id={"review-" + platform.id} key={platform.id} className={styles.card}>
                 <div className={styles.platformRow}>
                   <div className={styles.platformTitle}><PlatformMark platform={platform} size={32} /><h3 aria-label={label}>{platform.label}</h3></div>
-                  {profile?.reviewUrl ? (
-                    <a href={profile.reviewUrl} rel="noopener noreferrer" aria-label={action + " on " + label}>
-                      {action} <ArrowUpRight size={15} aria-hidden="true" />
+                  {reviewUrl ? (
+                    <a href={reviewUrl} rel="noopener noreferrer" target={isTechBehemoths ? "_blank" : undefined}
+                      data-techbehemoths-verification={isTechBehemoths ? "" : undefined}
+                      className={isTechBehemoths ? styles.verificationBadgeLink : undefined}
+                      aria-label={isTechBehemoths ? "View Orbilect SEO on TechBehemoths (opens in a new tab)" : action + " on " + label}>
+                      {isTechBehemoths ? (
+                        <Image src="https://cdn.techbehemoths.com/public/static/validation/tb-verified-logo.svg"
+                          alt="TechBehemoths Verification" width={123} height={40} unoptimized />
+                      ) : <>{action} <ArrowUpRight size={15} aria-hidden="true" /></>}
                     </a>
                   ) : <p>Link unavailable</p>}
                 </div>

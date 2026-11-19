@@ -18,6 +18,9 @@
 .card a, .card button { color: #004aad; }
 .card a { display: inline-flex; gap: .35rem; align-items: center; min-height: 40px; width: fit-content; text-underline-offset: .18em; }
 .card button { background: none; border: 0; cursor: pointer; display: block; text-decoration: underline; padding: .45rem 0; font-family: inherit; }
+.verificationBadgeLink { max-width: 100%; }
+.verificationBadgeLink img { display: block; width: 123px; max-width: 100%; height: auto; }
+.verificationBadgeLink:focus-visible { outline: 2px solid #004aad; outline-offset: 4px; border-radius: 4px; }
 .rightfirmsProfile { display: grid; justify-items: center; gap: .6rem; }
 .rightfirmsProfile h3 { margin: 0; font-size: .97rem; }
 .rightfirmsProfile a:focus-visible { outline: 2px solid #004aad; outline-offset: 4px; border-radius: 4px; }
