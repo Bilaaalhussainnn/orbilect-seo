@@ -9,7 +9,7 @@ export function PlatformMark({ platform, size = 16 }: { platform: (typeof review
   return <Image src={"/review-platforms/" + platform.mark} alt="" width={size} height={size} unoptimized />;
 }
 
-export function ReviewPlatformDisplay({ size = "compact" }: { size?: "compact" | "large" }) {
+export function ReviewPlatformDisplay({ size = "compact", exclude = [] }: { size?: "compact" | "large"; exclude?: readonly string[] }) {
   const large = size === "large";
 
   return (
@@ -18,7 +18,7 @@ export function ReviewPlatformDisplay({ size = "compact" }: { size?: "compact" |
         <div className={styles.track}>
           {[false, true].map(duplicate => (
             <ul key={String(duplicate)} className={styles.platforms} aria-label="Review platforms" role="list" aria-hidden={duplicate || undefined}>
-              {reviewPlatforms.map(platform => (
+              {reviewPlatforms.filter(platform => !exclude.includes(platform.id)).map(platform => (
                 <li key={platform.id}>
                   <Link href={reviewsPath + "#review-" + platform.id} className={styles.tile} prefetch={false}
                     tabIndex={duplicate ? -1 : undefined}

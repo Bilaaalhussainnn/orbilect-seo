@@ -36,7 +36,7 @@ export default function ReviewsPage() {
             <p>Online reputation management is the work of keeping your public information accurate, responding to genuine feedback, and fixing the problems it reveals. Just like our clients, we have a reputation to earn and maintain.</p>
             <p>Share any honest experience with our services. Helpful details include the work we delivered, how we communicated, and what we could do better. Keep confidential project details out of public reviews.</p>
           </header>
-          <ReviewPlatformDisplay size="large" />
+          <ReviewPlatformDisplay size="large" exclude={["yelp", "reviewsio", "bbb"]} />
         </div>
       </section>
       <section id="review-platforms" className={`${styles.section} ${styles.directory}`} aria-labelledby="review-directory-title">
