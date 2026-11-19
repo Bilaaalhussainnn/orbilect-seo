@@ -71,3 +71,29 @@
   .feedbackAction:is(:hover, :focus-within) .feedbackArt,
   .card:hover, .card:is(:hover, :focus-within, :target) .platformTitle img { transform: none; }
 }
+
+/* Equal card and logo areas, while preserving each platform's logo proportions. */
+.cards { grid-auto-rows: 1fr; }
+.directoryCard { display: grid; grid-template-rows: 22px 72px 48px 220px minmax(52px, auto); gap: 12px; padding: 22px 18px 18px; text-align: center; align-content: start; }
+.directoryTitle { font-size: .97rem; line-height: 22px; margin: 0; overflow-wrap: anywhere; }
+.directoryCard .logoBox { display: flex; justify-content: center; align-items: center; width: 200px; max-width: 100%; height: 72px; min-height: 0; margin-inline: auto; }
+.logoBox img { display: block; width: 200px; height: 72px; max-width: 100%; object-fit: contain; }
+.ratingRow { display: grid; justify-items: center; align-content: center; gap: 5px; }
+.emptyStars { display: flex; gap: 3px; color: #69798c; }
+.ratingRow p { font-size: 11px; line-height: 1.4; color: #536175; }
+.widgetSlot { display: grid; align-items: center; justify-items: stretch; min-width: 0; height: 220px; overflow: auto; border: 1px solid #e0e6ef; border-radius: 8px; background: #fff; }
+.providerWidget { display: block; width: 100%; height: 220px; border: 0; background: #fff; }
+.directoryCard .badgeBox { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; min-height: 0; }
+.badgeImage { display: inline-block; position: relative; width: 200px; max-width: 100%; height: 180px; }
+.badgeImage img { display: block; width: 200px; height: 180px; max-width: 100%; object-fit: contain; }
+.badgeYear { position: absolute; bottom: 15%; left: 0; right: 0; font: 700 12px Arial, sans-serif; color: #1a5efc; text-align: center; }
+.reviewPrompt { display: grid; justify-items: center; align-content: center; gap: 12px; padding: 20px; min-height: 180px; }
+.reviewPrompt svg { color: #004aad; }
+.reviewPrompt p { font-size: 12px; line-height: 1.6; }
+.cardFooter { display: grid; align-content: center; justify-items: center; gap: 4px; }
+.directoryCard .cardFooter a { justify-content: center; width: 100%; min-height: 32px; font-size: 12px; text-decoration: none; }
+.cardFooter a:hover { text-decoration: underline; }
+.directoryCard a:focus-visible { outline: 2px solid #004aad; outline-offset: 3px; border-radius: 4px; }
+.cardFooter p { font-size: 12px; }
+@media (max-width: 1024px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .cards { grid-template-columns: minmax(0, 1fr); } .directoryCard { padding-inline: 14px; } }

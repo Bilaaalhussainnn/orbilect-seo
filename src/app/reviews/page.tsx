@@ -1,16 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import GlobalLocations from "@/components/global-locations";
-import { ArrowUpRight, ClipboardList, MessageSquare, ShieldCheck } from "lucide-react";
+import { ClipboardList, MessageSquare, ShieldCheck } from "lucide-react";
 import TechnologyStack from "../_home/technology-stack";
 import { ReviewsCompanyFit } from "./reviews-company-fit";
 import { pageSeo } from "@/lib/orbilect-search";
 import { proposalFormHref } from "@/lib/leads/sources";
-import { reviewPlatforms, reviewsPath } from "@/lib/review-platforms";
+import { reviewsPath } from "@/lib/review-platforms";
 import { ServiceHero, type ServiceScene } from "../services/_components/service-story";
-import { PlatformMark, ReviewPlatformDisplay } from "./review-platform-display";
+import { ReviewPlatformDisplay } from "./review-platform-display";
 import { configuredReviewProfiles } from "./review-links";
-import { ReviewEmbed } from "./review-embed";
+import ReviewDirectory from "./review-directory";
 import styles from "./reviews.module.css";
 
 export const metadata = pageSeo(reviewsPath);
@@ -54,45 +53,7 @@ export default function ReviewsPage() {
             </div>
           </div>
 
-          <ul className={styles.cards} role="list">
-            {reviewPlatforms.filter((platform) => platform.id !== "softwareworld").map((platform) => {
-              const profile = profiles.get(platform.id);
-              const isTechBehemoths = platform.id === "techbehemoths";
-              const reviewUrl = isTechBehemoths ? "https://techbehemoths.com/company/orbilect-seo" : profile?.reviewUrl;
-              const label = platform.id === "google" ? "Google Business Account" : platform.label;
-              const action = platform.id === "bing" || platform.id === "yelp" ? "View listing" : "Leave a review";
-              return <li id={"review-" + platform.id} key={platform.id} className={styles.card}>
-                <div className={styles.platformRow}>
-                  <div className={styles.platformTitle}><PlatformMark platform={platform} size={32} /><h3 aria-label={label}>{platform.label}</h3></div>
-                  {reviewUrl ? (
-                    <a href={reviewUrl} rel="noopener noreferrer" target={isTechBehemoths ? "_blank" : undefined}
-                      data-techbehemoths-verification={isTechBehemoths ? "" : undefined}
-                      className={isTechBehemoths ? styles.verificationBadgeLink : undefined}
-                      aria-label={isTechBehemoths ? "View Orbilect SEO on TechBehemoths (opens in a new tab)" : action + " on " + label}>
-                      {isTechBehemoths ? (
-                        <Image src="https://cdn.techbehemoths.com/public/static/validation/tb-verified-logo.svg"
-                          alt="TechBehemoths Verification" width={123} height={40} unoptimized />
-                      ) : <>{action} <ArrowUpRight size={15} aria-hidden="true" /></>}
-                    </a>
-                  ) : <p>Link unavailable</p>}
-                </div>
-                {profile?.embedUrl && <ReviewEmbed label={platform.label} url={profile.embedUrl} />}
-              </li>;
-            })}
-            <li id="review-rightfirms" className={styles.card}>
-              <div className={styles.rightfirmsProfile}>
-                <h3>RightFirms</h3>
-                <a href="https://www.rightfirms.co/company/orbilect-seo" target="_blank" rel="noopener noreferrer"
-                  aria-label="View Orbilect SEO’s profile on RightFirms (opens in a new tab)">
-                  <span className={styles.rightfirmsBadge}>
-                    <Image src="/review-platforms/rightfirms-company.webp" alt="View our profile on RightFirms"
-                      width={1084} height={1129} unoptimized />
-                    <span className={styles.rightfirmsYear}>2026</span>
-                  </span>
-                </a>
-              </div>
-            </li>
-          </ul>
+          <ReviewDirectory profiles={profiles} />
         </div>
       </section>
       <section id="review-transparency" className={styles.section} aria-labelledby="transparency-title">
