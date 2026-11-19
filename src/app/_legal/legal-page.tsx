@@ -1,5 +1,6 @@
 import { businessDescription, pakistanAddress, staffingLocations } from "@/lib/site-identity";
-import { paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming, standardAdvance, standardBalance } from "@/lib/payment-policy";
+import { chequePaymentPolicy, paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming, standardAdvance, standardBalance } from "@/lib/payment-policy";
+import AcceptedPayments from "./accepted-payments";
 import LegalHero from "./legal-hero";
 import { ArticleSidebar } from "../blogs/what-is-search-engine-optimization/article-client";
 import articleStyles from "../blogs/what-is-search-engine-optimization/article.module.css";
@@ -253,6 +254,7 @@ const terms: readonly LegalSection[] = [
       standardAdvance,
       standardBalance,
       paymentMethods,
+      chequePaymentPolicy,
       "Keep your invoices, payment confirmations and receipts so we can reconcile a payment, refund or dispute. Staff never ask for full credit or debit card numbers, PINs or security codes. We may confirm the last four digits to match a payment. Use the authorized payment provider for full card details.",
       "Promotional offers follow their own full-payment terms below. Advertising spend and approved third-party charges are itemized or otherwise disclosed in writing."
     ]
@@ -421,7 +423,10 @@ export default function LegalPage({ kind }: { kind: "privacy" | "terms" }) {
           {sections.map(([id, [lead, accent], paragraphs]) => (
             <section id={id} key={id} aria-labelledby={id + "-title"}>
               <h2 data-site-heading="" id={id + "-title"} data-orbilect-title="">{lead} <span>{accent}</span></h2>
-              {paragraphs.map(paragraph => <p key={paragraph}>{linkedText(paragraph)}</p>)}
+              {id === "fees" && <AcceptedPayments />}
+              {paragraphs.map(paragraph => paragraph === chequePaymentPolicy
+                ? <p key={paragraph} className={styles.chequeNotice}><strong>{paragraph}</strong></p>
+                : <p key={paragraph}>{linkedText(paragraph)}</p>)}
               {(id === "who-we-are" || id === "agreement") && (
                 <>
                   <p>

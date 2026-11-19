@@ -11,3 +11,5 @@ export const projectRefund = "For eligible standard fixed-price projects, email 
 export const refundTiming = "We initiate approved refunds within 14 calendar days of written approval, or sooner where required by law. Your bank or payment provider may take additional days to show the credit.";
 
 export const paymentMethods = "We accept bank transfers, wire transfers, PayPal, Visa, Mastercard, and American Express through the options shown on your invoice. If a US payment route is unavailable, we can provide authorized Canadian payment details.";
+
+export const chequePaymentPolicy = "Cheques are not an accepted mode of payment. Following past payment-related difficulties and careful consideration, Orbilect SEO’s leadership has decided not to accept cheques. Please use an accepted payment method shown on your invoice.";
