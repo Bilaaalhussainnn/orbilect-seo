@@ -8,7 +8,9 @@
     "postbuild": "node scripts/index-naila-content.cjs",
     "start": "next start",
     "lint": "eslint",
-    "seo:verify": "npm run build && node scripts/verify-orbilect-search.cjs"
+    "seo:verify": "npm run build && node scripts/verify-orbilect-search.cjs",
+    "prebuild": "node scripts/optimize-design-media.cjs",
+    "predev": "node scripts/optimize-design-media.cjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
@@ -19,6 +21,7 @@
     "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "sharp": "0.35.5",
     "three": "^0.187.0"
   },
   "devDependencies": {

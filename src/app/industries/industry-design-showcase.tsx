@@ -1,3 +1,4 @@
+import { designPreview } from "@/lib/design-media";
 import { readdirSync } from "node:fs";
 import path from "node:path";
 import { briefs, type IndustrySlug } from "./industry-briefs";
@@ -20,7 +21,7 @@ export default function IndustryDesignShowcase({ slug }: { slug: ShowcaseSlug })
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
   }
   const images = Array.from({ length: 16 }, (_, index) => files[index] ? {
-    src: "/industry-showcases/" + slug + "/" + encodeURIComponent(files[index]),
+    ...designPreview("/industry-showcases/" + slug + "/" + encodeURIComponent(files[index])),
     name: files[index].replace(/\.[^.]+$/, "").replace(/[-_]/g, " "),
   } : null);
   return <DesignShowcaseMotion name={name} images={images} />;

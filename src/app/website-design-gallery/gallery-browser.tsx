@@ -15,7 +15,7 @@ export default function GalleryBrowser({ galleries }: { galleries: IndustryDesig
       </div>
       <div className={styles.panels}>{galleries.map(gallery => <div key={gallery.slug} id={"collection-" + gallery.slug} role="region" aria-labelledby={"choose-" + gallery.slug} hidden={active !== gallery.slug} className={styles.panel}>
         <h3>{gallery.name} design inspiration</h3><p>{gallery.summary} Pair clear content with a responsive layout that makes the next step easy.</p>
-        <GalleryRows images={gallery.images} label={gallery.name} />
+        {active === gallery.slug && <GalleryRows key={gallery.slug} images={gallery.images} label={gallery.name} />}
         <p className={styles.note}>*Sample designs for inspiration. Your website can be tailored to your brand, preferences, and requirements.</p>
       </div>)}</div>
     </div>

@@ -5,13 +5,14 @@ import {
   ArrowRight, BarChart3, Check, ChevronLeft, ChevronRight, Code2, FileText,
   LayoutTemplate, Megaphone, PenTool, RotateCcw, Search, ShoppingCart,
 } from "lucide-react";
+import { designPreview } from "@/lib/design-media";
 import { groups, type Tool } from "./tools";
 import styles from "./stack.module.css";
 
 const icons = { Search, FileText, Code2, LayoutTemplate, PenTool, Megaphone, ShoppingCart, BarChart3 };
 
 function Logo({ tool }: { tool: Tool }) {
-  const [src, setSrc] = useState(tool.logo);
+  const [src, setSrc] = useState(designPreview(tool.logo).src);
   return (
     <span className={styles.logo} aria-hidden="true">
       {src === "" ? tool.name.split(" ").slice(0, 2).map((word) => word[0]).join("") : (

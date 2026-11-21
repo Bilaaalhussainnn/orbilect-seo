@@ -1,5 +1,8 @@
 "use client";
 
+import DesignMarquee from "@/components/design-marquee";
+import { designPreview } from "@/lib/design-media";
+
 import Link from "next/link";
 import { ArrowUpRight, Code2, Layers, MousePointer2, Search, MonitorSmartphone } from "lucide-react";
 import { useEffect, useRef, useState, type PointerEvent } from "react";
@@ -30,7 +33,7 @@ const searchLogos = [
 
 function LogoStrip({ logos }: { logos: string[][] }) {
   return <ul className={styles.logos} aria-label="Tools and platforms">
-    {logos.map(([label, src]) => <li key={label} title={label}><img src={src} alt="" width={24} height={24} loading="lazy" /><span>{label}</span></li>)}
+    {logos.map(([label, src]) => <li key={label} title={label}><img src={designPreview(src).src} alt="" width={24} height={24} loading="lazy" /><span>{label}</span></li>)}
   </ul>;
 }
 
@@ -70,7 +73,7 @@ function SampleGrowth() {
   </div>;
 }
 
-type Design = { src: string; name: string } | null;
+type Design = { src: string; srcSet?: string; name: string } | null;
 
 export default function DesignShowcaseMotion({ name, images }: { name: string; images: Design[] }) {
   function tilt(event: PointerEvent<HTMLElement>) {
@@ -98,22 +101,7 @@ export default function DesignShowcaseMotion({ name, images }: { name: string; i
           <span className={styles.chip}><Layers /></span><span className={styles.pointer}><MousePointer2 /></span>
         </div>
       </div>
-      <div className={styles.gallery} aria-label={`${name} website design inspiration, sixteen concepts`}>
-        {[0, 1].map(row => {
-          const designs = images.slice(row * 8, row * 8 + 8);
-          return <div className={styles.lane} key={row}>
-            <div className={`${styles.track} ${row === 0 ? styles.right : styles.left}`}>
-              {[0, 1].map(group => <div className={styles.group} key={group} aria-hidden={group === 1 ? true : undefined}>
-                {[0, 1].flatMap(repeat => designs.map((image, index) => <div className={styles.card} key={`${repeat}-${index}`} aria-hidden={repeat === 1 ? true : undefined}>
-                  {image ? <img src={image.src} alt={`${name} website concept: ${image.name}`} width={800} height={1000} loading="lazy" decoding="async" /> : <div className={styles.placeholder}>
-                    <Code2 aria-hidden="true" /><span>{name}</span><strong>Design {String(row * 8 + index + 1).padStart(2, "0")}</strong><small>Your image goes here</small>
-                  </div>}
-                </div>))}
-              </div>)}
-            </div>
-          </div>;
-        })}
-      </div>
+      <DesignMarquee images={images.filter((image): image is NonNullable<Design> => image !== null)} label={name} />
       <p className={styles.note}>*Sample designs for inspiration. Your website can be tailored to your brand, preferences, and requirements.</p>
       <div className={styles.features}>
         {[

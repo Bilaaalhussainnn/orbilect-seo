@@ -1,9 +1,10 @@
+import { designPreview } from "./design-media";
 import "server-only";
 import { readdirSync } from "node:fs";
 import path from "node:path";
 import industries from "../app/_home/industry-growth/industries.json";
 
-export type GalleryDesign = { src: string; name: string };
+export type GalleryDesign = { src: string; srcSet?: string; name: string };
 export type IndustryDesigns = { slug: string; name: string; summary: string; images: GalleryDesign[] };
 
 export function getIndustryDesigns(): IndustryDesigns[] {
@@ -14,7 +15,7 @@ export function getIndustryDesigns(): IndustryDesigns[] {
       files = readdirSync(folder, { withFileTypes: true }).filter(file => file.isFile() && /\.(jpe?g|png|webp|avif)$/i.test(file.name))
         .map(file => file.name).sort((a, b) => a.localeCompare(b, "en", { numeric: true })).slice(0, 16);
     } catch (error) { if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error; }
-    return { slug, name, summary, images: files.map(file => ({ src: "/industry-showcases/" + slug + "/" + encodeURIComponent(file), name: file.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ") })) };
+    return { slug, name, summary, images: files.map(file => ({ ...designPreview("/industry-showcases/" + slug + "/" + encodeURIComponent(file)), name: file.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ") })) };
   });
 }
 

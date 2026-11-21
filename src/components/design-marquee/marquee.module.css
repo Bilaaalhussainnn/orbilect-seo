@@ -1,0 +1,12 @@
+.gallery { width: 100%; overflow: hidden; }
+.lane { overflow: hidden; }
+.track, .group { display: flex; width: max-content; gap: 0; }
+.group { flex: none; }
+.track { animation: move 80s linear infinite; animation-play-state: paused; will-change: transform; }
+.gallery[data-ready="true"] .track { animation-play-state: running; }
+.right { animation-direction: reverse; }
+.card { position: relative; display: block; flex: 0 0 clamp(144px,18vw,240px); width: clamp(144px,18vw,240px); height: clamp(180px,22.5vw,300px); aspect-ratio: 4 / 5; margin: 0; overflow: hidden; background: #edf1f7; }
+.card > img { position: absolute; inset: 0; display: block; width: 100% !important; height: 100% !important; object-fit: contain; max-width: none; }
+@keyframes move { to { transform: translate3d(-50%,0,0); } }
+@media (max-width:800px) { .card { flex-basis:144px; width:144px; height:180px; } }
+@media (prefers-reduced-motion:reduce) { .track { animation:none; } .lane { overflow-x:auto; } .group[aria-hidden="true"],.card[aria-hidden="true"] { display:none; } }
