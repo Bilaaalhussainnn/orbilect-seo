@@ -33,7 +33,13 @@ function ProcessPhoto({ slug }: { slug: string }) {
   );
 }
 
-export default function HowWeWork({ standalone = false }: { standalone?: boolean }) {
+export default function HowWeWork({
+  standalone = false,
+  heading = "How",
+  accent = "we work",
+  intro = "From the first conversation to kickoff, you’ll know what we recommend, what it costs, and how we’ll measure progress.",
+  steps = content.process,
+}: { standalone?: boolean; heading?: string; accent?: string; intro?: string; steps?: string[][] }) {
   const Heading = standalone ? "h1" : "h2";
   const [active, setActive] = useState(0);
   const cards = useRef<Array<HTMLLIElement | null>>([]);
@@ -76,8 +82,8 @@ export default function HowWeWork({ standalone = false }: { standalone?: boolean
       <div className={styles.wrap}>
         <header className={styles.header}>
           <p className={styles.eyebrow} data-site-eyebrow="">Our process</p>
-          <Heading id="process-title">How <span>we work</span></Heading>
-          <p>From the first conversation to kickoff, you’ll know what we recommend, what it costs, and how we’ll measure progress.</p>
+          <Heading id="process-title">{heading} <span>{accent}</span></Heading>
+          <p>{intro}</p>
         </header>
 
         <div className={styles.layout} data-reveal="off">
@@ -107,7 +113,7 @@ export default function HowWeWork({ standalone = false }: { standalone?: boolean
           </div>
 
           <ol className={styles.steps} role="list">
-            {content.process.map(([slug, title, description], index) => {
+            {steps.map(([slug, title, description], index) => {
               const stage = previews[index];
               const Icon = stage?.icon ?? ClipboardList;
               return (

@@ -1,3 +1,4 @@
+import IndustryDesignShowcase from "../industry-design-showcase";
 import { pageSeo } from "@/lib/orbilect-search";
 import { IndustryPricingBeforeFaq } from "../industry-pricing-before-faq";
 import { InvestmentBeforeFaq } from "../../_components/investment-before-faq";
@@ -122,7 +123,8 @@ export default function AutomotivePage() {
       <IndustryLinks current="automotive" />
       <IndustryPricingBeforeFaq routes={["/industries/automotive"]} />
       <InvestmentBeforeFaq routes={["/industries/automotive"]} />
-      <HomeFaq
+      <IndustryDesignShowcase slug="automotive" />
+      <HomeFaq hideSectionLabel
         items={faqs.map(([question, answer]) => ({ question, answer }))}
         introTitle="What automotive teams ask us"
         introCopy="Get answers about inventory feeds, local search, service bookings, and parts catalogs. Start with a free audit to see where your website can improve."

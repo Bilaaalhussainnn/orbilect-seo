@@ -6,11 +6,11 @@ import styles from "./industry-organic-value.module.css";
 
 const examples = [
   {
-    industry: "Home services",
-    query: "water heater replacement near me",
-    page: "Local water heater replacement page",
+    industry: "Automotive",
+    query: "brake inspection near me",
+    page: "Local brake inspection page",
     action: "Book a service visit",
-    value: "We build location and service pages that answer pricing, coverage, and availability questions before a homeowner calls.",
+    value: "We build location and service pages that explain repairs, availability, and booking before a driver calls.",
   },
   {
     industry: "Ecommerce",
@@ -20,7 +20,7 @@ const examples = [
     value: "We improve collections and buying guides so shoppers can compare the right products and move from search to checkout.",
   },
   {
-    industry: "B2B",
+    industry: "Manufacturing",
     query: "ISO 9001 precision machining supplier",
     page: "Machining capabilities and certifications",
     action: "Request a quote",

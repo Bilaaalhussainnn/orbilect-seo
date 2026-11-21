@@ -38,7 +38,7 @@ export default function AutomotiveHero() {
   }, []);
 
   return (
-    <section className={styles.hero} aria-labelledby="automotive-title">
+    <section className={`${styles.hero} ${styles.compactHero}`} aria-labelledby="automotive-title">
       <div className={[styles.wrap, styles.heroGrid].join(" ")}>
         <div>
           <OrbilectHeroBrand />

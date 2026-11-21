@@ -19,7 +19,7 @@
 .header { max-width: 54rem; margin-bottom: clamp(1.75rem, 4vw, 3rem); }
 .eyebrow { padding-bottom: .9rem; border-bottom: 1px solid var(--line); text-transform: uppercase; font-size: .78rem; font-weight: 700; letter-spacing: .16em; }
 .header h2 { margin: 1rem 0; font-size: clamp(1.68rem, 3.2vw, 2.64rem); letter-spacing: -.05em; line-height: 1.15; }
-.header h2 span { background: var(--blue); color: white; padding-inline: .14em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.section .header h2 span { background: var(--blue); color: #fff; -webkit-text-fill-color: #fff; padding-inline: .14em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .header > p:last-child, .detail p { color: var(--muted); line-height: 1.6; }
 
 .workspace { display: grid; grid-template-columns: minmax(13rem, .32fr) minmax(0, 1fr); gap: clamp(1rem, 3vw, 3rem); align-items: start; }
@@ -184,3 +184,6 @@
   text-transform: uppercase;
 }
 /* END Technology Stack eyebrow */
+
+/* Informational labels use the standard arrow cursor, including on hover. */
+.section, .section * { cursor: default; }

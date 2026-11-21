@@ -1,3 +1,4 @@
+import GalleryPromotion from "../../website-design-gallery/gallery-promotion";
 import { HowWeWork } from "../../_home/growth";
 import { serviceSchema } from "@/lib/orbilect-search";
 import SeoJsonLd from "@/components/seo/json-ld";
@@ -157,6 +158,7 @@ export default function OnPageSeoPage() {
 
       <HowWeWork />
       <InvestmentBeforeFaq routes={["/services/website-redesign"]} />
+      <GalleryPromotion />
       <OnPageFaq />
       
       <FinalCta />

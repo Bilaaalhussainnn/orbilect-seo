@@ -17,7 +17,7 @@
   {
     "path": "/blogs/what-is-search-engine-optimization",
     "title": "What Is Search Engine Optimization?",
-    "description": "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement."
+    "description": "Learn what SEO is, how search engines work, and how to improve your website\u2019s visibility with technical SEO, useful content, links, images, and measurement."
   },
   {
     "path": "/careers",
@@ -32,7 +32,7 @@
   {
     "path": "/corporate-social-responsibility",
     "title": "Corporate Social Responsibility",
-    "description": "Explore the principles that guide Orbilect SEO’s approach to people, accessibility, and responsible operations."
+    "description": "Explore the principles that guide Orbilect SEO\u2019s approach to people, accessibility, and responsible operations."
   },
   {
     "path": "/how-free-audit-works",
@@ -75,11 +75,6 @@
     "description": "Improve search visibility for clinics and healthcare practices with technical SEO, useful content, and clearer conversion paths."
   },
   {
-    "path": "/industries/home-services",
-    "title": "Home Services SEO Services",
-    "description": "Improve search visibility for local trades and home service companies with technical SEO, useful content, and clearer conversion paths."
-  },
-  {
     "path": "/industries/hospitality",
     "title": "Hospitality SEO Services",
     "description": "Improve search visibility for hotels, venues, and hospitality operators with technical SEO, useful content, and clearer conversion paths."
@@ -95,19 +90,9 @@
     "description": "Improve search visibility for manufacturers and industrial suppliers with technical SEO, useful content, and clearer conversion paths."
   },
   {
-    "path": "/industries/professional-services",
-    "title": "Professional Services SEO Services",
-    "description": "Improve search visibility for consultancies and specialist firms with technical SEO, useful content, and clearer conversion paths."
-  },
-  {
     "path": "/industries/real-estate",
     "title": "Real Estate SEO Services",
     "description": "Improve search visibility for brokerages, agents, and property businesses with technical SEO, useful content, and clearer conversion paths."
-  },
-  {
-    "path": "/industries/saas",
-    "title": "SaaS SEO Services",
-    "description": "Improve search visibility for software companies and subscription platforms with technical SEO, useful content, and clearer conversion paths."
   },
   {
     "path": "/media-pr-relations",
@@ -132,7 +117,7 @@
   {
     "path": "/newsroom/naila-ai",
     "title": "How Naila AI handles routine questions and hands off complex cases",
-    "description": "Explore the support assistant’s approach to approved knowledge, conversation context, and human handoff."
+    "description": "Explore the support assistant\u2019s approach to approved knowledge, conversation context, and human handoff."
   },
   {
     "path": "/newsroom/orbilect-create",
@@ -142,12 +127,12 @@
   {
     "path": "/newsroom/orbilect-reviews",
     "title": "Inside Orbilect Reviews, a directory for comparing service providers",
-    "description": "A closer look at Orbilect Labs’ approach to company profiles, client reviews, and shortlisting."
+    "description": "A closer look at Orbilect Labs\u2019 approach to company profiles, client reviews, and shortlisting."
   },
   {
     "path": "/our-team",
     "title": "Our Team",
-    "description": "Meet Orbilect SEO’s leadership, delivery specialists and support teams, and see how they work together across search, design and development."
+    "description": "Meet Orbilect SEO\u2019s leadership, delivery specialists and support teams, and see how they work together across search, design and development."
   },
   {
     "path": "/pricing",
@@ -478,5 +463,10 @@
     "path": "/blogs/how-search-and-social-platforms-are-changing-product-discovery",
     "title": "How Search and Social Platforms Are Changing Product Discovery",
     "description": "Compare how customers find and evaluate products across platforms."
+  },
+  {
+    "path": "/website-design-gallery",
+    "title": "Website Design Gallery",
+    "description": "Explore website and landing page design inspiration across nine industries, then request a custom responsive website through Contact."
   }
 ]

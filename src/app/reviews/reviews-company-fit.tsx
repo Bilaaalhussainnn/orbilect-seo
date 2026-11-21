@@ -3,6 +3,7 @@
 import { useState, type PointerEvent } from "react";
 import Link from "next/link";
 import { ArrowUpRight, BarChart3, Layers3, ListChecks, Plus } from "lucide-react";
+import listedIndustries from "../_home/industry-growth/industries.json";
 import styles from "./reviews-company-fit.module.css";
 
 const sizes = [
@@ -30,7 +31,9 @@ const industries = [
   { slug: "home-services", label: "Home services", need: "Homeowners often search by service and location when they need help quickly.", benefit: "Clear coverage areas and contact options make it easier to request an estimate or book a visit.", work: "We improve local listings, service pages, and call or booking routes, then track qualified leads." },
   { slug: "logistics", label: "Logistics", need: "Shippers search for routes, service levels, and specialized capabilities.", benefit: "Clear pages make it easier for the right businesses to compare coverage and request pricing.", work: "We group services around buyer needs, improve search visibility for priority routes, and review quote enquiries." },
   { slug: "saas", label: "SaaS", need: "Buyers search for use cases, integrations, and alternatives throughout a long decision process.", benefit: "Useful pages meet buyers earlier and give qualified prospects a path to a demo.", work: "We map content to the research journey, improve the technical foundation, and measure trial or demo actions." },
-];
+].filter(industry => listedIndustries.some(item => item.slug === industry.slug))
+  .map(industry => ({ ...industry, label: listedIndustries.find(item => item.slug === industry.slug)!.name }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 export function ReviewsCompanyFit() {
   const [sizeIndex, setSizeIndex] = useState(0);

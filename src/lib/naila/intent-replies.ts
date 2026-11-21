@@ -185,6 +185,9 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
       !/\b(?:review (?:my|our|this)|you review)\b/.test(q)) {
     return { text: "You can review Orbilect SEO’s services from our Reviews page. Use an available public platform or send feedback privately to our team.", actions: [{ text: "Review our services", href: "/reviews#review-platforms" }] };
   }
+  if (/\b(?:templates?|design gallery|design examples?|website examples?|sample (?:websites?|designs?)|show (?:me )?(?:your )?(?:websites?|designs?))\b/.test(q) && !/\b(?:email|invoice|resume|cv|job)\b/.test(q)) {
+    return { text: "Sure. Browse our Website Design Gallery and choose from nine industry collections. The designs are starting points for inspiration; we can tailor the look, content, platform, and features to your business. Which industry are you designing for?", actions: [{ text: "Explore the design gallery", href: "/website-design-gallery" }] };
+  }
   const serviceIntent = customerOperationsReply(q);
   if (serviceIntent) return serviceIntent;
   if (!pricingWords.test(q) && !/\b(?:blog|article|guide link|privacy|terms|refund)\b/.test(q)) {

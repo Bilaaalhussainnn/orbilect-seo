@@ -1,3 +1,4 @@
+import listedIndustries from "../../app/_home/industry-growth/industries.json";
 import { businessDescription } from "@/lib/site-identity";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import TechnologyScene from "../header/technology-scene";
 import { SocialLinks } from "../header/social-links";
 import styles from "./footer.module.css";
 
-const industryLinks = [["Automotive","/industries/automotive"],["Ecommerce","/industries/ecommerce"],["Healthcare","/industries/healthcare"],["Real Estate","/industries/real-estate"],["Hospitality","/industries/hospitality"],["Education","/industries/education"]];
+const industryLinks = listedIndustries.map(({ name, slug }) => [name, "/industries/" + slug]);
 const groups = [
   { title: "Services", href: "/services", links: [
     ["On-page SEO", "/services/on-page-seo"], ["Off-page SEO", "/services/off-page-seo"],
@@ -16,7 +17,7 @@ const groups = [
   { title: "Industries", href: "/industries", links: industryLinks },
   { title: "Company", href: "/about", links: [
     ["Pricing", "/pricing"], ["How we work", "/how-we-work"], ["Careers", "/careers"],
-    ["Staffing", "/staffing"], ["Blogs", "/blogs"],
+    ["Staffing", "/staffing"], ["Blogs", "/blogs"], ["Website Design Gallery", "/website-design-gallery"],
   ] },
 ];
 

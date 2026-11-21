@@ -1,13 +1,6 @@
-import { pageSeo } from "@/lib/orbilect-search";
-import { IndustryPage, industryMetadata } from "../industry-page";
+import { permanentRedirect } from "next/navigation";
 
-const slug = "saas";
-const seoBaseMetadata = industryMetadata(slug);
-
+// Retired category: use the directory of the nine active industries.
 export default function Page() {
-  return <IndustryPage slug={slug} />;
+  permanentRedirect("/industries");
 }
-
-
-// Orbilect search metadata
-export const metadata = pageSeo("/industries/saas", seoBaseMetadata as import("next").Metadata);

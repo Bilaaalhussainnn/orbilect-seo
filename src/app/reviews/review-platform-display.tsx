@@ -20,7 +20,7 @@ export function ReviewPlatformDisplay({ size = "compact", exclude = [] }: { size
             <ul key={String(duplicate)} className={styles.platforms} aria-label="Review platforms" role="list" aria-hidden={duplicate || undefined}>
               {reviewPlatforms.filter(platform => !exclude.includes(platform.id)).map(platform => (
                 <li key={platform.id}>
-                  <Link href={reviewsPath + "#review-" + platform.id} className={styles.tile} prefetch={false}
+                  <Link href={["bbb", "reviewsio", "softwareworld", "yelp"].includes(platform.id) ? reviewDirectoryPath : reviewsPath + "#review-" + platform.id} className={styles.tile} prefetch={false}
                     tabIndex={duplicate ? -1 : undefined}
                     aria-label={platform.id === "google" ? "Google Business Account" : undefined}>
                     <PlatformMark platform={platform} size={large ? 32 : 16} />

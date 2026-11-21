@@ -180,9 +180,15 @@ async function main() {
     }
     sitemapPages.set(url.pathname, url.href);
   }
+  const retiredIndustryRoutes = new Set(["/industries/home-services", "/industries/professional-services", "/industries/saas"]);
+  for (const route of retiredIndustryRoutes) {
+    const { response } = await get(route);
+    if (response.status !== 308 || response.headers.get("location") !== "/industries") fail(route + " must permanently redirect to the active industry directory.");
+    if (sitemapPages.has(route)) fail(route + " is a retired redirect and should not appear in the sitemap.");
+  }
   const sourceRoutes = appRoutes();
   for (const route of sourceRoutes) {
-    if (route === "/blogs/[slug]") continue;
+    if (route === "/blogs/[slug]" || retiredIndustryRoutes.has(route)) continue;
     if (!sitemapPages.has(route)) fail(route + " exists in the App Router and is missing from the sitemap.");
   }
   if (!sitemapPages.has("/")) fail("Homepage is missing from the sitemap.");

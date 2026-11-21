@@ -88,6 +88,12 @@ export function ArticleSidebar({
             <path d="M18.9 2h3.31l-7.23 8.26L23.5 22h-6.67l-5.22-7.12L5.38 22H2.06l7.73-8.84L1.62 2h6.84l4.72 6.46L18.9 2Zm-1.16 18h1.83L7.46 3.89H5.5L17.74 20Z" />
           </svg>
         </a>
+        <a href="https://www.pinterest.com/orbilectseo/" target="_blank" rel="noopener noreferrer" aria-label="Follow Orbilect SEO on Pinterest" title="Pinterest">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m9 20 2.4-10m-1 4.2c.5 2.8 4.8 2.1 5.8-1.7 1-3.7-1.3-6.4-4.3-6.4-3.3 0-5.2 2.5-4.9 5 .1 1 .5 1.6 1.1 2" />
+          </svg>
+        </a>
         </div>
       </div>
       <nav aria-label="Table of contents" className={styles.toc}>

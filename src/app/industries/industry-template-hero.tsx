@@ -9,14 +9,14 @@ import styles from "./automotive/automotive.module.css";
 import devices from "./industry-search-devices.module.css";
 import template from "./industry-template.module.css";
 
-export default function IndustryTemplateHero({ info }: { info: (typeof briefs)[IndustrySlug] }) {
+export default function IndustryTemplateHero({ info, compact = false }: { compact?: boolean; info: (typeof briefs)[IndustrySlug] }) {
   const [selected, setSelected] = useState(0);
   const [replay, setReplay] = useState(0);
   const query = info.searches[selected];
   const offer = info.offers[selected];
 
   return (
-    <section className={styles.hero} aria-labelledby="industry-page-title">
+    <section className={[styles.hero, compact ? styles.compactHero : ""].join(" ")} aria-labelledby="industry-page-title">
       <div className={[styles.wrap, styles.heroGrid].join(" ")}>
         <div>
           <OrbilectHeroBrand />

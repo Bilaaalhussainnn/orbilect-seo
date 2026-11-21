@@ -1,0 +1,10 @@
+export const galleryFaqs = [
+  { question: "Are these ready-made website templates?", answer: "They are sample designs to help you choose a visual direction. We tailor the layout, content, features, and platform to your brand and project requirements." },
+  { question: "Can I combine ideas from different industries?", answer: "Yes. Tell us which layouts, colours, or interactions you like. We can adapt those ideas into a consistent experience for your own audience." },
+  { question: "Will my website work on mobile and tablets?", answer: "Responsive layouts are part of the design process. We review navigation, readable content, forms, images, and important customer journeys across agreed screen sizes." },
+  { question: "Which website platforms can you use?", answer: "Depending on the project, options include Next.js and React, WordPress, Shopify, and WooCommerce. We recommend a platform around your content, integrations, ecommerce needs, and editing workflow." },
+  { question: "Does a redesign include SEO?", answer: "The agreed scope can include page structure, metadata, internal links, performance, sitemap updates, and redirect planning. We review valuable existing URLs before making migration decisions." },
+  { question: "How much does a custom website redesign cost?", answer: "The investment depends on pages, content, features, integrations, and migration requirements. Share your preferred designs and project goals through Contact so we can provide a tailored proposal." },
+  { question: "Can you redesign my existing website?", answer: "Yes. Share the current URL, what is not working, and which designs you prefer. We can review the existing structure and plan the improvements and migration work needed." },
+  { question: "Do these designs guarantee more traffic or sales?", answer: "No. Design can improve clarity and usability, while outcomes also depend on your offer, content, search visibility, traffic quality, and how the site is maintained. We agree on measurable goals for each project." },
+];

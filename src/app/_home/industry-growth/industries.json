@@ -4,62 +4,98 @@
     "name": "Automotive",
     "summary": "Help vehicle shoppers find the right inventory, dealership, or service centre when they’re ready to compare options.",
     "challenge": "Inventory changes quickly. When listings expire without a clear next step or dealership pages lack local details, shoppers can end up on unavailable vehicles or competing listings.",
-    "focus": ["Indexable vehicle inventory and category pages", "Dealership and service-area SEO", "Paths from model searches to test drives and enquiries"]
-  },
-  {
-    "slug": "finance",
-    "name": "Finance",
-    "summary": "Make financial services easier to discover with clear product pages, transparent information, and content reviewed by your specialists.",
-    "challenge": "People compare financial products carefully. If eligibility, fees, and service information are difficult to find, prospective customers may leave before they understand the offer.",
-    "focus": ["Search intent for financial products and services", "Clear, specialist-reviewed educational content", "Product-page structure and application journeys"]
-  },
-  {
-    "slug": "real-estate",
-    "name": "Real Estate",
-    "summary": "Connect buyers and tenants with relevant properties, neighbourhood guides, and local agents through organic search.",
-    "challenge": "Property listings turn over quickly, but searches for neighbourhoods and property types persist. A site built entirely around individual listings can miss those ongoing discovery opportunities.",
-    "focus": ["Indexable location and property-type pages", "Listing filters and duplicate URL management", "Neighbourhood guides and viewing enquiries"]
-  },
-  {
-    "slug": "hospitality",
-    "name": "Hospitality",
-    "summary": "Help guests discover your property while comparing destinations, room types, amenities, and places to stay.",
-    "challenge": "Travellers often start with a destination or an occasion. When your site gives them little detail about rooms, amenities, or the surrounding area, they may do their research and book elsewhere.",
-    "focus": ["Destination, room, and amenities pages", "Local search visibility for hotels and venues", "Clear paths from organic landing pages to direct booking"]
-  },
-  {
-    "slug": "education",
-    "name": "Education",
-    "summary": "Help prospective students find and compare courses, qualifications, and admissions requirements.",
-    "challenge": "Students search by subject, qualification, format, and location. Course pages that omit dates, entry criteria, or delivery format can lose enquiries even when they attract relevant traffic.",
-    "focus": ["Course and programme keyword mapping", "Admissions and application content", "Internal linking across faculties and course catalogues"]
-  },
-  {
-    "slug": "healthcare",
-    "name": "Healthcare",
-    "summary": "Help patients find your practice, understand the services available, and take the next step toward an appointment.",
-    "challenge": "Patients need clear answers about location, services, clinicians, and booking. Outdated practice information or thin service pages can send them back to search.",
-    "focus": ["Clinic, practitioner, and service pages", "Local listings and practice information", "Clinician-reviewed content and accessible booking paths"]
+    "focus": [
+      "Indexable vehicle inventory and category pages",
+      "Dealership and service-area SEO",
+      "Paths from model searches to test drives and enquiries"
+    ]
   },
   {
     "slug": "ecommerce",
     "name": "Ecommerce",
     "summary": "Make product and collection pages easier to discover across Shopify, WooCommerce, and custom stores.",
     "challenge": "Filters, variants, and duplicate URLs can compete with the category and product pages you want customers to find. Generic descriptions also make it harder for shoppers to compare products confidently.",
-    "focus": ["Collection and product-page optimization", "Product structured data and internal linking", "Variant, filter, and catalogue indexing"]
+    "focus": [
+      "Collection and product-page optimization",
+      "Product structured data and internal linking",
+      "Variant, filter, and catalogue indexing"
+    ]
+  },
+  {
+    "slug": "education",
+    "name": "Education",
+    "summary": "Help prospective students find and compare courses, qualifications, and admissions requirements.",
+    "challenge": "Students search by subject, qualification, format, and location. Course pages that omit dates, entry criteria, or delivery format can lose enquiries even when they attract relevant traffic.",
+    "focus": [
+      "Course and programme keyword mapping",
+      "Admissions and application content",
+      "Internal linking across faculties and course catalogues"
+    ]
+  },
+  {
+    "slug": "finance",
+    "name": "Finance",
+    "summary": "Make financial services easier to discover with clear product pages, transparent information, and content reviewed by your specialists.",
+    "challenge": "People compare financial products carefully. If eligibility, fees, and service information are difficult to find, prospective customers may leave before they understand the offer.",
+    "focus": [
+      "Search intent for financial products and services",
+      "Clear, specialist-reviewed educational content",
+      "Product-page structure and application journeys"
+    ]
+  },
+  {
+    "slug": "healthcare",
+    "name": "Healthcare",
+    "summary": "Help patients find your practice, understand the services available, and take the next step toward an appointment.",
+    "challenge": "Patients need clear answers about location, services, clinicians, and booking. Outdated practice information or thin service pages can send them back to search.",
+    "focus": [
+      "Clinic, practitioner, and service pages",
+      "Local listings and practice information",
+      "Clinician-reviewed content and accessible booking paths"
+    ]
+  },
+  {
+    "slug": "hospitality",
+    "name": "Hospitality",
+    "summary": "Help guests discover your property while comparing destinations, room types, amenities, and places to stay.",
+    "challenge": "Travellers often start with a destination or an occasion. When your site gives them little detail about rooms, amenities, or the surrounding area, they may do their research and book elsewhere.",
+    "focus": [
+      "Destination, room, and amenities pages",
+      "Local search visibility for hotels and venues",
+      "Clear paths from organic landing pages to direct booking"
+    ]
   },
   {
     "slug": "logistics",
     "name": "Logistics",
     "summary": "Reach shippers and procurement teams searching for freight, fulfilment, and warehousing services.",
     "challenge": "A generic logistics page may say little about the routes, facilities, or handling capabilities a buyer needs. That gap can cost you a quote request before anyone speaks with your sales team.",
-    "focus": ["Freight, fulfilment, and warehouse service pages", "Coverage and facility pages", "Qualified quote and contact journeys"]
+    "focus": [
+      "Freight, fulfilment, and warehouse service pages",
+      "Coverage and facility pages",
+      "Qualified quote and contact journeys"
+    ]
   },
   {
     "slug": "manufacturing",
     "name": "Manufacturing",
     "summary": "Help engineers and procurement teams find your capabilities, technical specifications, and products.",
     "challenge": "Buyers often search by material, tolerance, application, or manufacturing process. When those details are buried in PDFs or absent from the website, buyers may never reach your RFQ form.",
-    "focus": ["Capability, material, and application pages", "Searchable specifications and product catalogues", "RFQ paths and technical content"]
+    "focus": [
+      "Capability, material, and application pages",
+      "Searchable specifications and product catalogues",
+      "RFQ paths and technical content"
+    ]
+  },
+  {
+    "slug": "real-estate",
+    "name": "Real Estate",
+    "summary": "Connect buyers and tenants with relevant properties, neighbourhood guides, and local agents through organic search.",
+    "challenge": "Property listings turn over quickly, but searches for neighbourhoods and property types persist. A site built entirely around individual listings can miss those ongoing discovery opportunities.",
+    "focus": [
+      "Indexable location and property-type pages",
+      "Listing filters and duplicate URL management",
+      "Neighbourhood guides and viewing enquiries"
+    ]
   }
 ]

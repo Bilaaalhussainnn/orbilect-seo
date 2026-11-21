@@ -1,3 +1,5 @@
+import listedIndustries from "../_home/industry-growth/industries.json";
+import IndustryDesignShowcase from "./industry-design-showcase";
 import { IndustryPricingBeforeFaq } from "./industry-pricing-before-faq";
 import { InvestmentBeforeFaq } from "../_components/investment-before-faq";
 import type { Metadata } from "next";
@@ -94,7 +96,7 @@ function faqItems(info: Brief) {
 }
 
 export function IndustryLinks({ current }: { current: IndustrySlug | "automotive" }) {
-  const links = [["automotive", "Automotive"], ...Object.entries(briefs).map(([slug, info]) => [slug, info.name])];
+  const links = listedIndustries.map(({ slug, name }) => [slug, name]);
   return (
     <nav className={template.related} aria-labelledby="related-industry-title">
       <div className={styles.wrap}>
@@ -113,9 +115,10 @@ export function IndustryLinks({ current }: { current: IndustrySlug | "automotive
 
 export function IndustryPage({ slug }: { slug: IndustrySlug }) {
   const info = briefs[slug];
+  const hasShowcase = listedIndustries.some(industry => industry.slug === slug);
   return (
     <main>
-      <IndustryTemplateHero info={info} />
+      <IndustryTemplateHero info={info} compact={hasShowcase} />
 
       <section className={styles.light} aria-labelledby="industry-intro">
         <div className={styles.wrap}>
@@ -152,7 +155,8 @@ export function IndustryPage({ slug }: { slug: IndustrySlug }) {
       <IndustryLinks current={slug} />
       <IndustryPricingBeforeFaq routes={["/industries/ecommerce","/industries/education","/industries/finance","/industries/healthcare","/industries/home-services","/industries/hospitality","/industries/logistics","/industries/manufacturing","/industries/professional-services","/industries/real-estate","/industries/saas"]} />
       <InvestmentBeforeFaq routes={["/industries/ecommerce","/industries/education","/industries/finance","/industries/healthcare","/industries/home-services","/industries/hospitality","/industries/logistics","/industries/manufacturing","/industries/professional-services","/industries/real-estate","/industries/saas"]} />
-      <HomeFaq items={faqItems(info)} introTitle={"What " + info.businesses + " ask us"}
+      {hasShowcase && <IndustryDesignShowcase slug={slug} />}
+      <HomeFaq hideSectionLabel={hasShowcase} items={faqItems(info)} introTitle={"What " + info.businesses + " ask us"}
         introCopy={"Get answers about " + info.offers.join(", ").toLowerCase() + " and what we review in a free audit."} />
       <FinalCta />
     </main>

@@ -19,13 +19,10 @@ const publicPages = [
   "/industries/education",
   "/industries/finance",
   "/industries/healthcare",
-  "/industries/home-services",
   "/industries/hospitality",
   "/industries/logistics",
   "/industries/manufacturing",
-  "/industries/professional-services",
   "/industries/real-estate",
-  "/industries/saas",
   "/media-pr-relations",
   "/newsroom",
   "/newsroom/erp-platform",
@@ -57,6 +54,7 @@ const publicPages = [
   "/services/social-media-marketing",
   "/services/technical-seo",
   "/services/website-redesign",
+  "/website-design-gallery",
   "/staffing",
   "/terms-and-conditions"
 ];
