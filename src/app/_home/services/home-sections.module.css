@@ -114,9 +114,9 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 6 / 5;
+  aspect-ratio: 16 / 9;
   max-height: 57svh;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 22px;
   animation: serviceArtIn 300ms ease-out both;
 }

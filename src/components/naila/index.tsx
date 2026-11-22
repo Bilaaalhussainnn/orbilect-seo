@@ -67,7 +67,6 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
   const [notice, setNotice] = useState("");
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
-  const [blocked, setBlocked] = useState(false);
   const [mode, setMode] = useState<Mode>("chat");
   const [selection, setSelection] = useState<string[]>([]);
   const [scope, setScope] = useState("");
@@ -122,10 +121,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
 
   useEffect(() => {
     try {
-      if (Number(sessionStorage.getItem("naila-block-until")) > Date.now()) {
-        setBlocked(true);
-        return;
-      }
+      sessionStorage.removeItem("naila-block-until");
     } catch {}
     const timer = window.setTimeout(() => {
       if (!interacted.current) {
@@ -163,7 +159,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
   }, [closing, clearClosing]);
 
   function show() {
-    if (blocked || closing) return;
+    if (closing) return;
     start();
     interacted.current = true;
     setPeek(false);
@@ -192,7 +188,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
 
   async function run(payload: Record<string, unknown>) {
     const activeId = current.current?.id;
-    if (requesting.current || blocked || !activeId || closing) return;
+    if (requesting.current || !activeId || closing) return;
     requesting.current = true;
     setBusy(true);
     setError("");
@@ -206,11 +202,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
       const data = await response.json();
       if (current.current?.id !== activeId) return;
       if (data.blocked) {
-        setBlocked(true);
-        setOpen(false);
-        setPeek(false);
-        try { sessionStorage.setItem("naila-block-until", String(Date.now() + 86400_000)); } catch {}
-        return;
+        throw Error("Please try that again, or use Contact to reach our team.");
       }
       if (!response.ok) throw Error(data.error ?? "Naila is unavailable. Please try again.");
       if (data.endChat) {
@@ -239,7 +231,7 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
     const active = add(() => ({ role: "You", text: message, sentAt: Date.now() }), true);
     if (!active) return;
     const recentMessages = active.messages.filter(item => item.role === "You")
-      .slice(-5).map(item => item.text.slice(0, 400));
+      .slice(-50).map(item => item.text.slice(0, 400));
     void run({ recentMessages, action: "message", chatId: active.id, turnId: crypto.randomUUID(), text: message });
     setText("");
   }
@@ -270,7 +262,6 @@ export default function Naila({ humanChatEnabled = false }: { humanChatEnabled?:
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
-  if (blocked) return <span className={styles.blocked} role="status">Naila is temporarily unavailable.</span>;
   return (
     <div className={styles.widget} data-lenis-prevent="">
       {(peek || notice) && !open && (

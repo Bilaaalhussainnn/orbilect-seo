@@ -1,0 +1,802 @@
+[
+  {
+    "term": "robots.txt",
+    "aliases": [
+      "robots file"
+    ],
+    "definition": "A robots.txt file gives cooperating crawlers instructions about which paths they may fetch. It is not a password system, and blocking crawling alone does not reliably remove a URL from search results.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "XML sitemap",
+    "aliases": [
+      "sitemap"
+    ],
+    "definition": "An XML sitemap lists preferred public URLs to help search engines discover a site’s content. Submitting it supports discovery but does not guarantee that every URL will be indexed.",
+    "href": "/blogs/how-to-create-and-submit-an-xml-sitemap"
+  },
+  {
+    "term": "Schema",
+    "aliases": [
+      "schema markup"
+    ],
+    "definition": "Schema is a shared vocabulary for describing things such as an organization, article, or product in machine-readable data. Markup should describe the visible content accurately; it does not guarantee a special search appearance.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Canonical URL",
+    "aliases": [
+      "canonical"
+    ],
+    "definition": "A canonical URL is the preferred address for a page among duplicate or very similar versions. A canonical annotation is a signal rather than an instruction that search engines must always follow.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Crawling",
+    "aliases": [
+      "web crawling"
+    ],
+    "definition": "Crawling is how a search engine fetches pages and follows links to discover content. A page must be reachable before its content can be evaluated for search, although crawling and indexing are different stages.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Indexing",
+    "aliases": [
+      "search indexing"
+    ],
+    "definition": "Indexing is the process of analyzing and storing information about a page so it may be considered for search results. Being indexed does not guarantee a particular position or traffic level.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Noindex",
+    "aliases": [
+      "noindex tag"
+    ],
+    "definition": "Noindex tells supporting search engines not to include a page in their search index. The crawler generally needs access to the page to see this directive, so a robots.txt block can prevent it from being read.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Nofollow",
+    "aliases": [
+      "nofollow link"
+    ],
+    "definition": "Nofollow is a link relationship value used to qualify a link’s relationship to its destination. It is different from noindex, which concerns whether a page should appear in a search index.",
+    "href": "/services/off-page-seo"
+  },
+  {
+    "term": "Backlink",
+    "aliases": [
+      "inbound link"
+    ],
+    "definition": "A backlink is a link from another website to yours. Relevance, context, and legitimacy matter; simply accumulating a large number of links is not a reliable strategy for useful visibility.",
+    "href": "/services/off-page-seo"
+  },
+  {
+    "term": "Anchor text",
+    "aliases": [
+      "link text"
+    ],
+    "definition": "Anchor text is the visible wording of a link. Descriptive wording helps people understand the destination, whereas repeated vague labels provide less context about what the linked page contains.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Internal link",
+    "aliases": [
+      "internal linking"
+    ],
+    "definition": "An internal link connects pages on the same website. Useful internal links help visitors navigate related information and help crawlers discover how the site’s pages relate to each other.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "External link",
+    "aliases": [
+      "outbound link"
+    ],
+    "definition": "An external link points from your website to a different website. Link to relevant, trustworthy sources when they help the reader verify a claim or continue a useful task.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Keyword",
+    "aliases": [
+      "search keyword"
+    ],
+    "definition": "A keyword is a word or phrase used to describe a search topic or target an advertising opportunity. Good research considers the intent and business relevance behind a phrase rather than treating volume as the only criterion.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Search intent",
+    "aliases": [
+      "user intent"
+    ],
+    "definition": "Search intent is the task or need behind a query, such as learning, comparing, finding a location, or buying. A useful page should fit that task instead of merely repeating the query’s words.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Long-tail keyword",
+    "aliases": [
+      "long tail keyword"
+    ],
+    "definition": "A long-tail keyword is a more specific search phrase within a broader topic. Specific phrases can reveal a clearer customer need, but they are not automatically easy to rank for or commercially valuable.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "SERP",
+    "aliases": [
+      "search engine results page"
+    ],
+    "definition": "SERP means search engine results page. Its layout can include organic links, ads, local results, images, and other features depending on the query and the search system.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "CTR",
+    "aliases": [
+      "click through rate"
+    ],
+    "definition": "Click-through rate is clicks divided by impressions, usually expressed as a percentage. Compare it within the same channel, audience, and reporting context rather than assuming every placement should achieve the same rate.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "Impression",
+    "aliases": [
+      "impressions"
+    ],
+    "definition": "An impression records an eligible display or appearance under the reporting system’s rules. An impression is not the same as a visit, a click, or proof that someone carefully read the content.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "Organic traffic",
+    "aliases": [
+      "organic visits"
+    ],
+    "definition": "Organic traffic is traffic attributed to unpaid search results in the reporting setup being used. Classification and consent settings can affect analytics totals, so compare them carefully with Search Console clicks.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Local SEO",
+    "aliases": [
+      "local search optimization"
+    ],
+    "definition": "Local SEO helps eligible businesses be discovered for relevant location-based searches. It can involve accurate business information, useful location pages, appropriate profiles, and a clear route to calling or booking.",
+    "href": "/industries"
+  },
+  {
+    "term": "Google Business Profile",
+    "aliases": [
+      "GBP"
+    ],
+    "definition": "Google Business Profile is Google’s system for eligible businesses to manage public business information in its local experiences. Eligibility, verification, categories, and profile details should reflect the real business.",
+    "href": "/blogs/how-to-set-up-your-google-business-profile"
+  },
+  {
+    "term": "On-page SEO",
+    "aliases": [
+      "on page seo"
+    ],
+    "definition": "On-page SEO improves the content and structure of individual pages, including titles, headings, links, and useful explanations. It starts with what the visitor needs to understand and do.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Off-page SEO",
+    "aliases": [
+      "off page seo"
+    ],
+    "definition": "Off-page SEO concerns relevant signals and visibility beyond your own website, including legitimate links, mentions, and listings. Quality and accuracy matter more than indiscriminate submissions or promised link counts.",
+    "href": "/services/off-page-seo"
+  },
+  {
+    "term": "Technical SEO",
+    "aliases": [
+      "technical search optimization"
+    ],
+    "definition": "Technical SEO addresses how search engines access, understand, and index a website. Work can include redirects, canonicals, structured data, rendering, sitemaps, and performance diagnostics.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Ecommerce SEO",
+    "aliases": [
+      "e commerce seo"
+    ],
+    "definition": "Ecommerce SEO improves discovery of products and collections through useful product data, clear categories, internal links, and technical handling of variants and filters. The shopping journey still needs to work well on mobile.",
+    "href": "/services/ecommerce-seo"
+  },
+  {
+    "term": "Hreflang",
+    "aliases": [
+      "language targeting"
+    ],
+    "definition": "Hreflang annotations identify language or regional alternatives of related pages. They help search systems understand which version may suit a user, but they do not replace translation or a coherent international site structure.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Alt text",
+    "aliases": [
+      "alternative text"
+    ],
+    "definition": "Alt text describes the purpose or information conveyed by an image for people who cannot see it. Decorative images can use empty alternative text; keyword stuffing makes descriptions less useful.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Title tag",
+    "aliases": [
+      "page title"
+    ],
+    "definition": "A title tag supplies a page’s HTML title and can help identify it in browser tabs and search. Write a specific, accurate title; search engines can choose different title text for a result.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Meta description",
+    "aliases": [
+      "description tag"
+    ],
+    "definition": "A meta description is a short HTML summary of a page. It can inform a search snippet, but the search engine may generate another snippet depending on the query and page content.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "URL slug",
+    "aliases": [
+      "slug"
+    ],
+    "definition": "A URL slug is the readable path segment identifying a page, such as website-redesign. Keep it understandable and plan redirects when changing established URLs that visitors or search engines already use.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Redirect",
+    "aliases": [
+      "301 redirect"
+    ],
+    "definition": "A redirect sends a request from one URL to another. Use the appropriate status for a permanent or temporary move and direct old pages to a relevant replacement rather than always to the homepage.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "HTTP status code",
+    "aliases": [
+      "status code"
+    ],
+    "definition": "An HTTP status code describes the result of a request, such as success, redirection, not found, or a server error. Diagnose the actual production response rather than assuming a page’s appearance proves its status.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Structured data",
+    "aliases": [
+      "JSON-LD"
+    ],
+    "definition": "Structured data is machine-readable information about a page’s content. JSON-LD is one common format for publishing it, and the facts in the markup should agree with the visible page.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Rich result",
+    "aliases": [
+      "rich snippet"
+    ],
+    "definition": "A rich result is a search appearance enhanced with supported structured information or other features. Valid markup can support eligibility, but the search engine decides whether and how an enhancement is displayed.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "FAQ markup",
+    "aliases": [
+      "FAQ schema"
+    ],
+    "definition": "FAQ markup describes published questions and their answers in structured data. Having an FAQ section does not mean a website will receive an FAQ enhancement in search results.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Organization schema",
+    "aliases": [
+      "organization markup"
+    ],
+    "definition": "Organization schema describes an organization using structured properties such as its name, URL, and logo. The information should be accurate and consistent with the business’s public identity.",
+    "href": "/about"
+  },
+  {
+    "term": "Breadcrumb",
+    "aliases": [
+      "breadcrumb navigation"
+    ],
+    "definition": "Breadcrumb navigation shows a page’s place within a site hierarchy. It can help navigation on some sites; a website does not need to display breadcrumbs merely to use a consistent information architecture.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Core Web Vitals",
+    "aliases": [
+      "CWV"
+    ],
+    "definition": "Core Web Vitals describe aspects of loading, interaction responsiveness, and visual stability. Review them alongside accessibility, useful content, and whether customers can complete the tasks that matter.",
+    "href": "/blogs/what-core-web-vitals-tell-you-about-your-website"
+  },
+  {
+    "term": "LCP",
+    "aliases": [
+      "largest contentful paint"
+    ],
+    "definition": "Largest Contentful Paint measures when the largest eligible visible content element is rendered. Large images, server response time, and rendering delays can influence it, so identify the actual element before choosing a fix.",
+    "href": "/blogs/what-core-web-vitals-tell-you-about-your-website"
+  },
+  {
+    "term": "INP",
+    "aliases": [
+      "interaction to next paint"
+    ],
+    "definition": "Interaction to Next Paint measures a page’s responsiveness to user interactions. Long JavaScript tasks and expensive rendering can delay visible feedback even after the initial page has loaded.",
+    "href": "/blogs/what-core-web-vitals-tell-you-about-your-website"
+  },
+  {
+    "term": "CLS",
+    "aliases": [
+      "cumulative layout shift"
+    ],
+    "definition": "Cumulative Layout Shift measures unexpected movement of visible content. Reserving space for images, advertisements, and embeds can reduce movement while a page loads and updates.",
+    "href": "/blogs/what-core-web-vitals-tell-you-about-your-website"
+  },
+  {
+    "term": "Page speed",
+    "aliases": [
+      "website speed"
+    ],
+    "definition": "Page speed concerns how quickly useful content and interactions become available. Measure a real production page with its images, scripts, and integrations instead of relying on one simplified preview.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Duplicate content",
+    "aliases": [
+      "duplicate pages"
+    ],
+    "definition": "Duplicate content is substantially similar material accessible at more than one URL. Clarify the intended canonical structure and consolidate overlapping pages when separate versions do not serve distinct visitor needs.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Crawl budget",
+    "aliases": [
+      "crawl capacity"
+    ],
+    "definition": "Crawl budget describes the crawling attention available to a site in context. For many small sites, fixing access, quality, and URL duplication is more useful than treating crawl budget as the first problem.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Rendering",
+    "aliases": [
+      "page rendering"
+    ],
+    "definition": "Rendering is the process of turning HTML, styles, scripts, and assets into the page a browser or supported crawler can interpret. Important content should remain accessible through the site’s chosen rendering architecture.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "JavaScript SEO",
+    "aliases": [
+      "JS SEO"
+    ],
+    "definition": "JavaScript SEO examines how script-driven websites expose content, links, and metadata to search systems. Check the rendered production output and avoid relying on interactions a crawler may never perform.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Orphan page",
+    "aliases": [
+      "orphaned page"
+    ],
+    "definition": "An orphan page has no useful internal links leading to it from the site’s navigable structure. Add relevant links when the page belongs in the customer journey rather than relying only on a sitemap.",
+    "href": "/services/on-page-seo"
+  },
+  {
+    "term": "Faceted navigation",
+    "aliases": [
+      "product filters"
+    ],
+    "definition": "Faceted navigation lets shoppers filter a catalogue by attributes such as size, brand, or price. Plan which filter combinations should be search destinations to avoid an uncontrolled collection of duplicate parameter URLs.",
+    "href": "/services/ecommerce-seo"
+  },
+  {
+    "term": "Robots meta tag",
+    "aliases": [
+      "meta robots"
+    ],
+    "definition": "A robots meta tag publishes page-level instructions for supporting crawlers, such as noindex. It differs from robots.txt, which controls crawling paths rather than describing indexing instructions inside a page.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Googlebot",
+    "aliases": [
+      "Google crawler"
+    ],
+    "definition": "Googlebot is the name used for Google’s search crawlers. A user-agent string alone does not prove a request is genuine, so server-side verification needs the appropriate documented checks.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "PPC",
+    "aliases": [
+      "pay per click"
+    ],
+    "definition": "PPC means pay-per-click advertising, where clicks are one basis for charging. A successful campaign also needs relevant targeting, a useful destination, accurate measurement, and a viable offer.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "ROAS",
+    "aliases": [
+      "return on ad spend"
+    ],
+    "definition": "Return on ad spend compares attributed revenue with advertising spend. It is not profit because product costs, fulfilment, management fees, and other expenses may still need to be deducted.",
+    "href": "/blogs/how-to-tell-whether-ppc-is-profitable"
+  },
+  {
+    "term": "ROI",
+    "aliases": [
+      "return on investment"
+    ],
+    "definition": "Return on investment compares a return or gain with the investment required under a clearly defined calculation. State which costs and time period are included before comparing campaigns or channels.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "CPC",
+    "aliases": [
+      "cost per click"
+    ],
+    "definition": "Cost per click is the advertising cost divided by recorded clicks for the period. A low CPC is useful only when those clicks are relevant and contribute to the intended business outcome.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "CPM",
+    "aliases": [
+      "cost per thousand impressions"
+    ],
+    "definition": "CPM expresses advertising cost per thousand impressions. Compare it within suitable placement and audience contexts, and do not treat an impression total as a measure of completed sales.",
+    "href": "/services/paid-social-advertising"
+  },
+  {
+    "term": "CPA",
+    "aliases": [
+      "cost per acquisition"
+    ],
+    "definition": "Cost per acquisition divides the relevant advertising cost by the counted acquisition actions. Define the action carefully because an enquiry, qualified lead, and paying customer are different outcomes.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "CPL",
+    "aliases": [
+      "cost per lead"
+    ],
+    "definition": "Cost per lead compares campaign cost with the leads counted under an agreed definition. Follow qualification and sales outcomes as well, since inexpensive enquiries are not necessarily useful opportunities.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "Conversion rate",
+    "aliases": [
+      "CVR"
+    ],
+    "definition": "Conversion rate is the proportion of a defined population that completes a chosen action. State the denominator and action clearly, such as successful enquiries per session, before comparing two reports.",
+    "href": "/services/conversion-rate-optimization"
+  },
+  {
+    "term": "Quality Score",
+    "aliases": [
+      "Google Ads quality score"
+    ],
+    "definition": "Quality Score is a Google Ads diagnostic associated with expected click-through rate, ad relevance, and landing-page experience. Use it to investigate relevance rather than treating the score itself as a business outcome.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "Ad Rank",
+    "aliases": [
+      "advertisement rank"
+    ],
+    "definition": "Ad Rank is used by Google Ads to help determine ad eligibility and position using several factors. A larger bid alone does not guarantee a particular placement or profitable traffic.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "Negative keyword",
+    "aliases": [
+      "negative keywords"
+    ],
+    "definition": "Negative keywords help prevent ads from matching unwanted searches under the platform’s rules. Review the actual search intent before excluding phrases that may also contain useful demand.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "Keyword match type",
+    "aliases": [
+      "match types"
+    ],
+    "definition": "A keyword match type controls how an advertising keyword can relate to searches under the platform’s matching system. Review search terms and current platform documentation rather than assuming matching is only literal text equality.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "Attribution",
+    "aliases": [
+      "marketing attribution"
+    ],
+    "definition": "Attribution assigns credit for outcomes across interactions according to a model and available data. Different systems can report different totals because their definitions, windows, and observed journeys differ.",
+    "href": "/services/marketing-analytics"
+  },
+  {
+    "term": "Remarketing",
+    "aliases": [
+      "retargeting"
+    ],
+    "definition": "Remarketing reaches eligible audiences based on earlier interactions, subject to platform rules and applicable consent requirements. It needs thoughtful audience definitions, useful messaging, and appropriate data handling.",
+    "href": "/services/paid-social-advertising"
+  },
+  {
+    "term": "Ad group",
+    "aliases": [
+      "advertising group"
+    ],
+    "definition": "An ad group organizes related advertisements and targeting within a campaign. A clear structure helps match the message and destination to the audience or search intent being served.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "Campaign",
+    "aliases": [
+      "advertising campaign"
+    ],
+    "definition": "A campaign groups advertising activity around settings and objectives such as budget and delivery. Define the commercial goal and conversion measurement before judging performance from reach or clicks alone.",
+    "href": "/services/digital-marketing"
+  },
+  {
+    "term": "Ad spend",
+    "aliases": [
+      "media spend"
+    ],
+    "definition": "Ad spend is the amount paid to the advertising platform for delivery under its billing rules. It is usually separate from agency management, design, landing-page work, and other service costs unless the quote says otherwise.",
+    "href": "/services/ppc-management"
+  },
+  {
+    "term": "UET",
+    "aliases": [
+      "universal event tracking"
+    ],
+    "definition": "Universal Event Tracking is Microsoft Advertising’s website tracking system for supported measurement and audience features. Implementation should respect the applicable consent setup and be tested against the intended actions.",
+    "href": "/services/bing-advertising"
+  },
+  {
+    "term": "GA4",
+    "aliases": [
+      "Google Analytics 4"
+    ],
+    "definition": "Google Analytics 4 is Google’s event-based analytics platform for websites and apps. Plan and verify event definitions so reports connect to real customer actions rather than duplicated or misleading signals.",
+    "href": "/blogs/how-to-track-leads-and-sales-in-ga4"
+  },
+  {
+    "term": "Key event",
+    "aliases": [
+      "analytics key event"
+    ],
+    "definition": "A key event in GA4 identifies an event important to the business. The designation is only useful when the underlying event is implemented and counted correctly.",
+    "href": "/blogs/how-to-track-leads-and-sales-in-ga4"
+  },
+  {
+    "term": "Responsive design",
+    "aliases": [
+      "responsive website"
+    ],
+    "definition": "Responsive design adapts a layout to available screen space. It should preserve readable content, usable navigation, and complete forms across phones, tablets, and desktop screens.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Mobile-first design",
+    "aliases": [
+      "mobile first"
+    ],
+    "definition": "Mobile-first design begins with the essential experience on smaller screens before enhancing larger layouts. It encourages prioritizing content and actions rather than shrinking a crowded desktop composition.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "UX",
+    "aliases": [
+      "user experience"
+    ],
+    "definition": "User experience concerns how people understand and use a product or service to achieve their goals. Research, navigation, content, accessibility, and reliable interactions all contribute to it.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "UI",
+    "aliases": [
+      "user interface"
+    ],
+    "definition": "A user interface is the set of visual and interactive controls through which someone uses a product. Typography, spacing, buttons, feedback, and consistent components help make those controls understandable.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Wireframe",
+    "aliases": [
+      "wireframing"
+    ],
+    "definition": "A wireframe is a simplified plan of page structure, content priorities, and interaction paths. It helps agree the layout before investing in detailed visual styling.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Prototype",
+    "aliases": [
+      "design prototype"
+    ],
+    "definition": "A prototype is a representation used to test a proposed design or interaction. Its behaviour may be simulated, so it should not be confused with a fully connected production application.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "CTA",
+    "aliases": [
+      "call to action"
+    ],
+    "definition": "A call to action tells a visitor the next useful step, such as requesting an audit or booking a consultation. Its wording and destination should match what actually happens after the click.",
+    "href": "/services/landing-page-design"
+  },
+  {
+    "term": "Landing page",
+    "aliases": [
+      "campaign landing page"
+    ],
+    "definition": "A landing page is a destination designed around a focused audience, offer, or task. A clear explanation, relevant proof, and a reliable next step matter more than decorative complexity.",
+    "href": "/services/landing-page-design"
+  },
+  {
+    "term": "Accessibility",
+    "aliases": [
+      "web accessibility"
+    ],
+    "definition": "Web accessibility helps people with different abilities use a website. It includes semantic structure, keyboard access, readable contrast, meaningful alternatives, and understandable feedback.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Colour contrast",
+    "aliases": [
+      "color contrast"
+    ],
+    "definition": "Colour contrast describes the visual difference between foreground and background. Check text and controls in normal, hover, focus, and disabled states rather than judging a palette from isolated swatches.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Breakpoint",
+    "aliases": [
+      "responsive breakpoint"
+    ],
+    "definition": "A breakpoint is a condition at which a responsive layout changes its rules. Choose changes around content and usability needs rather than assuming every device fits a small fixed list of widths.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Design system",
+    "aliases": [
+      "component system"
+    ],
+    "definition": "A design system combines reusable components, styles, and usage rules. It helps a team maintain consistency while still adapting pages to different content and customer journeys.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Above the fold",
+    "aliases": [
+      "first viewport"
+    ],
+    "definition": "Above the fold means the part of a page initially visible before scrolling. The exact area varies by device and window size, so prioritize a clear opening rather than a universal pixel boundary.",
+    "href": "/services/landing-page-design"
+  },
+  {
+    "term": "Favicon",
+    "aliases": [
+      "site icon"
+    ],
+    "definition": "A favicon is a small icon used to identify a website in browser and related interfaces. Supply appropriate formats and sizes so the brand remains recognizable in compact contexts.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "CMS",
+    "aliases": [
+      "content management system"
+    ],
+    "definition": "A content management system lets authorized people create and manage website content. Choose one around editing needs, structure, integrations, and maintenance responsibilities rather than appearance alone.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Next.js",
+    "aliases": [
+      "next js"
+    ],
+    "definition": "Next.js is a React framework with routing and rendering capabilities for websites and applications. The appropriate architecture depends on the project’s content, server features, hosting, and editing workflow.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "React",
+    "aliases": [
+      "react js"
+    ],
+    "definition": "React is a library for building user interfaces from components. It can power interactive experiences, while the surrounding framework and implementation determine routing, rendering, and operational behaviour.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "WordPress",
+    "aliases": [
+      "wordpress cms"
+    ],
+    "definition": "WordPress is a content management system that can be extended with themes and plugins. It requires appropriate hosting, access controls, backups, and a maintenance process for the chosen installation.",
+    "href": "/blogs/how-to-build-a-wordpress-website"
+  },
+  {
+    "term": "Shopify",
+    "aliases": [
+      "shopify store"
+    ],
+    "definition": "Shopify is a hosted commerce platform for managing products and selling online. The project still needs a coherent catalogue, useful content, delivery settings, and a tested purchase journey.",
+    "href": "/blogs/how-to-build-a-shopify-store"
+  },
+  {
+    "term": "WooCommerce",
+    "aliases": [
+      "woo commerce"
+    ],
+    "definition": "WooCommerce adds commerce capabilities to WordPress. Hosting, extensions, payment setup, updates, and operational testing remain part of running a reliable store.",
+    "href": "/blogs/how-to-build-a-woocommerce-store"
+  },
+  {
+    "term": "Node.js",
+    "aliases": [
+      "node js"
+    ],
+    "definition": "Node.js is a JavaScript runtime commonly used for server-side applications and tools. It is different from a visual website template and must be supported by the chosen hosting environment when required.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "TypeScript",
+    "aliases": [
+      "typescript language"
+    ],
+    "definition": "TypeScript adds a type system to JavaScript development. It can catch classes of development mistakes, but type checking does not replace testing real forms, integrations, or customer journeys.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "API",
+    "aliases": [
+      "application programming interface"
+    ],
+    "definition": "An API defines how software systems exchange requests and results. Reliable integrations validate inputs, handle failures, protect credentials, and report the actual outcome of an external action.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "Webhook",
+    "aliases": [
+      "web hook"
+    ],
+    "definition": "A webhook sends a notification to another system when an event occurs. Verify the sender, handle retries safely, and avoid creating duplicate actions when a notification is delivered more than once.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "TLS",
+    "aliases": [
+      "SSL certificate"
+    ],
+    "definition": "TLS protects data in transit between appropriately configured endpoints. An SSL certificate is commonly used wording for the certificate involved, but transport encryption does not establish that every part of an application is secure.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "HTTPS",
+    "aliases": [
+      "secure HTTP"
+    ],
+    "definition": "HTTPS is HTTP carried over a protected TLS connection. It helps protect traffic in transit, while application security still depends on access controls, updates, validation, and other implementation details.",
+    "href": "/services/website-redesign"
+  },
+  {
+    "term": "DNS",
+    "aliases": [
+      "domain name system"
+    ],
+    "definition": "DNS publishes records that help systems locate services associated with a domain. Website routing, email delivery, and verification can use different record types and hostnames within the same domain.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "CDN",
+    "aliases": [
+      "content delivery network"
+    ],
+    "definition": "A content delivery network distributes eligible content through geographically distributed infrastructure. Correct caching and appropriately sized assets still matter; a CDN cannot automatically repair an oversized image or broken application.",
+    "href": "/services/technical-seo"
+  },
+  {
+    "term": "Web hosting",
+    "aliases": [
+      "hosting"
+    ],
+    "definition": "Web hosting provides the infrastructure needed to serve a website or application. The plan must support the framework, server features, storage, and deployment process the project actually uses.",
+    "href": "/blogs/10-web-hosting-platforms-compared"
+  },
+  {
+    "term": "Supabase",
+    "aliases": [
+      "supabase database"
+    ],
+    "definition": "Supabase provides database and related application services built around PostgreSQL. Protect server credentials, use appropriate access policies, and verify saved records independently of email notification delivery.",
+    "href": "/services/website-redesign"
+  }
+]

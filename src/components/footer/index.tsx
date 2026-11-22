@@ -1,58 +1,30 @@
-import listedIndustries from "../../app/_home/industry-growth/industries.json";
-import { businessDescription } from "@/lib/site-identity";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
-import TechnologyScene from "../header/technology-scene";
+import { Mail, MapPin, Phone } from "lucide-react";
+import industries from "../../app/_home/industry-growth/industries.json";
+import { pakistanAddress } from "@/lib/site-identity";
 import { SocialLinks } from "../header/social-links";
 import styles from "./footer.module.css";
-
-const industryLinks = listedIndustries.map(({ name, slug }) => [name, "/industries/" + slug]);
 const groups = [
-  { title: "Services", href: "/services", links: [
-    ["On-page SEO", "/services/on-page-seo"], ["Off-page SEO", "/services/off-page-seo"],
-    ["Technical SEO", "/services/technical-seo"], ["Ecommerce SEO", "/services/ecommerce-seo"],
-    ["Website redesign", "/services/website-redesign"],
-  ] },
-  { title: "Industries", href: "/industries", links: industryLinks },
-  { title: "Company", href: "/about", links: [
-    ["Pricing", "/pricing"], ["How we work", "/how-we-work"], ["Careers", "/careers"],
-    ["Staffing", "/staffing"], ["Blogs", "/blogs"], ["Website Design Gallery", "/website-design-gallery"],
-  ] },
+  { title: "Search expertise", links: [["On-page SEO","/services/on-page-seo"],["Off-page SEO","/services/off-page-seo"],["Technical SEO","/services/technical-seo"],["Ecommerce SEO","/services/ecommerce-seo"],["SEO content writing","/services/seo-content-writing"],["Digital PR","/services/digital-pr"]] },
+  { title: "Growth & design", links: [["Digital marketing","/services/digital-marketing"],["PPC management","/services/ppc-management"],["Paid social","/services/paid-social-advertising"],["Email marketing","/services/email-marketing"],["Marketing analytics","/services/marketing-analytics"],["Website redesign","/services/website-redesign"],["Landing page design","/services/landing-page-design"],["Ecommerce management","/services/ecommerce-management"]] },
+  { title: "Industries", links: industries.map(item=>[item.name,"/industries/"+item.slug]) },
+  { title: "Company", links: [["About us","/about"],["Our team","/our-team"],["How we work","/how-we-work"],["Careers","/careers"],["Offshore staffing","/staffing"],["Responsibility","/corporate-social-responsibility"],["Contact us","/contact"]] },
+  { title: "Explore & learn", links: [["Website Design Gallery","/website-design-gallery"],["Blogs","/blogs"],["Newsroom","/newsroom"],["Reviews","/reviews"],["Pricing","/pricing"],["How the free audit works","/how-free-audit-works"],["All services","/services"]] },
 ];
-
 export default function SiteFooter() {
-  return (
-    <footer className={styles.footer}>
-      <TechnologyScene showGrowthOrbs={false} />
-      <div className={styles.inner}>
-        <div className={styles.main}>
-          <div className={styles.brand}>
-            <Link href="/" aria-label="Orbilect SEO home">
-              <Image src="/brand/orbilect-seo-wordmark-dark.png" alt="Orbilect SEO" width={176} height={47} unoptimized />
-            </Link>
-            <p>{businessDescription}</p>
-            <a href="mailto:info@orbilectseo.com" className={styles.contact}><Mail size={17} aria-hidden="true" />info@orbilectseo.com</a>
-            <a href="tel:+16466400070" className={styles.contact}><Phone size={17} aria-hidden="true" />+1 (646) 640-0070</a>
-            <SocialLinks className={styles.social} />
-          </div>
-          <nav aria-label="Footer navigation" className={styles.navigation}>
-            {groups.map(({ title, href, links }) => (
-              <section key={title} className={styles.group}>
-                <h2><Link href={href}>{title}</Link></h2>
-                <ul>{links.map(([label, url]) => <li key={url}><Link href={url}>{label}</Link></li>)}</ul>
-              </section>
-            ))}
-          </nav>
-        </div>
-        <div className={styles.legal}>
-          <p>© {process.env.ORBILECT_COPYRIGHT_YEAR} Orbilect SEO. All rights reserved.</p>
-          <nav aria-label="Legal links">
-            <Link href="/privacy-policy">Privacy policy</Link>
-            <Link href="/terms-and-conditions">Terms and conditions</Link>
-          </nav>
-        </div>
+  return <footer className={styles.footer}>
+    <div className={styles.wrap}>
+      <div className={styles.brand}><Link href="/" aria-label="Orbilect SEO home"><Image src="/brand/orbilect-seo-wordmark-dark.png" width={176} height={47} alt="Orbilect SEO" unoptimized/></Link><p>The intelligence behind how customers find your brand.</p></div>
+      <div className={styles.columns}>
+        {groups.map(group=><nav key={group.title} aria-label={group.title+" footer links"}><h2>{group.title}</h2><ul>{group.links.map(([label,href])=><li key={href}><Link href={href}>{label}</Link></li>)}</ul></nav>)}
+        <section className={styles.contacts} aria-labelledby="footer-contact"><h2 id="footer-contact">Contact info</h2>
+          <h3>United States</h3><a href="tel:+16466400070"><Phone/>+1 (646) 640-0070</a><a href="mailto:info@orbilectseo.com"><Mail/>info@orbilectseo.com</a><p><MapPin/>450 Park Avenue, Suite 2800, New York, NY 10022, United States</p>
+          <h3>Pakistan</h3><a href="tel:+923092152810"><Phone/>+92 309 215-2810</a><a href="mailto:info@orbilectseo.com"><Mail/>info@orbilectseo.com</a><p><MapPin/>{pakistanAddress}</p>
+        </section>
       </div>
-    </footer>
-  );
+      <div className={styles.social}><p>Follow us for more</p><SocialLinks className={styles.icons}/></div>
+    </div>
+    <div className={styles.legal}><div className={styles.wrap}><p>© {process.env.ORBILECT_COPYRIGHT_YEAR} Orbilect SEO. All rights reserved.</p><nav aria-label="Legal links"><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms-and-conditions">Terms and conditions</Link></nav></div></div>
+  </footer>;
 }

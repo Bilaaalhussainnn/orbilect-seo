@@ -59,3 +59,7 @@
 .page, .page *, .promotion, .promotion * { cursor: default; }
 
 .collectionTitle span { color:#004aad; }
+
+.promotionWall{max-width:1000px}.promotion h2{font-size:clamp(27px,3.2vw,42px)}
+
+.promotion{--surface:#f0f4fb;--line:#d4e1f4}

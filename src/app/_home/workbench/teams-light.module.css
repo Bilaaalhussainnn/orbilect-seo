@@ -1,0 +1,203 @@
+.section {
+  --surface:#f1f5fc;
+  --line:#004aad25;
+  padding-block:var(--site-section-space);
+  background:#fff;
+  color:#12161d;
+}
+.wrap {
+  width:min(1280px,calc(100% - 48px));
+  margin:auto;
+}
+.intro>p:first-child {
+  padding-bottom:16px;
+  border-bottom:1px solid #12161d35;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:700;
+}
+.intro h2 {
+  font-size:var(--site-section-title);
+  letter-spacing:-.04em;
+  line-height:1.15;
+  margin:25px 0 18px;
+}
+.intro h2 span {
+  color:#004aad;
+  background:none!important;
+  -webkit-text-fill-color:#004aad;
+}
+.location {
+  display:flex;
+  gap:10px;
+  max-width:78ch;
+  line-height:1.8;
+  color:#4b586c;
+  font-size:var(--site-body);
+}
+.location svg {
+  flex:none;
+  margin-top:4px;
+  color:#004aad;
+}
+.trackGrid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:30px;
+  margin-top:36px;
+}
+.teamCard {
+  height:100%;
+  box-sizing:border-box;
+  border:1px solid #004aad25;
+  border-radius:18px;
+  padding:30px;
+  background:linear-gradient(140deg,#fff,#f5f8fd);
+  box-shadow:6px 8px 0 #004aad0d;
+  min-width:0;
+}
+.teamCard h3 {
+  font-size:24px;
+  letter-spacing:-.035em;
+  margin:20px 0 12px;
+}
+.teamCard p {
+  font-size:var(--site-body);
+  line-height:1.8;
+  color:#4b586c;
+}
+.trackButtons {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-block:20px;
+}
+.trackButtons button {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  border:1px solid #004aad35;
+  background:#fff;
+  color:#12161d;
+  min-height:42px;
+  padding:8px 12px;
+  border-radius:9px;
+  font:inherit;
+  font-size:12px;
+  cursor:pointer;
+}
+.trackButtons button[aria-pressed="true"] {
+  background:#004aad;
+  color:white;
+}
+.trackButtons button:focus-visible {
+  outline:2px solid #004aad;
+  outline-offset:3px;
+}
+.stepDetail {
+  min-height:4em;
+  margin-bottom:24px;
+}
+.scene {
+  height:180px;
+  position:relative;
+  max-width:320px;
+  margin:auto;
+  perspective:700px;
+}
+.screen {
+  position:absolute;
+  inset:20px 50px 20px 70px;
+  background:#fff;
+  border:1px solid #004aad45;
+  border-radius:14px;
+  box-shadow:10px 12px 0 #004aad22;
+  transform:rotateY(-14deg) rotateX(8deg);
+  display:grid;
+  place-items:center;
+}
+.screen>svg {
+  width:65px;
+  height:65px;
+  color:#004aad;
+}
+.screen>span {
+  width:60%;
+  height:5px;
+  background:#d5deec;
+  border-radius:4px;
+  margin-bottom:8px;
+}
+.person,.skill,.creative,.verified {
+  position:absolute;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  box-shadow:0 6px 0 #004aad30;
+  animation:drift 4s ease-in-out infinite alternate;
+}
+.person {
+  left:30px;
+  bottom:2px;
+  width:70px;
+  height:70px;
+  background:#004aad;
+  color:#fff;
+}
+.person svg {
+  width:36px;
+  height:36px;
+}
+.skill,.creative,.verified {
+  width:42px;
+  height:42px;
+  background:white;
+  color:#004aad;
+  border:1px solid #004aad30;
+}
+.skill {
+  right:20px;
+  top:12px;
+  animation-delay:-1s;
+}
+.creative {
+  left:25px;
+  top:5px;
+  animation-delay:-2s;
+}
+.verified {
+  right:25px;
+  bottom:10px;
+  animation-delay:-3s;
+}
+@keyframes drift {
+  to {
+    transform:translateY(-8px) rotateY(12deg);
+  }
+}
+@media(max-width:760px) {
+  .trackGrid {
+    grid-template-columns:1fr;
+  }
+  .wrap {
+    width:calc(100% - 36px);
+  }
+  .teamCard {
+    padding:22px;
+  }
+  .teamCard h3 {
+    font-size:22px;
+  }
+  .stepDetail {
+    min-height:0;
+  }
+  .scene {
+    height:150px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .person,.skill,.creative,.verified {
+    animation:none;
+  }
+}

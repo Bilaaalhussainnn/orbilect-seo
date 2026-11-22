@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { BriefcaseBusiness, ChevronRight, MapPin, UsersRound } from "lucide-react";
+import { BriefcaseBusiness, ChevronRight, MapPin, UsersRound, Monitor, Code2, PenTool, BadgeCheck } from "lucide-react";
 import { staffingLocations } from "@/lib/site-identity";
 import { Depth } from "./depth";
-import HomeCta from "./home-cta";
-import deck from "./delivery.module.css";
-import styles from "./workbench.module.css";
+import BrandCta from "@/components/brand-cta";
+import deck from "./teams-light.module.css";
+
 
 const tracks = [
   { title: "Offshore staffing", icon: UsersRound, href: "/staffing", cta: "Explore staffing",
@@ -22,14 +22,14 @@ function TrackCard({ track }: { track: (typeof tracks)[number] }) {
   return (
     <Depth>
       <article className={deck.teamCard}>
-        <span className={deck.tileIcon}><track.icon size={25} aria-hidden="true" /></span>
+        <div className={deck.scene} aria-hidden="true"><div className={deck.screen}><Monitor/><span/><span/></div><span className={deck.person}><track.icon/></span><i className={deck.skill}><Code2/></i><i className={deck.creative}><PenTool/></i><i className={deck.verified}><BadgeCheck/></i></div>
         <h3>{track.title}</h3>
         <p>{track.intro}</p>
         <div className={deck.trackButtons} role="group" aria-label={track.title + " steps"}>
           {track.steps.map(([step], index) => <button type="button" aria-pressed={index === selected} key={step} onClick={() => setSelected(index)}>{step}<ChevronRight size={14} aria-hidden="true" /></button>)}
         </div>
         <p className={deck.stepDetail} aria-live="polite">{track.steps[selected][1]}</p>
-        <HomeCta href={track.href}>{track.cta}</HomeCta>
+        <BrandCta href={track.href}>{track.cta}</BrandCta>
       </article>
     </Depth>
   );
@@ -37,9 +37,9 @@ function TrackCard({ track }: { track: (typeof tracks)[number] }) {
 
 export default function Teams() {
   return (
-    <section id="staffing-and-careers" className={styles.dark} aria-labelledby="teams-title">
-      <div className={styles.wrap}>
-        <div className={styles.intro}>
+    <section id="staffing-and-careers" className={deck.section} aria-labelledby="teams-title">
+      <div className={deck.wrap}>
+        <div className={deck.intro}>
           <p data-site-eyebrow="" data-reveal="off">Staffing and careers</p>
           <h2 data-site-heading="" id="teams-title">Build your team or <span>join ours</span></h2>
           <p className={deck.location}><MapPin size={18} aria-hidden="true" />{staffingLocations}</p>

@@ -1,0 +1,140 @@
+.wrap {
+  width:min(1280px,calc(100% - 48px));
+  margin:auto;
+}
+.intro,.directory {
+  padding-block:var(--site-section-space);
+  background:#fff;
+  color:#12161d;
+}
+.directory {
+  background:#f5f7fa;
+}
+.eyebrow {
+  padding-bottom:16px;
+  border-bottom:1px solid #12161d35;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:12px!important;
+  font-weight:700;
+}
+.intro h2,.directory h2 {
+  margin:24px 0 18px;
+  font-size:var(--site-section-title);
+  line-height:1.15;
+  letter-spacing:-.04em;
+}
+.intro h2 span,.directory h2 span {
+  color:#004aad;
+}
+.intro p,.directory p {
+  font-size:var(--site-body);
+  line-height:1.8;
+  color:#4b586c;
+  max-width:85ch;
+}
+.principles {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:30px;
+  margin-top:32px;
+}
+.principles p {
+  border-top:2px solid #004aad;
+  padding-top:18px;
+  margin:0;
+}
+.principles strong {
+  display:block;
+  color:#12161d;
+  margin-bottom:10px;
+  font-size:18px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  margin-top:34px;
+}
+.card {
+  overflow:hidden;
+  border:1px solid #004aad24;
+  border-radius:16px;
+  background:#fff;
+  min-width:0;
+  transition:transform .25s,box-shadow .25s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px #071d3c12;
+}
+.visual {
+  display:block;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#fff;
+}
+.visual img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition:transform .4s;
+}
+.card:hover .visual img {
+  transform:scale(1.035);
+}
+.copy {
+  padding:22px;
+}
+.copy h3 {
+  font-size:21px;
+  margin:0;
+  line-height:1.4;
+  letter-spacing:-.025em;
+}
+.copy h3 a {
+  color:#12161d;
+  text-decoration:none;
+}
+.copy h3 span {
+  display:block;
+  color:#004aad;
+  font-size:14px;
+  margin-top:4px;
+}
+.copy p {
+  min-height:5.4em;
+  margin:14px 0 20px;
+}
+@media(max-width:1000px) {
+  .grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+  }
+  .principles {
+    gap:20px;
+  }
+}
+@media(max-width:600px) {
+  .wrap {
+    width:calc(100% - 36px);
+  }
+  .grid,.principles {
+    grid-template-columns:1fr;
+  }
+  .copy p {
+    min-height:0;
+  }
+  .copy {
+    padding:20px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .card,.visual img {
+    transition:none;
+  }
+  .card:hover,.card:hover .visual img {
+    transform:none;
+  }
+}

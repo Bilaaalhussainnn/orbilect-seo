@@ -13,10 +13,10 @@ type Service = (typeof services)[number];
 function ServiceImage({ service }: { service: Service }) {
   return (
     <Image
-      src={`/services/${service.slug}.png`}
+      src={`/service-covers-landscape/${service.slug}.webp`}
       alt=""
-      width={720}
-      height={600}
+      width={960}
+      height={540}
       sizes="(max-width: 820px) 92vw, 42vw"
       className={styles.art}
     />
@@ -30,7 +30,7 @@ function ServiceLink({ service, label }: { service: Service; label: string }) {
       href={`/services/${service.slug}`}
       aria-label={`${label}: ${service.title}`}
      data-orbilect-cta="blue"><span data-orbilect-cta-icon="" aria-hidden="true" />
-      
+
       {label}
     </Link>
   );

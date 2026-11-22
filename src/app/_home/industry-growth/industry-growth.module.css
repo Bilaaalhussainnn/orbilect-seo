@@ -87,7 +87,7 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 
 .industryRow {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
   align-items: center;
   gap: clamp(16px, 3vw, 36px);
   padding-bottom: 24px;
@@ -98,8 +98,8 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 
 .imageFrame {
   width: 100%;
-  max-width: 200px;
-  aspect-ratio: 4 / 5;
+  max-width: 260px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 18px;
   background: radial-gradient(ellipse at 70% 25%, #004aad55, #111b2a 78%);
@@ -230,3 +230,5 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
   border-color: #fff !important;
   color: #004aad !important;
 }
+
+.section .view .ctaLabel{display:block!important;color:#fff!important;-webkit-text-fill-color:#fff!important;opacity:1!important;visibility:visible!important}.section .industryRow:is(:hover,:focus-visible) .view .ctaLabel{color:#004aad!important;-webkit-text-fill-color:#004aad!important}

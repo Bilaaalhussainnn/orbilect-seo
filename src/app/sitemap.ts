@@ -64,7 +64,7 @@ const publicPages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const updated = new Set(["/", "/industries", "/website-design-gallery", "/services/website-redesign", ...industries.map(item => "/industries/" + item.slug)]);
+  const updated = new Set(["/", "/industries", "/website-design-gallery", "/services/website-redesign", "/about", "/privacy-policy", "/terms-and-conditions", ...industries.map(item => "/industries/" + item.slug)]);
   return [
     ...publicPages.map(route => ({ url: siteUrl(route), ...(updated.has(route) ? { lastModified: "2026-11-22" } : {}) })),
     ...getPublishedGuides().map(({ post }) => ({ url: siteUrl(blogPath(post.slug)), lastModified: "2026-11-22" })),

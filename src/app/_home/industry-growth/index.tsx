@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import BrandCta from "@/components/brand-cta";
 import LeadPanel from "@/components/lead-panel";
 import industries from "./industries.json";
 import styles from "./industry-growth.module.css";
@@ -25,7 +26,7 @@ const titleParts: Record<string, [string, string]> = {
 function IndustryImage({ slug }: { slug: string }) {
   return (
     <div className={styles.imageFrame} aria-hidden="true">
-      <img className={styles.image} src={"/industry-covers/" + slug + ".webp"} alt="" width={640} height={800} loading="lazy" decoding="async" />
+      <img className={styles.image} src={"/industry-covers-landscape/" + slug + ".webp"} alt="" width={960} height={540} loading="lazy" decoding="async" />
     </div>
   );
 }
@@ -50,10 +51,7 @@ export function Industries({ directory = false }: { directory?: boolean } = {}) 
             {directory ? (
               <LeadPanel source="industries-audit" className={styles.primaryCta} />
             ) : (
-              <Link href="/industries" className={styles.primaryCta}><span className={styles.ctaDisc} aria-hidden="true"><ArrowUpRight /></span>
-                
-                Explore industries
-              </Link>
+              <BrandCta href="/industries">Explore industries</BrandCta>
             )}
           </div>
 
@@ -65,7 +63,7 @@ export function Industries({ directory = false }: { directory?: boolean } = {}) 
                   <div className={styles.industryCopy}>
                     <h3 aria-label={industry.name}><span>{titleParts[industry.slug]?.[0] ?? industry.name}</span><span className={styles.nameAccent}>{titleParts[industry.slug]?.[1]}</span></h3>
                     <p>{industry.summary}</p>
-                    <span className={styles.view}><span className={styles.ctaDisc} aria-hidden="true"><ArrowUpRight /></span>Explore SEO services</span>
+                    <span className={styles.view}><span className={styles.ctaDisc} aria-hidden="true"><ArrowUpRight /></span><span className={styles.ctaLabel}>Explore SEO services</span></span>
                   </div>
                 </Link>
               </li>

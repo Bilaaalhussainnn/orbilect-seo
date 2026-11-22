@@ -56,7 +56,7 @@ function Screen({ slug, query, title }: { slug: string; query: string; title: st
         <div className={styles.site}>
           <div className={styles.nav}><b /><i /><i /></div>
           <div className={styles.siteHero}
-            style={{ backgroundImage: "linear-gradient(90deg, #080b10e8, #080b1038), url(/industry-covers/" + slug + ".webp)" }}>
+            style={{ backgroundImage: "linear-gradient(90deg, #080b10e8, #080b1038), url(/industry-covers-landscape/" + slug + ".webp)" }}>
             <strong>{title}</strong>
             <i />
           </div>

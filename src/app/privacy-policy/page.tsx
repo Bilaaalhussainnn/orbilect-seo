@@ -1,4 +1,3 @@
-undefined
 import { pageSeo } from "@/lib/orbilect-search";
 import type { Metadata } from "next";
 import LegalPage from "../_legal/legal-page";

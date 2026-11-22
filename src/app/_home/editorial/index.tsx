@@ -2,7 +2,7 @@ import { ServicesReputation } from "../../services/_components/seo-support";
 import GlobalLocations from "@/components/global-locations";
 import { HomeBlogCards } from "../../blogs/blog-directory";
 import { EcommerceManagementSection } from "../../services/ecommerce-management/ecommerce-management-section";
-import { InvestmentBeforeFaq } from "../../_components/investment-before-faq";
+import GalleryPromotion from "../../website-design-gallery/gallery-promotion";
 import FinalCta from "../final-cta";
 import FaqAuditButton from "./faq-audit-button";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "How much does Orbilect SEO cost?",
-    answer: "Our monthly SEO plans start at $1,200. Your quote depends on the size of your website, the markets you serve, and the work needed. Your proposal outlines the scope, deliverables, and fees.",
+    answer: "Regular Starter SEO starts at $650 per billing cycle. Published promotional offers have separate eligibility and terms. Your quote depends on the size of your website, the markets you serve, and the work needed. Your proposal outlines the scope, deliverables, and fees.",
   },
   {
     question: "What is your refund policy?",
@@ -67,7 +67,7 @@ export default function HomeEditorial() {
               <p>Find out what to fix, what to measure, and where to start with SEO.</p>
             </div>
             <Link href="/blogs" className={`${cta.cta} ${cta.ctaBlack} ${styles.button}`} data-orbilect-cta="black"><span data-orbilect-cta-icon="" aria-hidden="true" />
-              
+
               View all blogs
             </Link>
           </div>
@@ -77,7 +77,7 @@ export default function HomeEditorial() {
       </section>
 
       <EcommerceManagementSection />
-      <InvestmentBeforeFaq routes={["/"]} />
+      <GalleryPromotion home />
       <GlobalLocations />
       <ServicesReputation />
       <HomeFaq hideSectionLabel />

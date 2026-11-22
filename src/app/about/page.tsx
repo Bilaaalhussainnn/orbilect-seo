@@ -1,3 +1,4 @@
+import GalleryPromotion from "../website-design-gallery/gallery-promotion";
 import { businessDescription } from "@/lib/site-identity";
 import Teams from "../_home/workbench/teams";
 
@@ -149,8 +150,9 @@ export default function AboutPage() {
       <RankingChallenges />
       <SearchStrategySections />
       <SeoTimeline />
-      
 
+
+      <GalleryPromotion />
       <Teams />
       <GlobalLocations />
 
@@ -161,7 +163,7 @@ export default function AboutPage() {
           <h2 data-site-heading="" id="about-closing-title" data-orbilect-title="">Find out what’s <span>holding your site back</span></h2>
           <p>Share your website and your goals. We’ll help you identify which changes to prioritize.</p>
           <Link href="/contact#request-proposal" className={[cta.cta, cta.ctaBlack, styles.action].join(" ")} data-orbilect-cta="black"><span data-orbilect-cta-icon="" aria-hidden="true" />
-            
+
             Request a proposal
           </Link>
           </div>

@@ -12,11 +12,9 @@ import { answer } from "../../../lib/naila/answers";
 import { sendNailaMail, teamEmail, validEmail } from "../../../lib/naila/server";
 import { calculateQuote } from "../../../lib/naila/quote";
 import { createHmac, randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
-import { isIP } from "node:net";
 
 const secret = process.env.NAILA_SESSION_SECRET || randomBytes(32).toString("hex");
 const cookieName = "orbilect_naila";
-const profanity = /\b(?:fuck(?:ing|er)?|shit(?:ty)?|bitch|cunt|asshole|motherfucker)\b/gi;
 const day = 86400;
 type Session = { id: string; warnings: number; curses: number; expires: number; messages?: number; emailed?: boolean; submitted?: boolean };
 
@@ -68,15 +66,6 @@ async function readBody(request: NextRequest, limit = 8192) {
   }
 }
 
-// Best-effort abuse protection for one running server instance.
-const blocks = new Map<string, number>();
-
-function ipKey(request: NextRequest) {
-  if (process.env.VERCEL !== "1" || !process.env.NAILA_SESSION_SECRET) return "";
-  const ip = request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() ?? "";
-  return isIP(ip) ? stamp("naila-ip:" + ip) : "";
-}
-
 function emailList(value: unknown) {
   if (typeof value !== "string") return [];
   const emails = [...new Set(value.split(",").map(email => email.trim().toLowerCase()).filter(Boolean))];
@@ -90,19 +79,13 @@ export async function POST(request: NextRequest) {
   }
 
   const state = session(request);
-  const ip = ipKey(request);
-  const now = Date.now();
   if (!process.env.NAILA_SESSION_SECRET && process.env.NODE_ENV === "production") {
     return Response.json({ error: "Chat is temporarily unavailable." }, { status: 503 });
-  }
-  for (const [key, expiry] of blocks) if (expiry <= now) blocks.delete(key);
-  if ((state.warnings >= 3 && state.curses > 3) || (ip && (blocks.get(ip) ?? 0) > now)) {
-    return respond(request, state, { blocked: true, text: "This chat is temporarily unavailable." }, 429);
   }
 
   try {
     const handoff = humanChatAvailable() && request.headers.get("x-naila-handoff") === "1";
-    const input = await readBody(request, handoff ? 524_288 : 32_768);
+    const input = await readBody(request, handoff ? 524_288 : 65_536);
     if (handoff && input?.action !== "human-start") return respond(request, state, { error: "Invalid handoff." }, 400);
     if (typeof input?.action === "string" && input.action.startsWith("human-")) {
       if (!humanChatAvailable()) return respond(request, state, { error: "Live support is currently unavailable." }, 503);
@@ -186,16 +169,11 @@ export async function POST(request: NextRequest) {
     if (input?.action !== "message" || typeof input.text !== "string" || !input.text.trim() || input.text.length > 1000) {
       return respond(request, state, { error: "Enter a message up to 1,000 characters." }, 400);
     }
-    const count = (input.text.match(profanity) ?? []).length;
-    if (count) {
-      if (state.warnings >= 3 && state.curses + count > 3) {
-        state.curses += count;
-        if (ip && blocks.size < 5000) blocks.set(ip, now + day * 1000);
-        return respond(request, state, { blocked: true, text: "I’m closing this chat for now. You can try again after 24 hours." }, 429);
-      }
-      state.curses += count;
-      state.warnings = Math.min(3, state.warnings + 1);
-      return respond(request, state, { text: "I’m here to help. Please keep the conversation professional. I can’t continue while the language is abusive." });
+    // One unclear or frustrated message must not lock an ongoing customer out.
+    state.warnings = 0;
+    state.curses = 0;
+    if (/^(?:you are |you're )?(?:an? )?(?:asshole|bitch|cunt)[.!\s]*$/i.test(input.text.trim()) || /^fuck you[.!\s]*$/i.test(input.text.trim())) {
+      return respond(request, state, { text: "I’m here to help. Please tell me what you need help with and we can continue." });
     }
     state.messages = (state.messages ?? 0) + 1;
     if (typeof input.chatId === "string" && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(input.chatId)) {
@@ -204,7 +182,7 @@ export async function POST(request: NextRequest) {
     }
     const shouldClose = declinesHelp(input.text);
     const recentMessages = Array.isArray(input.recentMessages)
-      ? input.recentMessages.slice(-5).filter((item: unknown): item is string => typeof item === "string")
+      ? input.recentMessages.slice(-50).filter((item: unknown): item is string => typeof item === "string")
         .map((item: string) => item.slice(0, 400))
       : typeof input.previousMessage === "string" ? [input.previousMessage.slice(0, 400)] : [];
     const reply = shouldClose ? { text: closingMessage, endChat: true } :

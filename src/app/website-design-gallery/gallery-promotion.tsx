@@ -1,14 +1,21 @@
-import Link from "next/link";
-import { ArrowUpRight, PanelsTopLeft } from "lucide-react";
+import { PanelsTopLeft } from "lucide-react";
 import { getIndustryDesigns, mixedDesigns } from "@/lib/design-gallery";
+import BrandCta from "@/components/brand-cta";
+import { Depth } from "../_home/workbench/depth";
 import GalleryRows from "./gallery-rows";
-import cta from "@/styles/orbilect-cta.module.css";
+import VerticalDesigns from "./vertical-designs";
 import styles from "./gallery.module.css";
 
-export default function GalleryPromotion() {
+export default function GalleryPromotion({ home = false }: { home?: boolean }) {
+  const designs = mixedDesigns(getIndustryDesigns(), home ? 48 : 16);
   return <section className={styles.promotion} aria-labelledby="gallery-promotion-heading">
-    <div className={`${styles.wrap} ${styles.promotionHeader}`}><div><p className={styles.eyebrow}>A new look. A clearer journey.</p><h2 id="gallery-promotion-heading">Your next website,<br /><span>waiting to take shape.</span></h2><p>Explore website and landing page designs across twelve industries. From automotive inventory and product collections to professional service enquiries, a thoughtful redesign brings your offer, brand, and mobile experience together. Browse the gallery, pick a direction, and let’s tailor it to your customers.</p><Link href="/website-design-gallery" className={`${cta.cta} ${cta.ctaBlue}`}><span className={cta.ctaIcon} aria-hidden="true"><ArrowUpRight /></span>Explore the design gallery</Link></div><div className={styles.floatingScene} aria-hidden="true"><i /><i /><span><PanelsTopLeft /></span></div></div>
-    <GalleryRows images={mixedDesigns(getIndustryDesigns())} rows={3} label="Mixed industry" />
+    <div className={`${styles.wrap} ${styles.promotionHeader}`}><div>
+      <p className={styles.eyebrow}>{home ? "Designed for your next chapter" : "A new look. A clearer journey."}</p>
+      <h2 id="gallery-promotion-heading">{home ? "Your next website starts" : "Your next website,"}<br/><span>{home ? "with a stronger first impression." : "waiting to take shape."}</span></h2>
+      <p>Explore responsive website and landing page design inspiration across twelve industries. Clear navigation, fast-loading layouts, useful content, and mobile-friendly enquiry journeys work together to help the right visitors understand your business and take the next step. Choose a direction, then let’s tailor it to your brand.</p>
+      <BrandCta href="/website-design-gallery">Explore the design gallery</BrandCta>
+    </div><Depth><div className={styles.floatingScene} aria-hidden="true"><i/><i/><span><PanelsTopLeft/></span></div></Depth></div>
+    {home ? <GalleryRows images={designs} rows={4} label="Mixed industry" compact /> : <div className={`${styles.wrap} ${styles.promotionWall}`}><VerticalDesigns images={designs} label="Mixed industry" /></div>}
     <p className={styles.note}>*Sample designs for inspiration. Your website can be tailored to your brand, preferences, and requirements.</p>
   </section>;
 }

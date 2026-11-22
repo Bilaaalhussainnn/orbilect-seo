@@ -1,10 +1,10 @@
 import { pageSeo } from "@/lib/orbilect-search";
-import { InvestmentBeforeFaq } from "../_components/investment-before-faq";
+import IndustryDirectory from "./industry-directory";
+import GalleryPromotion from "../website-design-gallery/gallery-promotion";
 import FinalCta from "../_home/final-cta";
 import IndustryOrganicValue from "./industry-organic-value";
 import IndustriesHero from "./industries-hero";
 import type { Metadata } from "next";
-import { Industries } from "../_home/industry-growth";
 import OrganicGrowthComparison from "../services/organic-growth-comparison";
 
 const seoBaseMetadata: Metadata = {
@@ -16,10 +16,10 @@ export default function IndustriesPage() {
   return (
     <main data-industries-index="">
       <IndustriesHero />
-      <Industries directory />
+      <IndustryDirectory />
+      <GalleryPromotion />
       <OrganicGrowthComparison />
       <IndustryOrganicValue />
-      <InvestmentBeforeFaq routes={["/industries"]} />
       <FinalCta />
     </main>
   );

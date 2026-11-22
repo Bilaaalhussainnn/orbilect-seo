@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import type { GalleryDesign } from "@/lib/design-gallery";
 import styles from "./marquee.module.css";
 
-export default function DesignMarquee({images,rows=2,label}:{images:GalleryDesign[];rows?:number;label:string}){
+export default function DesignMarquee({images,rows=2,label,compact=false}:{images:GalleryDesign[];rows?:number;label:string;compact?:boolean}){
  const element=useRef<HTMLDivElement>(null);const [near,setNear]=useState(false),[ready,setReady]=useState(false);
  useEffect(()=>{const observer=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){setNear(true);observer.disconnect();}},{rootMargin:"600px"});if(element.current)observer.observe(element.current);return()=>observer.disconnect();},[]);
  useEffect(()=>{if(!near)return;let live=true;
@@ -13,7 +13,7 @@ export default function DesignMarquee({images,rows=2,label}:{images:GalleryDesig
   }));Promise.all(probes).then(()=>{if(live)setReady(true);});return()=>{live=false;};
  },[near,images]);
  const perRow=Math.max(1,Math.ceil(images.length/rows));
- return <div ref={element} className={styles.gallery} data-ready={ready} aria-label={label+" sample website designs"}>
+ return <div ref={element} className={styles.gallery} data-ready={ready} data-compact={compact} aria-label={label+" sample website designs"}>
   {Array.from({length:rows},(_,row)=>{
    const part=images.slice(row*perRow,(row+1)*perRow),designs=part.length?part:images.slice(0,perRow);
    if(!designs.length)return null;

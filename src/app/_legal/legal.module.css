@@ -107,3 +107,5 @@
   .legalTile { animation: none; }
 }
 /* End Interactive legal heroes */
+
+.reviewed{width:min(1280px,calc(100% - 36px));margin:20px auto;color:#4b586c;font-size:12px}

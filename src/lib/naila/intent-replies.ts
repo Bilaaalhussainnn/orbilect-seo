@@ -1,3 +1,4 @@
+import { glossaryReply, continuityReply } from "./knowledge-and-continuity";
 import { naturalConversation } from "./natural-conversation";
 import { ecommerceOperationsAnswers as ecommerce, staffingSupportAnswers as staffing } from "../customer-operations-faqs";
 import { paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming } from "../payment-policy";
@@ -18,8 +19,8 @@ const labsWebsite = { text: "Visit Orbilect Labs", href: "https://orbilectlabs.c
 const investment = "Sure, I can help with pricing. We call it an investment because the work is designed to help your business grow and deliver measurable results.";
 const promotion = "Yes. Our pop-up advertises a limited-time Starter SEO promotion starting at $500 USD. You can request a free audit to enquire. Your written quote confirms eligibility and which billing periods the promotional price covers. " + promotionalPayment;
 const expiry = "I’m not sure when the $500 Starter promotion ends. Orbilect SEO’s leadership team sets the timeframe, and our team can confirm whether it’s still available.";
-const clarify = "I couldn’t quite understand your question. Could you clarify? I’d be happy to help.";
-const unrelated = "That’s outside what I can help with. I can answer questions about Orbilect SEO’s products and services.";
+const clarify = "I’m still here to help. Could you rephrase that or tell me the service you mean? We can take it one step at a time.";
+const unrelated = "I’m best placed to help with Orbilect SEO’s services and website questions. What would you like help with there?";
 const promoWords = /\b(?:promo\w*|(?:any|the|special|starter|limited[- ]time|seo) offers?|discount\w*|deals?|(?:most |more )?affordable|cheapest|cheaper|lowest)\b|\$\s*500\b/;
 const timeWords = /\b(?:ends?|expir\w*|deadline|how long|until|lasts?|still (?:available|valid))\b/;
 const pricingWords = /\b(?:pric(?:e|es|ing)|costs?|investment|quotes?|quotation|budgets?|rates?|fees?|charges?|how much|most affordable|most economical|cheapest|lowest[- ]priced)\b/;
@@ -58,7 +59,7 @@ function withBlog(text: string, q: string, preferred?: string): Reply {
   return { text, actions: post ? [{ text: post.title, href: "/blogs/" + post.slug }] : undefined };
 }
 
-const topic = /\b(?:seo|saas|restaurant|food|entertainment|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audit|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
+const topic = /\b(?:seo|saas|restaurant|food|entertainment|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audits?|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
 const pricingFollowup = /^(?:(?:and|so)\s+)?(?:how much(?: (?:does|would|will) (?:this|that|it) (?:cost|be))?|what(?:'s| is) (?:the )?(?:cost|price|investment)(?: of (?:this|that|it))?|(?:what|how) about (?:the )?(?:cost|pricing|price)|and the (?:cost|price))[.!?\s]*$/;
 const followupOnly = /^(?:thanks(?: so much)?|thank you(?: so much)?|(?:ok(?:ay)?|sure|understood|got it|sounds good|great|perfect|that makes sense)(?:[, ]+(?:thanks|thank you))?|(?:yes|no)(?: please)?)[.!?\s]*$/;
 
@@ -147,6 +148,10 @@ function conversationalReply(q: string, previous: string): Reply | undefined {
 }
 
 function classify(q: string, previous: string, fallback: (q: string) => Reply): Reply {
+  const glossaryDefinition = glossaryReply(q);
+  if (glossaryDefinition) return glossaryDefinition;
+  const continuation = continuityReply(q, previous);
+  if (continuation) return continuation;
   if (/^(?:thanks|thank you)(?: so much)?[.!?\s]*$/.test(q)) return { text: "You’re welcome!" };
   if (followupOnly.test(q)) return { text: "Sounds good. I’m here if you have another question." };
   if (!/[a-z0-9]/.test(q) || /^(?:what(?: the)?|how|why|where|can you|do you|i was wondering)[?.!\s]*$/.test(q)) return { text: clarify };
@@ -247,7 +252,11 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   const aboutPromo = promoWords.test(q) && !/\b(?:what|which) services\b/.test(q);
   if (timeWords.test(q) && (aboutPromo || (promoWords.test(previous) && /\b(?:it|that|the offer)\b/.test(q)))) return { text: expiry };
   const cheaper = /\b(?:under|below|less than|lower than|cheaper than)\s*(?:usd\s*)?\$?\s*6(?:00|50)\b/.test(q);
-  if (aboutPromo || cheaper) return { text: promotion, actions: [audit] };
+  if (aboutPromo || cheaper) {
+    if (/\b(?:redesign|website design)\b/.test(q + " " + previous)) return { text: "Our published website redesign promotion starts at $600, with 12 months of complimentary website bug support and the stated complimentary chatbot-builder offer. The written quote confirms scope, eligibility, and terms. " + promotionalPayment, actions: [{ text: "View redesign offer", href: "/services/website-redesign#website-redesign-promo" }, terms] };
+    if (/\b(?:current offers|offers do you have|promotions do you have)\b/.test(q)) return { text: "The website advertises a Starter SEO promotion from $500 and a website redesign promotion from $600. They have different scopes and terms; our team must confirm eligibility and availability in your written quote. Which one are you interested in?", actions: [audit, { text: "Website redesign offer", href: "/services/website-redesign#website-redesign-promo" }] };
+    return { text: promotion, actions: [audit] };
+  }
   const platform = (q.match(platforms) ?? (pricingFollowup.test(q) ? context.match(platforms) : null))?.[1];
   const directPriceQuestion = pricingFollowup.test(q) ||
     /^(?:pricing|price(?:s)?|cost(?:s)?|rates|fees|investment)[?!\.\s]*$/.test(q) ||
@@ -255,7 +264,7 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   if (directPriceQuestion && !/\b(?:what is|define|what does) (?:an? )?(?:ad spend|cost per click|cost per acquisition)\b/.test(q)) {
     if (/\bessential(?: seo)?\b/.test(context)) return { text: investment + " Essential SEO is $1,500 USD per 30-day billing cycle. We can confirm what is included for your site.", actions: [quote] };
     if (/\bstarter(?: seo)?\b/.test(context)) return { text: investment + " Regular Starter SEO starts at $650 USD. The written quote confirms what’s included and the billing schedule.", actions: [quote] };
-    if (platform || /\b(?:ppc|ads|paid search|migration|redesign|website build|building a website|ecommerce|technical seo|local seo|google business profile|digital marketing|online marketing|chatbots?|crm|landing pages?)\b/.test(context)) {
+    if (platform || /\b(?:on[- ]page seo|off[- ]page seo|email marketing|paid social|ppc|ads|paid search|migration|redesign|website build|building a website|ecommerce|technical seo|local seo|google business profile|digital marketing|online marketing|chatbots?|crm|landing pages?)\b/.test(context)) {
       const work = platform ? "For " + platformNames[platform.replace(/woo\s+commerce/, "woocommerce")] + " work" : "For that service";
       return { text: investment + " " + work + ", we quote based on your site, scope, and goals. What would you like us to handle?", actions: [quote] };
     }

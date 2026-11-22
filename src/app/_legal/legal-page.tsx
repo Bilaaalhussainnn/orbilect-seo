@@ -100,7 +100,7 @@ const privacy: readonly LegalSection[] = [
     "naila",
     ["Naila chat", "and reporting"],
     [
-      "When you message Naila, the website sends your current message and limited conversation context to our chat endpoint to choose a reply. The current site uses a site knowledge base and rules for replies. A signed session cookie supports features such as conversation limits and abuse prevention and expires after up to 24 hours. Browser storage can also remember session-related settings or a temporary block.",
+      "When you message Naila, the website sends your current message and up to 50 recent customer messages, limited to 400 characters each, to our chat endpoint to choose a reply. The current site uses a site knowledge base, a technical glossary, conversation context, and rules for replies. Adding example conversations updates our support logic and regression checks; it does not train an external language model on your messages. A signed session cookie supports chat continuity and request handling and expires after up to 24 hours. Browser storage can remember the current chat and session-related settings. An unclear question does not itself cause a persistent chat block.",
       "We keep a private record of automated chat messages and replies for support, follow-up and troubleshooting. When a chat ends, the visible conversation clears and a new session starts the next time you open it. The retention section below explains how long we keep information. Please use your agreed project channel for confidential material.",
       "You can download a transcript in your browser. If you ask us to email one, the addresses and transcript you provide are passed to our email delivery provider. If you use Naila to request a proposal, we receive the submitted contact and project details through email. Share confidential project material through your agreed project channel.",
       "If you request live help and agree to share your chat, authorized support staff can see your transcript and replies in our private inbox. You may leave a private rating and review after the agent closes the chat. We use this information to answer the enquiry and improve support. Agent ratings are separate from public reviews of our services.",
@@ -193,6 +193,12 @@ const privacy: readonly LegalSection[] = [
   ]
 ];
 const terms: readonly LegalSection[] = [
+  ["naila-guidance", ["Naila", "and website examples"], [
+    "Naila provides automated guidance using our published website, technical glossary, and conversation rules. It may ask a clarifying question when a request is unclear. You can continue the conversation, change the subject, request human help, or explicitly end the chat.",
+    "A chat reply does not approve a discount, change a contract, confirm an audit has been performed, or create a booking unless the relevant action is actually completed and confirmed. Ask the project team to confirm availability, scope, fees, promotional eligibility, and timelines in writing.",
+    "The website design gallery and cover illustrations show possible visual directions. They are not presented as completed client projects, measured client results, or fixed downloadable templates. Custom work and any integrations are defined in the accepted proposal.",
+    "Published promotions may have different scopes, billing arrangements, and eligibility conditions. A conversation about an offer does not reserve or redeem it; the accepted written quote and applicable offer terms govern the purchase."
+  ]],
   [
     "agreement",
     ["Your project", "agreement"],
@@ -414,6 +420,7 @@ export default function LegalPage({ kind }: { kind: "privacy" | "terms" }) {
   return (
     <main className={articleStyles.page + " " + styles.page}>
       <LegalHero isPrivacy={isPrivacy} />
+      <p className={styles.reviewed}>Updated <time dateTime="2026-11-22">22 November 2026</time></p>
       <div className={articleStyles.layout}>
         <ArticleSidebar
           contentsLabel="On this page"

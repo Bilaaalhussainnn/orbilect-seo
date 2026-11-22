@@ -6,7 +6,7 @@ export default function IndustrySchema({ slug }: { slug: string }) {
   if (!item) return null;
   const url = siteUrl("/industries/" + slug);
   return <SeoJsonLd data={{ "@context": "https://schema.org", "@graph": [
-    { "@type": "WebPage", "@id": url + "#page", url, name: item.name + " SEO Services", description: item.summary, isPartOf: { "@id": origin + "/#website" }, about: { "@id": url + "#service" }, primaryImageOfPage: { "@type": "ImageObject", url: siteUrl("/industry-covers/" + slug + ".webp"), width: 640, height: 800 } },
+    { "@type": "WebPage", "@id": url + "#page", url, name: item.name + " SEO Services", description: item.summary, isPartOf: { "@id": origin + "/#website" }, about: { "@id": url + "#service" }, primaryImageOfPage: { "@type": "ImageObject", url: siteUrl("/industry-covers-landscape/" + slug + ".webp"), width: 960, height: 540 } },
     { "@type": "Service", "@id": url + "#service", url, name: item.name + " SEO and website design", description: item.summary, serviceType: "SEO and website design", provider: { "@id": origin + "/#organization" } }
   ] }} />;
 }
