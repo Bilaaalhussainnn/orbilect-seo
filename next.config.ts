@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   /* config options here */
   async headers() {
     return [
+      ...["/brand/:path*", "/technology-stack/:path*", "/service-showcase/logos/:path*", "/platform-logos/:path*", "/naila/:path*"].map(source => ({
+        source,
+        has: [{ type: "query" as const, key: "v", value: imageRelease.version }],
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      })),
       ...["/industry-covers/:path*", "/industry-covers-landscape/:path*", "/service-covers-landscape/:path*"].map(source => ({
         source, headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
       })),

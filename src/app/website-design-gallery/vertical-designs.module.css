@@ -10,3 +10,5 @@
 @keyframes rise { to { transform:translateY(-50%); } }
 @media(max-width:600px) { .wall { height:300px;gap:4px;padding-inline:6px; }.group { gap:4px;padding-bottom:4px; }.card { border-radius:4px; } }
 @media(prefers-reduced-motion:reduce) { .track { animation:none; }.group[aria-hidden="true"] { display:none; }.wall { overflow-y:auto;mask-image:none; } }
+
+.wall[data-fast="true"] .track { animation-duration:36s; }

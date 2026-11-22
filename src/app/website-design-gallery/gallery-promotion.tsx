@@ -14,7 +14,7 @@ export default function GalleryPromotion({ home = false }: { home?: boolean }) {
       <p>Explore responsive website and landing page design inspiration across twelve industries. Clear navigation, fast-loading layouts, useful content, and mobile-friendly enquiry journeys work together to help the right visitors understand your business and take the next step. Choose a direction, then let’s tailor it to your brand.</p>
       <BrandCta href="/website-design-gallery">Explore the design gallery</BrandCta>
     </div><Depth><div className={styles.floatingScene} aria-hidden="true"><i/><i/><span><PanelsTopLeft/></span></div></Depth></div>
-    <div className={`${styles.wrap} ${styles.promotionWall}`}><VerticalDesigns images={designs} label="Mixed industry" /></div>
+    <div className={`${styles.wrap} ${styles.promotionWall}`}><VerticalDesigns images={designs} label="Mixed industry" fast={home} /></div>
     <p className={styles.note}>*Sample designs for inspiration. Your website can be tailored to your brand, preferences, and requirements.</p>
   </section>;
 }

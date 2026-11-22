@@ -6,7 +6,7 @@ import Image from "@/components/optimized-image";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import industryCatalog from "../industry-growth/industries.json";
-import media from "@/lib/design-media.json";
+import media from "@/lib/landing-previews.json";
 import { Depth } from "./depth";
 import HomeCta from "./home-cta";
 import styles from "./workbench.module.css";

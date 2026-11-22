@@ -1,0 +1,98 @@
+{
+  "/industry-showcases/arts-entertainment/entertainment-01.jpg": {
+    "src": "/design-media/d937dc3fed4a7846-480.webp",
+    "srcSet": "/design-media/d937dc3fed4a7846-240.webp 240w, /design-media/d937dc3fed4a7846-320.webp 320w, /design-media/d937dc3fed4a7846-480.webp 480w"
+  },
+  "/industry-showcases/arts-entertainment/entertainment-02.jpg": {
+    "src": "/design-media/ffbf012a21ab568d-480.webp",
+    "srcSet": "/design-media/ffbf012a21ab568d-240.webp 240w, /design-media/ffbf012a21ab568d-320.webp 320w, /design-media/ffbf012a21ab568d-480.webp 480w"
+  },
+  "/industry-showcases/automotive/automotive-01.jpg": {
+    "src": "/design-media/0f17286168e8ff62-480.webp",
+    "srcSet": "/design-media/0f17286168e8ff62-240.webp 240w, /design-media/0f17286168e8ff62-320.webp 320w, /design-media/0f17286168e8ff62-480.webp 480w"
+  },
+  "/industry-showcases/automotive/automotive-02.jpg": {
+    "src": "/design-media/d723e0f68dfe5340-480.webp",
+    "srcSet": "/design-media/d723e0f68dfe5340-240.webp 240w, /design-media/d723e0f68dfe5340-320.webp 320w, /design-media/d723e0f68dfe5340-480.webp 480w"
+  },
+  "/industry-showcases/ecommerce/Carbon%20lime%20activewear%20storefront-15.png": {
+    "src": "/design-media/9f1b002b0e5ec8c6-480.webp",
+    "srcSet": "/design-media/9f1b002b0e5ec8c6-240.webp 240w, /design-media/9f1b002b0e5ec8c6-320.webp 320w, /design-media/9f1b002b0e5ec8c6-480.webp 480w"
+  },
+  "/industry-showcases/ecommerce/Cobalt%20skincare%20essentials%20routine%20store-11.png": {
+    "src": "/design-media/7a5e2bbfaee6edc9-480.webp",
+    "srcSet": "/design-media/7a5e2bbfaee6edc9-240.webp 240w, /design-media/7a5e2bbfaee6edc9-320.webp 320w, /design-media/7a5e2bbfaee6edc9-480.webp 480w"
+  },
+  "/industry-showcases/education/education-01.jpg": {
+    "src": "/design-media/dd7aca4262ee082b-480.webp",
+    "srcSet": "/design-media/dd7aca4262ee082b-240.webp 240w, /design-media/dd7aca4262ee082b-320.webp 320w, /design-media/dd7aca4262ee082b-480.webp 480w"
+  },
+  "/industry-showcases/education/education-02.jpg": {
+    "src": "/design-media/caff0c9a88e9fbd4-480.webp",
+    "srcSet": "/design-media/caff0c9a88e9fbd4-240.webp 240w, /design-media/caff0c9a88e9fbd4-320.webp 320w, /design-media/caff0c9a88e9fbd4-480.webp 480w"
+  },
+  "/industry-showcases/finance/finance-01.jpg": {
+    "src": "/design-media/dac7c3c618b59ffc-480.webp",
+    "srcSet": "/design-media/dac7c3c618b59ffc-240.webp 240w, /design-media/dac7c3c618b59ffc-320.webp 320w, /design-media/dac7c3c618b59ffc-480.webp 480w"
+  },
+  "/industry-showcases/finance/finance-02.jpg": {
+    "src": "/design-media/d843480b52d8d5fa-480.webp",
+    "srcSet": "/design-media/d843480b52d8d5fa-240.webp 240w, /design-media/d843480b52d8d5fa-320.webp 320w, /design-media/d843480b52d8d5fa-480.webp 480w"
+  },
+  "/industry-showcases/food-beverages/food-01.jpg": {
+    "src": "/design-media/2446456c906507cb-480.webp",
+    "srcSet": "/design-media/2446456c906507cb-240.webp 240w, /design-media/2446456c906507cb-320.webp 320w, /design-media/2446456c906507cb-480.webp 480w"
+  },
+  "/industry-showcases/food-beverages/food-02.jpg": {
+    "src": "/design-media/271c76a652acc5a0-480.webp",
+    "srcSet": "/design-media/271c76a652acc5a0-240.webp 240w, /design-media/271c76a652acc5a0-320.webp 320w, /design-media/271c76a652acc5a0-480.webp 480w"
+  },
+  "/industry-showcases/healthcare/healthcare-01.jpg": {
+    "src": "/design-media/b686ce236c96022a-480.webp",
+    "srcSet": "/design-media/b686ce236c96022a-240.webp 240w, /design-media/b686ce236c96022a-320.webp 320w, /design-media/b686ce236c96022a-480.webp 480w"
+  },
+  "/industry-showcases/healthcare/healthcare-02.jpg": {
+    "src": "/design-media/f30f5c916d4078b1-480.webp",
+    "srcSet": "/design-media/f30f5c916d4078b1-240.webp 240w, /design-media/f30f5c916d4078b1-320.webp 320w, /design-media/f30f5c916d4078b1-480.webp 480w"
+  },
+  "/industry-showcases/hospitality/hospitality-01.jpg": {
+    "src": "/design-media/7e1af971a4bfd622-480.webp",
+    "srcSet": "/design-media/7e1af971a4bfd622-240.webp 240w, /design-media/7e1af971a4bfd622-320.webp 320w, /design-media/7e1af971a4bfd622-480.webp 480w"
+  },
+  "/industry-showcases/hospitality/hospitality-02.jpg": {
+    "src": "/design-media/ab275f281570bb37-480.webp",
+    "srcSet": "/design-media/ab275f281570bb37-240.webp 240w, /design-media/ab275f281570bb37-320.webp 320w, /design-media/ab275f281570bb37-480.webp 480w"
+  },
+  "/industry-showcases/logistics/logistics-01.jpg": {
+    "src": "/design-media/de1973d0aad8bc82-480.webp",
+    "srcSet": "/design-media/de1973d0aad8bc82-240.webp 240w, /design-media/de1973d0aad8bc82-320.webp 320w, /design-media/de1973d0aad8bc82-480.webp 480w"
+  },
+  "/industry-showcases/logistics/logistics-02.jpg": {
+    "src": "/design-media/5e72259e6e1d15a3-480.webp",
+    "srcSet": "/design-media/5e72259e6e1d15a3-240.webp 240w, /design-media/5e72259e6e1d15a3-320.webp 320w, /design-media/5e72259e6e1d15a3-480.webp 480w"
+  },
+  "/industry-showcases/manufacturing/manufacturing-01.jpg": {
+    "src": "/design-media/7598e34d266b1589-480.webp",
+    "srcSet": "/design-media/7598e34d266b1589-240.webp 240w, /design-media/7598e34d266b1589-320.webp 320w, /design-media/7598e34d266b1589-480.webp 480w"
+  },
+  "/industry-showcases/manufacturing/manufacturing-02.jpg": {
+    "src": "/design-media/9b41e04da5db07fe-480.webp",
+    "srcSet": "/design-media/9b41e04da5db07fe-240.webp 240w, /design-media/9b41e04da5db07fe-320.webp 320w, /design-media/9b41e04da5db07fe-480.webp 480w"
+  },
+  "/industry-showcases/real-estate/real-estate-01.jpg": {
+    "src": "/design-media/c29d20f832fdfd93-480.webp",
+    "srcSet": "/design-media/c29d20f832fdfd93-240.webp 240w, /design-media/c29d20f832fdfd93-320.webp 320w, /design-media/c29d20f832fdfd93-480.webp 480w"
+  },
+  "/industry-showcases/real-estate/real-estate-02.jpg": {
+    "src": "/design-media/136bd52c81be3828-480.webp",
+    "srcSet": "/design-media/136bd52c81be3828-240.webp 240w, /design-media/136bd52c81be3828-320.webp 320w, /design-media/136bd52c81be3828-480.webp 480w"
+  },
+  "/industry-showcases/saas/saas-01.jpg": {
+    "src": "/design-media/e460d75a788c1b2f-480.webp",
+    "srcSet": "/design-media/e460d75a788c1b2f-240.webp 240w, /design-media/e460d75a788c1b2f-320.webp 320w, /design-media/e460d75a788c1b2f-480.webp 480w"
+  },
+  "/industry-showcases/saas/saas-02.jpg": {
+    "src": "/design-media/bda2440b42354e12-480.webp",
+    "srcSet": "/design-media/bda2440b42354e12-240.webp 240w, /design-media/bda2440b42354e12-320.webp 320w, /design-media/bda2440b42354e12-480.webp 480w"
+  }
+}

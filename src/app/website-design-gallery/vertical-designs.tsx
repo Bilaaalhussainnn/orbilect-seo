@@ -6,7 +6,7 @@ import { Code2 } from "lucide-react";
 import type { GalleryDesign } from "@/lib/design-gallery";
 import styles from "./vertical-designs.module.css";
 
-export default function VerticalDesigns({ images, label }: { images: GalleryDesign[]; label: string }) {
+export default function VerticalDesigns({ images, label, fast = false }: { images: GalleryDesign[]; label: string; fast?: boolean }) {
   const root = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);
   const [ready, setReady] = useState(false);
@@ -34,7 +34,7 @@ export default function VerticalDesigns({ images, label }: { images: GalleryDesi
   }, [near, images]);
   if (!images.length) return <div className={styles.empty}><Code2 aria-hidden="true" /><p>{label} design collection</p><p>We’re preparing this collection. Tell us the look and features you have in mind.</p></div>;
   const designs = Array.from({ length: 16 }, (_, i) => images[i % images.length]);
-  return <div ref={root} className={styles.wall} data-ready={ready} aria-label={label + " website design inspiration"}>
+  return <div ref={root} className={styles.wall} data-ready={ready} data-fast={fast} aria-label={label + " website design inspiration"}>
     {Array.from({ length: 4 }, (_, col) => <div className={styles.column} key={col}>
       <div className={styles.track} style={{ animationDirection: col % 2 ? "reverse" : "normal" }}>
         {[0, 1].map(copy => <div className={styles.group} key={copy} aria-hidden={copy === 1 ? true : undefined}>
