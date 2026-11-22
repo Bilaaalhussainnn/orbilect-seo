@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import Link from "next/link";
 import GlobalLocations from "@/components/global-locations";
 import { ClipboardList, MessageSquare, ShieldCheck } from "lucide-react";
@@ -25,6 +26,7 @@ export default function ReviewsPage() {
   const feedback = proposalFormHref("Service Review", "I’d like to share private feedback about the Orbilect SEO services I received.");
   return (
     <main>
+      <PageStructuredData route="/reviews" />
       <ServiceHero eyebrow="Online reputation management" title="Reviews help us" accent="grow and improve"
         intro="Share your experience with Orbilect SEO. Public reviews help other businesses choose a provider, and honest feedback helps our team improve how we work."
         scenes={scenes} ctaLabel="Explore review options" showCtaArrow />

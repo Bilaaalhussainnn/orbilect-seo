@@ -44,7 +44,7 @@ const seoBaseMetadata: Metadata = {
 };
 
 export default function Page() {
-  return <div className={editorialType.index}>{<CorporatePage content={content}>
+  return <div className={editorialType.index}>{<CorporatePage route="/newsroom" content={content}>
       <section className={newsStyles.intro} aria-labelledby="newsroom-introduction">
         <div className={newsStyles.wrap}>
           <header className={newsStyles.heading}>

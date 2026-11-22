@@ -40,7 +40,7 @@ const seoBaseMetadata: Metadata = {
 };
 
 export default function Page() {
-  return <CorporatePage content={content} />;
+  return <CorporatePage route="/corporate-social-responsibility" content={content} />;
 }
 
 

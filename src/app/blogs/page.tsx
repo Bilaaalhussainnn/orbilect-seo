@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { pageSeo } from "@/lib/orbilect-search";
 import editorialType from "../editorial-index.module.css";
 import BlogsPricing from "../_components/seo-investment";
@@ -10,7 +11,8 @@ const seoBaseMetadata = {
 };
 
 export default function BlogsPage() {
-  return <main className={editorialType.index}><BlogLanding showBrowse={false} />
+  return <main className={editorialType.index}>
+      <PageStructuredData route="/blogs" /><BlogLanding showBrowse={false} />
       <BlogsPricing />
       <BlogsFinalCta />
     </main>;

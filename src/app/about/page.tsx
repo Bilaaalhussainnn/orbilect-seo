@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import GalleryPromotion from "../website-design-gallery/gallery-promotion";
 import { businessDescription } from "@/lib/site-identity";
 import Teams from "../_home/workbench/teams";
@@ -45,6 +46,7 @@ const principles = [
 export default function AboutPage() {
   return (<><style id="orbilect-about-hero-grid">{"\nbody:has(#orbilect-about-hero-grid)\n  :is(section, header, [role=\"banner\"]):has(h1):not(:has(:is(section, header, [role=\"banner\"]) h1)) {\n  background:\n    linear-gradient(rgba(145, 175, 230, .09) 1px, transparent 1px) 39px 41px / 68px 68px,\n    linear-gradient(90deg, rgba(145, 175, 230, .09) 1px, transparent 1px) 39px 41px / 68px 68px,\n    radial-gradient(ellipse at top right, #142d50 0%, #101b2e 42%, #0b1019 78%)\n    !important;\n}\n"}</style>{(<>{(
     <main>
+      <PageStructuredData route="/about" />
       <section className={styles.hero} aria-labelledby="about-heading">
         <div className={`${styles.container} ${styles.heroGrid}`}>
           <div>

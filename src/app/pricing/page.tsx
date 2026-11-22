@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { pageSeo } from "@/lib/orbilect-search";
 import { PricingClosing } from "./pricing-closing";
 import PricingFinalCta from "../_home/final-cta";
@@ -45,6 +46,7 @@ const scenes: ServiceScene[] = [
 export default function PricingPage() {
   return (
     <main>
+      <PageStructuredData route="/pricing" />
       <ServiceHero
         eyebrow="Orbilect SEO investment"
         title="Know what you’re investing in"

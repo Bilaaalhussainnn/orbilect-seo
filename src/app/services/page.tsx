@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
 import { pageSeo } from "@/lib/orbilect-search";
 import servicesHero from "./services-hero.module.css";
@@ -28,6 +29,7 @@ const seoBaseMetadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main>
+      <PageStructuredData route="/services" />
       <section className={[styles.hero, servicesHero.grid].join(" ")} aria-labelledby="services-page-title">
         <div className={[styles.container, styles.heroGrid, servicesHero.heroLayout].join(" ")}>
           <div>

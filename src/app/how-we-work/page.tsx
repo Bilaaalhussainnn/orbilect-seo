@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { businessDescription } from "@/lib/site-identity";
 import { pageSeo } from "@/lib/orbilect-search";
 import HowWeWorkClosing from "./how-we-work-closing";
@@ -86,6 +87,7 @@ const services = [
 export default function HowWeWorkPage() {
   return (
     <main>
+      <PageStructuredData route="/how-we-work" />
       <ServiceHero
         eyebrow="How we work"
         title="From the first conversation"

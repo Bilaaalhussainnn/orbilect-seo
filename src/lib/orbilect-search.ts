@@ -94,6 +94,7 @@ export const rootSeo: Metadata = {
   metadataBase: new URL(origin),
   title: { default: homeTitle, template: "%s | Orbilect SEO" },
   description: homeDescription,
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };
 
 export const homeSchema = {
@@ -105,7 +106,7 @@ export const homeSchema = {
       description: homeDescription,
       email: "info@orbilectseo.com", telephone: "+1-646-640-0070",
       address: { "@type": "PostalAddress", streetAddress: pakistanAddress.split(", Karachi")[0], addressLocality: "Karachi", addressRegion: "Sindh", addressCountry: "PK" },
-      contactPoint: { "@type": "ContactPoint", contactType: "customer service", url: internationalWhatsApp.href },
+      contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: "+1-646-640-0070", email: "info@orbilectseo.com", availableLanguage: ["en"], url: internationalWhatsApp.href },
       parentOrganization: { "@type": "Organization", name: "Orbilect Labs", url: "https://orbilectlabs.com/" },
       sameAs: [
         "https://www.linkedin.com/company/orbilect-seo",
@@ -113,12 +114,14 @@ export const homeSchema = {
         "https://www.facebook.com/orbilectseo/",
         "https://x.com/orbilectseo",
         "https://www.youtube.com/@OrbilectSEO",
+        "https://www.pinterest.com/orbilectseo/",
       ],
     },
     {
-      "@type": "WebSite", "@id": websiteId, name: brand, url: origin + "/",
+      "@type": "WebSite", "@id": websiteId, name: brand, alternateName: "OrbilectSEO", url: origin + "/",
       publisher: { "@id": organizationId }, inLanguage: "en",
     },
+    { "@type": "WebPage", "@id": origin + "/#webpage", url: origin + "/", name: homeTitle, description: homeDescription, isPartOf: { "@id": websiteId }, about: { "@id": organizationId }, inLanguage: "en" },
   ],
 };
 
@@ -176,4 +179,41 @@ export function serviceSchema(route: string) {
     url, name: details[0], description: details[1], serviceType: details[0],
     provider: { "@id": organizationId, "@type": "Organization", name: brand, url: origin + "/" },
   };
+}
+
+// These paths reflect existing public navigation, not invented search features.
+const navigationNames: Record<string, string> = {
+  "/": "Home", "/about": "About us", "/contact": "Contact us", "/services": "Services",
+  "/industries": "Industries", "/blogs": "Blogs", "/careers": "Careers", "/our-team": "Our team",
+  "/newsroom": "Newsroom", "/pricing": "Pricing", "/reviews": "Reviews", "/staffing": "Offshore staffing",
+  "/privacy-policy": "Privacy policy", "/terms-and-conditions": "Terms and conditions",
+  "/website-design-gallery": "Website Design Gallery",
+};
+const labelFor = (route: string) => navigationNames[route] ?? entries[route]?.[0] ?? route.split("/").at(-1)!.replace(/-/g, " ").replace(/^./, value => value.toUpperCase());
+export function breadcrumbSchema(route: string, title?: string) {
+  if (route === "/") return null;
+  const segments = route.split("/").filter(Boolean);
+  const routes = ["/", ...segments.map((_, index) => "/" + segments.slice(0, index + 1).join("/"))];
+  return { "@type": "BreadcrumbList", "@id": siteUrl(route) + "#breadcrumb", itemListElement: routes.map((path, index) => ({
+    "@type": "ListItem", position: index + 1, name: index === routes.length - 1 && title ? title : labelFor(path), item: siteUrl(path),
+  })) };
+}
+export function pageSchema(route: string, details: { name?: string; description?: string } = {}) {
+  const type = route === "/about" ? "AboutPage" : route === "/contact" ? "ContactPage" : ["/services", "/industries", "/blogs", "/newsroom"].includes(route) ? "CollectionPage" : "WebPage";
+  return { "@context": "https://schema.org", "@graph": [
+    ...(route === "/about" ? [homeSchema["@graph"][0]] : []),
+    { "@type": type, "@id": siteUrl(route) + "#webpage", url: siteUrl(route), name: details.name ?? entries[route]?.[0] ?? labelFor(route),
+      ...((details.description ?? entries[route]?.[1]) ? { description: details.description ?? entries[route]?.[1] } : {}), isPartOf: { "@id": websiteId }, about: { "@id": organizationId }, inLanguage: "en" },
+  ] };
+}
+export function withBreadcrumbs(data: object): object {
+  const root = data as Record<string, unknown>;
+  const nodes = (Array.isArray(root["@graph"]) ? root["@graph"] : [root]) as Record<string, unknown>[];
+  if (nodes.some(node => node["@type"] === "BreadcrumbList")) return data;
+  const node = nodes.find(node => typeof node.url === "string" && ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Service", "BlogPosting", "Article"].includes(String(node["@type"])));
+  if (!node || typeof node.url !== "string") return data;
+  const url = new URL(node.url);
+  if (url.origin !== origin || url.pathname === "/") return data;
+  const breadcrumb = breadcrumbSchema(url.pathname, typeof node.name === "string" ? node.name : typeof node.headline === "string" ? node.headline : undefined);
+  return { "@context": root["@context"] ?? "https://schema.org", "@graph": [...nodes.map(({ "@context": _context, ...item }) => item), breadcrumb] };
 }

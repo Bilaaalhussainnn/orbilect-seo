@@ -49,7 +49,7 @@ const seoBaseMetadata: Metadata = {
 };
 
 export default function Page() {
-  return <CorporatePage content={content} heroVisual={<TeamHero />}><Organization />
+  return <CorporatePage route="/our-team" content={content} heroVisual={<TeamHero />}><Organization />
       <LeadershipMessage />
       <DepartmentLeaders />
       <EmployeeSpotlight />

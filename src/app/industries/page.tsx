@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { pageSeo } from "@/lib/orbilect-search";
 import IndustryDirectory from "./industry-directory";
 import GalleryPromotion from "../website-design-gallery/gallery-promotion";
@@ -15,6 +16,7 @@ const seoBaseMetadata: Metadata = {
 export default function IndustriesPage() {
   return (
     <main data-industries-index="">
+      <PageStructuredData route="/industries" />
       <IndustriesHero />
       <IndustryDirectory />
       <GalleryPromotion />

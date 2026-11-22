@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import HeroAudit from "@/components/lead-panel/hero-audit";
 import Image from "@/components/optimized-image";
 import Link from "next/link";
@@ -48,6 +49,7 @@ export function NewsroomStories() {
 export function StoryPage({ story }: { story: Story }) {
   return (
     <main className={styles.article}>
+      <PageStructuredData route={"/newsroom/" + story.slug} name={story.title} description={story.summary} />
       <header className={styles.articleHero}>
         <div className={styles.wrap}>
           <Link className={styles.back} href="/newsroom">← Back to Newsroom</Link>

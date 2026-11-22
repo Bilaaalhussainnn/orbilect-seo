@@ -38,7 +38,7 @@ const seoBaseMetadata: Metadata = {
 };
 
 export default function Page() {
-  return <><CorporatePage content={content} /><MediaEditorialSections /></>;
+  return <><CorporatePage route="/media-pr-relations" content={content} /><MediaEditorialSections /></>;
 }
 
 

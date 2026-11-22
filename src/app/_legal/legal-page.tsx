@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { businessDescription, pakistanAddress, staffingLocations } from "@/lib/site-identity";
 import { chequePaymentPolicy, paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming, standardAdvance, standardBalance } from "@/lib/payment-policy";
 import AcceptedPayments from "./accepted-payments";
@@ -421,6 +422,7 @@ export default function LegalPage({ kind }: { kind: "privacy" | "terms" }) {
   const sections = isPrivacy ? privacy : terms;
   return (
     <main className={articleStyles.page + " " + styles.page}>
+      <PageStructuredData route={isPrivacy ? "/privacy-policy" : "/terms-and-conditions"} />
       <LegalHero isPrivacy={isPrivacy} />
       <p className={styles.reviewed}>Updated <time dateTime="2026-11-22">22 November 2026</time></p>
       <div className={articleStyles.layout}>

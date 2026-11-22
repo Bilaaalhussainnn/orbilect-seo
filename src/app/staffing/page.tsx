@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { staffingLocations } from "@/lib/site-identity";
 import { pageSeo } from "@/lib/orbilect-search";
 import { StaffingFaq } from "./staffing-faq";
@@ -56,6 +57,7 @@ const staffingScenes: ServiceScene[] = [
 export default function StaffingPage() {
   return (
     <main>
+      <PageStructuredData route="/staffing" />
       
       <ServiceHero
         eyebrow="Staffing and offshoring"

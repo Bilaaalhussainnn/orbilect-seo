@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
       { source: "/design-media/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
     ];
   },
+  async redirects() {
+    return [{ source: "/:path*", has: [{ type: "host" as const, value: "www.orbilectseo.com" }], destination: "https://orbilectseo.com/:path*", permanent: true }];
+  },
   compress: true,
   // Only immutable, release-versioned assets receive a year-long cache lifetime.
   images: { formats: ["image/avif", "image/webp"], localPatterns: [{ pathname: "/**", search: "" }, { pathname: "/**", search: "?v=" + imageRelease.version }] },

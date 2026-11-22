@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
 import { pageSeo } from "@/lib/orbilect-search";
 import CareersTitle from "./careers-title";
@@ -28,6 +29,7 @@ const requirements = [
 export default function CareersPage() {
   return (
     <main>
+      <PageStructuredData route="/careers" />
       <section className={styles.hero} aria-labelledby="careers-title">
         <div className={styles.heroGrid}>
           <div>

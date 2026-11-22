@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { pageSeo } from "@/lib/orbilect-search";
 import AuditValue from "./audit-value";
 import AfterAudit from "./after-audit";
@@ -22,6 +23,7 @@ const process = [
 export default function FreeAuditGuidePage() {
   return (
     <main>
+      <PageStructuredData route="/how-free-audit-works" />
       <AuditHero />
 
       <section className={styles.section} aria-labelledby="audit-process-title">

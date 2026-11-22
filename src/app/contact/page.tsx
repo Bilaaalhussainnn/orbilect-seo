@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { businessDescription } from "@/lib/site-identity";
 import { pageSeo } from "@/lib/orbilect-search";
 import ContactPageHero from "./contact-page-hero";
@@ -28,6 +29,7 @@ const directions =
 export default function ContactPage() {
   return (
     <main>
+      <PageStructuredData route="/contact" />
       <ContactPageHero />
 
       <SeoRequestSuspense><SeoRequestPrefill /></SeoRequestSuspense>

@@ -1,3 +1,4 @@
+import PageStructuredData from "@/components/seo/page-data";
 import { AssetImage } from "@/components/optimized-image";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
 import type { CSSProperties, ReactNode } from "react";
@@ -16,13 +17,14 @@ type Content = {
   action: { label: string; href: string };
 };
 
-export default function CorporatePage({ content, children, heroVisual }: { content: Content; children?: ReactNode; heroVisual?: ReactNode }) {
+export default function CorporatePage({ content, children, heroVisual, route }: { route: string; content: Content; children?: ReactNode; heroVisual?: ReactNode }) {
   const title = content.title.join(" ");
   const accentFrom = content.title[0].split(" ").length;
   let character = 0;
 
   return (
     <main>
+      <PageStructuredData route={route} name={title} description={content.description} />
       <section className={styles.hero} aria-labelledby="corporate-title">
         <div className={`${styles.wrap} ${styles.heroGrid}`}>
           <div>
