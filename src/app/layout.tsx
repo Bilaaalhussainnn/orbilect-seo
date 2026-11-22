@@ -20,6 +20,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import "./section-headings.css";
 import "./orbilect-cta.css";
+import "./compact-responsive.css";
 
 
 const poppins = Poppins({
@@ -34,7 +35,7 @@ export const metadata = rootSeo;
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body suppressHydrationWarning={process.env.NODE_ENV === "development"}>
+      <body data-public-website="" suppressHydrationWarning={process.env.NODE_ENV === "development"}>
         <SiteReadiness />
         <SiteHeader />
         <span id="site-content" tabIndex={-1} />
