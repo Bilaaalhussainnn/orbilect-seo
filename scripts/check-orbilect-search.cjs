@@ -180,7 +180,7 @@ async function main() {
     }
     sitemapPages.set(url.pathname, url.href);
   }
-  const retiredIndustryRoutes = new Set(["/industries/home-services", "/industries/professional-services", "/industries/saas"]);
+  const retiredIndustryRoutes = new Set(["/industries/home-services", "/industries/professional-services"]);
   for (const route of retiredIndustryRoutes) {
     const { response } = await get(route);
     if (response.status !== 308 || response.headers.get("location") !== "/industries") fail(route + " must permanently redirect to the active industry directory.");

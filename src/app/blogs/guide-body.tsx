@@ -15,6 +15,8 @@ export type Guide = {
 
 export type GuideExpansion = {
   sections: { heading: string; paragraphs: string[] }[];
+  referenceImages?: { src: string; width: number; height: number; title: string; alt: string; caption: string; source: string[] }[];
+  deepDive?: { id: string; title: string; paragraphs: string[] }[];
   example: { heading: string; paragraphs: string[] };
   flow: { caption: string; steps: Entry[] };
   comparison: { caption: string; headings: string[]; rows: Entry[] };
@@ -31,7 +33,8 @@ export type GuideExpansion = {
 };
 
 export function expansionSections(expansion: GuideExpansion) {
-  return [{ id: "worked-example", title: expansion.example.heading },
+  return [...(expansion.deepDive ?? []).map(({ id, title }) => ({ id, title })),
+    { id: "worked-example", title: expansion.example.heading },
     { id: "common-questions", title: "Common questions" },
     { id: "implementation-checks", title: "What to check next" }];
 }
@@ -101,6 +104,20 @@ export default function GuideBody({ guide, expansion, related }: {
         </p>}
       </section>
     ))}
+    {expansion.referenceImages?.map(image => <figure key={image.src} className={styles.figure}>
+      <figcaption>{image.title}</figcaption>
+      <div className={guideStyles.screenshot}>
+        <Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes="(max-width: 900px) 85vw, 720px" unoptimized />
+        <p>{image.caption} Source: <a href={image.source[1]}>{image.source[0]}</a>.</p>
+      </div>
+    </figure>)}
+    {expansion.deepDive?.map(section => {
+      const split = section.title.lastIndexOf(" ");
+      return <section key={section.id} aria-labelledby={section.id}>
+        <h2 id={section.id}>{section.title.slice(0, split)} <span>{section.title.slice(split + 1)}</span></h2>
+        {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+      </section>;
+    })}
     <section aria-labelledby="worked-example">
       <h2 id="worked-example">{example.heading.slice(0, split)} <span>{example.heading.slice(split + 1)}</span></h2>
       {example.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}

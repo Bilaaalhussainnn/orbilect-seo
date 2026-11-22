@@ -28,22 +28,12 @@
 .chip, .pointer { position: absolute; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: #004aad; color: #fff; box-shadow: 0 7px 0 #00367f; animation: float 3.8s ease-in-out infinite alternate; }
 .chip { right: 0; top: 10px; }
 .pointer { left: 10px; bottom: 0; animation-delay: -2s; background: #080b10; box-shadow: 0 7px 0 #004aad; }
-.gallery { width: 100%; overflow: hidden; }
-.lane { overflow: hidden; }
-.track, .group { display: flex; width: max-content; gap: 0; }
-.track { will-change: transform; animation: travel 80s linear infinite; }
-.right { animation-direction: reverse; }
-.left { animation-duration: 88s; }
-.group { flex: none; }
-.card { flex: 0 0 auto; width: clamp(144px, 18vw, 240px); aspect-ratio: 4 / 5; margin: 0; overflow: hidden; background: #080b10; }
-.card img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .placeholder { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 9px; text-align: center; color: #fff; background: linear-gradient(#ffffff0c 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, #ffffff0c 1px, transparent 1px) 0 0 / 24px 24px, #080b10; border: 1px solid #ffffff14; }
 .placeholder svg { width: 32px; height: 32px; margin-bottom: 6px; color: #004aad; }
 .placeholder span { font-size: 12px; }
 .placeholder strong { font-size: 18px; }
 .placeholder small { font-size: 10px; color: #b3bfd0; }
 .note { width: 100%; margin: 10px 0 0; padding-inline: 16px; box-sizing: border-box; font-size: 10px; line-height: 1.6; color: #677489; text-align: right !important; }
-@keyframes travel { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 @keyframes float { to { translate: 0 -8px; } }
 @media (max-width: 1024px) {
   .heading { grid-template-columns: minmax(0, 1fr); text-align: center; gap: 12px; }
@@ -58,14 +48,11 @@
   .window > b { bottom: 10px; }
   .chip, .pointer { width: 32px; height: 32px; border-radius: 9px; }
   .chip svg, .pointer svg { width: 18px; height: 18px; }
-  .card { width: 144px; }
 }
 /* Hover never changes playback. Respect the visitor’s system motion setting. */
 @media (prefers-reduced-motion: reduce) {
-  .track, .window, .chip, .pointer { animation: none; }
+  .window, .chip, .pointer { animation: none; }
   .stack { transform: none; transition: none; }
-  .lane { overflow-x: auto; }
-  .group[aria-hidden="true"], .card[aria-hidden="true"] { display: none; }
 }
 
 .subheading { width: min(1280px, calc(100% - clamp(36px, 10vw, 144px))); margin: 0 auto 24px; padding-bottom: 14px; border-bottom: 1px solid #12161d35; color: #12161d; font-size: var(--site-label); font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
@@ -112,3 +99,5 @@
 }
 
 .section, .section * { cursor: default; }
+
+.visualColumn{min-width:0}.visualColumn>ul{justify-content:center}.visualColumn .art{width:100%}

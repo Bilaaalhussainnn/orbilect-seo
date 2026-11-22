@@ -1,5 +1,16 @@
 [
   {
+    "slug": "arts-entertainment",
+    "name": "Arts & Entertainment",
+    "summary": "Help audiences discover performances, creative work, events, and venues through useful search pages and clear ticket journeys.",
+    "challenge": "Events and programmes change quickly. Weak event pages and unclear schedules make discovery and booking harder.",
+    "focus": [
+      "Event and programme pages",
+      "Venue and performer discovery",
+      "Clear ticket and enquiry journeys"
+    ]
+  },
+  {
     "slug": "automotive",
     "name": "Automotive",
     "summary": "Help vehicle shoppers find the right inventory, dealership, or service centre when they’re ready to compare options.",
@@ -41,6 +52,17 @@
       "Search intent for financial products and services",
       "Clear, specialist-reviewed educational content",
       "Product-page structure and application journeys"
+    ]
+  },
+  {
+    "slug": "food-beverages",
+    "name": "Food & Beverages",
+    "summary": "Make menus, locations, product ranges, reservations, and ordering options easy to discover on every screen.",
+    "challenge": "Customers need accurate menus, opening hours, dietary information and ordering options before choosing where to eat or what to buy.",
+    "focus": [
+      "Menu, product and location pages",
+      "Local search and opening hours",
+      "Reservation, ordering and enquiry paths"
     ]
   },
   {
@@ -96,6 +118,17 @@
       "Indexable location and property-type pages",
       "Listing filters and duplicate URL management",
       "Neighbourhood guides and viewing enquiries"
+    ]
+  },
+  {
+    "slug": "saas",
+    "name": "SaaS",
+    "summary": "Connect software buyers with useful feature, integration, and use-case pages that lead to informed trials and demos.",
+    "challenge": "Generic product claims leave buyers unsure whether a platform fits their workflow or existing tools.",
+    "focus": [
+      "Use-case and integration pages",
+      "Technical discovery and comparisons",
+      "Trial and demo journeys"
     ]
   }
 ]

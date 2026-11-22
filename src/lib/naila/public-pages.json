@@ -468,5 +468,20 @@
     "path": "/website-design-gallery",
     "title": "Website Design Gallery",
     "description": "Explore website and landing page design inspiration across nine industries, then request a custom responsive website through Contact."
+  },
+  {
+    "path": "/industries/arts-entertainment",
+    "title": "Arts & Entertainment SEO and website design",
+    "description": "Help audiences discover performances, creative work, events, and venues through useful search pages and clear ticket journeys."
+  },
+  {
+    "path": "/industries/food-beverages",
+    "title": "Food & Beverages SEO and website design",
+    "description": "Make menus, locations, product ranges, reservations, and ordering options easy to discover on every screen."
+  },
+  {
+    "path": "/industries/saas",
+    "title": "SaaS SEO and website design",
+    "description": "Connect software buyers with useful feature, integration, and use-case pages that lead to informed trials and demos."
   }
 ]

@@ -1,3 +1,4 @@
+import { naturalConversation } from "./natural-conversation";
 import { ecommerceOperationsAnswers as ecommerce, staffingSupportAnswers as staffing } from "../customer-operations-faqs";
 import { paymentMethods, projectRefund, promotionalPayment, recurringSchedule, refundTiming } from "../payment-policy";
 import { businessDescription, internationalWhatsApp, pakistanAddress, pakistanWhatsApp } from "../site-identity";
@@ -57,7 +58,7 @@ function withBlog(text: string, q: string, preferred?: string): Reply {
   return { text, actions: post ? [{ text: post.title, href: "/blogs/" + post.slug }] : undefined };
 }
 
-const topic = /\b(?:seo|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audit|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
+const topic = /\b(?:seo|saas|restaurant|food|entertainment|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audit|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
 const pricingFollowup = /^(?:(?:and|so)\s+)?(?:how much(?: (?:does|would|will) (?:this|that|it) (?:cost|be))?|what(?:'s| is) (?:the )?(?:cost|price|investment)(?: of (?:this|that|it))?|(?:what|how) about (?:the )?(?:cost|pricing|price)|and the (?:cost|price))[.!?\s]*$/;
 const followupOnly = /^(?:thanks(?: so much)?|thank you(?: so much)?|(?:ok(?:ay)?|sure|understood|got it|sounds good|great|perfect|that makes sense)(?:[, ]+(?:thanks|thank you))?|(?:yes|no)(?: please)?)[.!?\s]*$/;
 
@@ -174,6 +175,8 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
       (auditTopic.test(context) && pricingFollowup.test(q))) {
     return { text: "Yes, you can request a free SEO audit. Share your website and tell us what you’d like customers to find. We’ll review what may be holding the site back and flag where to start.", actions: [audit] };
   }
+  const natural = naturalConversation(q, previous);
+  if (natural) return natural;
   const conversation = conversationalReply(q, previous);
   if (conversation) return conversation;
   const aboutReputation = /\b(?:review|reviews|rate|feedback|testimonial)\b/.test(q);
@@ -186,7 +189,7 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
     return { text: "You can review Orbilect SEO’s services from our Reviews page. Use an available public platform or send feedback privately to our team.", actions: [{ text: "Review our services", href: "/reviews#review-platforms" }] };
   }
   if (/\b(?:templates?|design gallery|design examples?|website examples?|sample (?:websites?|designs?)|show (?:me )?(?:your )?(?:websites?|designs?))\b/.test(q) && !/\b(?:email|invoice|resume|cv|job)\b/.test(q)) {
-    return { text: "Sure. Browse our Website Design Gallery and choose from nine industry collections. The designs are starting points for inspiration; we can tailor the look, content, platform, and features to your business. Which industry are you designing for?", actions: [{ text: "Explore the design gallery", href: "/website-design-gallery" }] };
+    return { text: "Sure. Browse our Website Design Gallery and choose from twelve industry collections. The designs are starting points for inspiration; we can tailor the look, content, platform, and features to your business. Which industry are you designing for?", actions: [{ text: "Explore the design gallery", href: "/website-design-gallery" }] };
   }
   const serviceIntent = customerOperationsReply(q);
   if (serviceIntent) return serviceIntent;

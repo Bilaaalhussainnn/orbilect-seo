@@ -1,8 +1,8 @@
+import IndustrySchema from "../industry-schema";
 import IndustryDesignShowcase from "../industry-design-showcase";
 import { pageSeo } from "@/lib/orbilect-search";
 import { IndustryPricingBeforeFaq } from "../industry-pricing-before-faq";
-import { InvestmentBeforeFaq } from "../../_components/investment-before-faq";
-import { IndustryLinks } from "../industry-page";
+import IndustryLinks from "../related-industries";
 import AutomotiveGrowth from "./automotive-growth";
 import { HomeFaq } from "../../_home/editorial";
 import FinalCta from "../../_home/final-cta";
@@ -81,6 +81,7 @@ const faqs = [
 export default function AutomotivePage() {
   return (
     <main>
+      <IndustrySchema slug="automotive" />
       <AutomotiveHero />
 
       <section className={styles.light} aria-labelledby="automotive-intro">
@@ -120,10 +121,9 @@ export default function AutomotivePage() {
       <SeoTimeline content={timeline} />
 
       <AutomotiveGrowth />
-      <IndustryLinks current="automotive" />
       <IndustryPricingBeforeFaq routes={["/industries/automotive"]} />
-      <InvestmentBeforeFaq routes={["/industries/automotive"]} />
       <IndustryDesignShowcase slug="automotive" />
+      <IndustryLinks current="automotive" />
       <HomeFaq hideSectionLabel
         items={faqs.map(([question, answer]) => ({ question, answer }))}
         introTitle="What automotive teams ask us"

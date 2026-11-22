@@ -18,10 +18,10 @@ const companyAnswers: Record<string, string> = {
 };
 
 const entries: Entry[] = [
-  { question: "Which industries do you serve?", answer: "Our nine industry collections are Automotive, Ecommerce, Education, Finance, Healthcare, Hospitality, Logistics, Manufacturing, and Real Estate. Choose an industry to explore relevant SEO services and sample website designs.", href: "/industries" },
+  { question: "Which industries do you serve?", answer: "Our twelve industry collections are Automotive, Ecommerce, Education, Finance, Healthcare, Hospitality, Logistics, Manufacturing, and Real Estate. Choose an industry to explore relevant SEO services and sample website designs.", href: "/industries" },
   { question: "How do I start a website redesign?", answer: "Choose your preferred examples in the Website Design Gallery, then share your current URL, goals, and requirements through Contact. We review your website, agree the scope and investment, issue an invoice, and plan design, testing, and launch.", href: "/website-design-gallery#how-we-work" },
 
-  { question: "Where can I see your website designs?", answer: "Explore our Website Design Gallery. Switch between nine industry collections to compare website and landing page styles. These are sample designs; we tailor your website to your brand, preferred style, and requirements.", href: "/website-design-gallery" },
+  { question: "Where can I see your website designs?", answer: "Explore our Website Design Gallery. Switch between twelve industry collections to compare website and landing page styles. These are sample designs; we tailor your website to your brand, preferred style, and requirements.", href: "/website-design-gallery" },
   { question: "Can I choose a website template?", answer: "Yes, you can use our Website Design Gallery to choose a starting direction. These are inspiration samples rather than fixed templates. Share the examples you like and we will scope a custom design.", href: "/website-design-gallery" },
   { question: "Can I see automotive website designs?", answer: "Yes. Choose Automotive in our Website Design Gallery, or explore the carousel on our Automotive industry page. We can tailor inventory, service booking, and enquiry journeys to your business.", href: "/website-design-gallery#design-collections" },
 

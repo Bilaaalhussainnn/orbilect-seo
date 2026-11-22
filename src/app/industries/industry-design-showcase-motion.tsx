@@ -1,5 +1,6 @@
 "use client";
 
+import HeroPlatforms from "../_home/hero/hero-platforms";
 import DesignMarquee from "@/components/design-marquee";
 import { designPreview } from "@/lib/design-media";
 
@@ -10,6 +11,9 @@ import cta from "@/styles/orbilect-cta.module.css";
 import styles from "./industry-design-showcase.module.css";
 
 const designBenefits: Record<string, string> = {
+  "Arts & Entertainment": "Bring events, performers, and creative work into focus with clear schedules and easy ticket or enquiry journeys.",
+  "Food & Beverages": "Make menus, locations, dietary information, ordering, and reservations easy to explore before the next visit or order.",
+  SaaS: "Explain the product, show useful use cases and integrations, and give buyers a clear route to a trial or demo.",
   Automotive: "Make vehicle inventory easy to explore and turn interest into test-drive requests, service bookings, and enquiries.",
   Finance: "Present your expertise, credentials, and service information clearly so prospective clients can approach your team with confidence.",
   "Real Estate": "Help buyers and tenants explore properties, understand locations, and request a viewing from any device.",
@@ -93,13 +97,13 @@ export default function DesignShowcaseMotion({ name, images }: { name: string; i
             <span className={cta.ctaIcon} aria-hidden="true"><ArrowUpRight /></span>Let’s design your next chapter
           </Link>
         </div>
-        <div className={styles.art} aria-hidden="true" onPointerMove={tilt} onPointerLeave={event => {
+        <div className={styles.visualColumn}><div className={styles.art} aria-hidden="true" onPointerMove={tilt} onPointerLeave={event => {
           event.currentTarget.style.setProperty("--tilt-x", "0deg");
           event.currentTarget.style.setProperty("--tilt-y", "0deg");
         }}>
           <div className={styles.stack}><i /><i /><div className={styles.window}><span /><Code2 /><b /></div></div>
           <span className={styles.chip}><Layers /></span><span className={styles.pointer}><MousePointer2 /></span>
-        </div>
+        </div><HeroPlatforms /></div>
       </div>
       <DesignMarquee images={images.filter((image): image is NonNullable<Design> => image !== null)} label={name} />
       <p className={styles.note}>*Sample designs for inspiration. Your website can be tailored to your brand, preferences, and requirements.</p>

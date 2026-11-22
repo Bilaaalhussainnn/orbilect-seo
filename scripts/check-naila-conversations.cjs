@@ -21,6 +21,20 @@ const terms = "/terms-and-conditions";
 
 // Each row is a visitor turn, a required reply fragment or close event, and an optional source link.
 const flows = [
+  ["Budget and discount conversation", [
+    ["How are you?", /ready to help/i],
+    ["I need help with SEO", /new website found/i, freeAudit],
+    ["Can I get a discount?", /can’t approve a discount/i, "/contact#request-proposal"],
+    ["What information do you need from me?", /website URL/i],
+    ["That’ll be all", isClosing],
+  ]],
+  ["Restaurant discovery and next step", [
+    ["I run a restaurant", /menus, local discovery/i, "/industries/food-beverages"],
+    ["Do you offer website redesign?", /redesign your website/i, "/services/website-redesign"],
+    ["I already have a website", /current URL/i],
+    ["How do I get started?", /product strategists/i, "/contact#request-proposal"],
+    ["I don't need any further help", isClosing],
+  ]],
   ["Help greeting", [
     ["Hey I need help", /^Sure, I’m here to help\. What do you need help with\?$/, "/services"],
     ["Do you do FREE audits?", /free SEO audit/i, freeAudit],
@@ -177,7 +191,7 @@ for (const [title, turns] of flows) {
       assert.match(reply.text, expected, label);
       if (href) assert.ok(reply.actions?.some(action => action.href === href), label + " → " + href);
     }
-    transcript.push("**Visitor**  ", question, "", "**Naila**  ", reply.text, "");
+    transcript.push("**Visitor**", "", question, "", "**Naila**", "", reply.text, "");
     for (const action of reply.actions ?? []) {
       const url = action.href.startsWith("/") ? "https://orbilectseo.com" + action.href : action.href;
       transcript.push("[" + action.text + "](" + url + ")", "");
@@ -187,5 +201,5 @@ for (const [title, turns] of flows) {
   }
 }
 
-if (process.argv.includes("--markdown")) console.log(transcript.join("\n"));
+if (process.argv.includes("--markdown")) process.stdout.write(transcript.join("\n").trimEnd() + "\n");
 else console.log("Passed " + flows.length + " Naila conversation flows and " + flows.reduce((count, [, turns]) => count + turns.length, 0) + " visitor turns.");

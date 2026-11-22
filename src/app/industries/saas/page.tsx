@@ -1,6 +1,4 @@
-import { permanentRedirect } from "next/navigation";
-
-// Retired category: use the directory of the nine active industries.
-export default function Page() {
-  permanentRedirect("/industries");
-}
+import { pageSeo } from "@/lib/orbilect-search";
+import { IndustryPage, industryMetadata } from "../industry-page";
+export const metadata = pageSeo("/industries/saas", industryMetadata("saas"));
+export default function Page() { return <IndustryPage slug="saas" />; }

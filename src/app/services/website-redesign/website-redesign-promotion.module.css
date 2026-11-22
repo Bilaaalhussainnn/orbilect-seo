@@ -41,3 +41,5 @@
   .layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) { .exchange { animation: none; } }
+
+.section .banner,.section .banner span,.section .layout h2,.section .layout h2 span,.section .price strong{color:#fff;-webkit-text-fill-color:#fff}.section .layout h2 span{background:#004aad}.section .layout p{color:#e2e8f2}

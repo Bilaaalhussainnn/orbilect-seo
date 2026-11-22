@@ -47,7 +47,7 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <main className={styles.page}>
-      <SeoJsonLd data={articleSchema(post)} />
+      <SeoJsonLd data={{ ...articleSchema(post), dateModified: "2026-11-22", citation: expansion.sources.map(([name, url]) => ({ "@type": "CreativeWork", name, url })) }} />
       <header className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>
@@ -57,6 +57,7 @@ export default async function ArticlePage({ params }: Props) {
             <p className={styles.deck}>{post.summary}</p>
             <div className={styles.byline}><div><strong>{post.author.name}</strong><span>{post.author.role}</span></div>
               <time dateTime={post.publishedAt}>{formatPublicationDate(post.publishedAt)}</time>
+              <span>Updated <time dateTime="2026-11-22">22 November 2026</time></span>
             </div>
             <HeroAudit source="blog-hero-audit" />
           </div>

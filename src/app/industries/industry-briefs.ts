@@ -12,6 +12,25 @@ type IndustryBrief = {
 };
 
 export const briefs = {
+  "arts-entertainment": {
+    name: "Arts & Entertainment", businesses: "venues, event organisers, artists, and creative businesses",
+    headline: ["Be discovered before", "the curtain rises"],
+    offers: ["Event programmes", "Venue information", "Performer profiles"],
+    searches: ["live music events this weekend", "theatre venues near me", "book a live performer"],
+    audience: "audiences, organisers, and creative buyers", action: "book tickets or send an enquiry",
+    proof: "accurate schedules, venue details, accessibility information, and booking options",
+    local: "venues and event locations", friction: "dates, availability, entry requirements, and accessibility",
+  },
+  "food-beverages": {
+    name: "Food & Beverages", businesses: "restaurants, cafés, food brands, and beverage businesses",
+    headline: ["Get found before", "the next order"],
+    offers: ["Menus and products", "Location information", "Ordering and reservations"],
+    searches: ["restaurants with vegetarian options near me", "café opening hours", "reserve a restaurant table"],
+    audience: "diners, shoppers, and wholesale buyers", action: "order, reserve, or contact your team",
+    proof: "current menus, dietary information, opening hours, and fulfilment options",
+    local: "restaurant, café, and service locations", friction: "menu availability, dietary requirements, delivery coverage, and booking options",
+  },
+
   finance: {
     name: "Finance", businesses: "accounting and financial services firms",
     headline: ["Get found before", "the first consultation"],

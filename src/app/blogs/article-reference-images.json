@@ -1,0 +1,54 @@
+{
+  "how-to-build-a-wordpress-website": [
+    {
+      "src": "/blogs/reference-screens/wp-overview.webp",
+      "width": 1024,
+      "height": 579,
+      "title": "The WordPress editor workspace",
+      "alt": "The WordPress editor workspace \u2014 official documentation example",
+      "caption": "Official WordPress documentation screenshot showing the content area, toolbar, and settings sidebar. The source example is from WordPress 6.7; labels may differ in another version.",
+      "source": [
+        "WordPress Block Editor documentation",
+        "https://wordpress.org/documentation/article/wordpress-block-editor/"
+      ]
+    },
+    {
+      "src": "/blogs/reference-screens/wp-inserter.webp",
+      "width": 553,
+      "height": 1024,
+      "title": "Choose the content block you need",
+      "alt": "Choose the content block you need \u2014 official documentation example",
+      "caption": "Official WordPress documentation screenshot of the block inserter. Headings, paragraphs, images, and other blocks are selected here; available blocks depend on the installation.",
+      "source": [
+        "WordPress Block Editor documentation",
+        "https://wordpress.org/documentation/article/wordpress-block-editor/"
+      ]
+    }
+  ],
+  "how-to-build-a-woocommerce-store": [
+    {
+      "src": "/blogs/reference-screens/woo-product-data.webp",
+      "width": 704,
+      "height": 279,
+      "title": "Set the product type and price",
+      "alt": "Set the product type and price \u2014 official documentation example",
+      "caption": "Official WooCommerce documentation example of the Simple product data panel. The prices shown are demonstration values from the source, not an Orbilect SEO offer.",
+      "source": [
+        "WooCommerce: adding a product",
+        "https://woocommerce.com/document/managing-products/add-product/"
+      ]
+    },
+    {
+      "src": "/blogs/reference-screens/woo-product-page.webp",
+      "width": 704,
+      "height": 392,
+      "title": "Check the published product page",
+      "alt": "Check the published product page \u2014 official documentation example",
+      "caption": "Official WooCommerce documentation example of the resulting product page. Compare the image, price, description, and purchase action with the product record before launch.",
+      "source": [
+        "WooCommerce: adding a product",
+        "https://woocommerce.com/document/managing-products/add-product/"
+      ]
+    }
+  ]
+}

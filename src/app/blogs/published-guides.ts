@@ -1,5 +1,7 @@
 import { getPublishedPosts, seoGuideSlug } from "./blog-data";
 import articleContent from "./article-content.json";
+import referenceImages from "./article-reference-images.json";
+import articleDeepDives from "./article-deep-dives.json";
 import articleExpansions from "./article-expansions.json";
 import type { Guide, GuideExpansion } from "./guide-body";
 
@@ -31,7 +33,13 @@ const guides = posts.map(post => {
       return [label, detail];
     }),
   };
-  return { post, guide, expansion };
+  const additions: Record<string, GuideExpansion["deepDive"]> = articleDeepDives;
+  if (additions[post.slug]?.length !== 5) throw new Error("Incomplete deep dive for " + post.slug);
+  const screenshots: Record<string, GuideExpansion["referenceImages"]> = referenceImages;
+  const images = screenshots[post.slug];
+  const sources = [...expansion.sources];
+  for (const image of images ?? []) if (!sources.some(source => source[1] === image.source[1])) sources.push(image.source);
+  return { post, guide, expansion: { ...expansion, sources, deepDive: additions[post.slug], referenceImages: images } };
 });
 
 export function getPublishedGuides() {

@@ -1,3 +1,4 @@
+import industries from "./_home/industry-growth/industries.json";
 import type { MetadataRoute } from "next";
 import { blogPath, siteUrl } from "@/lib/orbilect-search";
 import { seoGuideSlug } from "./blogs/blog-data";
@@ -14,15 +15,18 @@ const publicPages = [
   "/how-free-audit-works",
   "/how-we-work",
   "/industries",
+  "/industries/arts-entertainment",
   "/industries/automotive",
   "/industries/ecommerce",
   "/industries/education",
   "/industries/finance",
+  "/industries/food-beverages",
   "/industries/healthcare",
   "/industries/hospitality",
   "/industries/logistics",
   "/industries/manufacturing",
   "/industries/real-estate",
+  "/industries/saas",
   "/media-pr-relations",
   "/newsroom",
   "/newsroom/erp-platform",
@@ -60,8 +64,9 @@ const publicPages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const updated = new Set(["/", "/industries", "/website-design-gallery", "/services/website-redesign", ...industries.map(item => "/industries/" + item.slug)]);
   return [
-    ...publicPages.map(route => ({ url: siteUrl(route) })),
-    ...getPublishedGuides().map(({ post }) => ({ url: siteUrl(blogPath(post.slug)) })),
+    ...publicPages.map(route => ({ url: siteUrl(route), ...(updated.has(route) ? { lastModified: "2026-11-22" } : {}) })),
+    ...getPublishedGuides().map(({ post }) => ({ url: siteUrl(blogPath(post.slug)), lastModified: "2026-11-22" })),
   ];
 }

@@ -1,9 +1,9 @@
+import IndustrySchema from "./industry-schema";
+import IndustryLinks from "./related-industries";
 import listedIndustries from "../_home/industry-growth/industries.json";
 import IndustryDesignShowcase from "./industry-design-showcase";
 import { IndustryPricingBeforeFaq } from "./industry-pricing-before-faq";
-import { InvestmentBeforeFaq } from "../_components/investment-before-faq";
 import type { Metadata } from "next";
-import Link from "next/link";
 import LeadPanel from "@/components/lead-panel";
 import SeoTimeline, { type SeoTimelineContent } from "../about/seo-timeline";
 import { HomeFaq } from "../_home/editorial";
@@ -12,7 +12,6 @@ import AutomotiveGrowth, { type IndustryGrowthCopy } from "./automotive/automoti
 import IndustryTemplateHero from "./industry-template-hero";
 import { briefs, type IndustrySlug } from "./industry-briefs";
 import styles from "./automotive/automotive.module.css";
-import template from "./industry-template.module.css";
 
 type Brief = (typeof briefs)[IndustrySlug];
 
@@ -95,29 +94,13 @@ function faqItems(info: Brief) {
   ];
 }
 
-export function IndustryLinks({ current }: { current: IndustrySlug | "automotive" }) {
-  const links = listedIndustries.map(({ slug, name }) => [slug, name]);
-  return (
-    <nav className={template.related} aria-labelledby="related-industry-title">
-      <div className={styles.wrap}>
-        <p className={styles.eyebrow}>Industries</p>
-        <h2 id="related-industry-title" data-orbilect-title="">Explore other <span>industries</span></h2>
-        <ul>
-          <li><Link href="/industries">All industries</Link></li>
-          {links.filter(([slug]) => slug !== current).map(([slug, name]) => (
-            <li key={slug}><Link href={"/industries/" + slug}>{name}</Link></li>
-          ))}
-        </ul>
-      </div>
-    </nav>
-  );
-}
 
 export function IndustryPage({ slug }: { slug: IndustrySlug }) {
   const info = briefs[slug];
   const hasShowcase = listedIndustries.some(industry => industry.slug === slug);
   return (
     <main>
+      <IndustrySchema slug={slug} />
       <IndustryTemplateHero info={info} compact={hasShowcase} />
 
       <section className={styles.light} aria-labelledby="industry-intro">
@@ -152,10 +135,9 @@ export function IndustryPage({ slug }: { slug: IndustrySlug }) {
 
       <SeoTimeline content={timelineCopy(info)} />
       <AutomotiveGrowth content={growthCopy(info)} />
-      <IndustryLinks current={slug} />
-      <IndustryPricingBeforeFaq routes={["/industries/ecommerce","/industries/education","/industries/finance","/industries/healthcare","/industries/home-services","/industries/hospitality","/industries/logistics","/industries/manufacturing","/industries/professional-services","/industries/real-estate","/industries/saas"]} />
-      <InvestmentBeforeFaq routes={["/industries/ecommerce","/industries/education","/industries/finance","/industries/healthcare","/industries/home-services","/industries/hospitality","/industries/logistics","/industries/manufacturing","/industries/professional-services","/industries/real-estate","/industries/saas"]} />
+      <IndustryPricingBeforeFaq routes={listedIndustries.map(industry => "/industries/" + industry.slug)} />
       {hasShowcase && <IndustryDesignShowcase slug={slug} />}
+      <IndustryLinks current={slug} />
       <HomeFaq hideSectionLabel={hasShowcase} items={faqItems(info)} introTitle={"What " + info.businesses + " ask us"}
         introCopy={"Get answers about " + info.offers.join(", ").toLowerCase() + " and what we review in a free audit."} />
       <FinalCta />

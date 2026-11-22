@@ -31,171 +31,171 @@ const covers: Partial<Record<string, BlogImage>> = {
   // Generated blog cover paths
   "what-is-search-engine-optimization": {
     "src": "/blogs/what-is-search-engine-optimization.webp",
-    "alt": ""
+    "alt": "What is search engine optimization — Orbilect SEO illustrated guide cover"
   },
   "how-to-submit-your-website-to-google-search-console": {
     "src": "/blogs/how-to-submit-your-website-to-google-search-console.webp",
-    "alt": ""
+    "alt": "How to submit your website to google search console — Orbilect SEO illustrated guide cover"
   },
   "how-to-set-up-your-google-business-profile": {
     "src": "/blogs/how-to-set-up-your-google-business-profile.webp",
-    "alt": ""
+    "alt": "How to set up your google business profile — Orbilect SEO illustrated guide cover"
   },
   "how-to-create-and-submit-an-xml-sitemap": {
     "src": "/blogs/how-to-create-and-submit-an-xml-sitemap.webp",
-    "alt": ""
+    "alt": "How to create and submit an xml sitemap — Orbilect SEO illustrated guide cover"
   },
   "how-long-does-google-take-to-index-a-website": {
     "src": "/blogs/how-long-does-google-take-to-index-a-website.webp",
-    "alt": ""
+    "alt": "How long does google take to index a website — Orbilect SEO illustrated guide cover"
   },
   "seo-vs-aeo-vs-geo": {
     "src": "/blogs/seo-vs-aeo-vs-geo.webp",
-    "alt": ""
+    "alt": "Seo vs aeo vs geo — Orbilect SEO illustrated guide cover"
   },
   "the-on-page-seo-checklist-for-business-websites": {
     "src": "/blogs/the-on-page-seo-checklist-for-business-websites.webp",
-    "alt": ""
+    "alt": "The on page seo checklist for business websites — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-wordpress-website": {
     "src": "/blogs/how-to-build-a-wordpress-website.webp",
-    "alt": ""
+    "alt": "How to build a wordpress website — Orbilect SEO illustrated guide cover"
   },
   "10-web-hosting-platforms-compared": {
     "src": "/blogs/10-web-hosting-platforms-compared.webp",
-    "alt": ""
+    "alt": "10 web hosting platforms compared — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-squarespace-website": {
     "src": "/blogs/how-to-build-a-squarespace-website.webp",
-    "alt": ""
+    "alt": "How to build a squarespace website — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-webflow-website": {
     "src": "/blogs/how-to-build-a-webflow-website.webp",
-    "alt": ""
+    "alt": "How to build a webflow website — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-wix-website": {
     "src": "/blogs/how-to-build-a-wix-website.webp",
-    "alt": ""
+    "alt": "How to build a wix website — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-framer-website": {
     "src": "/blogs/how-to-build-a-framer-website.webp",
-    "alt": ""
+    "alt": "How to build a framer website — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-shopify-store": {
     "src": "/blogs/how-to-build-a-shopify-store.webp",
-    "alt": ""
+    "alt": "How to build a shopify store — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-woocommerce-store": {
     "src": "/blogs/how-to-build-a-woocommerce-store.webp",
-    "alt": ""
+    "alt": "How to build a woocommerce store — Orbilect SEO illustrated guide cover"
   },
   "how-to-improve-your-website-conversion-rate": {
     "src": "/blogs/how-to-improve-your-website-conversion-rate.webp",
-    "alt": ""
+    "alt": "How to improve your website conversion rate — Orbilect SEO illustrated guide cover"
   },
   "ppc-vs-organic-search": {
     "src": "/blogs/ppc-vs-organic-search.webp",
-    "alt": ""
+    "alt": "Ppc vs organic search — Orbilect SEO illustrated guide cover"
   },
   "how-to-tell-whether-ppc-is-profitable": {
     "src": "/blogs/how-to-tell-whether-ppc-is-profitable.webp",
-    "alt": ""
+    "alt": "How to tell whether ppc is profitable — Orbilect SEO illustrated guide cover"
   },
   "meta-ads-in-2026": {
     "src": "/blogs/meta-ads-in-2026.webp",
-    "alt": ""
+    "alt": "Meta ads in 2026 — Orbilect SEO illustrated guide cover"
   },
   "how-to-write-a-landing-page-that-converts": {
     "src": "/blogs/how-to-write-a-landing-page-that-converts.webp",
-    "alt": ""
+    "alt": "How to write a landing page that converts — Orbilect SEO illustrated guide cover"
   },
   "how-to-track-leads-and-sales-in-ga4": {
     "src": "/blogs/how-to-track-leads-and-sales-in-ga4.webp",
-    "alt": ""
+    "alt": "How to track leads and sales in ga4 — Orbilect SEO illustrated guide cover"
   },
   "how-to-audit-a-google-ads-account": {
     "src": "/blogs/how-to-audit-a-google-ads-account.webp",
-    "alt": ""
+    "alt": "How to audit a google ads account — Orbilect SEO illustrated guide cover"
   },
   "why-real-estate-businesses-need-seo": {
     "src": "/blogs/why-real-estate-businesses-need-seo.webp",
-    "alt": ""
+    "alt": "Why real estate businesses need seo — Orbilect SEO illustrated guide cover"
   },
   "seo-vs-paid-advertising-for-clinics": {
     "src": "/blogs/seo-vs-paid-advertising-for-clinics.webp",
-    "alt": ""
+    "alt": "Seo vs paid advertising for clinics — Orbilect SEO illustrated guide cover"
   },
   "how-customer-support-fits-into-us-services-exports": {
     "src": "/blogs/how-customer-support-fits-into-us-services-exports.webp",
-    "alt": ""
+    "alt": "How customer support fits into us services exports — Orbilect SEO illustrated guide cover"
   },
   "how-saas-companies-use-seo-to-generate-demos": {
     "src": "/blogs/how-saas-companies-use-seo-to-generate-demos.webp",
-    "alt": ""
+    "alt": "How saas companies use seo to generate demos — Orbilect SEO illustrated guide cover"
   },
   "how-ecommerce-brands-grow-with-category-page-seo": {
     "src": "/blogs/how-ecommerce-brands-grow-with-category-page-seo.webp",
-    "alt": ""
+    "alt": "How ecommerce brands grow with category page seo — Orbilect SEO illustrated guide cover"
   },
   "how-local-service-businesses-turn-search-into-enquiries": {
     "src": "/blogs/how-local-service-businesses-turn-search-into-enquiries.webp",
-    "alt": ""
+    "alt": "How local service businesses turn search into enquiries — Orbilect SEO illustrated guide cover"
   },
   "when-to-hire-an-seo-team-or-an-agency": {
     "src": "/blogs/when-to-hire-an-seo-team-or-an-agency.webp",
-    "alt": ""
+    "alt": "When to hire an seo team or an agency — Orbilect SEO illustrated guide cover"
   },
   "how-ai-search-changes-content-discovery": {
     "src": "/blogs/how-ai-search-changes-content-discovery.webp",
-    "alt": ""
+    "alt": "How ai search changes content discovery — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-an-ai-chatbot-for-customer-support": {
     "src": "/blogs/how-to-build-an-ai-chatbot-for-customer-support.webp",
-    "alt": ""
+    "alt": "How to build an ai chatbot for customer support — Orbilect SEO illustrated guide cover"
   },
   "how-to-use-ai-for-keyword-research": {
     "src": "/blogs/how-to-use-ai-for-keyword-research.webp",
-    "alt": ""
+    "alt": "How to use ai for keyword research — Orbilect SEO illustrated guide cover"
   },
   "where-human-review-fits-in-ai-assisted-content": {
     "src": "/blogs/where-human-review-fits-in-ai-assisted-content.webp",
-    "alt": ""
+    "alt": "Where human review fits in ai assisted content — Orbilect SEO illustrated guide cover"
   },
   "what-ai-agents-can-do-for-small-businesses": {
     "src": "/blogs/what-ai-agents-can-do-for-small-businesses.webp",
-    "alt": ""
+    "alt": "What ai agents can do for small businesses — Orbilect SEO illustrated guide cover"
   },
   "how-ai-appointment-booking-works": {
     "src": "/blogs/how-ai-appointment-booking-works.webp",
-    "alt": ""
+    "alt": "How ai appointment booking works — Orbilect SEO illustrated guide cover"
   },
   "how-to-evaluate-an-ai-website-builder": {
     "src": "/blogs/how-to-evaluate-an-ai-website-builder.webp",
-    "alt": ""
+    "alt": "How to evaluate an ai website builder — Orbilect SEO illustrated guide cover"
   },
   "what-is-digital-marketing": {
     "src": "/blogs/what-is-digital-marketing.webp",
-    "alt": ""
+    "alt": "What is digital marketing — Orbilect SEO illustrated guide cover"
   },
   "what-google-search-updates-mean-for-site-owners": {
     "src": "/blogs/what-google-search-updates-mean-for-site-owners.webp",
-    "alt": ""
+    "alt": "What google search updates mean for site owners — Orbilect SEO illustrated guide cover"
   },
   "what-privacy-changes-mean-for-marketing-analytics": {
     "src": "/blogs/what-privacy-changes-mean-for-marketing-analytics.webp",
-    "alt": ""
+    "alt": "What privacy changes mean for marketing analytics — Orbilect SEO illustrated guide cover"
   },
   "what-core-web-vitals-tell-you-about-your-website": {
     "src": "/blogs/what-core-web-vitals-tell-you-about-your-website.webp",
-    "alt": ""
+    "alt": "What core web vitals tell you about your website — Orbilect SEO illustrated guide cover"
   },
   "how-to-build-a-digital-marketing-plan-for-a-small-business": {
     "src": "/blogs/how-to-build-a-digital-marketing-plan-for-a-small-business.webp",
-    "alt": ""
+    "alt": "How to build a digital marketing plan for a small business — Orbilect SEO illustrated guide cover"
   },
   "how-search-and-social-platforms-are-changing-product-discovery": {
     "src": "/blogs/how-search-and-social-platforms-are-changing-product-discovery.webp",
-    "alt": ""
+    "alt": "How search and social platforms are changing product discovery — Orbilect SEO illustrated guide cover"
   }
 };
 

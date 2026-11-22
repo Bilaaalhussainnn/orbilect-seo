@@ -9,7 +9,7 @@ import OrganicGrowthComparison from "../services/organic-growth-comparison";
 
 const seoBaseMetadata: Metadata = {
   title: "Industries We Serve",
-  description: "Explore industry-specific SEO from Orbilect SEO for ecommerce, healthcare, manufacturing, local services, and more.",
+  description: "Explore SEO and website design for 12 industries, from arts and entertainment to ecommerce, healthcare, food and beverages, and SaaS.",
 };
 
 export default function IndustriesPage() {

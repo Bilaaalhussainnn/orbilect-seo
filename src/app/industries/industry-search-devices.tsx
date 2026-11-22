@@ -6,6 +6,8 @@ import { RotateCcw } from "lucide-react";
 import styles from "./industry-search-devices.module.css";
 
 const queries: Record<string, string> = {
+  "arts-entertainment": "live theatre events near me",
+  "food-beverages": "restaurant menu and reservations",
   automotive: "used hybrid SUVs near me",
   ecommerce: "waterproof hiking boots for women",
   education: "part-time accounting courses",
@@ -54,7 +56,7 @@ function Screen({ slug, query, title }: { slug: string; query: string; title: st
         <div className={styles.site}>
           <div className={styles.nav}><b /><i /><i /></div>
           <div className={styles.siteHero}
-            style={{ backgroundImage: "linear-gradient(90deg, #080b10e8, #080b1038), url(/industries/" + slug + ".png)" }}>
+            style={{ backgroundImage: "linear-gradient(90deg, #080b10e8, #080b1038), url(/industry-covers/" + slug + ".webp)" }}>
             <strong>{title}</strong>
             <i />
           </div>
