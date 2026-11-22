@@ -1,3 +1,4 @@
+import { AssetImage } from "@/components/optimized-image";
 import type { CSSProperties } from "react";
 import { ArrowUpRight } from "lucide-react";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
@@ -15,7 +16,7 @@ export default function AuditHero() {
         <div className={styles.copy}>
           <a href="/" aria-label="Orbilect SEO home" style={{color:"inherit",textDecoration:"none",width:"fit-content"}} className={styles.brand} data-reveal="off">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/orbilect-seo-mark.svg" alt="" width={38} height={38} />
+            <AssetImage src="/brand/orbilect-seo-mark.svg" alt="" width={38} height={38} />
             <span>Orbilect <strong>SEO</strong></span>
           </a>
           <p className={styles.eyebrow} data-site-eyebrow="" data-reveal="off">Free SEO Audit</p>

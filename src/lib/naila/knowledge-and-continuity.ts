@@ -31,6 +31,12 @@ export function glossaryReply(message: string): Reply | undefined {
 export function continuityReply(message: string, previous: string): Reply | undefined {
   const q=normalize(message), service=conversationServices.find(item=>item.test.test(previous));
   const direct=conversationServices.find(item=>item.test.test(q));
+  if (/\borbilect os\b/.test(q) || (/\borbilect os\b/.test(previous) && /\b(?:sign in|log in|gmail|screenshots?|data|employees?|access|copy|photos?|fines?)\b/.test(q))) {
+    if (/\b(?:screenshots?|photos?|copy|export|customer data)\b/.test(q)) return {text:"Customer information is confidential. Unauthorised screenshots, photographs, copying, personal notes and exports are prohibited. Follow the approved internal process for any permitted transfer. The OS usage terms explain the rules and lawful consequences.",actions:link("Orbilect OS usage terms","/terms-and-conditions#orbilect-os")};
+    return {text:"Orbilect OS is an internal employee workspace. Access requires an approved Orbilect product email account and individual authorisation; personal email accounts are not permitted. If you want a similar product for your business, please contact Orbilect Labs.",actions:[{text:"OS privacy notice",href:"/privacy-policy#orbilect-os"},{text:"Contact Orbilect Labs",href:"https://orbilectlabs.com/"}]};
+  }
+  if (/^(?:that.s not what i meant|you misunderstood me|i.m confused|i don.t understand|can we start again|let me try again)[.!?\s]*$/.test(q)) return {text:"Thanks for telling me. Let’s take it one step at a time 🙂 What are you trying to achieve with your website?"};
+  if (/^(?:i.m|we.re) (?:worried|nervous|not sure)(?: about .*)?$/.test(q)) return {text:"That’s understandable. We can go through it together without rushing. Is your main concern the scope, the investment, or how the work will be handled?"};
   if (direct && /\b(?:considering|looking for|keep helping|return to|back to|interested in|need help with our)\b/.test(q))
     return {text:"Sure, we can help with "+direct.name+". We’d review "+direct.checks+". What would you most like to improve?",actions:link("Explore "+direct.name,direct.href)};
   if (/^(?:it|our (?:site|website)) (?:runs|is built) on\b/.test(q))

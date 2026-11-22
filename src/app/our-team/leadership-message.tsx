@@ -1,3 +1,4 @@
+import { AssetImage } from "@/components/optimized-image";
 import { TypedFounderName } from "./founder-motion";
 import styles from "./leadership-message.module.css";
 
@@ -7,7 +8,7 @@ export default function LeadershipMessage() {
       <div className={styles.layout}>
         <div className={styles.portrait}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/team/bilalhussain.jpg" alt="Bilal Hussain" loading="lazy" />
+          <AssetImage src="/team/bilalhussain.jpg" alt="Bilal Hussain" loading="lazy" />
         </div>
 
         <div className={styles.panel}>

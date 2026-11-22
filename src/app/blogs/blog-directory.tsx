@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight, ImageIcon, Search } from "lucide-react";
 import { categories, formatPublicationDate, getPublishedPosts, topics } from "./blog-data";

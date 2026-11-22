@@ -386,3 +386,7 @@
   .briefContent, .landingPreview, .mouse i { animation: none; }
   .accordionItem h3 button svg { transition: none; }
 }
+
+/* Bound portrait previews to their panel instead of stretching their full height. */
+.landingPreview img { width:100%;height:min(440px,65vh);object-fit:contain;background:#0c1524; }
+@media(max-width:850px) { .landingPreview img {height:360px;max-height:60vh;} }

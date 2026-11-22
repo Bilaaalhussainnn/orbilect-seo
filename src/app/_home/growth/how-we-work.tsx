@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { useEffect, useRef, useState } from "react";
 import { ClipboardList, FileCheck, Lock, Receipt, Rocket, Search } from "lucide-react";
 import content from "./content.json";

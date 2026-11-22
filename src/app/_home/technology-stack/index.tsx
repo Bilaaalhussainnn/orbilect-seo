@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 
 import { useRef, useState, type PointerEvent } from "react";
 import {
@@ -17,7 +19,7 @@ function Logo({ tool }: { tool: Tool }) {
     <span className={styles.logo} aria-hidden="true">
       {src === "" ? tool.name.split(" ").slice(0, 2).map((word) => word[0]).join("") : (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} width={42} height={42} alt="" onError={() => setSrc(src === tool.fallback ? "" : tool.fallback)} />
+        <AssetImage src={src} width={42} height={42} alt="" onError={() => setSrc(src === tool.fallback ? "" : tool.fallback)} />
       )}
     </span>
   );

@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 
 import { ArrowUpRight } from "lucide-react";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
@@ -37,7 +39,7 @@ export default function Hero() {
         </div>
         <div className={styles.copy}>
           <a href="/" aria-label="Orbilect SEO home" style={{color:"inherit",textDecoration:"none",width:"fit-content"}} className={styles.brand}>
-            <img
+            <AssetImage
               src="/brand/orbilect-seo-mark.svg"
               alt=""
               width={32}

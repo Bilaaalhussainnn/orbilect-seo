@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import logos from "./seo-engine-logos.json";
 
 const engines = [

@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Depth } from "@/app/_home/workbench/depth";
+import { Search, Mail, MapPin, Phone } from "lucide-react";
 import industries from "../../app/_home/industry-growth/industries.json";
 import { pakistanAddress } from "@/lib/site-identity";
 import { SocialLinks } from "../header/social-links";
@@ -15,7 +16,7 @@ const groups = [
 export default function SiteFooter() {
   return <footer className={styles.footer}>
     <div className={styles.wrap}>
-      <div className={styles.brand}><Link href="/" aria-label="Orbilect SEO home"><Image src="/brand/orbilect-seo-wordmark-dark.png" width={176} height={47} alt="Orbilect SEO" unoptimized/></Link><p>The intelligence behind how customers find your brand.</p></div>
+      <div className={styles.brand}><Link href="/" aria-label="Orbilect SEO home"><Image src="/brand/orbilect-seo-wordmark-dark.png" width={176} height={47} alt="Orbilect SEO" unoptimized/></Link><Depth><div className={styles.signature}><span className={styles.emblem} aria-hidden="true"><Search /></span><p><strong>The intelligence behind<br/><span>how customers find your brand.</span></strong></p></div></Depth></div>
       <div className={styles.columns}>
         {groups.map(group=><nav key={group.title} aria-label={group.title+" footer links"}><h2>{group.title}</h2><ul>{group.links.map(([label,href])=><li key={href}><Link href={href}>{label}</Link></li>)}</ul></nav>)}
         <section className={styles.contacts} aria-labelledby="footer-contact"><h2 id="footer-contact">Contact info</h2>

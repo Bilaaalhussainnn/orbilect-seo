@@ -1,0 +1,8 @@
+// Explicit, one-off release migration. Never recompress already compressed assets on every build.
+const fs=require('node:fs/promises'),path=require('node:path'),sharp=require('sharp');
+sharp.concurrency(2);
+async function walk(dir){let out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory()){if(e.name!=='design-media')out.push(...await walk(p));}else if(/\.(png|jpe?g|webp)$/i.test(p))out.push(p);}return out;}
+(async()=>{let before=0,after=0,changed=0;const report=[];for(const file of await walk('public')){const original=await fs.readFile(file);before+=original.length;if(original.length<100*1024){after+=original.length;continue;}const meta=await sharp(original).metadata();if((meta.pages??1)>1){after+=original.length;continue;}let image=sharp(original).rotate().resize({width:1200,height:1500,fit:'inside',withoutEnlargement:true});
+if(/\.png$/i.test(file))image=image.png({palette:true,colours:256,effort:8,dither:.5});else if(/\.webp$/i.test(file))image=image.webp({quality:76,effort:5});else image=image.jpeg({quality:78,mozjpeg:true});
+const next=await image.toBuffer();if(next.length<original.length*.85){await fs.writeFile(file,next);after+=next.length;changed++;report.push({file,before:original.length,after:next.length});}else after+=original.length;
+}await fs.mkdir('docs/performance',{recursive:true});await fs.writeFile('docs/performance/image-compression.json',JSON.stringify({before,after,changed,files:report},null,2)+'\n');console.log(JSON.stringify({changed,beforeMiB:before/1048576,afterMiB:after/1048576,reductionPercent:100*(1-after/before)}));})().catch(e=>{console.error(e);process.exitCode=1});

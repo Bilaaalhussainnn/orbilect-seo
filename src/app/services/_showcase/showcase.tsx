@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight, GalleryHorizontal, Gauge, Layers3, MousePointer2, Star, Store } from "lucide-react";
 import { useState, type PointerEvent } from "react";

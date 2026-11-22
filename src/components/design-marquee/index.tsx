@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 import { useEffect, useRef, useState } from "react";
 import type { GalleryDesign } from "@/lib/design-gallery";
 import styles from "./marquee.module.css";
@@ -20,7 +22,7 @@ export default function DesignMarquee({images,rows=2,label,compact=false}:{image
    const filled=Array.from({length:Math.max(16,designs.length)},(_,i)=>designs[i%designs.length]);
    return <div className={styles.lane} key={row}><div className={`${styles.track} ${row%2===0?styles.right:""}`}>
     {[0,1].map(group=><div className={styles.group} key={group} aria-hidden={group===1?true:undefined}>{filled.map((image,index)=><figure className={styles.card} key={index} aria-hidden={index>=designs.length?true:undefined}>
-     <img src={image.src} srcSet={image.srcSet} sizes="(max-width: 800px) 144px, 240px" alt={image.name+" — sample website design"} width={480} height={600} loading={near?"eager":"lazy"} decoding="async" draggable={false}/>
+     <AssetImage src={image.src} srcSet={image.srcSet} sizes="(max-width: 800px) 144px, 240px" alt={image.name+" — sample website design"} width={480} height={600} loading={near?"eager":"lazy"} decoding="async" draggable={false}/>
     </figure>)}</div>)}
    </div></div>;
   })}

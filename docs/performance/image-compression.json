@@ -1,0 +1,1227 @@
+{
+  "before": 512932475,
+  "after": 72052763,
+  "changed": 244,
+  "files": [
+    {
+      "file": "public/about/ranking-issues/buried-pages.png",
+      "before": 1796849,
+      "after": 581748
+    },
+    {
+      "file": "public/about/ranking-issues/competing-urls.png",
+      "before": 1741388,
+      "after": 475092
+    },
+    {
+      "file": "public/about/ranking-issues/duplicate-titles.png",
+      "before": 1584099,
+      "after": 524297
+    },
+    {
+      "file": "public/about/ranking-issues/external-references.png",
+      "before": 1695189,
+      "after": 549717
+    },
+    {
+      "file": "public/about/ranking-issues/indexing.png",
+      "before": 1870489,
+      "after": 562987
+    },
+    {
+      "file": "public/about/ranking-issues/local-listings.png",
+      "before": 1772500,
+      "after": 593139
+    },
+    {
+      "file": "public/about/ranking-issues/mobile-layout.png",
+      "before": 1630412,
+      "after": 547214
+    },
+    {
+      "file": "public/about/ranking-issues/search-intent.png",
+      "before": 1636077,
+      "after": 574510
+    },
+    {
+      "file": "public/about/ranking-issues/slow-pages.png",
+      "before": 1667817,
+      "after": 568117
+    },
+    {
+      "file": "public/about/ranking-issues/thin-content.png",
+      "before": 1686276,
+      "after": 579161
+    },
+    {
+      "file": "public/bilal-hussain.jpg",
+      "before": 2162342,
+      "after": 76690
+    },
+    {
+      "file": "public/industries/automotive.png",
+      "before": 1959117,
+      "after": 418411
+    },
+    {
+      "file": "public/industries/ecommerce.png",
+      "before": 1974577,
+      "after": 472494
+    },
+    {
+      "file": "public/industries/education.png",
+      "before": 1944088,
+      "after": 474522
+    },
+    {
+      "file": "public/industries/finance.png",
+      "before": 2050528,
+      "after": 447306
+    },
+    {
+      "file": "public/industries/healthcare.png",
+      "before": 1918604,
+      "after": 391278
+    },
+    {
+      "file": "public/industries/hospitality.png",
+      "before": 2043374,
+      "after": 474106
+    },
+    {
+      "file": "public/industries/logistics.png",
+      "before": 2057653,
+      "after": 459459
+    },
+    {
+      "file": "public/industries/manufacturing.png",
+      "before": 2036449,
+      "after": 509903
+    },
+    {
+      "file": "public/industries/real-estate.png",
+      "before": 2000830,
+      "after": 452226
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-01.jpg",
+      "before": 2252030,
+      "after": 208180
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-02.jpg",
+      "before": 2274483,
+      "after": 236131
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-03.jpg",
+      "before": 2094384,
+      "after": 185548
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-04.png",
+      "before": 2164364,
+      "after": 658240
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-05.jpg",
+      "before": 2076397,
+      "after": 185656
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-06.jpg",
+      "before": 2028551,
+      "after": 184112
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-07.jpg",
+      "before": 2402809,
+      "after": 265617
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-08.jpg",
+      "before": 2548243,
+      "after": 210075
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-09.jpg",
+      "before": 2166467,
+      "after": 210823
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-10.jpg",
+      "before": 2523012,
+      "after": 193327
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-11.jpg",
+      "before": 2029032,
+      "after": 182696
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-12.jpg",
+      "before": 2375267,
+      "after": 185261
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-13.jpg",
+      "before": 2354616,
+      "after": 202203
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-14.jpg",
+      "before": 2348021,
+      "after": 224437
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-15.jpg",
+      "before": 2005810,
+      "after": 184394
+    },
+    {
+      "file": "public/industry-showcases/arts-entertainment/entertainment-16.jpg",
+      "before": 2128489,
+      "after": 178494
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-01.jpg",
+      "before": 2242189,
+      "after": 198114
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-02.jpg",
+      "before": 2121597,
+      "after": 185071
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-03.jpg",
+      "before": 2240714,
+      "after": 194286
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-04.jpg",
+      "before": 2188882,
+      "after": 205003
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-05.jpg",
+      "before": 2981484,
+      "after": 283216
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-06.jpg",
+      "before": 2393917,
+      "after": 211305
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-07.jpg",
+      "before": 2687289,
+      "after": 220161
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-08.jpg",
+      "before": 2228438,
+      "after": 180791
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-09.jpg",
+      "before": 2170633,
+      "after": 205943
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-10.jpg",
+      "before": 2087718,
+      "after": 151669
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-11.jpg",
+      "before": 2663717,
+      "after": 262070
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-12.jpg",
+      "before": 2031673,
+      "after": 211396
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-13.jpg",
+      "before": 2231775,
+      "after": 177045
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-14.jpg",
+      "before": 2196391,
+      "after": 180734
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-15.jpg",
+      "before": 2120834,
+      "after": 201111
+    },
+    {
+      "file": "public/industry-showcases/automotive/automotive-16.jpg",
+      "before": 2027461,
+      "after": 189848
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Carbon lime activewear storefront-15.png",
+      "before": 2099843,
+      "after": 674840
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Cobalt skincare essentials routine store-11.png",
+      "before": 1960653,
+      "after": 633804
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Curated houseplants for every light-3.png",
+      "before": 2302822,
+      "after": 678841
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Go a little farther outdoors-9.png",
+      "before": 2568735,
+      "after": 754939
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Ivory and oxblood streetwear storefront-7.png",
+      "before": 2107813,
+      "after": 722318
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Ivory-and-blue independent bookstore storefront-16.png",
+      "before": 2337608,
+      "after": 633270
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Midnight violet headphone storefront-6.png",
+      "before": 2058182,
+      "after": 609808
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Olive living room furniture showcase-1.png",
+      "before": 2719694,
+      "after": 867779
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Personalized gifts, beautifully wrapped-8.png",
+      "before": 2259777,
+      "after": 594009
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Plum and gold pendant storefront-2.png",
+      "before": 2221831,
+      "after": 643528
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Premium coffee storefront for better mornings-5.png",
+      "before": 2315389,
+      "after": 687984
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Sculptural sneaker storefront in cream and vermilion-4.png",
+      "before": 2202273,
+      "after": 705193
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Signature Scent Fragrance Boutique-12.png",
+      "before": 2124589,
+      "after": 674429
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Small adventures, thoughtfully dressed-13.png",
+      "before": 2496665,
+      "after": 742516
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Sunflower dog play storefront-14.png",
+      "before": 2258926,
+      "after": 651960
+    },
+    {
+      "file": "public/industry-showcases/ecommerce/Terracotta tableware for shared moments-10.png",
+      "before": 2558306,
+      "after": 786709
+    },
+    {
+      "file": "public/industry-showcases/education/education-01.jpg",
+      "before": 2365505,
+      "after": 223235
+    },
+    {
+      "file": "public/industry-showcases/education/education-02.jpg",
+      "before": 2366455,
+      "after": 247577
+    },
+    {
+      "file": "public/industry-showcases/education/education-03.jpg",
+      "before": 2091412,
+      "after": 178897
+    },
+    {
+      "file": "public/industry-showcases/education/education-04.jpg",
+      "before": 2306427,
+      "after": 204089
+    },
+    {
+      "file": "public/industry-showcases/education/education-05.jpg",
+      "before": 2594810,
+      "after": 252521
+    },
+    {
+      "file": "public/industry-showcases/education/education-06.jpg",
+      "before": 2198451,
+      "after": 185017
+    },
+    {
+      "file": "public/industry-showcases/education/education-07.jpg",
+      "before": 2065674,
+      "after": 169045
+    },
+    {
+      "file": "public/industry-showcases/education/education-08.jpg",
+      "before": 2766740,
+      "after": 262045
+    },
+    {
+      "file": "public/industry-showcases/education/education-09.jpg",
+      "before": 2180038,
+      "after": 218373
+    },
+    {
+      "file": "public/industry-showcases/education/education-10.jpg",
+      "before": 2129298,
+      "after": 189712
+    },
+    {
+      "file": "public/industry-showcases/education/education-11.jpg",
+      "before": 2163793,
+      "after": 191545
+    },
+    {
+      "file": "public/industry-showcases/education/education-12.jpg",
+      "before": 2795768,
+      "after": 314950
+    },
+    {
+      "file": "public/industry-showcases/education/education-13.jpg",
+      "before": 2111298,
+      "after": 191923
+    },
+    {
+      "file": "public/industry-showcases/education/education-14.jpg",
+      "before": 2548637,
+      "after": 269678
+    },
+    {
+      "file": "public/industry-showcases/education/education-15.jpg",
+      "before": 2232968,
+      "after": 171867
+    },
+    {
+      "file": "public/industry-showcases/education/education-16.jpg",
+      "before": 1959016,
+      "after": 169899
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-01.jpg",
+      "before": 2062736,
+      "after": 158959
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-02.jpg",
+      "before": 1963739,
+      "after": 157057
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-03.jpg",
+      "before": 1776932,
+      "after": 124945
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-04.jpg",
+      "before": 2019195,
+      "after": 153055
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-05.jpg",
+      "before": 1872317,
+      "after": 139992
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-06.jpg",
+      "before": 2023267,
+      "after": 131345
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-07.jpg",
+      "before": 1878855,
+      "after": 152203
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-08.jpg",
+      "before": 1993266,
+      "after": 136042
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-09.jpg",
+      "before": 1743525,
+      "after": 126437
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-10.jpg",
+      "before": 2125672,
+      "after": 169394
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-11.jpg",
+      "before": 2483414,
+      "after": 185503
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-12.jpg",
+      "before": 1948650,
+      "after": 152444
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-13.jpg",
+      "before": 2257668,
+      "after": 183320
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-14.jpg",
+      "before": 2360272,
+      "after": 177052
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-15.jpg",
+      "before": 2065405,
+      "after": 151963
+    },
+    {
+      "file": "public/industry-showcases/finance/finance-16.jpg",
+      "before": 2072450,
+      "after": 164922
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-01.jpg",
+      "before": 2279922,
+      "after": 229862
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-02.jpg",
+      "before": 2376671,
+      "after": 219103
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-03.jpg",
+      "before": 2316643,
+      "after": 251362
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-04.jpg",
+      "before": 2318509,
+      "after": 251710
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-05.jpg",
+      "before": 2455837,
+      "after": 225489
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-06.jpg",
+      "before": 2302019,
+      "after": 245557
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-07.jpg",
+      "before": 2159030,
+      "after": 195331
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-08.jpg",
+      "before": 2080751,
+      "after": 204230
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-09.jpg",
+      "before": 2471304,
+      "after": 259472
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-10.jpg",
+      "before": 2161741,
+      "after": 222624
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-11.jpg",
+      "before": 2279180,
+      "after": 229439
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-12.jpg",
+      "before": 2097948,
+      "after": 203764
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-13.jpg",
+      "before": 2098002,
+      "after": 186730
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-14.jpg",
+      "before": 2332935,
+      "after": 236111
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-15.jpg",
+      "before": 2357103,
+      "after": 239588
+    },
+    {
+      "file": "public/industry-showcases/food-beverages/food-16.jpg",
+      "before": 2280394,
+      "after": 219245
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-01.jpg",
+      "before": 2237115,
+      "after": 223344
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-02.jpg",
+      "before": 2055227,
+      "after": 151231
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-03.jpg",
+      "before": 2239380,
+      "after": 219836
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-04.jpg",
+      "before": 1876190,
+      "after": 172915
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-05.jpg",
+      "before": 2113664,
+      "after": 187692
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-06.jpg",
+      "before": 2061033,
+      "after": 187996
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-07.jpg",
+      "before": 2153622,
+      "after": 174698
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-08.jpg",
+      "before": 2122040,
+      "after": 155139
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-09.jpg",
+      "before": 1991529,
+      "after": 170194
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-10.jpg",
+      "before": 2153303,
+      "after": 204923
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-11.jpg",
+      "before": 2074038,
+      "after": 178076
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-12.jpg",
+      "before": 2067806,
+      "after": 176732
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-13.jpg",
+      "before": 1868738,
+      "after": 174564
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-14.jpg",
+      "before": 2035877,
+      "after": 191423
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-15.jpg",
+      "before": 2013659,
+      "after": 165591
+    },
+    {
+      "file": "public/industry-showcases/healthcare/healthcare-16.jpg",
+      "before": 2162604,
+      "after": 199767
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-01.jpg",
+      "before": 3035803,
+      "after": 316761
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-02.jpg",
+      "before": 2593751,
+      "after": 237035
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-03.jpg",
+      "before": 2546983,
+      "after": 246056
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-04.jpg",
+      "before": 2913790,
+      "after": 304916
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-05.jpg",
+      "before": 2184043,
+      "after": 209341
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-06.jpg",
+      "before": 2829942,
+      "after": 293251
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-07.jpg",
+      "before": 3150806,
+      "after": 295240
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-08.jpg",
+      "before": 2389684,
+      "after": 258906
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-09.jpg",
+      "before": 2702661,
+      "after": 281742
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-10.jpg",
+      "before": 2658102,
+      "after": 279344
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-11.jpg",
+      "before": 2631871,
+      "after": 201164
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-12.jpg",
+      "before": 2611548,
+      "after": 293632
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-13.jpg",
+      "before": 2690515,
+      "after": 253918
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-14.jpg",
+      "before": 2783732,
+      "after": 270798
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-15.jpg",
+      "before": 2953429,
+      "after": 328505
+    },
+    {
+      "file": "public/industry-showcases/hospitality/hospitality-16.jpg",
+      "before": 2857384,
+      "after": 275809
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-01.jpg",
+      "before": 2132344,
+      "after": 211074
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-02.jpg",
+      "before": 1920327,
+      "after": 173007
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-03.jpg",
+      "before": 2033582,
+      "after": 184179
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-04.jpg",
+      "before": 2419169,
+      "after": 248662
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-05.jpg",
+      "before": 2289076,
+      "after": 240510
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-06.jpg",
+      "before": 2518935,
+      "after": 253308
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-07.jpg",
+      "before": 2191464,
+      "after": 202546
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-08.jpg",
+      "before": 1889524,
+      "after": 177580
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-09.jpg",
+      "before": 2153798,
+      "after": 213041
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-10.jpg",
+      "before": 2260972,
+      "after": 222977
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-11.jpg",
+      "before": 2172037,
+      "after": 209758
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-12.jpg",
+      "before": 2021928,
+      "after": 204608
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-13.jpg",
+      "before": 2069716,
+      "after": 188134
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-14.jpg",
+      "before": 2089023,
+      "after": 194877
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-15.jpg",
+      "before": 2118764,
+      "after": 215669
+    },
+    {
+      "file": "public/industry-showcases/logistics/logistics-16.jpg",
+      "before": 1818164,
+      "after": 151913
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-01.jpg",
+      "before": 2238148,
+      "after": 202333
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-02.jpg",
+      "before": 2073087,
+      "after": 207266
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-03.jpg",
+      "before": 2217401,
+      "after": 220676
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-04.jpg",
+      "before": 2204748,
+      "after": 208841
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-05.jpg",
+      "before": 2087327,
+      "after": 221416
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-06.jpg",
+      "before": 2258399,
+      "after": 230346
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-07.jpg",
+      "before": 2493126,
+      "after": 230170
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-08.jpg",
+      "before": 2175286,
+      "after": 233140
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-09.jpg",
+      "before": 2366404,
+      "after": 246711
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-10.jpg",
+      "before": 2224826,
+      "after": 204483
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-11.jpg",
+      "before": 2294812,
+      "after": 230832
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-12.jpg",
+      "before": 2366541,
+      "after": 247678
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-13.jpg",
+      "before": 2232442,
+      "after": 210490
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-14.jpg",
+      "before": 2222556,
+      "after": 200460
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-15.jpg",
+      "before": 2181766,
+      "after": 198657
+    },
+    {
+      "file": "public/industry-showcases/manufacturing/manufacturing-16.jpg",
+      "before": 2377009,
+      "after": 255471
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-01.jpg",
+      "before": 2336241,
+      "after": 240932
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-02.jpg",
+      "before": 2563818,
+      "after": 242719
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-03.jpg",
+      "before": 2055006,
+      "after": 175463
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-04.jpg",
+      "before": 2250141,
+      "after": 196784
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-05.jpg",
+      "before": 2735490,
+      "after": 251177
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-06.jpg",
+      "before": 2294353,
+      "after": 201898
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-07.jpg",
+      "before": 2580020,
+      "after": 235090
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-08.jpg",
+      "before": 2246835,
+      "after": 190204
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-09.jpg",
+      "before": 2898633,
+      "after": 291045
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-10.jpg",
+      "before": 2084711,
+      "after": 184486
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-11.jpg",
+      "before": 2919723,
+      "after": 308090
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-12.jpg",
+      "before": 2725704,
+      "after": 260981
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-13.jpg",
+      "before": 2487532,
+      "after": 252187
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-14.jpg",
+      "before": 2165999,
+      "after": 206048
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-15.jpg",
+      "before": 2323612,
+      "after": 245662
+    },
+    {
+      "file": "public/industry-showcases/real-estate/real-estate-16.jpg",
+      "before": 2479589,
+      "after": 246425
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-01.jpg",
+      "before": 1792914,
+      "after": 145247
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-02.jpg",
+      "before": 1725927,
+      "after": 138815
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-03.jpg",
+      "before": 1741849,
+      "after": 154421
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-04.jpg",
+      "before": 1772067,
+      "after": 129858
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-05.jpg",
+      "before": 1804512,
+      "after": 141559
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-06.jpg",
+      "before": 1792425,
+      "after": 141824
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-07.jpg",
+      "before": 1851588,
+      "after": 143709
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-08.jpg",
+      "before": 1633287,
+      "after": 136062
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-09.jpg",
+      "before": 1741587,
+      "after": 150821
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-10.jpg",
+      "before": 1709859,
+      "after": 153745
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-11.jpg",
+      "before": 1684858,
+      "after": 148091
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-12.jpg",
+      "before": 1668553,
+      "after": 144543
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-13.jpg",
+      "before": 1713425,
+      "after": 141004
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-14.jpg",
+      "before": 1768250,
+      "after": 150022
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-15.jpg",
+      "before": 1595075,
+      "after": 135589
+    },
+    {
+      "file": "public/industry-showcases/saas/saas-16.jpg",
+      "before": 1775310,
+      "after": 153503
+    },
+    {
+      "file": "public/newsroom/erp-platform.png",
+      "before": 1611367,
+      "after": 334019
+    },
+    {
+      "file": "public/newsroom/large-language-model.png",
+      "before": 1603803,
+      "after": 389011
+    },
+    {
+      "file": "public/newsroom/naila-ai.png",
+      "before": 1668186,
+      "after": 381566
+    },
+    {
+      "file": "public/newsroom/orbilect-create.png",
+      "before": 1834026,
+      "after": 298241
+    },
+    {
+      "file": "public/newsroom/orbilect-reviews.png",
+      "before": 1741228,
+      "after": 323623
+    },
+    {
+      "file": "public/process/assessment.png",
+      "before": 2048474,
+      "after": 372815
+    },
+    {
+      "file": "public/process/discovery.png",
+      "before": 1849158,
+      "after": 370243
+    },
+    {
+      "file": "public/process/kickoff.png",
+      "before": 1993512,
+      "after": 349988
+    },
+    {
+      "file": "public/process/nda.png",
+      "before": 2207807,
+      "after": 517866
+    },
+    {
+      "file": "public/process/payment.png",
+      "before": 1726676,
+      "after": 380990
+    },
+    {
+      "file": "public/process/scope.png",
+      "before": 2063972,
+      "after": 454953
+    },
+    {
+      "file": "public/service-showcase/ui/ecommerce-dark.webp",
+      "before": 118096,
+      "after": 53774
+    },
+    {
+      "file": "public/service-showcase/ui/ecommerce-light.webp",
+      "before": 147560,
+      "after": 69670
+    },
+    {
+      "file": "public/service-showcase/ui/healthcare-dark.webp",
+      "before": 155722,
+      "after": 62962
+    },
+    {
+      "file": "public/service-showcase/ui/healthcare-light.webp",
+      "before": 114586,
+      "after": 57238
+    },
+    {
+      "file": "public/service-showcase/ui/real-estate-dark.webp",
+      "before": 224928,
+      "after": 91358
+    },
+    {
+      "file": "public/service-showcase/ui/real-estate-light.webp",
+      "before": 337214,
+      "after": 144320
+    },
+    {
+      "file": "public/service-showcase/ui/retail-dark.webp",
+      "before": 193234,
+      "after": 80452
+    },
+    {
+      "file": "public/service-showcase/ui/retail-light.webp",
+      "before": 219750,
+      "after": 90310
+    },
+    {
+      "file": "public/service-showcase/ui/shopify-dark.webp",
+      "before": 165184,
+      "after": 77316
+    },
+    {
+      "file": "public/service-showcase/ui/shopify-light.webp",
+      "before": 110278,
+      "after": 49674
+    },
+    {
+      "file": "public/services/digital-marketing.png",
+      "before": 1845910,
+      "after": 439788
+    },
+    {
+      "file": "public/services/ecommerce-seo.png",
+      "before": 1967259,
+      "after": 608162
+    },
+    {
+      "file": "public/services/off-page-seo.png",
+      "before": 1798081,
+      "after": 487153
+    },
+    {
+      "file": "public/services/on-page-seo.png",
+      "before": 1858392,
+      "after": 640112
+    },
+    {
+      "file": "public/services/technical-seo.png",
+      "before": 1889736,
+      "after": 457335
+    },
+    {
+      "file": "public/services/website-redesign.png",
+      "before": 1882708,
+      "after": 423559
+    },
+    {
+      "file": "public/team/abdul-ghaffar.png",
+      "before": 2218258,
+      "after": 841347
+    },
+    {
+      "file": "public/team/ali-ahmed-farooqui.png",
+      "before": 1926345,
+      "after": 844578
+    },
+    {
+      "file": "public/team/bilal-ahmed.png",
+      "before": 2011930,
+      "after": 751697
+    },
+    {
+      "file": "public/team/bilalhussain.jpg",
+      "before": 2162342,
+      "after": 76690
+    },
+    {
+      "file": "public/team/shahzad-afridi.png",
+      "before": 2071724,
+      "after": 827240
+    }
+  ]
+}

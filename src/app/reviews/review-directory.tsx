@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { ArrowUpRight } from "lucide-react";
 import { reviewPlatforms } from "@/lib/review-platforms";
 import { ReviewEmbed } from "./review-embed";

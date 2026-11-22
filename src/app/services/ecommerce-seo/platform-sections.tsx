@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { ArrowUpRight, BarChart3, Layers, MapPin, Package, Search } from "lucide-react";
 import styles from "./platform-sections.module.css";
 

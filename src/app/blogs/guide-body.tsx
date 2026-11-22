@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import styles from "./what-is-search-engine-optimization/article.module.css";
 import guideStyles from "./guide-visuals.module.css";

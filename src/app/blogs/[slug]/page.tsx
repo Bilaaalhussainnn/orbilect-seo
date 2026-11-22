@@ -4,7 +4,7 @@ import HeroAudit from "@/components/lead-panel/hero-audit";
 import { OrbilectHeroBrand } from "../../contact/contact-hero";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { formatPublicationDate, getPublishedPosts } from "../blog-data";

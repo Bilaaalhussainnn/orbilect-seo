@@ -1,3 +1,4 @@
+import { AssetImage } from "@/components/optimized-image";
 import styles from "./department-leaders.module.css";
 
 const leaders = [
@@ -44,7 +45,7 @@ export default function DepartmentLeaders() {
             <article key={name} className={styles.card}>
               <div className={styles.portrait}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/team/${portrait}`} alt={name} loading="lazy" decoding="async" />
+                <AssetImage src={`/team/${portrait}`} alt={name} loading="lazy" decoding="async" />
               </div>
               <header className={styles.identity}>
                 <h3>{name}</h3>

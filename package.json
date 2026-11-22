@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "seo:verify": "npm run build && node scripts/verify-orbilect-search.cjs",
-    "prebuild": "node scripts/optimize-design-media.cjs",
-    "predev": "node scripts/optimize-design-media.cjs"
+    "prebuild": "node scripts/optimize-design-media.cjs && node scripts/build-image-versions.cjs",
+    "predev": "node scripts/optimize-design-media.cjs && node scripts/build-image-versions.cjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

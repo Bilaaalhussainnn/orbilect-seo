@@ -1,0 +1,12 @@
+@media(hover:hover) and (pointer:fine) { html,body,body * { cursor:url("/brand/orbilect-cursor.png") 3 3,auto !important; } }
+.orbilect-loading { position:fixed;inset:0;z-index:2147483000;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;padding:24px;background:radial-gradient(ellipse at 50% 30%,#004aad90,transparent 65%),linear-gradient(145deg,#080b10,#10284c);color:white;text-align:center; }
+.orbilect-loading img{filter:drop-shadow(0 12px 28px #0008)}
+.orbilect-loading-tagline{font-weight:700;font-size:clamp(14px,2vw,24px);max-width:52ch;clip-path:inset(0 100% 0 0);animation:orbilect-type 3s steps(54,end) forwards;}
+.orbilect-loading button{border:1px solid #ffffff70;background:#004aad;color:white;border-radius:24px;padding:10px 22px;font:inherit}
+@keyframes orbilect-type {to{clip-path:inset(0 0 0 0)}}
+@media(prefers-reduced-motion:reduce){.orbilect-loading-tagline{animation:none;clip-path:none}}
+/* No overlay on a fast load; CSS fails open even if JavaScript never arrives. */
+.orbilect-loading { opacity:0;visibility:hidden;animation:orbilect-show .1s .9s forwards,orbilect-hide .1s 8s forwards; }
+@keyframes orbilect-show {to{opacity:1;visibility:visible}}
+@keyframes orbilect-hide {to{opacity:0;visibility:hidden;pointer-events:none}}
+.orbilect-loading-tagline {animation-delay:.9s}

@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 import { useEffect, useRef, useState } from "react";
 import { Code2 } from "lucide-react";
 import type { GalleryDesign } from "@/lib/design-gallery";
@@ -37,7 +39,7 @@ export default function VerticalDesigns({ images, label }: { images: GalleryDesi
       <div className={styles.track} style={{ animationDirection: col % 2 ? "reverse" : "normal" }}>
         {[0, 1].map(copy => <div className={styles.group} key={copy} aria-hidden={copy === 1 ? true : undefined}>
           {designs.slice(col * 4, col * 4 + 4).map((image, i) => <figure key={i} className={styles.card}>
-            <img src={image.src} srcSet={image.srcSet} sizes="(max-width: 600px) 22vw, 210px" width={480} height={600} alt={copy ? "" : label + " website layout: " + image.name} decoding="async" loading={near ? "eager" : "lazy"} />
+            <AssetImage src={image.src} srcSet={image.srcSet} sizes="(max-width: 600px) 22vw, 210px" width={480} height={600} alt={copy ? "" : label + " website layout: " + image.name} decoding="async" loading={near ? "eager" : "lazy"} />
           </figure>)}
         </div>)}
       </div>

@@ -1,3 +1,4 @@
+import { AssetImage } from "@/components/optimized-image";
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
 import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
@@ -27,7 +28,7 @@ export default function CorporatePage({ content, children, heroVisual }: { conte
           <div>
             <a href="/" aria-label="Orbilect SEO home" style={{color:"inherit",textDecoration:"none",width:"fit-content"}} className={styles.brand}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/orbilect-seo-mark.svg" width={36} height={36} alt="" />
+              <AssetImage src="/brand/orbilect-seo-mark.svg" width={36} height={36} alt="" />
               <span>Orbilect <strong>SEO</strong></span>
             </a>
             <p className={styles.eyebrow} data-site-eyebrow="" data-reveal="off">{content.label}</p>

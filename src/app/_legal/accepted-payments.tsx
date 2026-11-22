@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { ArrowLeftRight, Landmark } from "lucide-react";
 import styles from "./legal.module.css";
 

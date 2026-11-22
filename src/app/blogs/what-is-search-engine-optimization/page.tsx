@@ -2,7 +2,7 @@ import { articleSchema, blogPath, blogSeo } from "@/lib/orbilect-search";
 import SeoJsonLd from "@/components/seo/json-ld";
 import HeroAudit from "@/components/lead-panel/hero-audit";
 import { OrbilectHeroBrand } from "../../contact/contact-hero";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { formatPublicationDate, getPublishedPosts, seoGuideSlug, topics } from "../blog-data";

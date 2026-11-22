@@ -1,5 +1,5 @@
 import HeroAudit from "@/components/lead-panel/hero-audit";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { stories, type Story } from "./stories";

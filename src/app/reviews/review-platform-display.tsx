@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import Link from "next/link";
 import { reviewDirectoryPath, reviewPlatforms, reviewsPath } from "@/lib/review-platforms";
 import styles from "./review-platforms.module.css";

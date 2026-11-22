@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 
 import HeroPlatforms from "../_home/hero/hero-platforms";
 import DesignMarquee from "@/components/design-marquee";
@@ -37,7 +39,7 @@ const searchLogos = [
 
 function LogoStrip({ logos }: { logos: string[][] }) {
   return <ul className={styles.logos} aria-label="Tools and platforms">
-    {logos.map(([label, src]) => <li key={label} title={label}><img src={designPreview(src).src} alt="" width={24} height={24} loading="lazy" /><span>{label}</span></li>)}
+    {logos.map(([label, src]) => <li key={label} title={label}><AssetImage src={designPreview(src).src} alt="" width={24} height={24} loading="lazy" /><span>{label}</span></li>)}
   </ul>;
 }
 

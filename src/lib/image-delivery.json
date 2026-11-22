@@ -1,0 +1,162 @@
+{
+  "/about/ranking-issues/buried-pages.png": {
+    "src": "/image-media/b7eb6b40a8d5-q76-1200.webp",
+    "srcSet": "/image-media/b7eb6b40a8d5-q76-480.webp 480w, /image-media/b7eb6b40a8d5-q76-960.webp 960w, /image-media/b7eb6b40a8d5-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/competing-urls.png": {
+    "src": "/image-media/d4994e5539ec-q76-1200.webp",
+    "srcSet": "/image-media/d4994e5539ec-q76-480.webp 480w, /image-media/d4994e5539ec-q76-960.webp 960w, /image-media/d4994e5539ec-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/duplicate-titles.png": {
+    "src": "/image-media/68b2ad095851-q76-1200.webp",
+    "srcSet": "/image-media/68b2ad095851-q76-480.webp 480w, /image-media/68b2ad095851-q76-960.webp 960w, /image-media/68b2ad095851-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/external-references.png": {
+    "src": "/image-media/2a6c5672bc3a-q76-1200.webp",
+    "srcSet": "/image-media/2a6c5672bc3a-q76-480.webp 480w, /image-media/2a6c5672bc3a-q76-960.webp 960w, /image-media/2a6c5672bc3a-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/indexing.png": {
+    "src": "/image-media/781a396d5824-q76-1200.webp",
+    "srcSet": "/image-media/781a396d5824-q76-480.webp 480w, /image-media/781a396d5824-q76-960.webp 960w, /image-media/781a396d5824-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/local-listings.png": {
+    "src": "/image-media/048ddeedbb9f-q76-1200.webp",
+    "srcSet": "/image-media/048ddeedbb9f-q76-480.webp 480w, /image-media/048ddeedbb9f-q76-960.webp 960w, /image-media/048ddeedbb9f-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/mobile-layout.png": {
+    "src": "/image-media/56ac6a8baaff-q76-1200.webp",
+    "srcSet": "/image-media/56ac6a8baaff-q76-480.webp 480w, /image-media/56ac6a8baaff-q76-960.webp 960w, /image-media/56ac6a8baaff-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/search-intent.png": {
+    "src": "/image-media/c3cfcae00219-q76-1200.webp",
+    "srcSet": "/image-media/c3cfcae00219-q76-480.webp 480w, /image-media/c3cfcae00219-q76-960.webp 960w, /image-media/c3cfcae00219-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/slow-pages.png": {
+    "src": "/image-media/a15439ec58da-q76-1200.webp",
+    "srcSet": "/image-media/a15439ec58da-q76-480.webp 480w, /image-media/a15439ec58da-q76-960.webp 960w, /image-media/a15439ec58da-q76-1200.webp 1200w"
+  },
+  "/about/ranking-issues/thin-content.png": {
+    "src": "/image-media/f897f22995db-q76-1200.webp",
+    "srcSet": "/image-media/f897f22995db-q76-480.webp 480w, /image-media/f897f22995db-q76-960.webp 960w, /image-media/f897f22995db-q76-1200.webp 1200w"
+  },
+  "/industries/automotive.png": {
+    "src": "/image-media/a4d17a684321-q76-1200.webp",
+    "srcSet": "/image-media/a4d17a684321-q76-480.webp 480w, /image-media/a4d17a684321-q76-960.webp 960w, /image-media/a4d17a684321-q76-1200.webp 1200w"
+  },
+  "/industries/ecommerce.png": {
+    "src": "/image-media/26c62a787adc-q76-1200.webp",
+    "srcSet": "/image-media/26c62a787adc-q76-480.webp 480w, /image-media/26c62a787adc-q76-960.webp 960w, /image-media/26c62a787adc-q76-1200.webp 1200w"
+  },
+  "/industries/education.png": {
+    "src": "/image-media/1c91f940436b-q76-1200.webp",
+    "srcSet": "/image-media/1c91f940436b-q76-480.webp 480w, /image-media/1c91f940436b-q76-960.webp 960w, /image-media/1c91f940436b-q76-1200.webp 1200w"
+  },
+  "/industries/finance.png": {
+    "src": "/image-media/0af6febeed3f-q76-1200.webp",
+    "srcSet": "/image-media/0af6febeed3f-q76-480.webp 480w, /image-media/0af6febeed3f-q76-960.webp 960w, /image-media/0af6febeed3f-q76-1200.webp 1200w"
+  },
+  "/industries/healthcare.png": {
+    "src": "/image-media/20f4362c114e-q76-1200.webp",
+    "srcSet": "/image-media/20f4362c114e-q76-480.webp 480w, /image-media/20f4362c114e-q76-960.webp 960w, /image-media/20f4362c114e-q76-1200.webp 1200w"
+  },
+  "/industries/hospitality.png": {
+    "src": "/image-media/c4e3b4f65ae2-q76-1200.webp",
+    "srcSet": "/image-media/c4e3b4f65ae2-q76-480.webp 480w, /image-media/c4e3b4f65ae2-q76-960.webp 960w, /image-media/c4e3b4f65ae2-q76-1200.webp 1200w"
+  },
+  "/industries/logistics.png": {
+    "src": "/image-media/aa627968080e-q76-1200.webp",
+    "srcSet": "/image-media/aa627968080e-q76-480.webp 480w, /image-media/aa627968080e-q76-960.webp 960w, /image-media/aa627968080e-q76-1200.webp 1200w"
+  },
+  "/industries/manufacturing.png": {
+    "src": "/image-media/cb90115a8b9f-q76-1200.webp",
+    "srcSet": "/image-media/cb90115a8b9f-q76-480.webp 480w, /image-media/cb90115a8b9f-q76-960.webp 960w, /image-media/cb90115a8b9f-q76-1200.webp 1200w"
+  },
+  "/industries/real-estate.png": {
+    "src": "/image-media/761bf0d8fe0b-q76-1200.webp",
+    "srcSet": "/image-media/761bf0d8fe0b-q76-480.webp 480w, /image-media/761bf0d8fe0b-q76-960.webp 960w, /image-media/761bf0d8fe0b-q76-1200.webp 1200w"
+  },
+  "/newsroom/erp-platform.png": {
+    "src": "/image-media/daaa2d7ad2bc-q76-1200.webp",
+    "srcSet": "/image-media/daaa2d7ad2bc-q76-480.webp 480w, /image-media/daaa2d7ad2bc-q76-960.webp 960w, /image-media/daaa2d7ad2bc-q76-1200.webp 1200w"
+  },
+  "/newsroom/large-language-model.png": {
+    "src": "/image-media/1aac409dd3e2-q76-1200.webp",
+    "srcSet": "/image-media/1aac409dd3e2-q76-480.webp 480w, /image-media/1aac409dd3e2-q76-960.webp 960w, /image-media/1aac409dd3e2-q76-1200.webp 1200w"
+  },
+  "/newsroom/naila-ai.png": {
+    "src": "/image-media/30f4ee51514b-q76-1200.webp",
+    "srcSet": "/image-media/30f4ee51514b-q76-480.webp 480w, /image-media/30f4ee51514b-q76-960.webp 960w, /image-media/30f4ee51514b-q76-1200.webp 1200w"
+  },
+  "/newsroom/orbilect-create.png": {
+    "src": "/image-media/bbc9030d6f24-q76-1200.webp",
+    "srcSet": "/image-media/bbc9030d6f24-q76-480.webp 480w, /image-media/bbc9030d6f24-q76-960.webp 960w, /image-media/bbc9030d6f24-q76-1200.webp 1200w"
+  },
+  "/newsroom/orbilect-reviews.png": {
+    "src": "/image-media/59d5301d430a-q76-1200.webp",
+    "srcSet": "/image-media/59d5301d430a-q76-480.webp 480w, /image-media/59d5301d430a-q76-960.webp 960w, /image-media/59d5301d430a-q76-1200.webp 1200w"
+  },
+  "/process/assessment.png": {
+    "src": "/image-media/1b063df7a6b8-q76-1200.webp",
+    "srcSet": "/image-media/1b063df7a6b8-q76-480.webp 480w, /image-media/1b063df7a6b8-q76-960.webp 960w, /image-media/1b063df7a6b8-q76-1200.webp 1200w"
+  },
+  "/process/discovery.png": {
+    "src": "/image-media/6d5d94a778f7-q76-1200.webp",
+    "srcSet": "/image-media/6d5d94a778f7-q76-480.webp 480w, /image-media/6d5d94a778f7-q76-960.webp 960w, /image-media/6d5d94a778f7-q76-1200.webp 1200w"
+  },
+  "/process/kickoff.png": {
+    "src": "/image-media/03c172973270-q76-1200.webp",
+    "srcSet": "/image-media/03c172973270-q76-480.webp 480w, /image-media/03c172973270-q76-960.webp 960w, /image-media/03c172973270-q76-1200.webp 1200w"
+  },
+  "/process/nda.png": {
+    "src": "/image-media/f6ab26fe5018-q76-1200.webp",
+    "srcSet": "/image-media/f6ab26fe5018-q76-480.webp 480w, /image-media/f6ab26fe5018-q76-960.webp 960w, /image-media/f6ab26fe5018-q76-1200.webp 1200w"
+  },
+  "/process/payment.png": {
+    "src": "/image-media/42559495d777-q76-1200.webp",
+    "srcSet": "/image-media/42559495d777-q76-480.webp 480w, /image-media/42559495d777-q76-960.webp 960w, /image-media/42559495d777-q76-1200.webp 1200w"
+  },
+  "/process/scope.png": {
+    "src": "/image-media/93e85a34919b-q76-1200.webp",
+    "srcSet": "/image-media/93e85a34919b-q76-480.webp 480w, /image-media/93e85a34919b-q76-960.webp 960w, /image-media/93e85a34919b-q76-1200.webp 1200w"
+  },
+  "/services/digital-marketing.png": {
+    "src": "/image-media/8aaf01e57a71-q76-1200.webp",
+    "srcSet": "/image-media/8aaf01e57a71-q76-480.webp 480w, /image-media/8aaf01e57a71-q76-960.webp 960w, /image-media/8aaf01e57a71-q76-1200.webp 1200w"
+  },
+  "/services/ecommerce-seo.png": {
+    "src": "/image-media/b1300d6d0b90-q76-1200.webp",
+    "srcSet": "/image-media/b1300d6d0b90-q76-480.webp 480w, /image-media/b1300d6d0b90-q76-960.webp 960w, /image-media/b1300d6d0b90-q76-1200.webp 1200w"
+  },
+  "/services/off-page-seo.png": {
+    "src": "/image-media/68c6468bc66c-q76-1200.webp",
+    "srcSet": "/image-media/68c6468bc66c-q76-480.webp 480w, /image-media/68c6468bc66c-q76-960.webp 960w, /image-media/68c6468bc66c-q76-1200.webp 1200w"
+  },
+  "/services/on-page-seo.png": {
+    "src": "/image-media/25c3e61d0f2c-q76-1200.webp",
+    "srcSet": "/image-media/25c3e61d0f2c-q76-480.webp 480w, /image-media/25c3e61d0f2c-q76-960.webp 960w, /image-media/25c3e61d0f2c-q76-1200.webp 1200w"
+  },
+  "/services/technical-seo.png": {
+    "src": "/image-media/9c789f377867-q76-1200.webp",
+    "srcSet": "/image-media/9c789f377867-q76-480.webp 480w, /image-media/9c789f377867-q76-960.webp 960w, /image-media/9c789f377867-q76-1200.webp 1200w"
+  },
+  "/services/website-redesign.png": {
+    "src": "/image-media/76805c3f8560-q76-1200.webp",
+    "srcSet": "/image-media/76805c3f8560-q76-480.webp 480w, /image-media/76805c3f8560-q76-960.webp 960w, /image-media/76805c3f8560-q76-1200.webp 1200w"
+  },
+  "/team/abdul-ghaffar.png": {
+    "src": "/image-media/37a1203fd786-q76-1200.webp",
+    "srcSet": "/image-media/37a1203fd786-q76-480.webp 480w, /image-media/37a1203fd786-q76-960.webp 960w, /image-media/37a1203fd786-q76-1200.webp 1122w"
+  },
+  "/team/ali-ahmed-farooqui.png": {
+    "src": "/image-media/454cc6625355-q76-1200.webp",
+    "srcSet": "/image-media/454cc6625355-q76-480.webp 480w, /image-media/454cc6625355-q76-960.webp 960w, /image-media/454cc6625355-q76-1200.webp 1122w"
+  },
+  "/team/bilal-ahmed.png": {
+    "src": "/image-media/443eea85e8fd-q76-1200.webp",
+    "srcSet": "/image-media/443eea85e8fd-q76-480.webp 480w, /image-media/443eea85e8fd-q76-960.webp 960w, /image-media/443eea85e8fd-q76-1200.webp 1122w"
+  },
+  "/team/shahzad-afridi.png": {
+    "src": "/image-media/f5521920c83f-q76-1200.webp",
+    "srcSet": "/image-media/f5521920c83f-q76-480.webp 480w, /image-media/f5521920c83f-q76-960.webp 960w, /image-media/f5521920c83f-q76-1200.webp 1122w"
+  }
+}

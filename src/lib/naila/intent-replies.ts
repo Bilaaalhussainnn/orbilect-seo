@@ -59,7 +59,7 @@ function withBlog(text: string, q: string, preferred?: string): Reply {
   return { text, actions: post ? [{ text: post.title, href: "/blogs/" + post.slug }] : undefined };
 }
 
-const topic = /\b(?:seo|saas|restaurant|food|entertainment|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audits?|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
+const topic = /\b(?:orbilect os|seo|saas|restaurant|food|entertainment|search engine optimization|starter|essential|marketing|ppc|ads|paid search|staffing|offshor\w*|outsourc\w*|chatbots?|agentic ai|crm|audits?|shopify|ecommerce|website|redesign|privacy|polic(?:y|ies)|terms|cookies?|refund\w*|billing|r[eé]sum[eé]|jobs?|vacanc\w*|sitemap|index\w*|backlinks?|reviews?|google business profile)\b/;
 const pricingFollowup = /^(?:(?:and|so)\s+)?(?:how much(?: (?:does|would|will) (?:this|that|it) (?:cost|be))?|what(?:'s| is) (?:the )?(?:cost|price|investment)(?: of (?:this|that|it))?|(?:what|how) about (?:the )?(?:cost|pricing|price)|and the (?:cost|price))[.!?\s]*$/;
 const followupOnly = /^(?:thanks(?: so much)?|thank you(?: so much)?|(?:ok(?:ay)?|sure|understood|got it|sounds good|great|perfect|that makes sense)(?:[, ]+(?:thanks|thank you))?|(?:yes|no)(?: please)?)[.!?\s]*$/;
 

@@ -1,3 +1,4 @@
+import { AssetImage } from "@/components/optimized-image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import BrandCta from "@/components/brand-cta";
@@ -26,7 +27,7 @@ const titleParts: Record<string, [string, string]> = {
 function IndustryImage({ slug }: { slug: string }) {
   return (
     <div className={styles.imageFrame} aria-hidden="true">
-      <img className={styles.image} src={"/industry-covers-landscape/" + slug + ".webp"} alt="" width={960} height={540} loading="lazy" decoding="async" />
+      <AssetImage className={styles.image} src={"/industry-covers-landscape/" + slug + ".webp"} alt="" width={960} height={540} loading="lazy" decoding="async" />
     </div>
   );
 }

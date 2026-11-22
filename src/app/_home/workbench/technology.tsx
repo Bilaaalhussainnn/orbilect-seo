@@ -1,8 +1,12 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
 
-import Image from "next/image";
+
+import Image from "@/components/optimized-image";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import industryCatalog from "../industry-growth/industries.json";
+import media from "@/lib/design-media.json";
 import { Depth } from "./depth";
 import HomeCta from "./home-cta";
 import styles from "./workbench.module.css";
@@ -14,7 +18,7 @@ const categories = [
   { label: "Website design and development", detail: "Prototype the experience, build it for the right platform, and check that it works across devices.",
     tools: [["Figma", stack("figma.svg")], ["Next.js", stack("nextjs.svg")], ["React", stack("react.svg")], ["WordPress", stack("wordpress.svg")], ["Shopify", "/platform-logos/shopify.svg"]],
     href: "/services/website-redesign", link: "Explore website redesign" },
-  { label: "Landing page design", detail: "Choose an industry and compare a light or dark direction. Each example uses a clear offer, a visual hierarchy, and a practical next step.",
+  { label: "Landing page design", detail: "Choose an industry and explore current design inspiration. Each example uses a clear offer, a visual hierarchy, and a practical next step.",
     tools: [], href: "/services/landing-page-design", link: "Explore landing page design" },
   { label: "SEO and keyword research", detail: "Identify useful queries, review how pages perform, and turn findings into priorities for content and technical work.",
     tools: [["Semrush", stack("semrush.png")], ["Ahrefs", stack("ahrefs.png")], ["Search Console", stack("search-console.svg")], ["Google Analytics 4", showcase("analytics.svg")]],
@@ -30,17 +34,14 @@ const categories = [
     href: "/services/marketing-analytics", link: "Explore marketing analytics" },
 ] as const;
 
-const industries = [
-  ["healthcare", "Healthcare"], ["real-estate", "Real estate"], ["retail", "Retail"],
-  ["ecommerce", "Ecommerce"], ["shopify", "Shopify"], ["crypto", "Crypto"],
-] as const;
-
-type Industry = (typeof industries)[number][0];
-
+const industries = industryCatalog.map(item => [item.slug, item.name] as const);
+const previews = Object.entries(media).filter(([url]) => url.startsWith("/industry-showcases/"));
 export default function Technology() {
   const [open, setOpen] = useState<number | null>(0);
-  const [industry, setIndustry] = useState<Industry>("healthcare");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [industry, setIndustry] = useState("automotive");
+  const [design, setDesign] = useState(0);
+  const options = previews.filter(([url]) => url.startsWith("/industry-showcases/" + industry + "/")).slice(0, 2);
+  const preview = options[design]?.[1] ?? options[0]?.[1];
   const active = open === null ? null : categories[open];
   const industryName = industries.find(([slug]) => slug === industry)?.[1];
 
@@ -67,12 +68,12 @@ export default function Technology() {
                   {tools.length === 0 && <>
                     <div className={styles.exampleControls} role="group" aria-label="Example industry">
                       {industries.map(([slug, name]) => (
-                        <button key={slug} type="button" aria-pressed={industry === slug} onClick={() => setIndustry(slug)}>{name}</button>
+                        <button key={slug} type="button" aria-pressed={industry === slug} onClick={() => { setIndustry(slug); setDesign(0); }}>{name}</button>
                       ))}
                     </div>
-                    <div className={styles.exampleControls} role="group" aria-label="Example theme">
-                      {(["light", "dark"] as const).map(value => (
-                        <button key={value} type="button" aria-pressed={theme === value} onClick={() => setTheme(value)}>{value === "light" ? "Light" : "Dark"}</button>
+                    <div className={styles.exampleControls} role="group" aria-label="Design example">
+                      {([0, 1] as const).map(value => (
+                        <button key={value} type="button" aria-pressed={design === value} onClick={() => setDesign(value)}>{`Design ${value + 1}`}</button>
                       ))}
                     </div>
                   </>}
@@ -99,11 +100,9 @@ export default function Technology() {
                       </ul>
                     </div>
                   ) : (
-                    <figure key={industry + theme} className={styles.landingPreview}>
-                      <Image src={`/service-showcase/ui/${industry}-${theme}.webp`}
-                        alt={`${industryName} landing page in a ${theme} palette`} width={1536} height={1024}
-                        sizes="(max-width: 850px) 88vw, 600px" unoptimized />
-                      <figcaption>{industryName} · {theme === "light" ? "Light" : "Dark"}</figcaption>
+                    <figure key={industry + design} className={styles.landingPreview}>
+                      {preview && <AssetImage src={preview.src} srcSet={preview.srcSet} sizes="(max-width: 850px) 80vw, 420px" alt={`${industryName} website design inspiration`} width={480} height={600} loading="lazy" decoding="async" />}
+                      <figcaption>{industryName} · Design {design + 1}</figcaption>
                     </figure>
                   )}
                 </div>

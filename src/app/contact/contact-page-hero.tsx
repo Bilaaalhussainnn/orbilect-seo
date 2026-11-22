@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 
 import HeroAudit, { HeroActions } from "@/components/lead-panel/hero-audit";
 import { useId, useState, type CSSProperties, type PointerEvent } from "react";
@@ -39,7 +41,7 @@ export default function ContactPageHero() {
         <div>
           <a href="/" aria-label="Orbilect SEO home" style={{color:"inherit",textDecoration:"none",width:"fit-content"}} className={styles.brand} data-reveal="off">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/orbilect-seo-mark.svg" alt="" width={36} height={36} />
+            <AssetImage src="/brand/orbilect-seo-mark.svg" alt="" width={36} height={36} />
             <span>Orbilect <strong>SEO</strong></span>
           </a>
           <p className={styles.eyebrow} data-site-eyebrow="" data-reveal="off">Contact us</p>

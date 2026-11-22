@@ -1,4 +1,6 @@
 "use client";
+import { AssetImage } from "@/components/optimized-image";
+
 
 import auditActions from "./audit-drawer-actions.module.css";
 import GoogleDeviceScreen from "@/components/google-device-screen";
@@ -89,7 +91,7 @@ export default function LeadPanel({
         </button>
 
         <div className={styles.drawerBrand}>
-          <img
+          <AssetImage
             src="/brand/orbilect-seo-mark.svg"
             width={32}
             height={32}

@@ -2,7 +2,7 @@
 import { formatChatTime } from "../../lib/naila/chat-time";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { ArrowUpRight, Calculator, Ellipsis, Mail, Minus, Send, X } from "lucide-react";
 import { type Action } from "../../lib/naila/answers";
 import { scopes, services } from "../../lib/naila/quote";

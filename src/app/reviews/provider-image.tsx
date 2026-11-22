@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { useState } from "react";
 
 export default function ProviderImage({ src, fallback, alt, width, height }: {

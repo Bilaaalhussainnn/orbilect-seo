@@ -12,7 +12,7 @@ import { OnPageSubservices } from "./on-page-subservices";
 import { InternalLinkingHelp, OnPageStructure } from "./service-structure";
 import supportStyles from "../_components/seo-support.module.css";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { FileText, Gauge, Globe, Link2, ListTree, Plus, Search } from "lucide-react";
 import logos from "../../about/seo-engine-logos.json";
 import { ServiceHero, type ServiceScene } from "../_components/service-story";

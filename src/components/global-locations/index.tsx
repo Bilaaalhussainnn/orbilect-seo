@@ -1,7 +1,7 @@
 "use client";
 
 import { internationalWhatsApp, pakistanAddress, pakistanWhatsApp } from "@/lib/site-identity";
-import Image from "next/image";
+import Image from "@/components/optimized-image";
 import { useEffect, useId, useRef, useState, type CSSProperties, type MouseEvent } from "react";
 import { ArrowUpRight, Mail, MapPin, X } from "lucide-react";
 import world from "./world-map.json";
@@ -140,8 +140,8 @@ export default function GlobalLocations() {
           {location && (
             <>
               <figure className={styles.figure}>
-                <Image key={location.slug} src={"/locations/" + location.slug + ".webp"}
-                  width={512} height={512} unoptimized alt={"Illustration of " + location.landmark} />
+                <Image key={location.slug} src={"/locations-dark-v11/" + location.slug + ".webp"}
+                  width={960} height={640} unoptimized alt={"Illustration of " + location.landmark} />
                 <figcaption>{location.landmark}</figcaption>
               </figure>
               <div className={styles.details}>
