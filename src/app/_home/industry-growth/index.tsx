@@ -1,12 +1,26 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import LeadPanel from "@/components/lead-panel";
-import cta from "@/styles/orbilect-cta.module.css";
 import industries from "./industries.json";
 import styles from "./industry-growth.module.css";
 
 export { default as SearchComparison } from "./search-comparison";
 
+
+const titleParts: Record<string, [string, string]> = {
+  "arts-entertainment": ["Arts & ", "Entertainment"],
+  automotive: ["Auto", "motive"],
+  ecommerce: ["E", "commerce"],
+  education: ["Edu", "cation"],
+  finance: ["Fin", "ance"],
+  "food-beverages": ["Food & ", "Beverages"],
+  healthcare: ["Health", "care"],
+  hospitality: ["Hospi", "tality"],
+  logistics: ["Log", "istics"],
+  manufacturing: ["Manu", "facturing"],
+  "real-estate": ["Real ", "Estate"],
+  saas: ["Sa", "aS"],
+};
 
 function IndustryImage({ slug }: { slug: string }) {
   return (
@@ -34,9 +48,9 @@ export function Industries({ directory = false }: { directory?: boolean } = {}) 
               and the action they need to take next.
             </p>
             {directory ? (
-              <LeadPanel source="industries-audit" />
+              <LeadPanel source="industries-audit" className={styles.primaryCta} />
             ) : (
-              <Link href="/industries" className={`${cta.cta} ${cta.ctaBlack}`} data-orbilect-cta="black"><span data-orbilect-cta-icon="" aria-hidden="true" />
+              <Link href="/industries" className={styles.primaryCta}><span className={styles.ctaDisc} aria-hidden="true"><ArrowUpRight /></span>
                 
                 Explore industries
               </Link>
@@ -49,9 +63,9 @@ export function Industries({ directory = false }: { directory?: boolean } = {}) 
                 <Link className={styles.industryRow} href={`/industries/${industry.slug}`}>
                   <IndustryImage slug={industry.slug} />
                   <div className={styles.industryCopy}>
-                    <h3>{industry.name}</h3>
+                    <h3 aria-label={industry.name}><span>{titleParts[industry.slug]?.[0] ?? industry.name}</span><span className={styles.nameAccent}>{titleParts[industry.slug]?.[1]}</span></h3>
                     <p>{industry.summary}</p>
-                    <span className={styles.view}>Explore SEO services <ArrowUpRight size={17} aria-hidden="true" /></span>
+                    <span className={styles.view}><span className={styles.ctaDisc} aria-hidden="true"><ArrowUpRight /></span>Explore SEO services</span>
                   </div>
                 </Link>
               </li>

@@ -87,7 +87,7 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 
 .industryRow {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  grid-template-columns: 200px minmax(0, 1fr);
   align-items: center;
   gap: clamp(16px, 3vw, 36px);
   padding-bottom: 24px;
@@ -97,6 +97,8 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 }
 
 .imageFrame {
+  width: 100%;
+  max-width: 200px;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 18px;
@@ -106,7 +108,55 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 .image { display:block; width:100%; height:100%; object-fit:contain; background:#fff; }
 .industryCopy h3 { margin: 0; font-size: clamp(20.7px, 2vw, 26.88px); font-weight: 500; letter-spacing: -.035em; }
 .industryCopy p { margin: 9px 0 16px; }
-.view { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+/* Same pill and arrow-disc language, scoped to this section. */
+.industryCopy .nameAccent { color: #004aad; }
+.view, .primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 5px 14px 5px 5px;
+  border: 1px solid #004aad;
+  border-radius: 999px;
+  background: #004aad;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+.primaryCta { cursor: pointer; }
+.ctaDisc, .primaryCta > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #004aad;
+  transition: background-color 220ms ease, color 220ms ease;
+}
+.ctaDisc svg, .primaryCta > span svg { width: 18px; height: 18px; transition: transform 220ms ease; }
+.industryRow:is(:hover, :focus-visible) .view,
+.primaryCta:is(:hover, :focus-visible) {
+  background: #fff;
+  border-color: #fff;
+  color: #004aad;
+}
+.industryRow:is(:hover, :focus-visible) .ctaDisc,
+.primaryCta:is(:hover, :focus-visible) > span {
+  background: #004aad;
+  color: #fff;
+}
+.industryRow:is(:hover, :focus-visible) .ctaDisc svg,
+.primaryCta:is(:hover, :focus-visible) svg { transform: rotate(45deg); }
+.primaryCta:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 .detailGrid { align-items: start; margin-bottom: 30px; }
 .detailGrid h2 { margin: 0 0 8px; font-size: clamp(21.84px, 3.2vw, 32px); line-height: 1.15; }
 .detailGrid ul { padding-inline-start: 20px; margin-bottom: 20px; }
@@ -135,7 +185,11 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
 @media (max-width: 560px) {
   .wrap { width: calc(100% - 36px); }
   .heading { font-size: clamp(23.52px, 6.4vw, 30.24px); }
-  .industryRow { grid-template-columns: minmax(0, 1fr); }
+  .industryRow { grid-template-columns: 104px minmax(0, 1fr); gap: 14px; align-items: start; }
+  .industryCopy h3 { font-size: 19px; }
+  .industryCopy p { font-size: 12px; line-height: 1.65; }
+  .view { font-size: 11px; gap: 6px; padding-right: 10px; }
+  .view .ctaDisc { flex-basis: 28px; width: 28px; height: 28px; }
   .industryCopy p { margin-bottom: 10px; }
 }
 
@@ -156,4 +210,23 @@ h1.heading { font-size: clamp(30.24px, 4vw, 44px); }
   }
 
   .controls { justify-content: center; }
+}
+
+@media (min-width: 561px) and (max-width: 900px) {
+  .industryRow { grid-template-columns: 160px minmax(0, 1fr); }
+}
+@media (max-width: 360px) {
+  .industryRow { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
+  .view { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view, .primaryCta, .ctaDisc, .ctaDisc svg { transition: none; }
+  .industryRow:is(:hover, :focus-visible) .ctaDisc svg,
+  .primaryCta:is(:hover, :focus-visible) svg { transform: none; }
+}
+/* Override the shared audit trigger only inside this industry section. */
+.section button.primaryCta:is(:hover, :focus-visible) {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #004aad !important;
 }
