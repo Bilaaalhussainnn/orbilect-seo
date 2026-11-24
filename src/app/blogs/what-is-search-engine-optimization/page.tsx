@@ -25,7 +25,7 @@ export default function SeoGuidePage() {
 
   return (
     <main className={styles.page}>
-      <SeoJsonLd data={articleSchema(post)} />
+      <SeoJsonLd data={articleSchema(post, "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement.")} />
       <header className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>

@@ -16,6 +16,12 @@ const homeTitle = "Orbilect SEO | SEO & Digital Marketing Services";
 const homeDescription = businessDescription;
 const entries: Record<string, [title: string, description: string]> = {
   "/": [homeTitle, homeDescription],
+  "/privacy-policy": ["Privacy Policy", "How Orbilect SEO handles enquiries, cookies, newsletter subscriptions, and privacy requests."],
+  "/terms-and-conditions": ["Terms and Conditions", "Orbilect SEO service terms, project scope, revisions, refunds, delivery, and SEO estimates."],
+  "/careers": ["Careers", "Get to know the teams at Orbilect SEO, check for current job openings, and learn what we look for in applicants."],
+  "/our-team": ["Our team", "Meet Orbilect SEO’s leadership, delivery specialists and support teams, and see how they work together across search, design and development."],
+  "/corporate-social-responsibility": ["Corporate Social Responsibility", "Explore the principles that guide Orbilect SEO’s approach to people, accessibility, and responsible operations."],
+  "/media-pr-relations": ["Media & PR Relations", "Contact Orbilect SEO for press enquiries, interviews, expert commentary, and brand asset requests."],
   "/about": ["About Orbilect SEO", "Meet the Orbilect Labs team behind Orbilect SEO and see how we plan search, paid marketing, website design and conversion work."],
   "/blogs": ["SEO & Digital Marketing Blog", "Read practical Orbilect SEO guides on search indexing, XML sitemaps, ecommerce SEO, Google Business Profile, website performance, and paid search."],
   "/services": ["SEO & Digital Marketing Services", "Explore technical SEO, on-page SEO, off-page SEO, ecommerce SEO, PPC management, content strategy, and website redesign for your business."],
@@ -24,6 +30,14 @@ const entries: Record<string, [title: string, description: string]> = {
   "/industries/arts-entertainment": ["Arts & Entertainment SEO & Website Design", "Help audiences discover your events, performers, and creative work with search-focused content, mobile-friendly design, and clearer ticket and enquiry journeys."],
   "/industries/food-beverages": ["Food & Beverage SEO & Website Design", "Help customers find your restaurant, cafe, or food brand with menu discovery, local SEO, mobile-friendly design, and clear ordering and reservation journeys."],
   "/industries/saas": ["SaaS SEO & Website Design Services", "Explain your software, reach relevant buyers, and improve the path to trials and demos with SaaS SEO, useful product content, and responsive website design."],
+  "/industries/automotive": ["Automotive SEO & Website Design Services", "Help vehicle shoppers find the right inventory, dealership, or service centre when they’re ready to compare options."],
+  "/industries/education": ["Education SEO & Website Design Services", "Help prospective students find and compare courses, qualifications, and admissions requirements."],
+  "/industries/finance": ["Finance SEO & Website Design Services", "Make financial services easier to discover with clear product pages, transparent information, and content reviewed by your specialists."],
+  "/industries/healthcare": ["Healthcare SEO & Website Design Services", "Help patients find your practice, understand the services available, and take the next step toward an appointment."],
+  "/industries/hospitality": ["Hospitality SEO & Website Design Services", "Help guests discover your property while comparing destinations, room types, amenities, and places to stay."],
+  "/industries/logistics": ["Logistics SEO & Website Design Services", "Reach shippers and procurement teams searching for freight, fulfilment, and warehousing services."],
+  "/industries/manufacturing": ["Manufacturing SEO & Website Design Services", "Help engineers and procurement teams find your capabilities, technical specifications, and products."],
+  "/industries/real-estate": ["Real Estate SEO & Website Design Services", "Connect buyers and tenants with relevant properties, neighbourhood guides, and local agents through organic search."],
   "/industries/ecommerce": ["SEO for Ecommerce Brands & Online Retailers", "See how Orbilect SEO helps online retailers improve product discovery, organize category pages, and guide shoppers from search to checkout."],
   "/reviews": ["Reviews and Online Reputation | Orbilect SEO", "Share honest feedback about Orbilect SEO services and learn how accurate listings and genuine reviews help businesses earn trust and improve."],
   "/pricing": ["SEO & Digital Marketing Pricing", "Compare Orbilect SEO plans and see how scope, technical work, content, and campaign management affect the investment for your business."],
@@ -57,35 +71,39 @@ function unbranded(title: string) {
   return title.replace(/\s*(?:\||[–—-])\s*Orbilect SEO\s*$/i, "");
 }
 
+export function brandedTitle(title: string) {
+  return /orbilect seo/i.test(title) ? title : title + " | " + brand;
+}
+
 export function pageSeo(route: string, previous: Metadata = {}): Metadata {
   const url = siteUrl(route);
   const entry = entries[route];
   const title = entry?.[0] ?? (typeof previous.title === "string" ? unbranded(previous.title) : previous.title);
   const description = entry?.[1] ?? previous.description;
-  const shareTitle = typeof title === "string" ? title : undefined;
+  const shareTitle = typeof title === "string" ? brandedTitle(title) : undefined;
   const next = { ...previous };
   delete next.keywords;
   return {
     ...next,
-    title: typeof title === "string" && /orbilect seo/i.test(title) ? { absolute: title } : title,
+    title: shareTitle ? { absolute: shareTitle } : title,
     description,
-    alternates: { ...previous.alternates, canonical: previous.alternates?.canonical ?? url },
+    alternates: { ...previous.alternates, canonical: url },
     openGraph: {
       type: "website",
       siteName: brand,
       locale: "en_US",
+      images: [{ url: share, width: 1200, height: 630, alt: brand }],
+      ...previous.openGraph,
       title: shareTitle,
       description,
       url,
-      images: [{ url: share, width: 1200, height: 630, alt: brand }],
-      ...previous.openGraph,
     } as Metadata["openGraph"],
     twitter: {
       card: "summary_large_image",
-      title: shareTitle,
-      description,
       images: [{ url: share, alt: brand }],
       ...previous.twitter,
+      title: shareTitle,
+      description,
     } as Metadata["twitter"],
   };
 }
@@ -156,12 +174,12 @@ export function blogSeo(post: Article, description = post.summary): Metadata {
   });
 }
 
-export function articleSchema(post: Article) {
+export function articleSchema(post: Article, description = post.summary) {
   const url = siteUrl(blogPath(post.slug));
   return {
     "@context": "https://schema.org", "@type": "BlogPosting", "@id": url + "#article",
     url, mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    headline: post.title, description: post.summary, datePublished: post.publishedAt,
+    headline: post.title, description, datePublished: post.publishedAt,
     articleSection: post.category,
     author: { "@type": "Person", name: post.author.name },
     publisher: { "@id": organizationId, "@type": "Organization", name: brand, url: origin + "/", logo: { "@type": "ImageObject", url: logo } },
@@ -176,7 +194,7 @@ export function serviceSchema(route: string) {
   const url = siteUrl(route);
   return {
     "@context": "https://schema.org", "@type": "Service", "@id": url + "#service",
-    url, name: details[0], description: details[1], serviceType: details[0],
+    url, name: brandedTitle(details[0]), description: details[1], serviceType: details[0],
     provider: { "@id": organizationId, "@type": "Organization", name: brand, url: origin + "/" },
   };
 }
@@ -202,13 +220,19 @@ export function pageSchema(route: string, details: { name?: string; description?
   const type = route === "/about" ? "AboutPage" : route === "/contact" ? "ContactPage" : ["/services", "/industries", "/blogs", "/newsroom"].includes(route) ? "CollectionPage" : "WebPage";
   return { "@context": "https://schema.org", "@graph": [
     ...(route === "/about" ? [homeSchema["@graph"][0]] : []),
-    { "@type": type, "@id": siteUrl(route) + "#webpage", url: siteUrl(route), name: details.name ?? entries[route]?.[0] ?? labelFor(route),
-      ...((details.description ?? entries[route]?.[1]) ? { description: details.description ?? entries[route]?.[1] } : {}), isPartOf: { "@id": websiteId }, about: { "@id": organizationId }, inLanguage: "en" },
+    { "@type": type, "@id": siteUrl(route) + "#webpage", url: siteUrl(route), name: brandedTitle(entries[route]?.[0] ?? details.name ?? labelFor(route)),
+      ...((entries[route]?.[1] ?? details.description) ? { description: entries[route]?.[1] ?? details.description } : {}), isPartOf: { "@id": websiteId }, about: { "@id": organizationId }, inLanguage: "en" },
   ] };
 }
 export function withBreadcrumbs(data: object): object {
   const root = data as Record<string, unknown>;
-  const nodes = (Array.isArray(root["@graph"]) ? root["@graph"] : [root]) as Record<string, unknown>[];
+  const nodes = ((Array.isArray(root["@graph"]) ? root["@graph"] : [root]) as Record<string, unknown>[]).map(item => {
+    if (typeof item.url !== "string") return item;
+    const url = new URL(item.url);
+    const details = url.origin === origin ? entries[url.pathname] : undefined;
+    if (!details || !["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Service"].includes(String(item["@type"]))) return item;
+    return { ...item, name: brandedTitle(details[0]), description: details[1] };
+  });
   if (nodes.some(node => node["@type"] === "BreadcrumbList")) return data;
   const node = nodes.find(node => typeof node.url === "string" && ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Service", "BlogPosting", "Article"].includes(String(node["@type"])));
   if (!node || typeof node.url !== "string") return data;

@@ -1,85 +1,47 @@
 import Image from "@/components/optimized-image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import { reviewPlatforms } from "@/lib/review-platforms";
 import { ReviewEmbed } from "./review-embed";
-import ProviderImage from "./provider-image";
+import { directoryEntries } from "./review-directory-data";
 import styles from "./reviews.module.css";
 
 type Profile = { reviewUrl?: string; embedUrl?: string };
-type DirectoryEntry = {
-  id: string;
-  label: string;
-  mark: string;
-  href?: string;
-  widget?: "designrush" | "trustpilot" | "clutch" | "truefirms" | "smartcustomer";
-  badge?: string;
-  directory?: boolean;
-};
-
-const profileLinks: Record<string, string> = {
-  techbehemoths: "https://techbehemoths.com/company/orbilect-seo",
-  designrush: "https://www.designrush.com/agency/profile/orbilect-seo#reviews",
-  trustpilot: "https://www.trustpilot.com/review/orbilectseo.com",
-  clutch: "https://clutch.co/profile/orbilect-seo",
-};
-
-const widgets: Record<string, DirectoryEntry["widget"]> = {
-  designrush: "designrush", trustpilot: "trustpilot", clutch: "clutch",
-};
-
-// This list belongs only to the reviews directory. Shared carousels stay unchanged.
-const entries: DirectoryEntry[] = [
-  ...reviewPlatforms.filter(platform => !["softwareworld", "yelp", "reviewsio", "bbb"].includes(platform.id)).map(platform => ({
-    id: platform.id,
-    label: platform.id === "google" ? "Google Business Account" : platform.label,
-    mark: "/review-platforms/" + platform.mark,
-    href: profileLinks[platform.id],
-    widget: widgets[platform.id],
-    badge: platform.id === "techbehemoths" ? "https://cdn.techbehemoths.com/public/static/validation/tb-verified-logo.svg" : undefined,
-  })),
-  { id: "rightfirms", label: "RightFirms", mark: "/review-platforms/rightfirms-company.webp", href: "https://www.rightfirms.co/company/orbilect-seo", badge: "/review-platforms/rightfirms-company.webp" },
-  { id: "techreviewer", label: "Techreviewer", mark: "/review-platforms/techreviewer.svg", href: "https://techreviewer.co/companies/orbilect-seo" },
-  // The supplied TopDevelopers URL is a directory, not an Orbilect SEO profile.
-  { id: "topdevelopers", label: "TopDevelopers.co", mark: "/review-platforms/topdevelopers.svg", href: "https://www.topdevelopers.co/directory/web-development-companies", badge: "https://www.topdevelopers.co/assets/badges/app-2026/Web-Development/badge-top-web-development-companies-2026.png", directory: true },
-  // Add a verified profile URL here when TrueFirms supplies one; keep company ID in the widget.
-  { id: "truefirms", label: "TrueFirms", mark: "/review-platforms/truefirms.png", widget: "truefirms" },
-  { id: "smartcustomer", label: "SmartCustomer", mark: "/review-platforms/smartcustomer.svg", href: "https://www.smartcustomer.com/reviews/orbilectseo.com", widget: "smartcustomer" },
-];
 
 export default function ReviewDirectory({ profiles }: { profiles: Map<string, Profile> }) {
   return <ul className={styles.cards} role="list">
-    {entries.map(entry => {
-      const profile = profiles.get(entry.id);
-      const href = entry.href ?? profile?.reviewUrl;
-      const rel = entry.directory ? "nofollow noopener noreferrer" : "noopener noreferrer";
-      const logo = <Image src={entry.mark} alt={entry.label} width={200} height={72} unoptimized />;
+    {/* Preserve the Google and Bing account controls and configured URLs. */}
+    {reviewPlatforms.filter(platform => platform.id === "google" || platform.id === "bing").map(platform => {
+      const profile = profiles.get(platform.id);
+      const href = profile?.reviewUrl;
+      const label = platform.id === "google" ? "Google Business Account" : platform.label;
+      const logo = <Image src={"/review-platforms/" + platform.mark} alt={label} width={200} height={72} unoptimized />;
+      return <li id={"review-" + platform.id} key={platform.id} className={`${styles.card} ${styles.directoryCard} ${styles.accountCard}`}>
+        <h3 className={styles.directoryTitle}>{label}</h3>
+        {href ? <a className={styles.logoBox} href={href} target="_blank" rel="noopener noreferrer" aria-label={"Visit " + label + " (opens in a new tab)"}>{logo}</a> : <div className={styles.logoBox}>{logo}</div>}
+        <div className={styles.cardFooter}>{href ? <a href={href} target="_blank" rel="noopener noreferrer">View profile and reviews<ArrowUpRight size={15} aria-hidden="true" /></a> : <p>Profile link coming soon</p>}</div>
+        {profile?.embedUrl && <details className={styles.badgeDetails}><summary>Show reviews</summary><div className={styles.widgetSlot}><ReviewEmbed label={label} url={profile.embedUrl} /></div></details>}
+      </li>;
+    })}
+    {directoryEntries.map(entry => {
+      const href = entry.directory ? profiles.get(entry.id)?.reviewUrl ?? entry.href : entry.href;
+      const isDirectory = entry.directory && href === entry.href;
       return <li id={"review-" + entry.id} key={entry.id} className={`${styles.card} ${styles.directoryCard}`}>
-        <h3 className={styles.directoryTitle}>{entry.label}</h3>
-        {href ? <a className={styles.logoBox} href={href} target="_blank" rel={rel}
-          aria-label={"Visit " + entry.label + " (opens in a new tab)"}>{logo}</a> : <div className={styles.logoBox}>{logo}</div>}
-
-        <div className={styles.cardFooter}>
-          {href ? <a href={href} target="_blank" rel={rel}>{entry.directory ? "View listing" : "View profile and reviews"}<ArrowUpRight size={15} aria-hidden="true" /></a>
-            : <p>Profile link coming soon</p>}
-        </div>
-        {(entry.widget || entry.badge || profile?.embedUrl) && <details className={styles.badgeDetails}>
-          <summary>{entry.widget || profile?.embedUrl ? "Show reviews" : "Show badge"}</summary>
-        <div className={styles.widgetSlot}>
-          {entry.widget ? <iframe className={styles.providerWidget}
-            src={"/api/review-widgets/" + entry.widget} title={entry.label + " reviews for Orbilect SEO"}
-            loading="lazy" width="100%" height={220} referrerPolicy="strict-origin-when-cross-origin" />
-            : entry.badge && href ? <a href={href} target="_blank" rel={rel} className={styles.badgeBox}
-              data-techbehemoths-verification={entry.id === "techbehemoths" ? "" : undefined}>
-              <span className={styles.badgeImage}>
-                <ProviderImage src={entry.badge} fallback={entry.mark} alt={entry.id === "techbehemoths" ? "TechBehemoths Verification" : entry.label + " company badge"}
-                  width={200} height={180} />
-                {entry.id === "rightfirms" && <span className={styles.badgeYear}>2026</span>}
-              </span>
-            </a> : profile?.embedUrl ? <ReviewEmbed label={entry.label} url={profile.embedUrl} />
-            : null}
-        </div>
-
-        </details>}
+        <a className={styles.cardLink} href={href} target="_blank" rel={isDirectory ? "nofollow noopener noreferrer" : "noopener noreferrer"} aria-label={"Visit " + entry.label + (isDirectory ? " directory" : " profile for Orbilect SEO") + " (opens in a new tab)"}>
+          <h3 className={styles.directoryTitle}>{entry.label}</h3>
+          <span className={styles.logoBox}>
+            <span className={entry.badgeYear ? styles.reviewBadge : undefined}>
+              <Image src={"/review-platforms/" + entry.mark} alt={entry.badgeYear ? "RightFirms Read Reviews badge" : entry.label} width={200} height={72} unoptimized />
+              {entry.badgeYear && <span className={styles.reviewBadgeYear}>2026</span>}
+            </span>
+          </span>
+          <span className={styles.reviewStatus}>
+            {entry.rating ? <>
+              <span className={styles.blueStars} aria-label={entry.rating.value + " out of 5 stars"}>{[1,2,3,4,5].map(star => <Star key={star} size={18} fill="currentColor" strokeWidth={0} aria-hidden="true" />)}</span>
+              <span>{entry.rating.value.toFixed(1)}/5 · {entry.rating.count} {entry.rating.count === 1 ? "review" : "reviews"}</span>
+            </> : <span>{isDirectory ? "Explore the directory" : entry.noReviews ? "No reviews yet" : "See latest reviews"}</span>}
+          </span>
+          <span className={styles.profileCta}><span className={styles.profileArrow} aria-hidden="true">↗</span>{isDirectory ? "Visit platform" : "Visit our profile"}</span>
+        </a>
       </li>;
     })}
   </ul>;

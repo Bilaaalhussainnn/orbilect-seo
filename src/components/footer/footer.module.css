@@ -178,3 +178,11 @@
 @media(max-width:700px) { .emblem {width:42px;height:42px;border-radius:12px}.signature{gap:18px}.signature p{font-size:16px} }
 
 @media(max-width:1024px), (max-width:1366px) and (pointer:coarse) { .brand { flex-direction:column;align-items:center;text-align:center; }.signature {flex-direction:column;justify-content:center;text-align:center;}.signature p {margin-inline:auto;}.contacts a,.contacts p {justify-content:center}.footer ul.icons,.legal nav {justify-content:center}.legal>.wrap {align-items:center;text-align:center;} }
+
+.footerBottom { display:flex;justify-content:space-between;align-items:center;gap:24px;padding-bottom:26px; }
+.footerBottom .social { padding-bottom:0; }
+.selectedBadge { display:block;flex:none;border-radius:50%;transition:transform .2s; }
+.selectedBadge img { display:block;width:104px;height:104px;object-fit:contain; }
+.selectedBadge:is(:hover,:focus-visible) { transform:translateY(-3px); }
+@media(max-width:700px) { .footerBottom { flex-direction:column; }.footerBottom .social { text-align:center; } }
+@media(prefers-reduced-motion:reduce) { .selectedBadge {transition:none;}.selectedBadge:is(:hover,:focus-visible){transform:none;} }
