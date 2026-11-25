@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   async headers() {
     return [
+      { source: "/:path*", headers: [{ key: "X-Orbilect-SEO-Release", value: "search-v16" }] },
       ...["/brand/:path*", "/technology-stack/:path*", "/service-showcase/logos/:path*", "/platform-logos/:path*", "/naila/:path*"].map(source => ({
         source,
         has: [{ type: "query" as const, key: "v", value: imageRelease.version }],

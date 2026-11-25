@@ -13,7 +13,7 @@ const organizationId = origin + "/#organization";
 const websiteId = origin + "/#website";
 
 const homeTitle = "Orbilect SEO | SEO & Digital Marketing Services";
-const homeDescription = businessDescription;
+const homeDescription = "Orbilect SEO, a product of Orbilect Labs, helps businesses grow with SEO, PPC, content, ecommerce services and website design. Request a free SEO audit.";
 const entries: Record<string, [title: string, description: string]> = {
   "/": [homeTitle, homeDescription],
   "/privacy-policy": ["Privacy Policy", "How Orbilect SEO handles enquiries, cookies, newsletter subscriptions, and privacy requests."],
@@ -121,7 +121,7 @@ export const homeSchema = {
     {
       "@type": "Organization", "@id": organizationId, name: brand, url: origin + "/",
       logo: { "@type": "ImageObject", url: logo, width: 423, height: 113 },
-      description: homeDescription,
+      description: businessDescription,
       email: "info@orbilectseo.com", telephone: "+1-646-640-0070",
       address: { "@type": "PostalAddress", streetAddress: pakistanAddress.split(", Karachi")[0], addressLocality: "Karachi", addressRegion: "Sindh", addressCountry: "PK" },
       contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: "+1-646-640-0070", email: "info@orbilectseo.com", availableLanguage: ["en"], url: internationalWhatsApp.href },
@@ -224,20 +224,48 @@ export function pageSchema(route: string, details: { name?: string; description?
       ...((entries[route]?.[1] ?? details.description) ? { description: entries[route]?.[1] ?? details.description } : {}), isPartOf: { "@id": websiteId }, about: { "@id": organizationId }, inLanguage: "en" },
   ] };
 }
+/** Emit a self-contained graph; keep one stable identity for each real entity. */
 export function withBreadcrumbs(data: object): object {
   const root = data as Record<string, unknown>;
+  const pageTypes = ["WebPage", "AboutPage", "ContactPage", "CollectionPage"];
+  const contentTypes = [...pageTypes, "Service", "BlogPosting", "Article"];
   const nodes = ((Array.isArray(root["@graph"]) ? root["@graph"] : [root]) as Record<string, unknown>[]).map(item => {
     if (typeof item.url !== "string") return item;
-    const url = new URL(item.url);
+    const url = new URL(item.url, origin);
     const details = url.origin === origin ? entries[url.pathname] : undefined;
-    if (!details || !["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Service"].includes(String(item["@type"]))) return item;
+    if (!details || ![...pageTypes, "Service"].includes(String(item["@type"]))) return item;
     return { ...item, name: brandedTitle(details[0]), description: details[1] };
   });
-  if (nodes.some(node => node["@type"] === "BreadcrumbList")) return data;
-  const node = nodes.find(node => typeof node.url === "string" && ["WebPage", "AboutPage", "ContactPage", "CollectionPage", "Service", "BlogPosting", "Article"].includes(String(node["@type"])));
+  const node = nodes.find(item => typeof item.url === "string" && contentTypes.includes(String(item["@type"])));
   if (!node || typeof node.url !== "string") return data;
-  const url = new URL(node.url);
-  if (url.origin !== origin || url.pathname === "/") return data;
-  const breadcrumb = breadcrumbSchema(url.pathname, typeof node.name === "string" ? node.name : typeof node.headline === "string" ? node.headline : undefined);
-  return { "@context": root["@context"] ?? "https://schema.org", "@graph": [...nodes.map(({ "@context": _context, ...item }) => item), breadcrumb] };
+  const url = new URL(node.url, origin);
+  if (url.origin !== origin) return data;
+
+  // Service and article pages also describe the actual page, not just its subject.
+  let page = nodes.find(item => pageTypes.includes(String(item["@type"])));
+  if (!page) {
+    page = {
+      "@type": "WebPage", "@id": siteUrl(url.pathname) + "#webpage", url: siteUrl(url.pathname),
+      name: brandedTitle(String(node.headline ?? node.name ?? labelFor(url.pathname))),
+      description: node.description, isPartOf: { "@id": websiteId }, inLanguage: "en",
+      ...(node["@id"] ? { mainEntity: { "@id": node["@id"] } } : {}),
+    };
+    nodes.push(page);
+  }
+  if (!nodes.some(item => item["@id"] === organizationId)) nodes.unshift(homeSchema["@graph"][0]);
+  if (!nodes.some(item => item["@id"] === websiteId)) nodes.unshift(homeSchema["@graph"][1]);
+  const breadcrumb = breadcrumbSchema(url.pathname, String(node.name ?? node.headline ?? labelFor(url.pathname)));
+  if (breadcrumb) {
+    if (!nodes.some(item => item["@type"] === "BreadcrumbList")) nodes.push(breadcrumb);
+    page.breadcrumb = { "@id": breadcrumb["@id"] };
+  }
+  // Do not discard normalization when the incoming graph already has breadcrumbs.
+  return {
+    "@context": root["@context"] ?? "https://schema.org",
+    "@graph": nodes.map(item => {
+      const copy = { ...item };
+      delete copy["@context"];
+      return copy;
+    }),
+  };
 }
