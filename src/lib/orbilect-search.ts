@@ -109,6 +109,7 @@ export function pageSeo(route: string, previous: Metadata = {}): Metadata {
 }
 
 export const rootSeo: Metadata = {
+  other: { "p:domain_verify": "8f47ab891c7e7cbb82e98425d42ab607" },
   metadataBase: new URL(origin),
   title: { default: homeTitle, template: "%s | Orbilect SEO" },
   description: homeDescription,
