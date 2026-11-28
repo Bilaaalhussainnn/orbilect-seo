@@ -1,3 +1,4 @@
+import PublicWebMcp from "@/components/agents/webmcp";
 import { humanChatAvailable } from "@/lib/naila/human-chat";
 import { rootSeo } from "@/lib/orbilect-search";
 import SiteHeader from "@/components/header";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <span id="site-content" tabIndex={-1} />
         {children}  <ScrollExperience />
         <SiteScrollReveal />
+        <PublicWebMcp />
       <SeoInvestmentOffer />
       <CookieConsent />
       <Naila humanChatEnabled={humanChatAvailable()} />

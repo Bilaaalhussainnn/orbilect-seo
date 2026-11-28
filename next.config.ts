@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: [{ key: "X-Orbilect-SEO-Release", value: "reliability-v21" }] },
+      { source: "/agent-markdown/:path*", headers: [{ key: "Content-Type", value: "text/markdown; charset=utf-8" }, { key: "Cache-Control", value: "public, max-age=3600" }, { key: "X-Robots-Tag", value: "noindex" }] },
+      { source: "/llms.txt", headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }, { key: "Cache-Control", value: "public, max-age=3600" }] },
       ...["/brand/:path*", "/technology-stack/:path*", "/service-showcase/logos/:path*", "/platform-logos/:path*", "/naila/:path*"].map(source => ({
         source,
         has: [{ type: "query" as const, key: "v", value: imageRelease.version }],

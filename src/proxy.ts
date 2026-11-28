@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { legacyImageTarget } from "./lib/legacy-image";
+import { prefersMarkdown } from "./lib/agents/accept";
 import { getPublishedPosts } from "./app/blogs/blog-data";
 
-const published = new Set(getPublishedPosts().map(post => post.slug));
-
+const publishedBlogs = new Set(getPublishedPosts().map(post => "/blogs/" + post.slug));
 export function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === "/_next/image") {
     const target = legacyImageTarget(request.nextUrl.searchParams.get("url"));
@@ -12,13 +12,24 @@ export function proxy(request: NextRequest) {
     response.headers.set("Cache-Control", "public, max-age=3600");
     return response;
   }
-  const slug = request.nextUrl.pathname.split("/").filter(Boolean).at(-1);
-  if (!slug || published.has(slug)) return NextResponse.next();
-
-  // Return Next's not-found page before the blog layout starts streaming.
-  return NextResponse.rewrite(new URL("/_not-found", request.url), { status: 404 });
+  const pathname = request.nextUrl.pathname;
+  const markdown = pathname !== "/agent-content" && ["GET", "HEAD"].includes(request.method) &&
+    !request.headers.has("rsc") && !request.headers.has("next-router-prefetch") &&
+    prefersMarkdown(request.headers.get("accept") ?? "");
+  let response: NextResponse;
+  if (markdown) {
+    const url = new URL("/agent-content",request.url);
+    url.searchParams.set("path",pathname);
+    response = NextResponse.rewrite(url);
+    response.headers.set("Cache-Control", "private, no-store");
+    response.headers.set("CDN-Cache-Control", "no-store");
+  } else if (/^\/blogs\/[^/.]+$/.test(pathname) && !publishedBlogs.has(pathname)) {
+    response = NextResponse.rewrite(new URL("/_not-found",request.url), { status: 404 });
+  } else response = NextResponse.next();
+  response.headers.append("Vary", "Accept");
+  return response;
 }
 
 export const config = {
-  matcher: ["/blogs/:slug([^/.]+)", "/_next/image"],
+  matcher: ["/_next/image", "/((?!api|admin|internal|_next|agent-markdown|mcp|\\.well-known|.*\\.[^/]+$).*)"],
 };

@@ -1,0 +1,681 @@
+[
+  {
+    "path": "/",
+    "title": "The Intelligence Behind How Customers Find Your Brand",
+    "description": "Orbilect SEO, a product of Orbilect Labs, helps businesses grow with SEO, PPC, content, ecommerce services and website design. Request a free SEO audit.",
+    "file": "index.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/index.md"
+  },
+  {
+    "path": "/about",
+    "title": "We help businesses earn their place in search",
+    "description": "Meet the Orbilect Labs team behind Orbilect SEO and see how we plan search, paid marketing, website design and conversion work.",
+    "file": "about.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/about.md"
+  },
+  {
+    "path": "/blogs",
+    "title": "Get found and get chosenGet found and get chosen",
+    "description": "Read practical Orbilect SEO guides on search indexing, XML sitemaps, ecommerce SEO, Google Business Profile, website performance, and paid search.",
+    "file": "blogs.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs.md"
+  },
+  {
+    "path": "/blogs/what-is-search-engine-optimization",
+    "title": "What Is Search Engine Optimization?",
+    "description": "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement.",
+    "file": "blogs/what-is-search-engine-optimization.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-is-search-engine-optimization.md"
+  },
+  {
+    "path": "/careers",
+    "title": "Careers at Orbilect SEO",
+    "description": "Get to know the teams at Orbilect SEO, check for current job openings, and learn what we look for in applicants.",
+    "file": "careers.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/careers.md"
+  },
+  {
+    "path": "/contact",
+    "title": "Let’s talk about growing your business",
+    "description": "Talk with Orbilect SEO about search visibility, paid search, or a website redesign. Share your project goals and request a tailored proposal.",
+    "file": "contact.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/contact.md"
+  },
+  {
+    "path": "/corporate-social-responsibility",
+    "title": "How we work with responsibility",
+    "description": "Explore the principles that guide Orbilect SEO’s approach to people, accessibility, and responsible operations.",
+    "file": "corporate-social-responsibility.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/corporate-social-responsibility.md"
+  },
+  {
+    "path": "/how-free-audit-works",
+    "title": "See what your free SEO audit covers",
+    "description": "See what Orbilect SEO checks in a free SEO audit, including crawlability, indexing, priority pages, and opportunities for qualified search traffic.",
+    "file": "how-free-audit-works.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/how-free-audit-works.md"
+  },
+  {
+    "path": "/how-we-work",
+    "title": "From the first conversation to a clear plan for growth",
+    "description": "See how Orbilect SEO scopes the work, prioritizes technical and content changes, measures progress, and reports on qualified traffic and enquiries.",
+    "file": "how-we-work.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/how-we-work.md"
+  },
+  {
+    "path": "/industries",
+    "title": "Turn industry searches into customersTurn industry searches into customers",
+    "description": "Explore SEO for twelve industries: arts and entertainment, automotive, ecommerce, education, finance, food and beverages, healthcare, hospitality, logistics, manufacturing, real estate, and SaaS.",
+    "file": "industries.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries.md"
+  },
+  {
+    "path": "/industries/arts-entertainment",
+    "title": "Be discovered before the curtain rises",
+    "description": "Help audiences discover your events, performers, and creative work with search-focused content, mobile-friendly design, and clearer ticket and enquiry journeys.",
+    "file": "industries/arts-entertainment.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/arts-entertainment.md"
+  },
+  {
+    "path": "/industries/automotive",
+    "title": "Get found before the test drive",
+    "description": "Help vehicle shoppers find the right inventory, dealership, or service centre when they’re ready to compare options.",
+    "file": "industries/automotive.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/automotive.md"
+  },
+  {
+    "path": "/industries/ecommerce",
+    "title": "Get discovered before checkout",
+    "description": "See how Orbilect SEO helps online retailers improve product discovery, organize category pages, and guide shoppers from search to checkout.",
+    "file": "industries/ecommerce.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/ecommerce.md"
+  },
+  {
+    "path": "/industries/education",
+    "title": "Be the course students find first",
+    "description": "Help prospective students find and compare courses, qualifications, and admissions requirements.",
+    "file": "industries/education.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/education.md"
+  },
+  {
+    "path": "/industries/finance",
+    "title": "Get found before the first consultation",
+    "description": "Make financial services easier to discover with clear product pages, transparent information, and content reviewed by your specialists.",
+    "file": "industries/finance.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/finance.md"
+  },
+  {
+    "path": "/industries/food-beverages",
+    "title": "Get found before the next order",
+    "description": "Help customers find your restaurant, cafe, or food brand with menu discovery, local SEO, mobile-friendly design, and clear ordering and reservation journeys.",
+    "file": "industries/food-beverages.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/food-beverages.md"
+  },
+  {
+    "path": "/industries/healthcare",
+    "title": "Help patients find the right practice",
+    "description": "Help patients find your practice, understand the services available, and take the next step toward an appointment.",
+    "file": "industries/healthcare.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/healthcare.md"
+  },
+  {
+    "path": "/industries/hospitality",
+    "title": "Get found where guests plan to stay",
+    "description": "Help guests discover your property while comparing destinations, room types, amenities, and places to stay.",
+    "file": "industries/hospitality.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/hospitality.md"
+  },
+  {
+    "path": "/industries/logistics",
+    "title": "Get found before the freight quote",
+    "description": "Reach shippers and procurement teams searching for freight, fulfilment, and warehousing services.",
+    "file": "industries/logistics.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/logistics.md"
+  },
+  {
+    "path": "/industries/manufacturing",
+    "title": "Get shortlisted before the RFQ",
+    "description": "Help engineers and procurement teams find your capabilities, technical specifications, and products.",
+    "file": "industries/manufacturing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/manufacturing.md"
+  },
+  {
+    "path": "/industries/real-estate",
+    "title": "Get found before the first showing",
+    "description": "Connect buyers and tenants with relevant properties, neighbourhood guides, and local agents through organic search.",
+    "file": "industries/real-estate.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/real-estate.md"
+  },
+  {
+    "path": "/industries/saas",
+    "title": "Get discovered before the demo",
+    "description": "Explain your software, reach relevant buyers, and improve the path to trials and demos with SaaS SEO, useful product content, and responsive website design.",
+    "file": "industries/saas.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/industries/saas.md"
+  },
+  {
+    "path": "/media-pr-relations",
+    "title": "Talk to Orbilect SEO about your story",
+    "description": "Contact Orbilect SEO for press enquiries, interviews, expert commentary, and brand asset requests.",
+    "file": "media-pr-relations.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/media-pr-relations.md"
+  },
+  {
+    "path": "/newsroom",
+    "title": "News from Orbilect SEO",
+    "description": "Read company announcements, product briefings, and updates from Orbilect SEO and Orbilect Labs.",
+    "file": "newsroom.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom.md"
+  },
+  {
+    "path": "/newsroom/erp-platform",
+    "title": "An ERP platform that connects orders, inventory, and invoicing",
+    "description": "Inside the Orbilect Labs ERP platform and the handoffs it brings into one workspace.",
+    "file": "newsroom/erp-platform.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom/erp-platform.md"
+  },
+  {
+    "path": "/newsroom/large-language-model",
+    "title": "How Orbilect Labs approaches language model development",
+    "description": "A look at the LLM work and the role of task-specific evaluation before a model enters a workflow.",
+    "file": "newsroom/large-language-model.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom/large-language-model.md"
+  },
+  {
+    "path": "/newsroom/naila-ai",
+    "title": "How Naila AI handles routine questions and hands off complex cases",
+    "description": "Explore the support assistant’s approach to approved knowledge, conversation context, and human handoff.",
+    "file": "newsroom/naila-ai.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom/naila-ai.md"
+  },
+  {
+    "path": "/newsroom/orbilect-create",
+    "title": "Orbilect Create turns a website brief into an editable first draft",
+    "description": "A look at how Orbilect Labs brings AI-assisted site creation, editing, and responsive previews into one workspace.",
+    "file": "newsroom/orbilect-create.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom/orbilect-create.md"
+  },
+  {
+    "path": "/newsroom/orbilect-reviews",
+    "title": "Inside Orbilect Reviews, a directory for comparing service providers",
+    "description": "A closer look at Orbilect Labs’ approach to company profiles, client reviews, and shortlisting.",
+    "file": "newsroom/orbilect-reviews.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/newsroom/orbilect-reviews.md"
+  },
+  {
+    "path": "/our-team",
+    "title": "Meet the people behind the work",
+    "description": "Meet Orbilect SEO’s leadership, delivery specialists and support teams, and see how they work together across search, design and development.",
+    "file": "our-team.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/our-team.md"
+  },
+  {
+    "path": "/pricing",
+    "title": "Know what you’re investing in before we start",
+    "description": "Compare Orbilect SEO plans and see how scope, technical work, content, and campaign management affect the investment for your business.",
+    "file": "pricing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/pricing.md"
+  },
+  {
+    "path": "/privacy-policy",
+    "title": "Privacy Policy",
+    "description": "How Orbilect SEO handles enquiries, cookies, newsletter subscriptions, and privacy requests.",
+    "file": "privacy-policy.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/privacy-policy.md"
+  },
+  {
+    "path": "/reviews",
+    "title": "Reviews help us grow and improve",
+    "description": "Share honest feedback about Orbilect SEO services and learn how accurate listings and genuine reviews help businesses earn trust and improve.",
+    "file": "reviews.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/reviews.md"
+  },
+  {
+    "path": "/services",
+    "title": "SEO services that help customers find you",
+    "description": "Explore technical SEO, on-page SEO, off-page SEO, ecommerce SEO, PPC management, content strategy, and website redesign for your business.",
+    "file": "services.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services.md"
+  },
+  {
+    "path": "/services/bing-advertising",
+    "title": "Reach buyers searching on Bing with a plan you can measure",
+    "description": "Review Bing Ads structure, Microsoft Advertising targeting, search terms, campaign budgets, and conversion tracking against your paid search goals.",
+    "file": "services/bing-advertising.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/bing-advertising.md"
+  },
+  {
+    "path": "/services/chatgpt-advertising",
+    "title": "Prepare a campaign for eligible ad placements with a plan you can measure",
+    "description": "Explore campaign planning and readiness for advertising in ChatGPT, including audience, message, landing pages, and how to measure results where available.",
+    "file": "services/chatgpt-advertising.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/chatgpt-advertising.md"
+  },
+  {
+    "path": "/services/conversion-rate-optimization",
+    "title": "Turn more existing visits into completed actions with a plan you can measure",
+    "description": "Find friction in forms, product pages, and lead journeys. Prioritize conversion tests around customer intent, usability, and measurable outcomes.",
+    "file": "services/conversion-rate-optimization.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/conversion-rate-optimization.md"
+  },
+  {
+    "path": "/services/digital-marketing",
+    "title": "Turn the right attention into measurable enquiries",
+    "description": "Plan digital campaigns around audience, landing pages, conversion tracking, and reporting so your team can see which channels bring qualified enquiries.",
+    "file": "services/digital-marketing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/digital-marketing.md"
+  },
+  {
+    "path": "/services/digital-pr",
+    "title": "Earn attention with stories worth sharing",
+    "description": "Plan relevant media and editorial outreach around useful research, expertise, or company news, with a clear scope and coverage review.",
+    "file": "services/digital-pr.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/digital-pr.md"
+  },
+  {
+    "path": "/services/ecommerce-management",
+    "title": "Build, grow and run your ecommerce store",
+    "description": "Build and run your online store with ecommerce website design, SEO, paid ads, catalog and order management, AI chatbots, and customer support.",
+    "file": "services/ecommerce-management.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/ecommerce-management.md"
+  },
+  {
+    "path": "/services/ecommerce-seo",
+    "title": "Help shoppers find the products they came for",
+    "description": "Make products easier to find with collection and product-page SEO, stronger internal linking, product schema, and a plan for filters and duplicate URLs.",
+    "file": "services/ecommerce-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/ecommerce-seo.md"
+  },
+  {
+    "path": "/services/email-marketing",
+    "title": "Send useful follow-ups people signed up for with a plan you can measure",
+    "description": "Plan email campaigns and automations around audience segments, clear messages, landing pages, and measurable customer actions.",
+    "file": "services/email-marketing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/email-marketing.md"
+  },
+  {
+    "path": "/services/hire-seo-content-writer",
+    "title": "Add a writer who can work inside your process with a plan you can measure",
+    "description": "Scope a dedicated SEO writer who can work within your editorial process on briefs, drafts, service pages, and revisions.",
+    "file": "services/hire-seo-content-writer.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/hire-seo-content-writer.md"
+  },
+  {
+    "path": "/services/landing-page-design",
+    "title": "Make the page deliver on the campaign promise with a plan you can measure",
+    "description": "Create focused landing pages that match ad or search intent, explain your offer clearly, and give visitors a measurable next step.",
+    "file": "services/landing-page-design.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/landing-page-design.md"
+  },
+  {
+    "path": "/services/marketing-analytics",
+    "title": "Know which campaigns produce real enquiries with a plan you can measure",
+    "description": "Validate conversion tracking, review attribution, and build reports that connect campaigns to qualified enquiries, leads, and sales.",
+    "file": "services/marketing-analytics.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/marketing-analytics.md"
+  },
+  {
+    "path": "/services/off-page-seo",
+    "title": "Build credibility beyond your website",
+    "description": "Review backlink quality, reclaim useful links, clean up citations, and plan relevant outreach to strengthen your visibility beyond your own website.",
+    "file": "services/off-page-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/off-page-seo.md"
+  },
+  {
+    "path": "/services/on-page-seo",
+    "title": "Give customers a reason to choose your page",
+    "description": "Improve page titles, headings, internal links, content, and search intent alignment so customers can find the right page and act on it.",
+    "file": "services/on-page-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/on-page-seo.md"
+  },
+  {
+    "path": "/services/paid-social-advertising",
+    "title": "Test the creative that earns a response with a plan you can measure",
+    "description": "Improve paid social campaigns with audience planning, creative testing, landing page alignment, and conversion tracking tied to business goals.",
+    "file": "services/paid-social-advertising.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/paid-social-advertising.md"
+  },
+  {
+    "path": "/services/ppc-management",
+    "title": "Make every paid click count toward a real enquiry",
+    "description": "Improve paid search performance with tighter campaign targeting, relevant ad copy, conversion tracking, and landing pages aligned to what visitors searched.",
+    "file": "services/ppc-management.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/ppc-management.md"
+  },
+  {
+    "path": "/services/seo-content-writing",
+    "title": "Publish pages that answer buying questions with a plan you can measure",
+    "description": "Get search-focused landing pages, service pages, and editorial content planned around customer questions, clear briefs, and relevant internal links.",
+    "file": "services/seo-content-writing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/seo-content-writing.md"
+  },
+  {
+    "path": "/services/social-media-marketing",
+    "title": "Give customers a reason to follow and respond with a plan you can measure",
+    "description": "Plan organic social content around the channels customers use, the questions they ask, and the engagement or enquiries you can measure.",
+    "file": "services/social-media-marketing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/social-media-marketing.md"
+  },
+  {
+    "path": "/services/technical-seo",
+    "title": "Clear the roadblocks between search and your site",
+    "description": "Identify crawl and indexing barriers, audit redirects and canonicals, and prioritize improvements to site structure, performance, and structured data.",
+    "file": "services/technical-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/technical-seo.md"
+  },
+  {
+    "path": "/services/website-redesign",
+    "title": "Build a website customers can actually use",
+    "description": "Redesign your website around clearer navigation, mobile usability, and conversions. Plan redirects and preserve important search landing pages during launch.",
+    "file": "services/website-redesign.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/services/website-redesign.md"
+  },
+  {
+    "path": "/website-design-gallery",
+    "title": "Make your first impression worth a second look.",
+    "description": "Explore responsive website and landing page designs across twelve industries. Discover a visual direction for your custom website redesign with Orbilect SEO.",
+    "file": "website-design-gallery.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/website-design-gallery.md"
+  },
+  {
+    "path": "/staffing",
+    "title": "Build your team with dedicated offshore talent",
+    "description": "Build a dedicated team for SEO, content, paid media, or analytics. Explore specialist roles and how Orbilect SEO scopes staffing and onboarding.",
+    "file": "staffing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/staffing.md"
+  },
+  {
+    "path": "/terms-and-conditions",
+    "title": "Terms and Conditions",
+    "description": "Orbilect SEO service terms, project scope, revisions, refunds, delivery, and SEO estimates.",
+    "file": "terms-and-conditions.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/terms-and-conditions.md"
+  },
+  {
+    "path": "/blogs/how-to-submit-your-website-to-google-search-console",
+    "title": "How to Submit Your Website to Google Search Console",
+    "description": "A practical walkthrough of ownership verification, sitemap submission, and common Search Console errors.",
+    "file": "blogs/how-to-submit-your-website-to-google-search-console.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-submit-your-website-to-google-search-console.md"
+  },
+  {
+    "path": "/blogs/how-to-set-up-your-google-business-profile",
+    "title": "How to Set Up Your Google Business Profile",
+    "description": "A step-by-step guide to setup, verification, and profile optimization, with fixes for common problems.",
+    "file": "blogs/how-to-set-up-your-google-business-profile.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-set-up-your-google-business-profile.md"
+  },
+  {
+    "path": "/blogs/how-to-create-and-submit-an-xml-sitemap",
+    "title": "How to Create and Submit an XML Sitemap",
+    "description": "Decide which URLs belong in your sitemap, submit it, and identify errors.",
+    "file": "blogs/how-to-create-and-submit-an-xml-sitemap.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-create-and-submit-an-xml-sitemap.md"
+  },
+  {
+    "path": "/blogs/how-long-does-google-take-to-index-a-website",
+    "title": "How Long Does Google Take to Index a Website?",
+    "description": "Understand how discovery, crawling, and indexing work and what can delay each one.",
+    "file": "blogs/how-long-does-google-take-to-index-a-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-long-does-google-take-to-index-a-website.md"
+  },
+  {
+    "path": "/blogs/seo-vs-aeo-vs-geo",
+    "title": "SEO vs AEO vs GEO",
+    "description": "Compare search optimization, answer engine optimization, and generative engine optimization.",
+    "file": "blogs/seo-vs-aeo-vs-geo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/seo-vs-aeo-vs-geo.md"
+  },
+  {
+    "path": "/blogs/the-on-page-seo-checklist-for-business-websites",
+    "title": "The On-Page SEO Checklist for Business Websites",
+    "description": "Prioritize titles, headings, internal links, and content that answers what visitors came to find.",
+    "file": "blogs/the-on-page-seo-checklist-for-business-websites.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/the-on-page-seo-checklist-for-business-websites.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-wordpress-website",
+    "title": "How to Build a WordPress Website",
+    "description": "Choose a domain, hosting, theme, and page builder, then prepare your site for launch.",
+    "file": "blogs/how-to-build-a-wordpress-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-wordpress-website.md"
+  },
+  {
+    "path": "/blogs/10-web-hosting-platforms-compared",
+    "title": "10 Web Hosting Platforms Compared",
+    "description": "Compare hosting by renewal cost, backups, support, performance, and site requirements.",
+    "file": "blogs/10-web-hosting-platforms-compared.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/10-web-hosting-platforms-compared.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-squarespace-website",
+    "title": "How to Build a Squarespace Website",
+    "description": "Choose a template, structure the site, connect a domain, and check mobile layouts.",
+    "file": "blogs/how-to-build-a-squarespace-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-squarespace-website.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-webflow-website",
+    "title": "How to Build a Webflow Website",
+    "description": "Plan responsive layouts, set up collections, and check redirects and metadata before launch.",
+    "file": "blogs/how-to-build-a-webflow-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-webflow-website.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-wix-website",
+    "title": "How to Build a Wix Website",
+    "description": "Choose an editor, set up core pages, connect your domain, and configure your search settings.",
+    "file": "blogs/how-to-build-a-wix-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-wix-website.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-framer-website",
+    "title": "How to Build a Framer Website",
+    "description": "Use components and CMS collections to launch a responsive marketing site.",
+    "file": "blogs/how-to-build-a-framer-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-framer-website.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-shopify-store",
+    "title": "How to Build a Shopify Store",
+    "description": "Build a Shopify store step by step: compare plans, create your account, connect a domain, choose a theme, add products, configure checkout and improve SEO.",
+    "file": "blogs/how-to-build-a-shopify-store.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-shopify-store.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-woocommerce-store",
+    "title": "How to Build a WooCommerce Store",
+    "description": "Set up a catalogue, configure checkout, and test payments and order emails.",
+    "file": "blogs/how-to-build-a-woocommerce-store.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-woocommerce-store.md"
+  },
+  {
+    "path": "/blogs/how-to-improve-your-website-conversion-rate",
+    "title": "How to Improve Your Website Conversion Rate",
+    "description": "Use analytics and customer feedback to identify friction and prioritize experiments.",
+    "file": "blogs/how-to-improve-your-website-conversion-rate.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-improve-your-website-conversion-rate.md"
+  },
+  {
+    "path": "/blogs/ppc-vs-organic-search",
+    "title": "PPC vs Organic Search",
+    "description": "Compare timelines, costs, and how each channel contributes to qualified leads.",
+    "file": "blogs/ppc-vs-organic-search.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/ppc-vs-organic-search.md"
+  },
+  {
+    "path": "/blogs/how-to-tell-whether-ppc-is-profitable",
+    "title": "How to Tell Whether PPC Is Profitable",
+    "description": "Compare campaign cost with lead quality, margin, and the revenue campaigns generate.",
+    "file": "blogs/how-to-tell-whether-ppc-is-profitable.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-tell-whether-ppc-is-profitable.md"
+  },
+  {
+    "path": "/blogs/meta-ads-in-2026",
+    "title": "Meta Ads in 2026",
+    "description": "Review changes to campaign setup, creative testing, and measurement.",
+    "file": "blogs/meta-ads-in-2026.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/meta-ads-in-2026.md"
+  },
+  {
+    "path": "/blogs/how-to-write-a-landing-page-that-converts",
+    "title": "How to Write a Landing Page That Converts",
+    "description": "Match the offer to visitor intent and make the next action easy to find.",
+    "file": "blogs/how-to-write-a-landing-page-that-converts.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-write-a-landing-page-that-converts.md"
+  },
+  {
+    "path": "/blogs/how-to-track-leads-and-sales-in-ga4",
+    "title": "How to Track Leads and Sales in GA4",
+    "description": "Define useful events, validate tracking, and assess lead and sales performance.",
+    "file": "blogs/how-to-track-leads-and-sales-in-ga4.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-track-leads-and-sales-in-ga4.md"
+  },
+  {
+    "path": "/blogs/how-to-audit-a-google-ads-account",
+    "title": "How to Audit a Google Ads Account",
+    "description": "Review search terms, conversion tracking, ads, and where your budget goes.",
+    "file": "blogs/how-to-audit-a-google-ads-account.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-audit-a-google-ads-account.md"
+  },
+  {
+    "path": "/blogs/why-real-estate-businesses-need-seo",
+    "title": "Why Real Estate Businesses Need SEO",
+    "description": "Build visibility around neighborhoods, listings, and the questions local buyers ask.",
+    "file": "blogs/why-real-estate-businesses-need-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/why-real-estate-businesses-need-seo.md"
+  },
+  {
+    "path": "/blogs/seo-vs-paid-advertising-for-clinics",
+    "title": "SEO vs Paid Advertising for Clinics",
+    "description": "Compare local discovery, short-term demand, and how each channel contributes to bookings.",
+    "file": "blogs/seo-vs-paid-advertising-for-clinics.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/seo-vs-paid-advertising-for-clinics.md"
+  },
+  {
+    "path": "/blogs/how-customer-support-fits-into-us-services-exports",
+    "title": "How Customer Support Fits Into US Services Exports",
+    "description": "Explain when cross-border support contracts count as services exports and which country records them.",
+    "file": "blogs/how-customer-support-fits-into-us-services-exports.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-customer-support-fits-into-us-services-exports.md"
+  },
+  {
+    "path": "/blogs/how-saas-companies-use-seo-to-generate-demos",
+    "title": "How SaaS Companies Use SEO to Generate Demos",
+    "description": "Connect educational and comparison content with relevant demo and trial paths.",
+    "file": "blogs/how-saas-companies-use-seo-to-generate-demos.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-saas-companies-use-seo-to-generate-demos.md"
+  },
+  {
+    "path": "/blogs/how-ecommerce-brands-grow-with-category-page-seo",
+    "title": "How Ecommerce Brands Grow With Category Page SEO",
+    "description": "Improve collection pages and clarify how customers browse and find products.",
+    "file": "blogs/how-ecommerce-brands-grow-with-category-page-seo.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-ecommerce-brands-grow-with-category-page-seo.md"
+  },
+  {
+    "path": "/blogs/how-local-service-businesses-turn-search-into-enquiries",
+    "title": "How Local Service Businesses Turn Search Into Enquiries",
+    "description": "Use service pages, reviews, and location information to help customers get in touch.",
+    "file": "blogs/how-local-service-businesses-turn-search-into-enquiries.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-local-service-businesses-turn-search-into-enquiries.md"
+  },
+  {
+    "path": "/blogs/when-to-hire-an-seo-team-or-an-agency",
+    "title": "When to Hire an SEO Team or an Agency",
+    "description": "Compare staffing, scope, ownership, and how to evaluate the investment.",
+    "file": "blogs/when-to-hire-an-seo-team-or-an-agency.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/when-to-hire-an-seo-team-or-an-agency.md"
+  },
+  {
+    "path": "/blogs/how-ai-search-changes-content-discovery",
+    "title": "How AI Search Changes Content Discovery",
+    "description": "Explore citations, summaries, and how to track AI-driven discovery.",
+    "file": "blogs/how-ai-search-changes-content-discovery.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-ai-search-changes-content-discovery.md"
+  },
+  {
+    "path": "/blogs/how-to-build-an-ai-chatbot-for-customer-support",
+    "title": "How to Build an AI Chatbot for Customer Support",
+    "description": "Plan the knowledge base, escalation rules, evaluation, and rollout.",
+    "file": "blogs/how-to-build-an-ai-chatbot-for-customer-support.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-an-ai-chatbot-for-customer-support.md"
+  },
+  {
+    "path": "/blogs/how-to-use-ai-for-keyword-research",
+    "title": "How to Use AI for Keyword Research",
+    "description": "Group search topics, assess intent, and verify suggestions against real data.",
+    "file": "blogs/how-to-use-ai-for-keyword-research.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-use-ai-for-keyword-research.md"
+  },
+  {
+    "path": "/blogs/where-human-review-fits-in-ai-assisted-content",
+    "title": "Where Human Review Fits in AI-Assisted Content",
+    "description": "Define editorial checks for accuracy, sources, and customer usefulness.",
+    "file": "blogs/where-human-review-fits-in-ai-assisted-content.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/where-human-review-fits-in-ai-assisted-content.md"
+  },
+  {
+    "path": "/blogs/what-ai-agents-can-do-for-small-businesses",
+    "title": "What AI Agents Can Do for Small Businesses",
+    "description": "Match business workflows to realistic automation opportunities and oversight needs.",
+    "file": "blogs/what-ai-agents-can-do-for-small-businesses.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-ai-agents-can-do-for-small-businesses.md"
+  },
+  {
+    "path": "/blogs/how-ai-appointment-booking-works",
+    "title": "How AI Appointment Booking Works",
+    "description": "Explore scheduling rules, calendar availability, and confirmation workflows.",
+    "file": "blogs/how-ai-appointment-booking-works.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-ai-appointment-booking-works.md"
+  },
+  {
+    "path": "/blogs/how-to-evaluate-an-ai-website-builder",
+    "title": "How to Evaluate an AI Website Builder",
+    "description": "Review responsive layout, accessibility, editing controls, and export options.",
+    "file": "blogs/how-to-evaluate-an-ai-website-builder.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-evaluate-an-ai-website-builder.md"
+  },
+  {
+    "path": "/blogs/what-is-digital-marketing",
+    "title": "What Is Digital Marketing?",
+    "description": "See how search, email, paid media, social, and analytics work together.",
+    "file": "blogs/what-is-digital-marketing.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-is-digital-marketing.md"
+  },
+  {
+    "path": "/blogs/what-google-search-updates-mean-for-site-owners",
+    "title": "What Google Search Updates Mean for Site Owners",
+    "description": "Understand what to check before attributing traffic changes to a search update.",
+    "file": "blogs/what-google-search-updates-mean-for-site-owners.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-google-search-updates-mean-for-site-owners.md"
+  },
+  {
+    "path": "/blogs/what-privacy-changes-mean-for-marketing-analytics",
+    "title": "What Privacy Changes Mean for Marketing Analytics",
+    "description": "Explore consent, first-party data, and the limits of attribution.",
+    "file": "blogs/what-privacy-changes-mean-for-marketing-analytics.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-privacy-changes-mean-for-marketing-analytics.md"
+  },
+  {
+    "path": "/blogs/what-core-web-vitals-tell-you-about-your-website",
+    "title": "What Core Web Vitals Tell You About Your Website",
+    "description": "Use performance metrics to prioritize issues that affect real visitors.",
+    "file": "blogs/what-core-web-vitals-tell-you-about-your-website.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/what-core-web-vitals-tell-you-about-your-website.md"
+  },
+  {
+    "path": "/blogs/how-to-build-a-digital-marketing-plan-for-a-small-business",
+    "title": "How to Build a Digital Marketing Plan for a Small Business",
+    "description": "Set measurable goals, choose channels, and build a realistic publishing and testing schedule.",
+    "file": "blogs/how-to-build-a-digital-marketing-plan-for-a-small-business.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-to-build-a-digital-marketing-plan-for-a-small-business.md"
+  },
+  {
+    "path": "/blogs/how-search-and-social-platforms-are-changing-product-discovery",
+    "title": "How Search and Social Platforms Are Changing Product Discovery",
+    "description": "Compare how customers find and evaluate products across platforms.",
+    "file": "blogs/how-search-and-social-platforms-are-changing-product-discovery.md",
+    "markdownUrl": "https://orbilectseo.com/agent-markdown/blogs/how-search-and-social-platforms-are-changing-product-discovery.md"
+  }
+]
