@@ -614,27 +614,981 @@
   "how-to-build-a-shopify-store": {
     "sections": [
       {
-        "id": "organise-products-around-how-people-shop",
-        "lead": "Organise products around",
-        "accent": "how people shop",
+        "id": "choose-shopify-plan",
+        "lead": "Step 1. Compare Shopify plans",
+        "accent": "before signing up",
         "paragraphs": [
-          "Set up product categories, variants and inventory. Give products accurate descriptions, images and specifications. Build collections around meaningful shopping needs and link to them from relevant navigation and guides."
+          "Start by deciding which plan fits the store you want to build. Compare the permanent subscription, billing period and required features before accepting a trial offer. You can choose a provisional plan now and activate it after creating the account; researching a plan does not require paying first.",
+          "The table below records the US-dollar list prices displayed on Shopify’s US pricing page on 29 November 2026. Annual figures are monthly equivalents billed yearly. Taxes, payment processing, third-party transaction charges, apps, domains and paid themes can add costs. Regional prices, promotions and availability can change, so confirm the checkout total."
+        ],
+        "steps": [
+          "Open Shopify’s pricing page and set your actual business region.",
+          "Compare Basic, Grow, Advanced and Plus against your team access, shipping and operational requirements.",
+          "Record both monthly billing and the annual commitment, then choose the lowest plan that meets your launch needs."
+        ],
+        "sources": [
+          [
+            "Shopify pricing",
+            "https://www.shopify.com/pricing"
+          ],
+          [
+            "Starter eligibility",
+            "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-starter-plan"
+          ]
+        ],
+        "table": {
+          "caption": "Shopify online-store plans: US list prices checked 29 November 2026",
+          "headings": [
+            "Plan",
+            "Pay monthly",
+            "Annual monthly equivalent",
+            "Starting point"
+          ],
+          "rows": [
+            [
+              "Basic",
+              "$39 USD/month",
+              "$29 USD/month; $348/year",
+              "Owner-led full online store"
+            ],
+            [
+              "Grow",
+              "$105 USD/month",
+              "$79 USD/month; $948/year",
+              "Small team; up to 5 staff accounts"
+            ],
+            [
+              "Advanced",
+              "$399 USD/month",
+              "$299 USD/month; $3,588/year",
+              "Larger operations; up to 15 staff accounts"
+            ],
+            [
+              "Plus",
+              "From $2,300 USD/month",
+              "Contract-dependent; confirm with Shopify",
+              "Complex enterprise requirements"
+            ]
+          ]
+        },
+        "note": "Starter is not available to new stores according to Shopify’s current Help Center. It is not a substitute for the full theme-and-collection store described in this guide. POS Pro is an additional retail product, not a replacement for your online-store plan."
+      },
+      {
+        "id": "create-shopify-account",
+        "lead": "Step 2. Create your",
+        "accent": "Shopify account",
+        "paragraphs": [
+          "Now create the account that owns the store. Use an email address the business controls rather than an agency employee’s personal address. Keep ownership and recovery access with the merchant, even when a developer will do the build.",
+          "Shopify can show different onboarding screens by country, account and offer. Follow the available account-creation method, then complete or skip the optional questionnaire. The important outcome is access to the correct store’s admin, not matching every question in a screenshot."
+        ],
+        "steps": [
+          "Visit shopify.com and select Start for free.",
+          "Create an account with your business email and a unique password, or use an available sign-in provider. Verify the email if prompted.",
+          "Enter truthful country and business details. Add billing now or use the available skip option.",
+          "Complete or skip the setup questions, open the admin and record the store’s original myshopify.com identifier."
+        ],
+        "sources": [
+          [
+            "Create a Shopify account",
+            "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup"
+          ]
+        ],
+        "note": "Do not create a store in another country merely to unlock a payment provider. The business, banking and verification information must match your real setup."
+      },
+      {
+        "id": "activate-shopify-subscription",
+        "lead": "Step 3. Activate the selected",
+        "accent": "subscription",
+        "paragraphs": [
+          "Your account and your subscription are separate decisions. Creating an account gets you into the admin; choosing a paid plan determines the recurring bill and capabilities. Recheck the plan once you can see the actual offer attached to your store.",
+          "For an example launch budget, write three headings in a spreadsheet: fixed monthly costs, one-time setup costs and costs per order. Keep payment fees and shipping outside the platform subscription line. This prevents a low introductory price from becoming your entire operating budget."
+        ],
+        "steps": [
+          "Open Settings > Plan, or the plan-selection prompt shown in the admin.",
+          "Select the plan researched in step 1 and compare monthly versus yearly billing.",
+          "Read the introductory offer, renewal price, billing date, currency and cancellation conditions before confirming.",
+          "Add an authorized billing method and save the invoice details for your accounts team."
+        ],
+        "sources": [
+          [
+            "Shopify plans and pricing",
+            "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans"
+          ]
         ]
       },
       {
-        "id": "configure-payments-and-fulfilment",
-        "lead": "Configure payments",
-        "accent": "and fulfilment",
+        "id": "business-settings-and-security",
+        "lead": "Step 4. Set business details",
+        "accent": "and secure access",
         "paragraphs": [
-          "Check the payment methods available to your business and set up shipping zones, fulfilment and returns. Test checkout with representative addresses and combinations of items. Make availability and delivery costs easy to find before payment."
+          "Configure the store before designing it. The legal business, customer-facing contact information, currency, time zone and weight units influence checkout, reporting and fulfillment. Confirm these with whoever runs the business, rather than guessing from the market you hope to reach.",
+          "Make a small access register: owner, developer, fulfillment lead and finance contact. Record what each person needs, not their passwords. Use individual access and two-step authentication where available. Remove temporary access after the handover."
+        ],
+        "steps": [
+          "Open Settings > General and review the store name, legal details, business contact information, time zone and default units.",
+          "Choose the store currency deliberately before transactions start, and review Shopify’s rules before changing it later.",
+          "Secure the owner account, save recovery information and invite staff or collaborators with appropriate permissions.",
+          "Keep the storefront private while it is unfinished; use the available password or visibility controls."
+        ],
+        "sources": [
+          [
+            "Business settings",
+            "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-business-settings"
+          ],
+          [
+            "Shopify account security",
+            "https://help.shopify.com/en/manual/your-account/logging-in/secure-sign-in"
+          ]
         ]
       },
       {
-        "id": "verify-organic-discovery-after-launch",
-        "lead": "Verify organic discovery",
+        "id": "choose-store-domain",
+        "lead": "Step 5. Choose a memorable",
+        "accent": "domain name",
+        "paragraphs": [
+          "A domain is the address customers remember; a theme is the design they see. You can plan the address before buying it, and you can build on the temporary Shopify address while availability and ownership are checked. The custom domain does not replace the store’s underlying account identifier.",
+          "Shortlist three names that can be spoken clearly and typed without explanation. For a fictional homeware brand, compare a clear brand-led name with a long string of product keywords. Prefer the one customers can remember, then check for confusingly similar brands, renewal costs and suitable social handles."
+        ],
+        "steps": [
+          "Write down the brand spelling and the countries you intend to serve.",
+          "Check domain availability through Shopify or a registrar; compare renewal pricing as well as the first year.",
+          "Check whether the name could confuse customers with another business.",
+          "Register it in an account controlled by your business and document renewal ownership."
+        ],
+        "sources": [
+          [
+            "Domains in Shopify",
+            "https://help.shopify.com/en/manual/domains"
+          ],
+          [
+            "Adding a domain",
+            "https://help.shopify.com/en/manual/domains/add-a-domain"
+          ]
+        ]
+      },
+      {
+        "id": "connect-shopify-domain",
+        "lead": "Step 6. Buy or connect",
+        "accent": "your domain",
+        "paragraphs": [
+          "If you buy through Shopify, use Settings > Domains and the purchase flow. If you already own the name, connect it from the same area and follow the instructions for your DNS provider. Connecting a domain and transferring its registration are different operations; you do not need to transfer it just to use it with Shopify.",
+          "For a third-party connection, follow the record values shown in Shopify and its current provider guide. Preserve unrelated email records. Wait for the domain status and TLS certificate to become ready before treating the address as live. Avoid repeatedly changing DNS while propagation is in progress."
+        ],
+        "steps": [
+          "In Settings > Domains, choose Buy new domain or Connect existing domain as appropriate.",
+          "For an existing domain, enter the root name without a page path and follow automatic connection if your provider supports it.",
+          "If manual setup is required, update the specified A, AAAA and www CNAME records at the DNS provider. Keep MX and email-verification records intact.",
+          "Return to Shopify to verify connection, select the intended primary domain and check that alternate addresses redirect correctly."
+        ],
+        "sources": [
+          [
+            "Buy through Shopify",
+            "https://help.shopify.com/en/manual/domains/add-a-domain/buying-domains"
+          ],
+          [
+            "Manual domain connection",
+            "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual"
+          ]
+        ],
+        "images": [
+          {
+            "src": "/blogs/shopify-guide-v22/connect-domain.webp",
+            "width": 1200,
+            "height": 367,
+            "alt": "Shopify Domains screen showing Connect existing domain",
+            "caption": "Official Shopify reference screenshot. Shopify Domains screen showing Connect existing domain.",
+            "source": [
+              "Shopify source",
+              "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual"
+            ]
+          },
+          {
+            "src": "/blogs/shopify-guide-v22/enter-domain.webp",
+            "width": 1200,
+            "height": 511,
+            "alt": "Shopify dialog for entering an existing domain name",
+            "caption": "Official Shopify reference screenshot. Shopify dialog for entering an existing domain name.",
+            "source": [
+              "Shopify source",
+              "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual"
+            ]
+          },
+          {
+            "src": "/blogs/shopify-guide-v22/domain-ready.webp",
+            "width": 1200,
+            "height": 625,
+            "alt": "Shopify domain connection status and TLS certificate checks",
+            "caption": "Official Shopify reference screenshot. Shopify domain connection status and TLS certificate checks.",
+            "source": [
+              "Shopify source",
+              "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compare-shopify-themes",
+        "lead": "Step 7. Shortlist free and paid",
+        "accent": "Shopify themes",
+        "paragraphs": [
+          "Choose from real themes in the Shopify Theme Store rather than an unlicensed ZIP download. Test a theme with your product photos, longest product title and likely collection size. A demo is a starting point: it does not prove your own photography, menu or checkout will work.",
+          "Use the shortlist below as a comparison set, not a promise that one theme fits every business. Free themes can be a sensible launch choice. A paid theme is worth considering when its built-in layout saves custom work you actually need. Confirm the current license, features and price on the linked listing."
+        ],
+        "steps": [
+          "Open the Shopify Theme Store and filter by price and the features your catalog needs.",
+          "Preview a product, collection, menu, cart and mobile view in each candidate.",
+          "Score navigation clarity, product media, filtering needs, text length and accessibility with your real content.",
+          "Choose one primary candidate and one backup; reserve any paid-theme budget before customization."
+        ],
+        "sources": [
+          [
+            "Theme installation and licensing",
+            "https://help.shopify.com/en/manual/online-store/themes/adding-themes"
+          ],
+          [
+            "Horizon",
+            "https://themes.shopify.com/themes/horizon/presets/horizon"
+          ],
+          [
+            "Dawn",
+            "https://themes.shopify.com/themes/dawn/presets/dawn"
+          ],
+          [
+            "Craft",
+            "https://themes.shopify.com/themes/craft/presets/craft"
+          ],
+          [
+            "Sense",
+            "https://themes.shopify.com/themes/sense/presets/sense"
+          ],
+          [
+            "Prestige",
+            "https://themes.shopify.com/themes/prestige/presets/prestige"
+          ],
+          [
+            "Impulse",
+            "https://themes.shopify.com/themes/impulse/presets/impulse"
+          ]
+        ],
+        "table": {
+          "caption": "A theme shortlist to test with your own products",
+          "headings": [
+            "Theme",
+            "Type",
+            "What to evaluate"
+          ],
+          "rows": [
+            [
+              "Horizon",
+              "Free, Shopify",
+              "Flexible storefront sections and product presentation"
+            ],
+            [
+              "Dawn",
+              "Free, Shopify",
+              "Minimal layout and image-led product pages"
+            ],
+            [
+              "Craft",
+              "Free, Shopify",
+              "Editorial storytelling and collection presentation"
+            ],
+            [
+              "Sense",
+              "Free, Shopify",
+              "Product information and brand presentation"
+            ],
+            [
+              "Prestige",
+              "Paid, third-party",
+              "Premium editorial presentation; verify needed features"
+            ],
+            [
+              "Impulse",
+              "Paid, third-party",
+              "Merchandising and promotion layouts; verify needed features"
+            ]
+          ]
+        },
+        "images": [
+          {
+            "src": "/blogs/shopify-guide-v22/theme-horizon.webp",
+            "width": 1000,
+            "height": 1248,
+            "alt": "Horizon desktop theme preview from the Shopify Theme Store",
+            "caption": "Official Shopify theme preview. Horizon desktop theme preview from the Shopify Theme Store.",
+            "source": [
+              "Shopify source",
+              "https://themes.shopify.com/themes/horizon/presets/horizon"
+            ]
+          },
+          {
+            "src": "/blogs/shopify-guide-v22/theme-dawn.webp",
+            "width": 1200,
+            "height": 1498,
+            "alt": "Dawn desktop theme preview from the Shopify Theme Store",
+            "caption": "Official Shopify theme preview. Dawn desktop theme preview from the Shopify Theme Store.",
+            "source": [
+              "Shopify source",
+              "https://themes.shopify.com/themes/dawn/presets/dawn"
+            ]
+          },
+          {
+            "src": "/blogs/shopify-guide-v22/theme-craft.webp",
+            "width": 1200,
+            "height": 1498,
+            "alt": "Craft desktop theme preview from the Shopify Theme Store",
+            "caption": "Official Shopify theme preview. Craft desktop theme preview from the Shopify Theme Store.",
+            "source": [
+              "Shopify source",
+              "https://themes.shopify.com/themes/craft/presets/craft"
+            ]
+          },
+          {
+            "src": "/blogs/shopify-guide-v22/theme-sense.webp",
+            "width": 1200,
+            "height": 1498,
+            "alt": "Sense desktop theme preview from the Shopify Theme Store",
+            "caption": "Official Shopify theme preview. Sense desktop theme preview from the Shopify Theme Store.",
+            "source": [
+              "Shopify source",
+              "https://themes.shopify.com/themes/sense/presets/sense"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "install-and-preview-theme",
+        "lead": "Step 8. Add your theme",
+        "accent": "without rushing publication",
+        "paragraphs": [
+          "The account includes a default theme, but it does not have to become your final design. Work on an unpublished theme while checking content and navigation. If you are redesigning an existing store, first duplicate the live theme and record what must be preserved.",
+          "A theme is not your entire store database. Switching a theme changes presentation and settings; it does not substitute for product, payment and fulfillment setup. Keep a change log so you can identify which customizations belong to the theme and which belong to apps or store configuration."
+        ],
+        "steps": [
+          "Go to Online Store > Themes and open the free-theme or Theme Store options available in your admin.",
+          "Add a free theme, or use the paid listing’s trial option to add a preview.",
+          "Open the theme editor and preview desktop and mobile before editing.",
+          "Purchase a paid theme before publishing it, and keep its license assigned to the correct store."
+        ],
+        "sources": [
+          [
+            "Add, preview and buy a theme",
+            "https://help.shopify.com/en/manual/online-store/themes/adding-themes"
+          ],
+          [
+            "Manage draft and published themes",
+            "https://help.shopify.com/en/manual/online-store/themes/managing-themes"
+          ]
+        ]
+      },
+      {
+        "id": "customize-brand-and-layout",
+        "lead": "Step 9. Customize branding",
+        "accent": "in the theme editor",
+        "paragraphs": [
+          "Set a coherent visual system before filling every section. Choose a readable body font, heading hierarchy, button style and restrained color palette. A store should still make sense when an image fails or a customer uses keyboard navigation.",
+          "Create a simple content kit: logo, favicon, two or three brand colors, product image guidelines, heading examples and button wording. For a fictional kitchenware store, “Shop cookware” tells a shopper more than “Discover more.” Use real product benefits instead of decorative slogans in every section."
+        ],
+        "steps": [
+          "In Online Store > Themes, open the editor using Edit theme or Customize, depending on the interface shown.",
+          "Use Theme settings for brand colors, typography, logo and global styling.",
+          "Select the Home page template and use sections and blocks to build the first layout.",
+          "Preview narrow, tablet and desktop sizes; test contrast, image cropping, focus states and button labels."
+        ],
+        "sources": [
+          [
+            "Theme editor",
+            "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor"
+          ],
+          [
+            "Theme settings",
+            "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/theme-settings"
+          ]
+        ],
+        "images": [
+          {
+            "src": "/blogs/shopify-guide-v22/theme-editor.webp",
+            "width": 1200,
+            "height": 666,
+            "alt": "Shopify online store editor displaying the Dawn theme and its page sections",
+            "caption": "Official Shopify reference screenshot. The Dawn editor example illustrates sections; your theme and labels can differ.",
+            "source": [
+              "Shopify source",
+              "https://www.shopify.com/blog/start-online-store"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "build-store-homepage",
+        "lead": "Step 10. Build a homepage",
+        "accent": "that guides a purchase",
+        "paragraphs": [
+          "Give the homepage one clear job: help the right visitor understand the offer and reach a useful collection or product. A large carousel is optional. A clear first screen, dependable menu and visible shipping information often help more than filling the page with movement.",
+          "Sketch the page as a journey: introduction, main collections, selected products, useful evidence, delivery reassurance and help. For each block, write the next action. If two sections repeat the same message without helping a decision, combine them."
+        ],
+        "steps": [
+          "Add a concise first heading that explains what you sell and for whom.",
+          "Link the main call to action to a relevant collection, not an empty page.",
+          "Add featured collections and a small set of representative products after the products are ready.",
+          "Include genuine information about materials, delivery, returns and support. Publish reviews only when they are authentic.",
+          "After completing steps 12–15, return to the preview and verify every button and menu destination."
+        ],
+        "sources": [
+          [
+            "Sections and blocks",
+            "https://help.shopify.com/en/manual/online-store/themes/theme-structure/sections-and-blocks"
+          ]
+        ],
+        "note": "Build the draft layout now. Populate and verify product and collection links after steps 12–15, when those resources exist. Keep the store private until the launch checks pass."
+      },
+      {
+        "id": "create-pages-and-policies",
+        "lead": "Step 11. Create essential pages",
+        "accent": "and honest policies",
+        "paragraphs": [
+          "Before checkout is opened, customers need to understand who sells the products and what happens after payment. Add an About page, a working Contact page, delivery information and the policies relevant to your business. Do not publish placeholder promises.",
+          "Policy templates need review. Match the refund window, delivery process, address and support contact to the business that will actually fulfill orders. Ask a qualified adviser about market-specific legal requirements; a generated policy is not a compliance guarantee."
+        ],
+        "steps": [
+          "Create informational pages through Online Store > Pages, or the page area shown in your admin.",
+          "Write About, Contact and delivery content with real business details.",
+          "Open Settings > Policies and review return/refund, privacy, terms and shipping content.",
+          "Check translated policies if you sell in more than one language.",
+          "Link customer-help pages and policies from the footer, then submit a test contact enquiry."
+        ],
+        "sources": [
+          [
+            "Store policies",
+            "https://help.shopify.com/en/manual/checkout-settings/refund-privacy-tos"
+          ],
+          [
+            "Webpages",
+            "https://help.shopify.com/en/manual/online-store/add-edit-pages"
+          ]
+        ]
+      },
+      {
+        "id": "add-first-shopify-product",
+        "lead": "Step 12. Add your first",
+        "accent": "complete product",
+        "paragraphs": [
+          "Only now, after the account and storefront foundation exist, start building the catalog. Complete one representative product before importing hundreds. Use that product to test descriptions, images, options and the product-page layout.",
+          "Write information that removes buying uncertainty: what the item is, materials, dimensions, what is included, care instructions and delivery expectations. For a fictional ceramic mug, give its capacity and dishwasher guidance rather than repeating “premium quality” in every sentence."
+        ],
+        "steps": [
+          "Go to Products > Add product. Enter a clear name and an original description.",
+          "Upload accurate product media and set a real selling price; check that no unintended zero-price item can be purchased.",
+          "Assign the appropriate product category, relevant attributes and shipping requirements.",
+          "Use product fields or metafields for consistent specifications where appropriate.",
+          "Save as a draft, preview the page and check it on a phone before making it available on the intended sales channel."
+        ],
+        "sources": [
+          [
+            "Adding products",
+            "https://help.shopify.com/en/manual/products/add-update-products"
+          ],
+          [
+            "Product details",
+            "https://help.shopify.com/en/manual/products/details"
+          ]
+        ]
+      },
+      {
+        "id": "variants-skus-and-stock",
+        "lead": "Step 13. Configure variants, SKUs",
+        "accent": "and inventory",
+        "paragraphs": [
+          "Use variants for genuine choices such as size or color. Do not duplicate a product page merely because the same shirt comes in three sizes. Give each sellable variation a consistent identifier and verify its own price, image and availability.",
+          "Inventory belongs to a real fulfillment process. Decide who counts stock, which location dispatches orders and how returns are put back into stock. A neat product page cannot compensate for selling units that are not available."
+        ],
+        "steps": [
+          "Open the product and add the option names and values customers need.",
+          "Review every generated variant; assign a SKU, relevant barcode, price, weight and image as appropriate.",
+          "Create or verify the stock location and enter counted quantities.",
+          "Choose the out-of-stock behavior deliberately; allow continued selling only when your preorder or backorder process supports it.",
+          "For a large catalog, test a small CSV import, export a backup and check the result before uploading the rest."
+        ],
+        "sources": [
+          [
+            "Add variants",
+            "https://help.shopify.com/en/manual/products/variants/add-variants"
+          ],
+          [
+            "Inventory and locations",
+            "https://help.shopify.com/en/manual/inventory-and-locations"
+          ],
+          [
+            "Safe CSV imports",
+            "https://help.shopify.com/en/manual/products/import-export/import-products"
+          ]
+        ]
+      },
+      {
+        "id": "create-shopify-collections",
+        "lead": "Step 14. Organize products",
+        "accent": "into collections",
+        "paragraphs": [
+          "Collections are shopping destinations. Group products around categories customers understand, such as dinnerware or linen shirts, then give each collection a distinct purpose. Avoid creating dozens of thin pages just to repeat nearby keywords.",
+          "Plan a small collection map before building rules. In a fictional homeware store, “Dining” can lead to “Mugs” and “Dinner plates.” A seasonal gift collection may serve a different need. Check that every collection has enough relevant products to deserve a permanent navigation link."
+        ],
+        "steps": [
+          "Go to Products > Collections and create the first collection.",
+          "Add a descriptive title, useful introduction and suitable image.",
+          "Choose the manual product selection or automatic conditions available in your admin.",
+          "Review the actual matched products, including variant behavior, and remove irrelevant items.",
+          "Set a sensible sort order, preview the collection and make it available to the intended channel."
+        ],
+        "sources": [
+          [
+            "Create collections",
+            "https://help.shopify.com/en/manual/products/collections/create-collection"
+          ],
+          [
+            "Collection layout",
+            "https://help.shopify.com/en/manual/products/collections/collection-layout"
+          ]
+        ]
+      },
+      {
+        "id": "build-navigation-and-filters",
+        "lead": "Step 15. Connect menus",
+        "accent": "and product discovery",
+        "paragraphs": [
+          "The store is not ready if good pages can only be found through a direct URL. Connect the homepage, main menu, collections, product pages and help pages so shoppers can move between them naturally.",
+          "Use a short menu that names categories clearly. Test with a task: “Find a blue medium shirt, check delivery and contact support.” Watch where the shopper hesitates. Fix the labels and destinations before adding more filters or promotional banners."
+        ],
+        "steps": [
+          "Open Content > Menus and edit the main menu.",
+          "Add links to the most important collections and information pages using Shopify’s resource picker.",
+          "Assign the menu to the theme header and the policy/help menu to the footer.",
+          "Configure collection filters supported by the theme and Shopify Search & Discovery where needed.",
+          "Test mobile menus, search, empty results and breadcrumbs if your theme includes them."
+        ],
+        "sources": [
+          [
+            "Menus and links",
+            "https://help.shopify.com/en/manual/online-store/menus-and-links"
+          ],
+          [
+            "Search & Discovery filters",
+            "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters"
+          ]
+        ]
+      },
+      {
+        "id": "configure-payment-provider",
+        "lead": "Step 16. Configure payments",
+        "accent": "for your real business",
+        "paragraphs": [
+          "Choose payment methods that are available to your business location and product category. Shopify Payments eligibility depends on supported countries and verification. If it is unavailable, evaluate compatible third-party providers and their settlement terms.",
+          "Do not assume that a gateway available to a US merchant can be activated by a Pakistan-based business. Check the business documents, receiving bank, settlement currency, refunds and total fees. Cash on delivery and manual methods also need an operational process, not just a checkout toggle."
+        ],
+        "steps": [
+          "Open Settings > Payments and review the providers available to your store.",
+          "Complete the selected provider’s genuine identity, business and bank verification.",
+          "Review transaction charges, payout timing, refund handling and supported currencies.",
+          "Choose automatic or manual payment capture according to the fulfillment process.",
+          "Use the provider’s supported test method before accepting real customer orders."
+        ],
+        "sources": [
+          [
+            "Payment methods",
+            "https://help.shopify.com/en/manual/payments"
+          ],
+          [
+            "Shopify Payments countries",
+            "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries"
+          ]
+        ]
+      },
+      {
+        "id": "shipping-and-delivery-rates",
+        "lead": "Step 17. Set shipping rates",
+        "accent": "and fulfillment rules",
+        "paragraphs": [
+          "Shipping must match the items and regions you can actually fulfill. Configure packages, origins and delivery options before advertising worldwide delivery. A customer should see a usable rate for a supported address and a clear restriction for an unsupported one.",
+          "Build a basket matrix: one light item, multiple items, an oversized item and a free-shipping threshold. Check costs and margins for each. If the parcel costs more to send than the order contributes, the rate needs work before launch."
+        ],
+        "steps": [
+          "Open Settings > Shipping and delivery. Confirm the fulfillment origin and packages.",
+          "Create shipping zones for supported destinations and set suitable flat, free or calculated rates.",
+          "Use separate profiles where products need different rules.",
+          "Enter correct product and package weights, then test representative postcodes and basket values.",
+          "Write delivery estimates that your courier and operations team can support."
+        ],
+        "sources": [
+          [
+            "Shipping setup",
+            "https://help.shopify.com/en/manual/fulfillment/setup"
+          ],
+          [
+            "Shipping profiles",
+            "https://help.shopify.com/en/manual/fulfillment/setup/shipping-profiles"
+          ]
+        ]
+      },
+      {
+        "id": "configure-taxes",
+        "lead": "Step 18. Review taxes",
+        "accent": "before taking payments",
+        "paragraphs": [
+          "Tax settings should follow the business’s actual registrations and selling obligations. Shopify can help calculate taxes, but calculation settings do not decide where you must register, file or remit.",
+          "Prepare a configuration brief for your accountant: business location, fulfillment locations, product categories and customer markets. Ask which settings and registrations apply. Keep that advice with the launch checklist instead of copying another store’s rates."
+        ],
+        "steps": [
+          "Open Settings > Taxes and duties and review the regions in which you sell.",
+          "Enter registrations only when they apply to your business.",
+          "Review whether displayed prices include or exclude tax and how shipping is treated.",
+          "Check a representative checkout calculation with your adviser.",
+          "Document who reviews tax changes and reporting after launch."
+        ],
+        "sources": [
+          [
+            "Shopify tax configuration",
+            "https://help.shopify.com/en/manual/taxes"
+          ]
+        ]
+      },
+      {
+        "id": "markets-languages-and-currencies",
+        "lead": "Step 19. Choose markets",
+        "accent": "and localization",
+        "paragraphs": [
+          "Start with the markets you can support properly. Currency display, payment acceptance, translated copy, stock availability, duties and customer service need to agree. A language selector alone does not make a store ready for international orders.",
+          "For each market, write down the customer promise: what can be bought, how it is priced, how long it takes and who helps. Translate size information, delivery details and checkout messages, not just the homepage."
+        ],
+        "steps": [
+          "Open Markets and review the default and proposed customer regions.",
+          "Configure supported countries, product availability and the localization features your plan and payment setup allow.",
+          "Add reviewed translations and regional content where needed.",
+          "Test a full order from each priority region, including currency, address and shipping restrictions.",
+          "Avoid duplicate regional pages unless they provide a genuine local experience."
+        ],
+        "sources": [
+          [
+            "Markets configuration",
+            "https://help.shopify.com/en/manual/markets"
+          ]
+        ]
+      },
+      {
+        "id": "install-only-needed-apps",
+        "lead": "Step 20. Add apps",
+        "accent": "with a clear purpose",
+        "paragraphs": [
+          "Install an app when a specific requirement is not covered by the platform or theme. Typical needs might include subscriptions, reviews, returns or back-in-stock messages. Do not start by installing a long “must-have” list.",
+          "Keep an app register with the purpose, owner, recurring fee, permissions and removal process. If two apps add the same pixel, review widget or SEO markup, decide which one owns that function. This makes troubleshooting and handover much easier."
+        ],
+        "steps": [
+          "Write the requirement and check whether Shopify or the chosen theme already handles it.",
+          "Compare compatible apps, current pricing, support and requested permissions.",
+          "Test on a theme copy where possible and measure storefront performance.",
+          "Review the generated storefront content and event tracking for conflicts.",
+          "Remove unused app embeds and follow the developer’s cleanup instructions after uninstalling."
+        ],
+        "sources": [
+          [
+            "Working with apps",
+            "https://help.shopify.com/en/manual/apps"
+          ]
+        ]
+      },
+      {
+        "id": "shopify-seo-keyword-map",
+        "lead": "Step 21. Plan how Shopify SEO",
+        "accent": "will work",
+        "paragraphs": [
+          "Shopify supplies useful infrastructure, but visibility still depends on useful pages, crawl access and relevance. Give different searches a suitable destination: a product for an exact item, a collection for a category, and a guide for a research question.",
+          "Create a keyword-to-page map. For our fictional homeware store, “stoneware mugs” belongs to a useful collection, a specific model belongs to its product page, and “how to care for stoneware” belongs to a guide. Link the guide to relevant products. Avoid forcing all three searches onto the homepage."
+        ],
+        "steps": [
+          "List your main products, categories and customer questions.",
+          "Group searches by intent rather than assigning a new page to every variation.",
+          "Map one primary purpose to each product, collection and informational page.",
+          "Write unique helpful copy, then link related collections, products and guides together.",
+          "Review the map when actual Search Console queries become available."
+        ],
+        "sources": [
+          [
+            "SEO overview",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+          ],
+          [
+            "Ecommerce site structure",
+            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+          ]
+        ]
+      },
+      {
+        "id": "titles-descriptions-and-image-alt",
+        "lead": "Step 22. Write titles, descriptions",
+        "accent": "and image alternatives",
+        "paragraphs": [
+          "Edit the search engine listing on important products, collections and pages. Describe the actual offer and use natural language. Give a collection a category-focused title and a product a specific name; do not paste the same metadata across the store.",
+          "Example: “Stoneware Mugs | Everyday Kitchenware” is clearer than a list of unrelated keywords. A description can explain capacity, availability and delivery without promising facts the page cannot support. Search engines may choose different snippets, so metadata is an input rather than a guaranteed display."
+        ],
+        "steps": [
+          "Open a product or collection and find its Search engine listing or Website SEO preview.",
+          "Edit the title, description and URL handle carefully; keep established URLs unless a change has a clear benefit.",
+          "Check the homepage metadata in the online-store preferences area.",
+          "Write alt text that explains the image’s useful content, such as the item and visible detail.",
+          "Check the page’s visible main heading and use subheadings to organize specifications and buying information."
+        ],
+        "sources": [
+          [
+            "Shopify SEO fields",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords"
+          ],
+          [
+            "Google title links",
+            "https://developers.google.com/search/docs/appearance/title-link"
+          ]
+        ]
+      },
+      {
+        "id": "canonicals-redirects-and-duplicates",
+        "lead": "Step 23. Check canonicals",
+        "accent": "and redirects",
+        "paragraphs": [
+          "A product may be reachable through several paths or variants. Inspect the rendered page before adding an SEO app that rewrites its canonical. Shopify themes should expose the appropriate canonical URL, but custom code and apps need checking.",
+          "For a migration, make a spreadsheet of old URLs and their closest replacements. Keep useful product URLs stable. Do not redirect every discontinued item to the homepage: use a genuine substitute or leave a helpful unavailable page where appropriate."
+        ],
+        "steps": [
+          "Open representative product and collection pages and inspect the HTML canonical link.",
+          "Check that important pages point to the intended live HTTPS address.",
+          "When changing a handle, enable or create the appropriate redirect and test the old URL.",
+          "Manage redirects through Content > Menus > URL redirects, or the redirect area shown in your admin.",
+          "Check duplicate descriptions, broken internal links and filter URLs before creating broad indexation rules."
+        ],
+        "sources": [
+          [
+            "Theme SEO and canonical URLs",
+            "https://shopify.dev/docs/storefronts/themes/seo"
+          ],
+          [
+            "Shopify redirects",
+            "https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect"
+          ],
+          [
+            "Google canonical guidance",
+            "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+          ]
+        ]
+      },
+      {
+        "id": "submit-shopify-sitemap",
+        "lead": "Step 24. Verify the domain",
+        "accent": "and submit the sitemap",
+        "paragraphs": [
+          "Shopify generates a sitemap automatically. Once the store is publicly accessible, use the canonical domain’s /sitemap.xml address. Submitting it helps search engines discover pages; it does not guarantee inclusion or a ranking date.",
+          "Keep the distinction between access and ranking clear. A private storefront, a noindex instruction, a failed page or an unexpected canonical needs investigation. Repeated sitemap submissions do not replace fixing the underlying issue."
+        ],
+        "steps": [
+          "Verify the correct domain in Google Search Console, using a supported verification method.",
+          "After launch, open https://your-domain.example/sitemap.xml and confirm that it loads. Replace this example with your real address.",
+          "Submit sitemap.xml in the Sitemaps report and review its processing status.",
+          "Inspect the homepage, one collection and one product; review live accessibility and Google’s selected canonical.",
+          "Use Bing Webmaster Tools for Bing visibility and monitor indexing reports over time."
+        ],
+        "sources": [
+          [
+            "Shopify sitemap setup",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/find-site-map"
+          ],
+          [
+            "Robots.txt guidance",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt"
+          ],
+          [
+            "Search Console verification",
+            "https://support.google.com/webmasters/answer/9008080"
+          ]
+        ],
+        "note": "Verify domain ownership now. Complete the public sitemap, live URL and indexability checks after step 29. A private or password-protected store is not ready for public crawling."
+      },
+      {
+        "id": "product-schema-and-merchant-center",
+        "lead": "Step 25. Validate product data",
+        "accent": "and Merchant Center",
+        "paragraphs": [
+          "Product structured data describes information such as name, price, currency and availability. Check what the theme and apps already output before adding another source. The markup must match what a customer can actually see and buy.",
+          "If you use Google Merchant Center, keep feed data and the store synchronized. A product being published in Shopify is not the same as being approved for every shopping destination. Check diagnostics and policy issues rather than assuming that a feed submission is complete."
+        ],
+        "steps": [
+          "Run representative product URLs through Google’s Rich Results Test.",
+          "Check Product and Offer data against the selected product, currency, price and stock state.",
+          "Use genuine reviews only; do not add invented aggregate ratings to obtain stars.",
+          "Configure the supported Google & YouTube channel if it suits your market and requirements, then review Merchant Center diagnostics.",
+          "Retest markup after changing themes or review apps."
+        ],
+        "sources": [
+          [
+            "Google product structured data",
+            "https://developers.google.com/search/docs/appearance/structured-data/product"
+          ],
+          [
+            "Google & YouTube channel",
+            "https://help.shopify.com/en/manual/online-sales-channels/marketplaces/google"
+          ]
+        ]
+      },
+      {
+        "id": "optimize-store-speed",
+        "lead": "Step 26. Keep the storefront",
+        "accent": "fast and accessible",
+        "paragraphs": [
+          "A heavy theme, oversized media and overlapping apps can slow an otherwise sound store. Test the actual product and collection templates, not just an empty homepage. Check performance after each major feature is added.",
+          "Make performance part of the design: reserve space for images, avoid autoplay media above the fold, keep text readable and make controls usable by keyboard. Compress images without destroying detail. A product photo should still let a shopper judge the item."
+        ],
+        "steps": [
+          "Review Shopify’s web-performance reports and use PageSpeed Insights on representative URLs.",
+          "Resize source media sensibly and use the theme’s responsive image handling.",
+          "Remove unused app embeds, redundant pixels and unnecessary sliders.",
+          "Check loading, interaction and layout stability on mobile; distinguish lab tests from real-user data.",
+          "Test keyboard navigation, visible focus, labels and alt text before sign-off."
+        ],
+        "sources": [
+          [
+            "Shopify web performance",
+            "https://help.shopify.com/en/manual/online-store/web-performance"
+          ],
+          [
+            "Theme accessibility",
+            "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility"
+          ]
+        ]
+      },
+      {
+        "id": "analytics-and-conversion-tracking",
+        "lead": "Step 27. Set up analytics",
+        "accent": "and consent",
+        "paragraphs": [
+          "Measure the journey you want to improve: product view, add to cart, checkout and purchase. Choose one supported implementation for each analytics destination, and check it before adding another app or theme script.",
+          "Use a test log with order ID, value, currency and observed events. Compare the completed order with the event report, accounting for consent choices and test-mode exclusions. Two purchase events for one order can make advertising appear more profitable than it is."
+        ],
+        "steps": [
+          "Review Shopify analytics first and decide which extra measurement tools you need.",
+          "Connect GA4 through a supported Shopify integration such as the Google & YouTube channel when available for your setup.",
+          "Configure customer privacy and consent settings for your markets.",
+          "Test permitted customer events and check that purchase tracking is not duplicated.",
+          "Keep an event map and record the owner of every pixel or integration."
+        ],
+        "sources": [
+          [
+            "Customer events and pixels",
+            "https://help.shopify.com/en/manual/promoting-marketing/pixels"
+          ],
+          [
+            "Customer privacy settings",
+            "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings"
+          ],
+          [
+            "GA4 implementation on Shopify",
+            "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-setup"
+          ]
+        ],
+        "note": "Prepare analytics now, then validate live collection after step 29. Shopify’s GA4 documentation says analytics cannot track events while the store remains in private mode; simulated test orders are not a live-sales measurement check."
+      },
+      {
+        "id": "place-test-orders",
+        "lead": "Step 28. Test orders",
+        "accent": "from start to finish",
+        "paragraphs": [
+          "A store is not ready because its homepage looks finished. Test the full journey, including payment failure, delivery options, order emails, stock changes and cancellation or refund handling. Use supported test facilities rather than making accidental customer charges.",
+          "Write the expected outcome first. For a two-item basket, record the variant choices, subtotal, shipping and expected stock reduction. After the test, compare each result. If the totals or notifications differ, fix the cause before launch."
+        ],
+        "steps": [
+          "Choose a paid plan, then enable the supported test gateway or Shopify Payments test mode.",
+          "Place successful and unsuccessful test orders using the provider’s documented test details.",
+          "Check product variants, discounts, shipping addresses, taxes, emails and order processing.",
+          "Test cancellation, refund and fulfillment procedures with the team.",
+          "Turn test mode off and remove accidental sample products or test settings before accepting customers."
+        ],
+        "sources": [
+          [
+            "Place a test order",
+            "https://help.shopify.com/en/manual/checkout-settings/test-orders"
+          ],
+          [
+            "Shopify Payments test mode",
+            "https://help.shopify.com/en/manual/payments/shopify-payments/testing-shopify-payments"
+          ]
+        ],
+        "images": [
+          {
+            "src": "/blogs/shopify-guide-v22/checkout-preview.webp",
+            "width": 1200,
+            "height": 675,
+            "alt": "Shopify checkout example shown on desktop and mobile",
+            "caption": "Official Shopify reference screenshot. Shopify checkout example shown on desktop and mobile.",
+            "source": [
+              "Shopify source",
+              "https://www.shopify.com/blog/start-online-store"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "launch-shopify-store",
+        "lead": "Step 29. Publish the store",
+        "accent": "and verify it live",
+        "paragraphs": [
+          "Launch when the merchant, payments and fulfillment teams can support real orders. Publishing a theme and making the store public are separate checks. Review the visibility controls shown in your admin and confirm that customers can reach checkout.",
+          "Use an incognito browser and mobile data for the final check. Review the primary domain, menu, product details, customer contact route and payment availability. Keep a rollback plan for the theme and nominate a person to watch the first orders."
+        ],
+        "steps": [
+          "Confirm the chosen theme is published and the custom domain is ready.",
+          "Turn off test payments and verify the real provider’s status.",
+          "Open the online-store visibility or preferences area and remove password/private access when the launch checklist is complete.",
+          "Visit the public store without an admin session and check representative pages and checkout.",
+          "Submit the public sitemap, check analytics and begin promotion only after the buying journey works."
+        ],
+        "sources": [
+          [
+            "Launch preparation",
+            "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-prepare-for-launch"
+          ]
+        ]
+      },
+      {
+        "id": "after-launch-shopify-checklist",
+        "lead": "Step 30. Run the store",
         "accent": "after launch",
         "paragraphs": [
-          "Check the generated sitemap, product pages and collection URLs. Inspect how variants and filtered collections are linked. Test analytics across the purchase flow and compare recorded transactions with store orders before making marketing decisions."
+          "Launch begins the operating phase. Assign responsibility for orders, returns, inventory, content and site changes. Keep the same checklist when a new app, market, theme or payment method is introduced.",
+          "Review customer questions as content opportunities. If several buyers ask about sizing or delivery, improve the relevant page and verify whether the answer reduces confusion. For SEO, compare useful search impressions, qualified visits and sales rather than celebrating any increase in raw traffic."
+        ],
+        "steps": [
+          "Daily: review failed payments, support enquiries, unfulfilled orders and stock anomalies.",
+          "Weekly: check broken links, key search queries, collection quality and conversion issues.",
+          "Monthly: review apps and costs, test checkout and prioritize content improvements.",
+          "Before a theme update, duplicate the current theme and test the draft against product, cart and app requirements.",
+          "Keep a handover record of domains, access, integrations and operational owners."
+        ],
+        "sources": [
+          [
+            "Orders and fulfillment",
+            "https://help.shopify.com/en/manual/fulfillment"
+          ],
+          [
+            "Theme updates",
+            "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes"
+          ]
+        ],
+        "images": [
+          {
+            "src": "/blogs/shopify-guide-v22/theme-update.webp",
+            "width": 1022,
+            "height": 455,
+            "alt": "Shopify theme update dialog showing the option to add a new version",
+            "caption": "Official Shopify reference screenshot. Shopify theme update dialog showing the option to add a new version.",
+            "source": [
+              "Shopify source",
+              "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes"
+            ]
+          }
         ]
       }
     ],
@@ -646,20 +1600,92 @@
     ],
     "checks": [
       [
-        "Catalogue",
-        "Connect collections to useful products"
+        "Plan and ownership",
+        "Correct plan, billing and merchant-owned account"
       ],
       [
-        "Checkout",
-        "Test representative addresses and totals"
+        "Domain and design",
+        "Live HTTPS domain, usable theme and navigation"
       ],
       [
-        "Reporting",
-        "Reconcile purchase events to store orders"
+        "Catalog",
+        "Accurate products, variants, images and stock"
+      ],
+      [
+        "Payments and delivery",
+        "Verified provider and tested shipping"
+      ],
+      [
+        "SEO and measurement",
+        "Useful metadata, crawl access and verified tracking"
+      ],
+      [
+        "Launch",
+        "Test orders passed, public access and real payments ready"
       ]
     ],
     "sources": [
-      "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+      "https://www.shopify.com/pricing",
+      "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-starter-plan",
+      "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup",
+      "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans",
+      "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-business-settings",
+      "https://help.shopify.com/en/manual/your-account/logging-in/secure-sign-in",
+      "https://help.shopify.com/en/manual/domains",
+      "https://help.shopify.com/en/manual/domains/add-a-domain",
+      "https://help.shopify.com/en/manual/domains/add-a-domain/buying-domains",
+      "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual",
+      "https://help.shopify.com/en/manual/online-store/themes/adding-themes",
+      "https://themes.shopify.com/themes/horizon/presets/horizon",
+      "https://themes.shopify.com/themes/dawn/presets/dawn",
+      "https://themes.shopify.com/themes/craft/presets/craft",
+      "https://themes.shopify.com/themes/sense/presets/sense",
+      "https://themes.shopify.com/themes/prestige/presets/prestige",
+      "https://themes.shopify.com/themes/impulse/presets/impulse",
+      "https://help.shopify.com/en/manual/online-store/themes/managing-themes",
+      "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor",
+      "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/theme-settings",
+      "https://help.shopify.com/en/manual/online-store/themes/theme-structure/sections-and-blocks",
+      "https://help.shopify.com/en/manual/checkout-settings/refund-privacy-tos",
+      "https://help.shopify.com/en/manual/online-store/add-edit-pages",
+      "https://help.shopify.com/en/manual/products/add-update-products",
+      "https://help.shopify.com/en/manual/products/details",
+      "https://help.shopify.com/en/manual/products/variants/add-variants",
+      "https://help.shopify.com/en/manual/inventory-and-locations",
+      "https://help.shopify.com/en/manual/products/import-export/import-products",
+      "https://help.shopify.com/en/manual/products/collections/create-collection",
+      "https://help.shopify.com/en/manual/products/collections/collection-layout",
+      "https://help.shopify.com/en/manual/online-store/menus-and-links",
+      "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+      "https://help.shopify.com/en/manual/payments",
+      "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries",
+      "https://help.shopify.com/en/manual/fulfillment/setup",
+      "https://help.shopify.com/en/manual/fulfillment/setup/shipping-profiles",
+      "https://help.shopify.com/en/manual/taxes",
+      "https://help.shopify.com/en/manual/markets",
+      "https://help.shopify.com/en/manual/apps",
+      "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview",
+      "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure",
+      "https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords",
+      "https://developers.google.com/search/docs/appearance/title-link",
+      "https://shopify.dev/docs/storefronts/themes/seo",
+      "https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect",
+      "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+      "https://help.shopify.com/en/manual/promoting-marketing/seo/find-site-map",
+      "https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt",
+      "https://support.google.com/webmasters/answer/9008080",
+      "https://developers.google.com/search/docs/appearance/structured-data/product",
+      "https://help.shopify.com/en/manual/online-sales-channels/marketplaces/google",
+      "https://help.shopify.com/en/manual/online-store/web-performance",
+      "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility",
+      "https://help.shopify.com/en/manual/promoting-marketing/pixels",
+      "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings",
+      "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-setup",
+      "https://help.shopify.com/en/manual/checkout-settings/test-orders",
+      "https://help.shopify.com/en/manual/payments/shopify-payments/testing-shopify-payments",
+      "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-prepare-for-launch",
+      "https://help.shopify.com/en/manual/fulfillment",
+      "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes"
     ]
   },
   "how-to-build-a-woocommerce-store": {

@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-11-29",
+  "screenshots": [
+    {
+      "name": "connect-domain",
+      "source": "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual",
+      "sourceImage": "https://cdn.shopify.com/shopifycloud/help-center/manual/domains/connect_to_existing/connect_existing_domain_button.png",
+      "alt": "Shopify Domains screen showing Connect existing domain",
+      "originalBytes": 71306,
+      "src": "/blogs/shopify-guide-v22/connect-domain.webp",
+      "width": 1200,
+      "height": 367,
+      "bytes": 21498
+    },
+    {
+      "name": "enter-domain",
+      "source": "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual",
+      "sourceImage": "https://cdn.shopify.com/shopifycloud/help-center/manual/domains/connect_to_existing/connect_existing_domain_dialog.png",
+      "alt": "Shopify dialog for entering an existing domain name",
+      "originalBytes": 48718,
+      "src": "/blogs/shopify-guide-v22/enter-domain.webp",
+      "width": 1200,
+      "height": 511,
+      "bytes": 12496
+    },
+    {
+      "name": "domain-ready",
+      "source": "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual",
+      "sourceImage": "https://cdn.shopify.com/shopifycloud/help-center/manual/domains/connect_to_existing/connect_manually/domain_manual_connect_success.png",
+      "alt": "Shopify domain connection status and TLS certificate checks",
+      "originalBytes": 539760,
+      "src": "/blogs/shopify-guide-v22/domain-ready.webp",
+      "width": 1200,
+      "height": 625,
+      "bytes": 44006
+    },
+    {
+      "name": "theme-editor",
+      "source": "https://www.shopify.com/blog/start-online-store",
+      "sourceImage": "https://cdn.shopify.com/s/files/1/0070/7032/files/2dawntheme.png?v=1794968772",
+      "alt": "Shopify online store editor displaying the Dawn theme and its page sections",
+      "originalBytes": 857244,
+      "src": "/blogs/shopify-guide-v22/theme-editor.webp",
+      "width": 1200,
+      "height": 666,
+      "bytes": 41548
+    },
+    {
+      "name": "checkout-preview",
+      "source": "https://www.shopify.com/blog/start-online-store",
+      "sourceImage": "https://cdn.shopify.com/s/files/1/0070/7032/files/6checkout.png?v=1794968772",
+      "alt": "Shopify checkout example shown on desktop and mobile",
+      "originalBytes": 110845,
+      "src": "/blogs/shopify-guide-v22/checkout-preview.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 27308
+    },
+    {
+      "name": "theme-update",
+      "source": "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes",
+      "sourceImage": "https://cdn.shopify.com/shopifycloud/help-center/manual/themes/theme-updates/add-to-theme-library.png",
+      "alt": "Shopify theme update dialog showing the option to add a new version",
+      "originalBytes": 48994,
+      "src": "/blogs/shopify-guide-v22/theme-update.webp",
+      "width": 1022,
+      "height": 455,
+      "bytes": 28512
+    },
+    {
+      "name": "theme-horizon",
+      "source": "https://themes.shopify.com/themes/horizon/presets/horizon",
+      "sourceImage": "https://cdn.shopify.com/theme-store/re0gschewfw562p5jdyj75iwaqr5.jpg?width=2400",
+      "alt": "Horizon desktop theme preview from the Shopify Theme Store",
+      "originalBytes": 221266,
+      "src": "/blogs/shopify-guide-v22/theme-horizon.webp",
+      "width": 1000,
+      "height": 1248,
+      "bytes": 114052
+    },
+    {
+      "name": "theme-dawn",
+      "source": "https://themes.shopify.com/themes/dawn/presets/dawn",
+      "sourceImage": "https://cdn.shopify.com/theme-store/m5ynz26bt6in8bdrej5f6aifpelm.jpg?width=2400",
+      "alt": "Dawn desktop theme preview from the Shopify Theme Store",
+      "originalBytes": 2025732,
+      "src": "/blogs/shopify-guide-v22/theme-dawn.webp",
+      "width": 1200,
+      "height": 1498,
+      "bytes": 77988
+    },
+    {
+      "name": "theme-craft",
+      "source": "https://themes.shopify.com/themes/craft/presets/craft",
+      "sourceImage": "https://cdn.shopify.com/theme-store/2crss7jf5cvp5lnl3e184aqom54l.jpg?width=2400",
+      "alt": "Craft desktop theme preview from the Shopify Theme Store",
+      "originalBytes": 2667603,
+      "src": "/blogs/shopify-guide-v22/theme-craft.webp",
+      "width": 1200,
+      "height": 1498,
+      "bytes": 78310
+    },
+    {
+      "name": "theme-sense",
+      "source": "https://themes.shopify.com/themes/sense/presets/sense",
+      "sourceImage": "https://cdn.shopify.com/theme-store/eykvg00tx5kb1k9xb7x4vyarg5c6.jpg?width=2400",
+      "alt": "Sense desktop theme preview from the Shopify Theme Store",
+      "originalBytes": 1909582,
+      "src": "/blogs/shopify-guide-v22/theme-sense.webp",
+      "width": 1200,
+      "height": 1498,
+      "bytes": 64844
+    }
+  ]
+}

@@ -16,7 +16,7 @@ const paragraphs = new Set();
 let words = 0;
 for (const [slug, article] of Object.entries(additions)) {
   assert.equal(article.sections.length, 4, slug);
-  assert.equal(article.updatedAt, '2026-11-28', slug);
+  assert.equal(article.updatedAt, slug === 'how-to-build-a-shopify-store' ? '2026-11-29' : '2026-11-28', slug);
   const ids = new Set([...(existing[slug]?.sections.map(s => s.id) ?? []), ...(deepDives[slug]?.map(s => s.id) ?? [])]);
   for (const section of article.sections) {
     assert.match(section.id, /^[a-z][a-z0-9-]+$/);

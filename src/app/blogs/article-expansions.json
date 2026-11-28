@@ -1564,97 +1564,501 @@
   "how-to-build-a-shopify-store": {
     "sections": [
       {
-        "heading": "Organise products the way buyers shop",
-        "paragraphs": [
-          "Start with a clean product inventory and a collection plan. Decide which variants belong on one product page and which products need separate pages. Store sizing, material and delivery information in consistent fields. Give collections descriptive names customers understand, and make important collections accessible from the menu and homepage. Review what a shopper needs to choose a product before importing hundreds of descriptions."
-        ]
+        "heading": "",
+        "paragraphs": []
       },
       {
-        "heading": "Configure payments, fulfilment and the storefront together",
-        "paragraphs": [
-          "Set markets, shipping, payment methods and store policies for the actual territories you serve. Use representative baskets to check shipping thresholds, discounts and taxes configured for your business. Give each product compelling photos and information on stock, returns and fit. Configure the domain and check product and collection metadata before removing storefront password protection for launch."
-        ]
+        "heading": "",
+        "paragraphs": []
       },
       {
-        "heading": "Test from collection to fulfilment",
-        "paragraphs": [
-          "Complete a test order, confirm the email, and review cancellation and refund workflows with operations. Check the public sitemap and validate a few canonical product URLs after launch. Test out-of-stock behaviour and decide when a discontinued item should remain useful or redirect to a true replacement. Compress large media and measure the product template after installing apps."
-        ]
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
+      },
+      {
+        "heading": "",
+        "paragraphs": []
       }
     ],
     "questions": [
       [
-        "Does Shopify create a sitemap?",
-        "Yes. Open the live store’s sitemap and verify that it lists the published pages you expect. Confirm password protection has been removed when the store is ready to launch."
+        "Should I select a plan before creating the account?",
+        "Compare plans first so you understand the commitment. Create the account next, then activate the chosen plan in the admin. You do not have to pay before you can research the options."
       ],
       [
-        "Should every product variant have its own indexed page?",
-        "Use separate pages when the products have distinct demand and useful information. Many size or colour combinations work better as choices within a single product."
+        "Does the Shopify plan include a custom domain?",
+        "A myshopify.com address identifies your store. A custom domain is a separate purchase unless your specific offer explicitly includes it. Check the renewal price and keep ownership with the business."
       ],
       [
-        "What should I do with a product that is temporarily out of stock?",
-        "Keep a useful product page where it makes sense, clearly show availability and offer a relevant alternative or restock option. Review long-term handling when the item is permanently discontinued."
+        "Can I build on a free theme?",
+        "Yes. Test a free theme against your actual catalog and design needs. A paid theme is optional; it does not automatically improve rankings or conversions."
+      ],
+      [
+        "Can Shopify Payments be used from every country?",
+        "No. Business location, eligibility and documentation matter. If your business is not supported, evaluate a compatible third-party provider. Do not use a false business country."
+      ],
+      [
+        "Does Shopify do all the SEO automatically?",
+        "No. Shopify provides infrastructure, but you still need useful product and collection content, clear links, sensible metadata and indexable pages. Custom themes and apps can also introduce issues."
+      ],
+      [
+        "Do I need an SEO app?",
+        "Only if it solves a specific gap. Check the theme’s canonical and structured-data output first. Avoid adding overlapping tools for the same function."
+      ],
+      [
+        "How long until a new Shopify store ranks?",
+        "There is no fixed date. Search engines need to discover and evaluate pages, and competitiveness varies. Monitor indexing and useful queries instead of relying on an immediate ranking promise."
+      ],
+      [
+        "Can I migrate an existing store?",
+        "Yes, but add a separate migration plan for products, customers where permitted, orders, URLs, redirects and integrations. Test a small import and keep backups before the full move."
+      ],
+      [
+        "Can I launch with thousands of products?",
+        "You can plan a large catalog, but validate the product data, collections, filters, inventory and checkout with a small sample first. Test bulk imports and account for the operational work."
+      ],
+      [
+        "What should I hand over to the owner?",
+        "Account and domain control, plan and app costs, stock and fulfillment procedures, analytics ownership, support contacts and a tested launch checklist. Never hand over a collection of shared passwords."
       ]
     ],
     "sources": [
       [
-        "Shopify Help: SEO overview",
+        "Shopify pricing",
+        "https://www.shopify.com/pricing"
+      ],
+      [
+        "Starter eligibility",
+        "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-starter-plan"
+      ],
+      [
+        "Create a Shopify account",
+        "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup"
+      ],
+      [
+        "Shopify plans and pricing",
+        "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans"
+      ],
+      [
+        "Business settings",
+        "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-business-settings"
+      ],
+      [
+        "Shopify account security",
+        "https://help.shopify.com/en/manual/your-account/logging-in/secure-sign-in"
+      ],
+      [
+        "Domains in Shopify",
+        "https://help.shopify.com/en/manual/domains"
+      ],
+      [
+        "Adding a domain",
+        "https://help.shopify.com/en/manual/domains/add-a-domain"
+      ],
+      [
+        "Buy through Shopify",
+        "https://help.shopify.com/en/manual/domains/add-a-domain/buying-domains"
+      ],
+      [
+        "Manual domain connection",
+        "https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual"
+      ],
+      [
+        "Add, preview and buy a theme",
+        "https://help.shopify.com/en/manual/online-store/themes/adding-themes"
+      ],
+      [
+        "Horizon",
+        "https://themes.shopify.com/themes/horizon/presets/horizon"
+      ],
+      [
+        "Dawn",
+        "https://themes.shopify.com/themes/dawn/presets/dawn"
+      ],
+      [
+        "Craft",
+        "https://themes.shopify.com/themes/craft/presets/craft"
+      ],
+      [
+        "Sense",
+        "https://themes.shopify.com/themes/sense/presets/sense"
+      ],
+      [
+        "Prestige",
+        "https://themes.shopify.com/themes/prestige/presets/prestige"
+      ],
+      [
+        "Impulse",
+        "https://themes.shopify.com/themes/impulse/presets/impulse"
+      ],
+      [
+        "Manage draft and published themes",
+        "https://help.shopify.com/en/manual/online-store/themes/managing-themes"
+      ],
+      [
+        "Theme editor",
+        "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor"
+      ],
+      [
+        "Theme settings",
+        "https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/theme-settings"
+      ],
+      [
+        "Sections and blocks",
+        "https://help.shopify.com/en/manual/online-store/themes/theme-structure/sections-and-blocks"
+      ],
+      [
+        "Store policies",
+        "https://help.shopify.com/en/manual/checkout-settings/refund-privacy-tos"
+      ],
+      [
+        "Webpages",
+        "https://help.shopify.com/en/manual/online-store/add-edit-pages"
+      ],
+      [
+        "Adding products",
+        "https://help.shopify.com/en/manual/products/add-update-products"
+      ],
+      [
+        "Product details",
+        "https://help.shopify.com/en/manual/products/details"
+      ],
+      [
+        "Add variants",
+        "https://help.shopify.com/en/manual/products/variants/add-variants"
+      ],
+      [
+        "Inventory and locations",
+        "https://help.shopify.com/en/manual/inventory-and-locations"
+      ],
+      [
+        "Safe CSV imports",
+        "https://help.shopify.com/en/manual/products/import-export/import-products"
+      ],
+      [
+        "Create collections",
+        "https://help.shopify.com/en/manual/products/collections/create-collection"
+      ],
+      [
+        "Collection layout",
+        "https://help.shopify.com/en/manual/products/collections/collection-layout"
+      ],
+      [
+        "Menus and links",
+        "https://help.shopify.com/en/manual/online-store/menus-and-links"
+      ],
+      [
+        "Search & Discovery filters",
+        "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters"
+      ],
+      [
+        "Payment methods",
+        "https://help.shopify.com/en/manual/payments"
+      ],
+      [
+        "Shopify Payments countries",
+        "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries"
+      ],
+      [
+        "Shipping setup",
+        "https://help.shopify.com/en/manual/fulfillment/setup"
+      ],
+      [
+        "Shipping profiles",
+        "https://help.shopify.com/en/manual/fulfillment/setup/shipping-profiles"
+      ],
+      [
+        "Shopify tax configuration",
+        "https://help.shopify.com/en/manual/taxes"
+      ],
+      [
+        "Markets configuration",
+        "https://help.shopify.com/en/manual/markets"
+      ],
+      [
+        "Working with apps",
+        "https://help.shopify.com/en/manual/apps"
+      ],
+      [
+        "SEO overview",
         "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
       ],
       [
-        "Google Search Central: ecommerce site structure",
+        "Ecommerce site structure",
         "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+      ],
+      [
+        "Shopify SEO fields",
+        "https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords"
+      ],
+      [
+        "Google title links",
+        "https://developers.google.com/search/docs/appearance/title-link"
+      ],
+      [
+        "Theme SEO and canonical URLs",
+        "https://shopify.dev/docs/storefronts/themes/seo"
+      ],
+      [
+        "Shopify redirects",
+        "https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect"
+      ],
+      [
+        "Google canonical guidance",
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      [
+        "Shopify sitemap setup",
+        "https://help.shopify.com/en/manual/promoting-marketing/seo/find-site-map"
+      ],
+      [
+        "Robots.txt guidance",
+        "https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt"
+      ],
+      [
+        "Search Console verification",
+        "https://support.google.com/webmasters/answer/9008080"
+      ],
+      [
+        "Google product structured data",
+        "https://developers.google.com/search/docs/appearance/structured-data/product"
+      ],
+      [
+        "Google & YouTube channel",
+        "https://help.shopify.com/en/manual/online-sales-channels/marketplaces/google"
+      ],
+      [
+        "Shopify web performance",
+        "https://help.shopify.com/en/manual/online-store/web-performance"
+      ],
+      [
+        "Theme accessibility",
+        "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility"
+      ],
+      [
+        "Customer events and pixels",
+        "https://help.shopify.com/en/manual/promoting-marketing/pixels"
+      ],
+      [
+        "Customer privacy settings",
+        "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings"
+      ],
+      [
+        "GA4 implementation on Shopify",
+        "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-setup"
+      ],
+      [
+        "Place a test order",
+        "https://help.shopify.com/en/manual/checkout-settings/test-orders"
+      ],
+      [
+        "Shopify Payments test mode",
+        "https://help.shopify.com/en/manual/payments/shopify-payments/testing-shopify-payments"
+      ],
+      [
+        "Launch preparation",
+        "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-prepare-for-launch"
+      ],
+      [
+        "Orders and fulfillment",
+        "https://help.shopify.com/en/manual/fulfillment"
+      ],
+      [
+        "Theme updates",
+        "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes"
+      ],
+      [
+        "Shopify reference screenshots",
+        "https://www.shopify.com/blog/start-online-store"
       ]
     ],
     "example": {
-      "heading": "A Shopify launch with related variants",
+      "heading": "Worked example: a small homeware launch",
       "paragraphs": [
-        "An apparel store has one shirt in eight sizes and three colours. The team creates one product page with variant selectors, adds a fit guide and creates collections for categories buyers browse. It tests picking a size, discount eligibility and shipping on a phone and checks that product URLs in the sitemap resolve publicly.",
-        "Use a pricing and inventory check before running campaigns. Compare the amount advertised to the product price and final checkout totals in each market you serve. Check sale pricing, shipping and any threshold that changes the order total. If you plan to connect a shopping feed, keep price, availability and variant identifiers consistent with the destination pages. Document who owns product updates so an inventory change does not leave an old offer live in another channel."
+        "Imagine an owner-led homeware business launching ten products in one country. The owner controls the Shopify account and domain, starts with the lowest suitable full-store plan, and tests a free theme with one complete product before building the rest. This is a fictional planning example, not a client case study.",
+        "The first catalog contains three meaningful collections rather than a separate page for every keyword. Delivery costs, product dimensions and returns information are written before launch. The team then tests a normal order, an unsupported shipping address, a discount and a refund workflow. Only after those checks do they make the store public.",
+        "Use the budget table as a worksheet. Replace every placeholder with a supplier price or an internal estimate. Do not treat a promotional subscription or a free theme as the total cost of running the business."
       ]
     },
     "comparison": {
-      "caption": "Store launch checkpoints",
+      "caption": "Launch budget worksheet: separate recurring and one-time costs",
       "headings": [
-        "Area",
-        "Ready when",
-        "Test"
+        "Cost element",
+        "Billing pattern",
+        "How to budget"
       ],
       "rows": [
         [
-          "Collections",
-          "Buyers can find products by a clear category",
-          "Navigate from the homepage without search"
+          "Platform plan",
+          "Monthly or annual",
+          "Use your region’s actual checkout price"
         ],
         [
-          "Checkout",
-          "Shipping and payment reflect real policies",
-          "Place a test order using a representative address"
+          "Domain",
+          "Usually annual",
+          "Record purchase and renewal separately"
         ],
         [
-          "Search",
-          "Preferred product and collection pages are accessible",
-          "Inspect the sitemap and sample a live product"
+          "Theme",
+          "Free or paid license",
+          "Use the current listing and required licenses"
+        ],
+        [
+          "Apps",
+          "Often recurring",
+          "List each installed paid app and its owner"
+        ],
+        [
+          "Payments",
+          "Per transaction and other provider fees",
+          "Model order value, refunds and settlement costs"
+        ],
+        [
+          "Delivery",
+          "Per shipment and packaging",
+          "Use representative baskets and destinations"
+        ],
+        [
+          "Content and implementation",
+          "Project or internal time",
+          "Include photography, copy, migration and testing"
         ]
       ]
     },
     "flow": {
-      "caption": "From catalogue to a confirmed Shopify order",
+      "caption": "The build order at a glance",
       "steps": [
         [
-          "Model the catalogue",
-          "Group products and document the variants"
+          "Decide",
+          "Compare plans and costs"
         ],
         [
-          "Connect fulfilment",
-          "Configure markets, checkout and shipping"
+          "Create",
+          "Own and secure the account"
         ],
         [
-          "Run the purchase test",
-          "Verify emails, inventory and public product URLs"
+          "Connect",
+          "Choose the domain and theme"
+        ],
+        [
+          "Build",
+          "Complete pages and products"
+        ],
+        [
+          "Configure",
+          "Payments, delivery and SEO"
+        ],
+        [
+          "Test",
+          "Verify checkout before launch"
         ]
       ]
-    }
+    },
+    "contact": "Need help planning, building or improving a Shopify store? Orbilect SEO can scope the design, ecommerce operations and SEO work."
   },
   "how-to-build-a-woocommerce-store": {
     "sections": [

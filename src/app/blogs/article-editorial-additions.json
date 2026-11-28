@@ -732,7 +732,7 @@
     ]
   },
   "how-to-build-a-shopify-store": {
-    "updatedAt": "2026-11-28",
+    "updatedAt": "2026-11-29",
     "sections": [
       {
         "id": "practical-assign-ownership-to-product-facts-and-inventory-changes",
@@ -743,8 +743,8 @@
         ],
         "sources": [
           [
-            "Shopify Help: SEO overview",
-            "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+            "Shopify inventory and locations",
+            "https://help.shopify.com/en/manual/inventory-and-locations"
           ]
         ]
       },
@@ -757,8 +757,8 @@
         ],
         "sources": [
           [
-            "Google Search Central: ecommerce site structure",
-            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+            "Shopify URL redirects",
+            "https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect"
           ]
         ]
       },
@@ -771,8 +771,8 @@
         ],
         "sources": [
           [
-            "Shopify Help: SEO overview",
-            "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+            "Shopify test orders",
+            "https://help.shopify.com/en/manual/checkout-settings/test-orders"
           ]
         ]
       },

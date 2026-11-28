@@ -216,7 +216,7 @@ const groups: [Category, [number, string, string][]][] = [
     [0, "How to Build a Webflow Website", "Plan responsive layouts, set up collections, and check redirects and metadata before launch."],
     [0, "How to Build a Wix Website", "Choose an editor, set up core pages, connect your domain, and configure your search settings."],
     [0, "How to Build a Framer Website", "Use components and CMS collections to launch a responsive marketing site."],
-    [0, "How to Build a Shopify Store", "Organize products, payments, shipping, and storefront settings for launch."],
+    [0, "How to Build a Shopify Store", "Build a Shopify store step by step: compare plans, create your account, connect a domain, choose a theme, add products, configure checkout and improve SEO."],
     [0, "How to Build a WooCommerce Store", "Set up a catalogue, configure checkout, and test payments and order emails."],
   ]],
   ["Paid Media & CRO", [

@@ -6,7 +6,14 @@ import ArticleAdditionSections from "./article-addition-sections";
 import type { ArticleAdditionSection } from "./article-additions";
 
 type Entry = string[];
-type GuideSection = { id: string; lead: string; accent: string; paragraphs: string[] };
+type GuideSection = {
+  id: string; lead: string; accent: string; paragraphs: string[];
+  steps?: string[];
+  table?: { caption: string; headings: string[]; rows: string[][] };
+  note?: string;
+  sources?: string[][];
+  images?: { src: string; width: number; height: number; alt: string; caption: string; source: string[] }[];
+};
 
 export type Guide = {
   sections: GuideSection[];
@@ -80,11 +87,29 @@ export default function GuideBody({ guide, expansion, related }: {
   const { comparison, example } = expansion;
   const split = example.heading.lastIndexOf(" ");
   return <>
-    {guide.sections.map(({ id, lead, accent, paragraphs }, index) => (
+    {guide.sections.map(({ id, lead, accent, paragraphs, ...details }, index) => (
       <section key={id} aria-labelledby={id}>
         <h2 id={id}>{lead} <span>{accent}</span></h2>
         {paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-        <h3>{expansion.sections[index].heading}</h3>
+        {details.steps && <ol className={guideStyles.instructions}>{details.steps.map(step => <li key={step}>{step}</li>)}</ol>}
+        {details.table && <div className={`${styles.tableWrap} ${guideStyles.stepTable}`} role="region" aria-label={details.table.caption} tabIndex={0}>
+          <table><caption>{details.table.caption}</caption>
+            <thead><tr>{details.table.headings.map(label => <th key={label} scope="col">{label}</th>)}</tr></thead>
+            <tbody>{details.table.rows.map(([label, ...cells]) => <tr key={label}><th scope="row">{label}</th>{cells.map((cell, index) => <td key={index}>{cell}</td>)}</tr>)}</tbody>
+          </table>
+        </div>}
+        {details.note && <p className={guideStyles.note}><strong>Before you continue:</strong> {details.note}</p>}
+        {details.images && <div className={details.images.length > 3 ? guideStyles.previewGrid : undefined}>
+          {details.images.map(image => <figure key={image.src} className={guideStyles.stepScreenshot}>
+            <a href={image.src} target="_blank" rel="noopener noreferrer" aria-label={"Open full screenshot: " + image.alt}>
+              <Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes={details.images!.length > 3 ? "(max-width: 600px) 85vw, 360px" : "(max-width: 900px) 85vw, 720px"} />
+            </a>
+            <figcaption>{image.caption} <a href={image.source[1]}>{image.source[0]}</a>. Open the image to inspect it.</figcaption>
+          </figure>)}
+        </div>}
+        {details.sources && <p className={styles.source}>{details.sources.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</p>}
+
+        {expansion.sections[index].heading && <h3>{expansion.sections[index].heading}</h3>}
         {expansion.sections[index].paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         {index === 0 && (
           <figure className={styles.figure}>
