@@ -9,12 +9,21 @@ type Profile = { reviewUrl?: string; embedUrl?: string };
 
 export default function ReviewDirectory({ profiles }: { profiles: Map<string, Profile> }) {
   return <ul className={styles.cards} role="list">
-    {/* Preserve the Google and Bing account controls and configured URLs. */}
+    {/* Google has a public default; account-specific configured URLs take precedence. */}
     {reviewPlatforms.filter(platform => platform.id === "google" || platform.id === "bing").map(platform => {
       const profile = profiles.get(platform.id);
       const href = profile?.reviewUrl;
-      const label = platform.id === "google" ? "Google Business Account" : platform.label;
+      const label = platform.label;
       const logo = <Image src={"/review-platforms/" + platform.mark} alt={label} width={200} height={72} unoptimized />;
+      if (platform.id === "google" && href) return <li id="review-google" key={platform.id} className={`${styles.card} ${styles.directoryCard}`}>
+        <a className={styles.cardLink} href={href} target="_blank" rel="noopener noreferrer" aria-label="Visit Orbilect SEO on Google (opens in a new tab)">
+          <h3 className={styles.directoryTitle}>{label}</h3>
+          <span className={styles.logoBox}>{logo}</span>
+          <span className={styles.reviewStatus}>Business profile and reviews</span>
+          <span className={styles.profileCta}><span className={styles.profileArrow} aria-hidden="true">↗</span>Visit our profile</span>
+        </a>
+        {profile?.embedUrl && <details className={styles.badgeDetails}><summary>Show reviews</summary><div className={styles.widgetSlot}><ReviewEmbed label={label} url={profile.embedUrl} /></div></details>}
+      </li>;
       return <li id={"review-" + platform.id} key={platform.id} className={`${styles.card} ${styles.directoryCard} ${styles.accountCard}`}>
         <h3 className={styles.directoryTitle}>{label}</h3>
         {href ? <a className={styles.logoBox} href={href} target="_blank" rel="noopener noreferrer" aria-label={"Visit " + label + " (opens in a new tab)"}>{logo}</a> : <div className={styles.logoBox}>{logo}</div>}

@@ -2,6 +2,8 @@ import Image from "@/components/optimized-image";
 import Link from "next/link";
 import styles from "./what-is-search-engine-optimization/article.module.css";
 import guideStyles from "./guide-visuals.module.css";
+import ArticleAdditionSections from "./article-addition-sections";
+import type { ArticleAdditionSection } from "./article-additions";
 
 type Entry = string[];
 type GuideSection = { id: string; lead: string; accent: string; paragraphs: string[] };
@@ -17,6 +19,7 @@ export type GuideExpansion = {
   sections: { heading: string; paragraphs: string[] }[];
   referenceImages?: { src: string; width: number; height: number; title: string; alt: string; caption: string; source: string[] }[];
   deepDive?: { id: string; title: string; paragraphs: string[] }[];
+  editorialAdditions?: ArticleAdditionSection[];
   example: { heading: string; paragraphs: string[] };
   flow: { caption: string; steps: Entry[] };
   comparison: { caption: string; headings: string[]; rows: Entry[] };
@@ -34,6 +37,7 @@ export type GuideExpansion = {
 
 export function expansionSections(expansion: GuideExpansion) {
   return [...(expansion.deepDive ?? []).map(({ id, title }) => ({ id, title })),
+    ...(expansion.editorialAdditions ?? []).map(({ id, title }) => ({ id, title })),
     { id: "worked-example", title: expansion.example.heading },
     { id: "common-questions", title: "Common questions" },
     { id: "implementation-checks", title: "What to check next" }];
@@ -118,6 +122,7 @@ export default function GuideBody({ guide, expansion, related }: {
         {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
       </section>;
     })}
+    <ArticleAdditionSections sections={expansion.editorialAdditions ?? []} />
     <section aria-labelledby="worked-example">
       <h2 id="worked-example">{example.heading.slice(0, split)} <span>{example.heading.slice(split + 1)}</span></h2>
       {example.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}

@@ -4,6 +4,7 @@ import referenceImages from "./article-reference-images.json";
 import articleDeepDives from "./article-deep-dives.json";
 import articleExpansions from "./article-expansions.json";
 import type { Guide, GuideExpansion } from "./guide-body";
+import { getArticleAdditions } from "./article-additions";
 
 const content: Record<string, (typeof articleContent)[keyof typeof articleContent] | undefined> = articleContent;
 const expansions: Record<string, GuideExpansion | undefined> = articleExpansions;
@@ -38,8 +39,12 @@ const guides = posts.map(post => {
   const screenshots: Record<string, GuideExpansion["referenceImages"]> = referenceImages;
   const images = screenshots[post.slug];
   const sources = [...expansion.sources];
+  const editorial = getArticleAdditions(post.slug);
+  for (const section of editorial.sections) for (const source of section.sources) {
+    if (!sources.some(entry => entry[1] === source[1])) sources.push(source);
+  }
   for (const image of images ?? []) if (!sources.some(source => source[1] === image.source[1])) sources.push(image.source);
-  return { post, guide, expansion: { ...expansion, sources, deepDive: additions[post.slug], referenceImages: images } };
+  return { post, guide, updatedAt: editorial.updatedAt, expansion: { ...expansion, sources, deepDive: additions[post.slug], editorialAdditions: editorial.sections, referenceImages: images } };
 });
 
 export function getPublishedGuides() {

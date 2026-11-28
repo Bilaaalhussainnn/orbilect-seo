@@ -1,5 +1,5 @@
 import "server-only";
-import { reviewPlatforms } from "@/lib/review-platforms";
+import { googleBusinessProfileUrl, reviewPlatforms } from "@/lib/review-platforms";
 
 type ReviewProfile = { reviewUrl?: string; embedUrl?: string };
 const widgetHosts: Record<string, readonly string[]> = {
@@ -22,7 +22,7 @@ function validUrl(value: unknown, hosts: readonly string[], allowSubdomains = fa
 }
 
 export function configuredReviewProfiles() {
-  const profiles = new Map<string, ReviewProfile>();
+  const profiles = new Map<string, ReviewProfile>([["google", { reviewUrl: googleBusinessProfileUrl }]]);
   try {
     const input = JSON.parse(process.env.ORBILECT_REVIEW_PROFILES ?? "{}");
     for (const { id, domains } of reviewPlatforms) {

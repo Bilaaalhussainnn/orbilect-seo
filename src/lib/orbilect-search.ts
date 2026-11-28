@@ -158,7 +158,7 @@ export function blogPath(slug: string) {
   return "/blogs/" + slug;
 }
 
-export function blogSeo(post: Article, description = post.summary): Metadata {
+export function blogSeo(post: Article, description = post.summary, modifiedTime?: string): Metadata {
   const route = blogPath(post.slug);
   const image = post.cover ? { url: siteUrl(post.cover.src), alt: post.cover.alt } : undefined;
   return pageSeo(route, {
@@ -167,6 +167,7 @@ export function blogSeo(post: Article, description = post.summary): Metadata {
     openGraph: {
       type: "article",
       publishedTime: post.publishedAt,
+      ...(modifiedTime && { modifiedTime }),
       authors: [post.author.name],
       section: post.category,
       ...(image && { images: [image] }),

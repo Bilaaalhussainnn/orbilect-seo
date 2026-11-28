@@ -1,8 +1,9 @@
 export const reviewsPath = "/reviews";
 export const reviewDirectoryPath = "/reviews#review-platforms";
+export const googleBusinessProfileUrl = "https://www.google.com/maps/search/?api=1&query=Orbilect%20SEO&query_place_id=ChIJQTaQVpRZwokRhRWr4hTB_po";
 
 export const reviewPlatforms = [
-  { id: "google", label: "Business Account", mark: "google-profile.png", domains: ["google.com", "g.page", "maps.app.goo.gl", "share.google"] },
+  { id: "google", label: "Google Business Profile", mark: "google-profile.png", domains: ["google.com", "g.page", "maps.app.goo.gl", "share.google"] },
   { id: "bing", label: "Bing Business Account", mark: "bing.png", domains: ["bing.com", "bingplaces.com"] },
   { id: "yelp", label: "Yelp", mark: "yelp.svg", domains: ["yelp.com"] },
   { id: "trustpilot", label: "Trustpilot", mark: "trustpilot.svg", domains: ["trustpilot.com"] },

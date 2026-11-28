@@ -1,6 +1,10 @@
 import Image from "@/components/optimized-image";
 import Link from "next/link";
 import styles from "./article.module.css";
+import { getArticleAdditions } from "../article-additions";
+import ArticleAdditionSections from "../article-addition-sections";
+
+const additions = getArticleAdditions("what-is-search-engine-optimization");
 
 export const sections = [
   { id: "what-seo-means", title: "What SEO means" },
@@ -16,6 +20,7 @@ export const sections = [
   { id: "measure-results", title: "How to measure results" },
   { id: "continuous-seo", title: "Why SEO is a continuous process" },
   {"id":"seo-hurdles","title":"Eight SEO hurdles Orbilect SEO helps solve"},
+  ...additions.sections.map(({ id, title }) => ({ id, title })),
 ];
 
 export const related = [
@@ -252,5 +257,6 @@ export function SeoGuide() {
       <p>If several of these problems look familiar, choose one commercially important page or template first. Establish a baseline, fix the most consequential issue, and check the live result before expanding the work.</p>
     </section>
 
+    <ArticleAdditionSections sections={additions.sections} />
   </>;
 }

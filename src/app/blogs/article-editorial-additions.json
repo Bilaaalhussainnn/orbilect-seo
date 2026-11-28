@@ -1,0 +1,2564 @@
+{
+  "how-to-submit-your-website-to-google-search-console": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-read-the-google-selected-canonical-before-requesting-indexing",
+        "title": "Read the Google-selected canonical before requesting indexing",
+        "paragraphs": [
+          "Inspect the exact HTTPS URL you want customers to reach, then expand its indexing details. Compare the declared canonical with Google's selected canonical. If the two differ, review duplicates, redirects and internal links before repeatedly requesting a crawl. A request cannot repair contradictory page signals.",
+          "Keep one record for the preferred page and one for any alternate URL. This makes it easier to distinguish an expected duplicate from a service page that genuinely needs correction."
+        ],
+        "sources": [
+          [
+            "Google: URL Inspection tool",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      },
+      {
+        "id": "practical-understand-why-an-indexed-page-may-not-appear-for-your-brand",
+        "title": "Understand why an indexed page may not appear for your brand",
+        "paragraphs": [
+          "An indexed homepage is eligible for search; it is not a promise that it will appear for every query. If another group website ranks for your brand name, check the homepage title, visible business description and destination URLs on relevant public profiles.",
+          "Use Search Console's query and page filters to see whether your own domain receives branded impressions. Compare changes over time instead of treating a single search from one device as a complete visibility report."
+        ],
+        "sources": [
+          [
+            "Google: Verify site ownership",
+            "https://support.google.com/webmasters/answer/9008080"
+          ]
+        ]
+      },
+      {
+        "id": "practical-preserve-verification-during-a-domain-or-hosting-change",
+        "title": "Preserve verification during a domain or hosting change",
+        "paragraphs": [
+          "Before switching DNS providers, copy the verification record into the new zone and confirm which organization controls that zone. Moving hosting and moving DNS are different operations, so do not assume that a successful website migration preserves every verification method.",
+          "After the change, check ownership access, the preferred-domain redirect and sitemap availability. Keep the old implementation notes until the new property remains accessible to the business owner and the team responsible for search reporting."
+        ],
+        "sources": [
+          [
+            "Google: URL Inspection tool",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      },
+      {
+        "id": "practical-create-an-evidence-log-for-important-url-changes",
+        "title": "Create an evidence log for important URL changes",
+        "paragraphs": [
+          "For a major page update, record its URL, deployment date, intended canonical, live response and the issue you were fixing. Add the indexed inspection result separately from the live test result because they describe different moments.",
+          "Revisit the same page when fresh crawl information becomes available. A short evidence log lets your developer separate a failed release from normal processing time and prevents a later content edit from being mistaken for the cause of an earlier traffic change."
+        ],
+        "sources": [
+          [
+            "Google: Verify site ownership",
+            "https://support.google.com/webmasters/answer/9008080"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-set-up-your-google-business-profile": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-prepare-evidence-for-an-ownership-or-verification-request",
+        "title": "Prepare evidence for an ownership or verification request",
+        "paragraphs": [
+          "Keep the business name, contact details and operating information consistent with the real business before starting verification. Gather the records or operational evidence relevant to the verification method Google actually offers; do not create details simply to fit the form.",
+          "Assign a business-controlled account as an owner and give other contributors suitable access. If a previous agency manages the listing, resolve ownership rather than creating a second profile that competes with the existing one."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: add or claim a listing",
+            "https://support.google.com/business/answer/2911778"
+          ]
+        ]
+      },
+      {
+        "id": "practical-plan-for-holiday-hours-and-temporary-operating-changes",
+        "title": "Plan for holiday hours and temporary operating changes",
+        "paragraphs": [
+          "A profile can be technically complete and still disappoint customers when its hours are wrong. Make changes to holiday opening, appointment availability and service interruptions part of ordinary operations, with someone responsible for checking the website and listing together.",
+          "Recheck the customer journey after a change. A visitor who sees accurate hours but reaches a disconnected telephone number or an unavailable booking page still experiences inaccurate information about how the business can help."
+        ],
+        "sources": [
+          [
+            "Google’s eligibility and address guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-a-public-profile-link-from-a-review-request-link",
+        "title": "Separate a public profile link from a review request link",
+        "paragraphs": [
+          "Store the public listing URL and the review request URL as distinct business assets. A website's contact page may need the listing and directions, while a post-service message may need the direct review flow. Test both as a customer without relying on a management dashboard link.",
+          "Invite honest feedback without asking only satisfied customers or offering a reward. Keep the invitation neutral, and make it clear that customers should avoid including private project or personal details in a public review."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: add or claim a listing",
+            "https://support.google.com/business/answer/2911778"
+          ]
+        ]
+      },
+      {
+        "id": "practical-handle-duplicate-or-outdated-listings-before-expanding",
+        "title": "Handle duplicate or outdated listings before expanding",
+        "paragraphs": [
+          "Search for previous names, addresses and telephone numbers before opening another profile. A duplicate listing can split customer attention and make it harder to tell which information is current. Document the relevant URLs and use the appropriate Google support process for the situation.",
+          "Do not reuse a closed location's details for a different business merely to retain its reviews. The listing should describe the business that customers can actually contact and use today."
+        ],
+        "sources": [
+          [
+            "Google’s eligibility and address guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-create-and-submit-an-xml-sitemap": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-keep-sitemap-urls-aligned-with-internal-navigation",
+        "title": "Keep sitemap URLs aligned with internal navigation",
+        "paragraphs": [
+          "Compare a sample of sitemap entries with the URLs used in menus, category pages and contextual links. If the sitemap lists HTTPS URLs but the site links to redirected HTTP or alternate-host versions, fix the source of the inconsistency.",
+          "The aim is a coherent public URL inventory, not the largest possible file. Important pages should have useful internal discovery paths as well as sitemap entries, so a visitor and a crawler can understand where those pages belong."
+        ],
+        "sources": [
+          [
+            "Google Search Central: build and submit a sitemap",
+            "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+          ]
+        ]
+      },
+      {
+        "id": "practical-distinguish-a-sitemap-fetch-problem-from-a-page-problem",
+        "title": "Distinguish a sitemap fetch problem from a page problem",
+        "paragraphs": [
+          "Open the sitemap itself and check its response, XML structure and accessibility. Then inspect a listed page separately. An unreadable sitemap is different from a readable sitemap containing a redirected, blocked or missing page, and the fixes belong in different places.",
+          "Use the Search Console submission result as one diagnostic input. If the file is reachable and processing is delayed, retain the evidence and avoid repeatedly regenerating unrelated parts of the website."
+        ],
+        "sources": [
+          [
+            "Google Search Console: sitemap statuses and errors",
+            "https://support.google.com/webmasters/answer/7451001"
+          ]
+        ]
+      },
+      {
+        "id": "practical-exclude-search-account-and-temporary-campaign-variations",
+        "title": "Exclude search, account and temporary campaign variations",
+        "paragraphs": [
+          "Review whether generated URLs represent useful public destinations or operational states. Internal searches, account pages, preview URLs and tracking variations usually need different handling from stable service, product and article pages.",
+          "Make the inclusion rule part of the sitemap generator, rather than manually deleting entries after every build. Confirm that the same rule works when a new content type or product filter is introduced, so temporary URLs do not silently return to the file."
+        ],
+        "sources": [
+          [
+            "Google Search Central: build and submit a sitemap",
+            "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+          ]
+        ]
+      },
+      {
+        "id": "practical-verify-sitemap-behavior-after-content-is-retired",
+        "title": "Verify sitemap behavior after content is retired",
+        "paragraphs": [
+          "When removing a page, decide whether there is a genuinely equivalent replacement. Update internal links and sitemap generation to reflect that decision; do not leave a retired URL in the inventory just because it once attracted traffic.",
+          "After deployment, inspect both the old URL and its intended replacement. Record whether the old page redirects, returns an appropriate error or remains live with updated content, and make sure the sitemap describes the current state."
+        ],
+        "sources": [
+          [
+            "Google Search Console: sitemap statuses and errors",
+            "https://support.google.com/webmasters/answer/7451001"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-long-does-google-take-to-index-a-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-distinguish-a-release-problem-from-an-indexing-delay",
+        "title": "Distinguish a release problem from an indexing delay",
+        "paragraphs": [
+          "Check the live page before assuming that Google simply needs more time. A release can accidentally publish a noindex directive, a login wall, a broken response or a canonical pointing elsewhere. Waiting does not resolve those implementation problems.",
+          "Keep the release timestamp beside the first successful live test. That gives you a defensible starting point for monitoring discovery and crawling instead of measuring the delay from the day someone first drafted the page."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ask Google to recrawl",
+            "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"
+          ]
+        ]
+      },
+      {
+        "id": "practical-investigate-groups-of-missing-pages-by-template",
+        "title": "Investigate groups of missing pages by template",
+        "paragraphs": [
+          "If many product or service pages disappear together, group them by template, launch batch and URL pattern. A shared rendering issue or configuration change is usually more actionable than treating every URL as an isolated mystery.",
+          "Select representative examples from the affected and unaffected groups. Compare their response, rendered main content, internal links and canonical signals, then fix the shared cause before submitting a large number of individual indexing requests."
+        ],
+        "sources": [
+          [
+            "Google Search Console: URL Inspection",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-server-reliability-while-google-revisits-the-site",
+        "title": "Review server reliability while Google revisits the site",
+        "paragraphs": [
+          "A page that loads successfully once may still suffer intermittent errors or slow responses. Review hosting logs and monitoring around deployments, traffic spikes and maintenance windows to see whether important URLs remain consistently available.",
+          "Coordinate search work with the person responsible for infrastructure. A content rewrite cannot compensate for an unreliable delivery path, and changing many page elements at once makes it harder to identify which correction actually restored successful access."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ask Google to recrawl",
+            "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"
+          ]
+        ]
+      },
+      {
+        "id": "practical-decide-when-to-improve-consolidate-or-retire-a-page",
+        "title": "Decide when to improve, consolidate or retire a page",
+        "paragraphs": [
+          "Repeatedly requesting indexing is not a substitute for a distinct page purpose. Compare a missing page with similar pages on your site and ask what useful information it adds for a real visitor.",
+          "Improve a page with a clear role, consolidate genuine overlap where appropriate, or retire content that no longer serves a need. Document the decision and associated redirects or link changes. There is no universal waiting period that makes every thin or duplicate page worth indexing."
+        ],
+        "sources": [
+          [
+            "Google Search Console: URL Inspection",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      }
+    ]
+  },
+  "seo-vs-aeo-vs-geo": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-a-direct-answer-from-the-evidence-supporting-it",
+        "title": "Separate a direct answer from the evidence supporting it",
+        "paragraphs": [
+          "A concise definition helps a reader orient themselves, but the rest of the page should explain its scope, examples and limits. For a service topic, distinguish what the term means from how your team applies it and which outcomes remain outside your control.",
+          "This structure supports both quick understanding and deeper evaluation. It is an editorial recommendation, not a special format that guarantees a featured answer, an AI citation or a particular search presentation."
+        ],
+        "sources": [
+          [
+            "Google Search Central: AI features and your website",
+            "https://developers.google.com/search/docs/appearance/ai-features"
+          ]
+        ]
+      },
+      {
+        "id": "practical-avoid-creating-several-near-identical-pages-for-new-labels",
+        "title": "Avoid creating several near-identical pages for new labels",
+        "paragraphs": [
+          "Before launching separate SEO, AEO and GEO landing pages, compare the audience, deliverables and underlying information. If the pages say the same thing with different acronyms, a single stronger explanation may be more useful.",
+          "Separate pages make sense when they address genuinely different questions or services. Give each one a distinct purpose and connect them with relevant links, instead of expecting additional labels alone to create additional search demand."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-machine-readable-claims-consistent-with-visible-content",
+        "title": "Keep machine-readable claims consistent with visible content",
+        "paragraphs": [
+          "If a page describes a service, organization or article through structured data, ensure the same facts appear clearly for visitors. Do not add invisible ratings, invented awards or unsupported expertise to make the page look more authoritative to an automated system.",
+          "Google's AI search guidance does not prescribe a special AI schema. Start with eligible, accessible content and accurate existing markup, then evaluate whether people can verify the actual claims on the page."
+        ],
+        "sources": [
+          [
+            "Google Search Central: AI features and your website",
+            "https://developers.google.com/search/docs/appearance/ai-features"
+          ]
+        ]
+      },
+      {
+        "id": "practical-use-a-repeatable-observation-method-for-ai-visibility",
+        "title": "Use a repeatable observation method for AI visibility",
+        "paragraphs": [
+          "When checking whether an answer engine references your site, record the question, date, context and destination URL. Treat the result as an observation from that session, not proof that every user receives the same answer.",
+          "Combine those observations with referral traffic and real enquiries where measurable. A screenshot of one citation is useful evidence of that occurrence, but it cannot establish the total reach, commercial value or permanence of an AI feature."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      }
+    ]
+  },
+  "the-on-page-seo-checklist-for-business-websites": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-check-pages-that-share-a-title-template",
+        "title": "Check pages that share a title template",
+        "paragraphs": [
+          "Inspect several real pages rather than approving the metadata template in isolation. A service name may be missing, a location may repeat unnecessarily, or a long brand suffix may obscure what distinguishes the page.",
+          "Keep the title, visible heading and page purpose aligned without forcing them to be identical word for word. Review the rendered result after deployment, because a CMS field can be correct while the published template still produces the wrong output."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-make-supporting-information-useful-before-adding-keywords",
+        "title": "Make supporting information useful before adding keywords",
+        "paragraphs": [
+          "Look for the practical questions a customer must answer before enquiring: service scope, suitability, delivery process, location coverage and what happens next. Add missing information where it belongs instead of repeating a target phrase in every paragraph.",
+          "Use an actual service page as a test. If someone understands the keywords but still cannot tell whether the service fits their problem, the content needs clearer substance rather than a higher keyword count."
+        ],
+        "sources": [
+          [
+            "Google Search Central: title links in search",
+            "https://developers.google.com/search/docs/appearance/title-link"
+          ]
+        ]
+      },
+      {
+        "id": "practical-audit-the-destinations-behind-conversion-links",
+        "title": "Audit the destinations behind conversion links",
+        "paragraphs": [
+          "Check where each primary button, telephone link and related-service link actually goes. A well-written page loses value if its enquiry button opens an unrelated form or its navigation leads through a redirect chain.",
+          "Test with keyboard input and on a phone as well as with a mouse. Confirm that the form identifies the service requested and that staff can recognize the enquiry's context without asking the customer to repeat the whole page."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-retest-the-published-page-after-the-cms-changes",
+        "title": "Retest the published page after the CMS changes",
+        "paragraphs": [
+          "Content approval should include a deployed-page check. Confirm that headings, image descriptions, links and metadata survived publication, and that components have not hidden important text or duplicated a section.",
+          "Keep a small acceptance list for each page type. A service page, article and product page need different checks, but all should have an understandable purpose, useful content and a reliable next action. Save the approved URL with the release record."
+        ],
+        "sources": [
+          [
+            "Google Search Central: title links in search",
+            "https://developers.google.com/search/docs/appearance/title-link"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-wordpress-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-distinguish-a-content-export-from-a-restorable-backup",
+        "title": "Distinguish a content export from a restorable backup",
+        "paragraphs": [
+          "A content export is useful for moving posts and pages, but recovery planning also needs the site's files, configuration and database where relevant. Record which system backs up each part and who can access the stored copy.",
+          "Test restoration in an appropriate non-production environment. A file labelled backup is not sufficient evidence that your business can recover the current website, uploaded media, forms and operational settings after a failed update."
+        ],
+        "sources": [
+          [
+            "WordPress documentation: getting started",
+            "https://wordpress.org/documentation/article/get-started-with-wordpress/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-give-editors-a-smaller-set-of-approved-components",
+        "title": "Give editors a smaller set of approved components",
+        "paragraphs": [
+          "Create reusable patterns for common page tasks such as service summaries, article introductions, FAQs and enquiry sections. This keeps publishing practical for non-developers and reduces the chance that each page introduces a different layout or styling exception.",
+          "Document which fields editors should change and which template decisions require review. A small, well-understood component system is usually easier to maintain than a large library of visually similar blocks with uncertain behavior."
+        ],
+        "sources": [
+          [
+            "WordPress core: native XML sitemap details",
+            "https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-plugin-responsibilities-before-adding-another-tool",
+        "title": "Review plugin responsibilities before adding another tool",
+        "paragraphs": [
+          "List what each plugin does and identify overlaps in caching, SEO output, forms, redirects and analytics. Two plugins trying to manage the same responsibility can complicate troubleshooting even when neither is faulty by itself.",
+          "Evaluate a proposed plugin against a specific requirement and test it with the existing stack. Keep a removal and recovery plan so the business is not dependent on an extension nobody understands or can safely update."
+        ],
+        "sources": [
+          [
+            "WordPress documentation: getting started",
+            "https://wordpress.org/documentation/article/get-started-with-wordpress/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-define-what-happens-after-the-launch-handover",
+        "title": "Define what happens after the launch handover",
+        "paragraphs": [
+          "Assign responsibility for WordPress core, theme and plugin updates, backups, form monitoring and account access. Include the process for urgent fixes and the information a new maintainer would need to take over.",
+          "Separate ordinary editing from structural development. Staff should be able to update approved content without changing a production template accidentally, while larger changes should follow a review and recovery process appropriate to the website's importance."
+        ],
+        "sources": [
+          [
+            "WordPress core: native XML sitemap details",
+            "https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5/"
+          ]
+        ]
+      }
+    ]
+  },
+  "10-web-hosting-platforms-compared": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-check-the-limits-behind-an-unlimited-offer",
+        "title": "Check the limits behind an unlimited offer",
+        "paragraphs": [
+          "Translate the hosting offer into the workload your website will actually create: visitors, image delivery, database activity, background jobs and simultaneous editors. Ask how the provider handles resource pressure instead of relying on an unlimited label.",
+          "Keep the answer with the quotation. A low introductory price is difficult to evaluate without knowing which activity causes throttling, an upgrade, an overage charge or a temporary interruption for customers."
+        ],
+        "sources": [
+          [
+            "WordPress.org: hosting requirements",
+            "https://wordpress.org/about/requirements/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-test-the-geographic-delivery-path-your-customers-use",
+        "title": "Test the geographic delivery path your customers use",
+        "paragraphs": [
+          "Evaluate a representative page from locations relevant to the business, including a slower mobile connection. Distinguish the origin server's work from the effect of a CDN, image delivery and third-party scripts.",
+          "A host can serve a small cached page quickly while a complex checkout or uncached search remains slow. Compare the same realistic tasks across shortlisted providers rather than choosing solely from a synthetic score on a provider's sample website."
+        ],
+        "sources": [
+          [
+            "Vercel: deployment documentation",
+            "https://vercel.com/docs/deployments"
+          ]
+        ]
+      },
+      {
+        "id": "practical-assign-recovery-objectives-before-choosing-a-backup-plan",
+        "title": "Assign recovery objectives before choosing a backup plan",
+        "paragraphs": [
+          "Decide what amount of lost work and interruption the business could tolerate, then compare backup frequency, retention and restoration access against those needs. A brochure site and a busy store may need different recovery arrangements.",
+          "Confirm who performs a restore and whether the backup remains accessible when the main account has a problem. Treat a successful recovery exercise as evidence; a dashboard showing many stored backups does not demonstrate that the complete application can be restored."
+        ],
+        "sources": [
+          [
+            "WordPress.org: hosting requirements",
+            "https://wordpress.org/about/requirements/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-hosting-migration-from-domain-and-email-changes",
+        "title": "Separate hosting migration from domain and email changes",
+        "paragraphs": [
+          "Write a migration checklist that identifies the website, DNS zone, domain registration and email services separately. They may be controlled by different providers, and moving one does not automatically move the others.",
+          "Prepare the destination, test representative URLs and plan the DNS change before cancelling the old service. Keep a rollback route and check forms, payment integrations and mail delivery after the move, alongside normal page loading."
+        ],
+        "sources": [
+          [
+            "Vercel: deployment documentation",
+            "https://vercel.com/docs/deployments"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-squarespace-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-plan-redirects-before-renaming-established-pages",
+        "title": "Plan redirects before renaming established pages",
+        "paragraphs": [
+          "Make a list of important existing URLs before changing navigation or moving content into a new structure. Identify a relevant destination for each retired page and use Squarespace's URL mapping guidance for the supported redirect pattern.",
+          "After publishing, test the old URL directly as well as the menu link. A new navigation item can work while an old link from search or a customer bookmark still leads to a missing page."
+        ],
+        "sources": [
+          [
+            "Squarespace: URL mappings",
+            "https://support.squarespace.com/hc/en-us/articles/205815308-URL-mappings"
+          ]
+        ]
+      },
+      {
+        "id": "practical-treat-forms-as-an-operational-workflow",
+        "title": "Treat forms as an operational workflow",
+        "paragraphs": [
+          "A form is only useful when submissions reach the right team and receive a response. Confirm the available storage or notification destination, send a realistic test and check whether staff can identify the service requested.",
+          "Provide clear labels and an understandable confirmation message. Ask only for information needed at this stage, and avoid making customers submit the same details twice simply because a notification or handover process is incomplete."
+        ],
+        "sources": [
+          [
+            "Squarespace: SEO checklist",
+            "https://support.squarespace.com/hc/en-us/articles/360002090267-SEO-checklist"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-reusable-design-choices-consistent-across-pages",
+        "title": "Keep reusable design choices consistent across pages",
+        "paragraphs": [
+          "Agree a small set of spacing, typography, image and button rules before filling every page. Review how those choices behave with a longer heading, a short description and a page containing more detailed information.",
+          "Consistency should help a visitor recognize the next step, not force every page into the same content layout. Use the platform's editing system to support the information rather than repeating decorative sections that add no explanation."
+        ],
+        "sources": [
+          [
+            "Squarespace: URL mappings",
+            "https://support.squarespace.com/hc/en-us/articles/205815308-URL-mappings"
+          ]
+        ]
+      },
+      {
+        "id": "practical-prepare-an-owner-friendly-publishing-checklist",
+        "title": "Prepare an owner-friendly publishing checklist",
+        "paragraphs": [
+          "Create a brief handover covering page edits, image replacement, form checks, account access and the steps used to publish a change. Include an example of a correctly configured service page so future editors have something concrete to follow.",
+          "Recheck search settings and old links after structural changes. Ownership of a finished website includes knowing how to maintain it, not just having the login details for an attractive first version."
+        ],
+        "sources": [
+          [
+            "Squarespace: SEO checklist",
+            "https://support.squarespace.com/hc/en-us/articles/360002090267-SEO-checklist"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-webflow-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-cms-field-design-from-visual-layout",
+        "title": "Separate CMS field design from visual layout",
+        "paragraphs": [
+          "Give each CMS field a clear editorial purpose: title, summary, main content, image description or related item. Avoid storing important facts only inside an image or a decorative component that editors cannot maintain consistently.",
+          "Test the collection template with incomplete and unusually long entries before importing the full inventory. This reveals whether optional fields leave awkward gaps and whether the same visual design remains usable with real content."
+        ],
+        "sources": [
+          [
+            "Webflow: Create a sitemap",
+            "https://help.webflow.com/hc/en-us/articles/33961355371667-Create-a-sitemap-in-Webflow"
+          ]
+        ]
+      },
+      {
+        "id": "practical-map-url-changes-before-publishing-a-redesign",
+        "title": "Map URL changes before publishing a redesign",
+        "paragraphs": [
+          "Export or record the important old paths, then identify their intended replacements. Use Webflow's documented redirect controls for permanent moves and test the resulting live URLs after publishing.",
+          "Keep navigation, contextual links and the sitemap aligned with the new structure. A redirect can preserve an old entry path, but it should not become an excuse to leave every internal link pointing through an unnecessary extra step."
+        ],
+        "sources": [
+          [
+            "Webflow: Set up redirects",
+            "https://help.webflow.com/hc/en-us/articles/33961294898835-How-do-I-set-up-redirects-in-Webflow"
+          ]
+        ]
+      },
+      {
+        "id": "practical-check-the-published-interaction-without-relying-on-motion",
+        "title": "Check the published interaction without relying on motion",
+        "paragraphs": [
+          "Read the page and complete its main task with animations minimized. Important content, links and form controls should remain understandable when a visitor does not experience the full visual effect.",
+          "Test keyboard navigation and different screen widths on the published site, not only inside the designer. A polished interaction can still obstruct a small screen, place content off-screen or make an otherwise simple enquiry difficult to complete."
+        ],
+        "sources": [
+          [
+            "Webflow: Create a sitemap",
+            "https://help.webflow.com/hc/en-us/articles/33961355371667-Create-a-sitemap-in-Webflow"
+          ]
+        ]
+      },
+      {
+        "id": "practical-document-what-editors-can-safely-change",
+        "title": "Document what editors can safely change",
+        "paragraphs": [
+          "Define which CMS fields and content sections the customer can update without affecting the overall layout. Give practical examples, including a service update and an image replacement, and record who owns larger design changes.",
+          "Include publishing, redirect review and form testing in the handover. This helps the website remain a usable business asset after the original designer is no longer present for every small editorial decision."
+        ],
+        "sources": [
+          [
+            "Webflow: Set up redirects",
+            "https://help.webflow.com/hc/en-us/articles/33961294898835-How-do-I-set-up-redirects-in-Webflow"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-wix-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-check-the-difference-between-editor-and-customer-views",
+        "title": "Check the difference between editor and customer views",
+        "paragraphs": [
+          "Review the published website in a clean browser session, on a phone and with keyboard navigation. Editor previews are useful during production, but they do not replace testing the actual domain and the complete route into a form or booking.",
+          "Include long page titles and realistic images in the test. A layout that works with placeholder content can behave differently when a business publishes its actual services, terms and location information."
+        ],
+        "sources": [
+          [
+            "Wix Help: sitemap and search submission",
+            "https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines"
+          ]
+        ]
+      },
+      {
+        "id": "practical-preserve-important-urls-during-a-rebuild",
+        "title": "Preserve important URLs during a rebuild",
+        "paragraphs": [
+          "Record the pages that customers already reach through search, saved links and directory profiles before restructuring the site. Where a permanent URL change is necessary, review the platform's current redirect controls and choose the closest useful replacement.",
+          "Test the old destination after launch and correct internal links as well. Sending every retired page to the homepage makes it harder for a returning visitor to continue the task that brought them there."
+        ],
+        "sources": [
+          [
+            "Google Search Console: URL Inspection",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-the-effect-of-added-apps-on-the-customer-journey",
+        "title": "Review the effect of added apps on the customer journey",
+        "paragraphs": [
+          "For every app, identify the business problem it solves and the pages on which it needs to run. Compare that benefit with its recurring cost, additional loading work and maintenance responsibilities.",
+          "Test the complete published journey after adding or removing an integration. A chat tool, booking widget or marketing script should not cover the primary button, delay essential content or create conflicting requests for the same customer information."
+        ],
+        "sources": [
+          [
+            "Wix Help: sitemap and search submission",
+            "https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-business-ownership-separate-from-agency-access",
+        "title": "Keep business ownership separate from agency access",
+        "paragraphs": [
+          "Confirm that the business can recover its website account, domain and connected services without relying on one external contributor's personal login. Give collaborators the access their role needs and document the relevant renewal responsibilities.",
+          "A practical handover also includes forms, analytics and the ordinary publishing workflow. This reduces the risk that a small content change or staff departure becomes an avoidable interruption to customer enquiries."
+        ],
+        "sources": [
+          [
+            "Google Search Console: URL Inspection",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-framer-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-test-component-variants-with-realistic-content",
+        "title": "Test component variants with realistic content",
+        "paragraphs": [
+          "Use actual service names, longer headings and meaningful button labels when reviewing component variants. A reusable section should explain its content clearly without depending on the exact length of the sample text used during design.",
+          "Check the same variant at narrow and wide breakpoints. If an editor must add arbitrary line breaks or shorten important information to keep the layout intact, refine the component before duplicating it across the website."
+        ],
+        "sources": [
+          [
+            "Framer: Publishing your website",
+            "https://www.framer.com/help/articles/publishing-your-framer-website/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-the-difference-between-a-preview-and-a-live-release",
+        "title": "Review the difference between a preview and a live release",
+        "paragraphs": [
+          "Confirm which domain and environment each publishing action affects in your current Framer plan. Review the changes before release, then test the public domain rather than assuming that a successful preview represents the production site.",
+          "Keep a short release record when changing navigation, forms or integrations. It should explain what changed, who checked it and which live URLs were tested, making subsequent maintenance more predictable."
+        ],
+        "sources": [
+          [
+            "MDN: prefers-reduced-motion",
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-visual-effects-optional-for-understanding-the-page",
+        "title": "Keep visual effects optional for understanding the page",
+        "paragraphs": [
+          "Motion can introduce a section or clarify a relationship, but the offer and next action should remain available without it. Test the website with reduced motion and avoid tying essential reading to a long or fragile scroll sequence.",
+          "Review any custom code alongside the visual design. An effect that behaves well on one desktop can still delay interaction, conceal content or create extra work for a visitor using a slower device."
+        ],
+        "sources": [
+          [
+            "Framer: Publishing your website",
+            "https://www.framer.com/help/articles/publishing-your-framer-website/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-verify-form-delivery-and-integration-failure-states",
+        "title": "Verify form delivery and integration failure states",
+        "paragraphs": [
+          "Submit a realistic enquiry and confirm where it arrives, which service it identifies and what the customer sees afterwards. Also review what happens when a connected service is unavailable or a required field contains an error.",
+          "Give the business a documented way to inspect submissions and recognize failures. A polished interface needs a dependable operational path behind it, especially when the website is the main source of new enquiries."
+        ],
+        "sources": [
+          [
+            "MDN: prefers-reduced-motion",
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-shopify-store": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-assign-ownership-to-product-facts-and-inventory-changes",
+        "title": "Assign ownership to product facts and inventory changes",
+        "paragraphs": [
+          "Decide who maintains product names, variant details, stock status, delivery information and returns content. A store can look finished at launch while its underlying catalogue becomes inconsistent as suppliers and offers change.",
+          "Use a small representative batch to test the update process before importing everything. Include products with several variants, unavailable options and unusual shipping requirements so the team can see how those details appear to customers."
+        ],
+        "sources": [
+          [
+            "Shopify Help: SEO overview",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+          ]
+        ]
+      },
+      {
+        "id": "practical-prepare-migration-redirects-using-the-actual-url-inventory",
+        "title": "Prepare migration redirects using the actual URL inventory",
+        "paragraphs": [
+          "List the existing product, collection and information URLs that need a useful destination after migration. Shopify's migration guidance treats redirects and search setup as part of launch preparation, not as a later cosmetic task.",
+          "After connecting the domain, test priority old paths and review whether menus and category links use the new destinations directly. Keep the old inventory until the launch team has verified the important customer entry points."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce site structure",
+            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+          ]
+        ]
+      },
+      {
+        "id": "practical-test-a-transaction-beyond-the-payment-confirmation",
+        "title": "Test a transaction beyond the payment confirmation",
+        "paragraphs": [
+          "Follow a test order through confirmation, fulfilment communication and the relevant cancellation or refund process using the payment provider's supported testing method. Include staff who will actually handle those steps.",
+          "Review inventory changes and customer notifications as well as the storefront screen. A successful checkout is only one part of the order lifecycle, and operational errors can undermine an otherwise well-designed shopping experience."
+        ],
+        "sources": [
+          [
+            "Shopify Help: SEO overview",
+            "https://help.shopify.com/en/manual/promoting-marketing/seo/seo-overview"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-campaign-pages-connected-to-the-permanent-catalogue",
+        "title": "Keep campaign pages connected to the permanent catalogue",
+        "paragraphs": [
+          "When building a seasonal or advertising landing page, verify that its product facts, prices and availability remain aligned with the underlying store. Give customers a clear route into the relevant product or collection.",
+          "Decide what happens when the campaign ends before publishing it. A temporary page should not leave active ads, email links or internal navigation pointing to an offer the business can no longer fulfil."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce site structure",
+            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-woocommerce-store": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-test-payments-in-the-gateway-s-supported-test-mode",
+        "title": "Test payments in the gateway’s supported test mode",
+        "paragraphs": [
+          "Use the payment provider's documented test environment to check successful, failed and refunded transactions without treating ordinary live purchases as a free test system. WooPayments, for example, documents a dedicated test mode for those checks.",
+          "Confirm that production credentials and test credentials are handled separately. Before launch, verify which environment is active and assign someone to approve the transition, so customers do not reach a checkout that is still configured for testing."
+        ],
+        "sources": [
+          [
+            "WooCommerce: Testing WooPayments",
+            "https://woocommerce.com/document/woopayments/testing-and-troubleshooting/testing/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-protect-live-orders-during-a-staging-release",
+        "title": "Protect live orders during a staging release",
+        "paragraphs": [
+          "Treat the store database as operational data, not merely website content. A staging copy can become outdated as production receives new orders, customers and stock changes. Plan exactly what a deployment will replace before pushing it live.",
+          "Coordinate the release with the person responsible for store operations and recovery. Test the update route with representative data, and retain a suitable backup and rollback plan before changing a revenue-generating checkout or order workflow."
+        ],
+        "sources": [
+          [
+            "WordPress: Backup guidance",
+            "https://developer.wordpress.org/advanced-administration/security/backup/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-check-emails-shipping-rules-and-tax-configuration-together",
+        "title": "Check emails, shipping rules and tax configuration together",
+        "paragraphs": [
+          "Review the journey from product selection through address entry, delivery options and order notifications. Use realistic customer scenarios for the locations and fulfilment methods the store actually supports.",
+          "Where tax treatment or cross-border obligations are unclear, obtain qualified advice rather than guessing from a plugin default. The implementation should reflect the business's approved rules, and staff should understand how exceptions and customer questions are handled."
+        ],
+        "sources": [
+          [
+            "WooCommerce: Testing WooPayments",
+            "https://woocommerce.com/document/woopayments/testing-and-troubleshooting/testing/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-measure-extension-value-after-the-store-is-operating",
+        "title": "Measure extension value after the store is operating",
+        "paragraphs": [
+          "Review whether each extension still solves an active requirement once real orders are flowing. Check recurring costs, overlapping features and the work needed to keep the extension compatible with the store.",
+          "Remove unused functionality through a controlled process rather than deleting components blindly. Verify checkout, order handling and reporting after the change, and record which provider owns support for any integration that remains business-critical."
+        ],
+        "sources": [
+          [
+            "WordPress: Backup guidance",
+            "https://developer.wordpress.org/advanced-administration/security/backup/"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-improve-your-website-conversion-rate": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-an-interface-click-from-a-completed-customer-task",
+        "title": "Separate an interface click from a completed customer task",
+        "paragraphs": [
+          "A button click can show interest without proving that the visitor submitted a valid enquiry, paid for an order or attended an appointment. Define the downstream state before calling an interaction a conversion.",
+          "Trace a few complete journeys into the CRM or order system. This helps reveal broken submissions, duplicate events and low-quality enquiries that a front-end dashboard might otherwise count as successful outcomes."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: understand key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-compare-like-for-like-traffic-before-judging-a-redesign",
+        "title": "Compare like-for-like traffic before judging a redesign",
+        "paragraphs": [
+          "Record the devices, channels, offers and audience segments contributing to the comparison period. A change in visitor mix can alter the conversion rate even when the page itself behaves the same way.",
+          "Review the relevant segment alongside the overall figure. If a new campaign sends less qualified traffic, the site-wide rate alone cannot show whether the redesign improved the experience for the audience it was intended to help."
+        ],
+        "sources": [
+          [
+            "web.dev: Core Web Vitals",
+            "https://web.dev/articles/vitals"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-the-customer-response-after-a-form-submission",
+        "title": "Review the customer response after a form submission",
+        "paragraphs": [
+          "Check how quickly a valid enquiry reaches an appropriate person, what information staff receive and whether the customer understands the next step. A shorter form can improve submissions while creating extra manual work if essential context disappears.",
+          "Evaluate both sides of the handover. Useful conversion work reduces unnecessary friction for customers while preserving the information the business needs to respond accurately, qualify the enquiry and deliver the promised service."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: understand key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-a-decision-log-for-experiments-that-do-not-win",
+        "title": "Keep a decision log for experiments that do not win",
+        "paragraphs": [
+          "Document the hypothesis, audience, measurement approach and observed result even when an experiment does not improve the target outcome. Record technical problems and changes in acquisition conditions alongside the final decision.",
+          "A well-run inconclusive test can still reveal what to investigate next. Avoid rewriting the story around whichever metric increased; use the agreed success measure and explain the limits of the available evidence."
+        ],
+        "sources": [
+          [
+            "web.dev: Core Web Vitals",
+            "https://web.dev/articles/vitals"
+          ]
+        ]
+      }
+    ]
+  },
+  "ppc-vs-organic-search": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-account-for-the-work-that-happens-after-the-click",
+        "title": "Account for the work that happens after the click",
+        "paragraphs": [
+          "Both paid and organic traffic need a useful destination and a reliable response process. Compare the cost of content, creative, page maintenance, measurement and sales follow-up alongside media spend or agency fees.",
+          "This creates a more useful channel comparison than treating organic visits as free and paid visits as the only acquisition expense. The relevant question is what the business invests to generate and serve an appropriate customer, not simply which dashboard reports the cheapest click."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-use-paid-query-learning-without-copying-every-keyword",
+        "title": "Use paid-query learning without copying every keyword",
+        "paragraphs": [
+          "Paid search can reveal the language that leads to relevant enquiries, but an advertising query is not automatically a reason to publish a separate organic page. Review the intent, commercial relevance and information needed to answer it well.",
+          "Where several queries describe the same customer task, a clear existing service page may be the right destination. Use the evidence to improve that page instead of creating a large collection of overlapping keyword variations."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: about ad auctions",
+            "https://support.google.com/google-ads/answer/6366577"
+          ]
+        ]
+      },
+      {
+        "id": "practical-compare-mature-customer-groups-rather-than-isolated-days",
+        "title": "Compare mature customer groups rather than isolated days",
+        "paragraphs": [
+          "Allow for the time between the first visit, qualification and a completed sale when comparing channels. A recent paid campaign may produce immediate leads while an older organic cohort has already had more time to convert.",
+          "Use a consistent observation window and record the sales lag relevant to your business. This makes it easier to distinguish a channel that attracts good future customers from one that simply receives more credit because its leads have already matured."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-decide-which-channel-solves-the-present-bottleneck",
+        "title": "Decide which channel solves the present bottleneck",
+        "paragraphs": [
+          "If the offer and landing page are unproven, increasing either traffic source may amplify confusion rather than solve it. If a strong service page lacks visibility, a focused acquisition test can provide a different type of learning.",
+          "State the bottleneck before dividing the budget. A practical mix might combine a limited paid test with improvements to priority organic pages, then review enquiry quality and delivery capacity before committing to a larger ongoing investment."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: about ad auctions",
+            "https://support.google.com/google-ads/answer/6366577"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-tell-whether-ppc-is-profitable": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-calculate-the-acquisition-ceiling-from-contribution",
+        "title": "Calculate the acquisition ceiling from contribution",
+        "paragraphs": [
+          "Use a transparent example rather than a universal target. If a hypothetical first order contributes $120 after the direct costs you include, acquiring that order for $40 leaves $80 before the other costs excluded from the calculation. State those exclusions explicitly.",
+          "Then apply the same method to actual business records. Gross revenue, advertising return and contribution are different measures, so a strong revenue-to-ad-spend ratio does not by itself establish that a campaign is profitable."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: return on investment",
+            "https://support.google.com/google-ads/answer/1722066"
+          ]
+        ]
+      },
+      {
+        "id": "practical-adjust-lead-economics-for-qualification-and-close-rates",
+        "title": "Adjust lead economics for qualification and close rates",
+        "paragraphs": [
+          "For a lead-based business, estimate how many valid leads become paying customers and which costs occur during qualification. A cheap form submission can be expensive acquisition if few submissions match the service or reach a completed sale.",
+          "Work backwards from an acceptable customer acquisition cost using your observed close rate, while recording the uncertainty in a small sample. Review spam, duplicates and unreachable contacts separately so they do not inflate the apparent pipeline."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: conversion values",
+            "https://support.google.com/google-ads/answer/3419241"
+          ]
+        ]
+      },
+      {
+        "id": "practical-reconcile-refunds-and-cancellations-before-scaling",
+        "title": "Reconcile refunds and cancellations before scaling",
+        "paragraphs": [
+          "Check whether reported conversions include orders later refunded, cancelled or rejected. Use a reporting period that gives the relevant transactions time to settle and compare the advertising data with operational records.",
+          "Document which values include delivery, discounts or other adjustments. Consistency matters more than selecting the most flattering total, because a budget decision based on inflated order value can become more expensive as the campaign grows."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: return on investment",
+            "https://support.google.com/google-ads/answer/1722066"
+          ]
+        ]
+      },
+      {
+        "id": "practical-write-a-scaling-rule-that-the-operations-team-can-support",
+        "title": "Write a scaling rule that the operations team can support",
+        "paragraphs": [
+          "Agree what evidence would justify a higher budget and what conditions would trigger a review. Include lead quality, contribution and the business's ability to fulfil additional demand rather than relying only on a campaign-level efficiency metric.",
+          "Increase spend through a deliberate decision process and monitor the additional customers acquired. The marginal results from a larger budget may differ from the historical average, especially when audience reach, auction conditions or service capacity changes."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: conversion values",
+            "https://support.google.com/google-ads/answer/3419241"
+          ]
+        ]
+      }
+    ]
+  },
+  "meta-ads-in-2026": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-keep-creative-testing-separate-from-an-offer-change",
+        "title": "Keep creative testing separate from an offer change",
+        "paragraphs": [
+          "When reviewing a new visual or message, record whether the offer, audience and landing page also changed. If everything changes together, it becomes difficult to tell which decision affected the outcome.",
+          "Use a short creative brief describing the customer problem, promise, supporting proof and intended action. Review platform availability in the live account, because account controls and eligible features can differ; a year in an article title does not make every advertised option universally available."
+        ],
+        "sources": [
+          [
+            "Meta: Conversions API",
+            "https://developers.facebook.com/docs/marketing-api/conversions-api/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-deduplicate-browser-and-server-events-for-the-same-action",
+        "title": "Deduplicate browser and server events for the same action",
+        "paragraphs": [
+          "If the same customer action is sent through both Meta Pixel and the Conversions API, review Meta's documented deduplication method. The event identifiers and event names need to represent the same real action rather than two apparently independent conversions.",
+          "Test a complete purchase or lead journey and compare the incoming events with the operational record. Adding server-side delivery can improve the implementation, but duplicated or incorrectly named events can still make reporting misleading."
+        ],
+        "sources": [
+          [
+            "Meta: Deduplicate Pixel and Conversions API events",
+            "https://developers.facebook.com/documentation/ads-commerce/conversions-api/deduplicate-pixel-and-server-events"
+          ]
+        ]
+      },
+      {
+        "id": "practical-inspect-the-destination-inside-the-actual-mobile-journey",
+        "title": "Inspect the destination inside the actual mobile journey",
+        "paragraphs": [
+          "Open the ad destination on the devices and browser contexts your audience is likely to use. Check whether the offer is visible, the page loads acceptably and the form or checkout remains usable with the on-screen keyboard open.",
+          "Verify that promotional details match the creative and that customers can complete the task without losing their place. A strong advertisement cannot compensate for a confusing destination or a follow-up process that ignores the enquiry's context."
+        ],
+        "sources": [
+          [
+            "Meta: Conversions API",
+            "https://developers.facebook.com/docs/marketing-api/conversions-api/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-comments-and-sales-feedback-alongside-ad-metrics",
+        "title": "Review comments and sales feedback alongside ad metrics",
+        "paragraphs": [
+          "Ask the customer-facing team which questions, objections and misunderstandings recur after the campaign launches. Repeated confusion about price, eligibility or delivery may indicate a messaging problem even when engagement appears strong.",
+          "Use that feedback to refine the creative and destination together. Distinguish individual anecdotes from a pattern, and keep the campaign's commercial objective visible so the team does not optimize only for reactions or conversation volume."
+        ],
+        "sources": [
+          [
+            "Meta: Deduplicate Pixel and Conversions API events",
+            "https://developers.facebook.com/documentation/ads-commerce/conversions-api/deduplicate-pixel-and-server-events"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-write-a-landing-page-that-converts": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-make-the-promise-specific-enough-to-evaluate",
+        "title": "Make the promise specific enough to evaluate",
+        "paragraphs": [
+          "Explain who the offer is for, what the customer receives and what happens after the primary action. A broad claim about transformation is harder to assess than a clear service scope and a practical next step.",
+          "Use supporting details where the question arises. If customers worry about timing, explain the relevant stages; if suitability is uncertain, describe the requirements. Do not substitute a large badge or dramatic headline for the information needed to make a decision."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: landing page experience",
+            "https://support.google.com/google-ads/answer/2404197"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-proof-attached-to-the-claim-it-supports",
+        "title": "Keep proof attached to the claim it supports",
+        "paragraphs": [
+          "Place a relevant example, genuine testimonial or explanation beside the specific point it helps establish. A testimonial about communication does not prove a performance figure, and a sample design should not be presented as a measured client result.",
+          "Check names, permissions and context before publication. Clear attribution helps the reader understand the evidence without forcing them to infer what work was delivered or whether the example represents their situation."
+        ],
+        "sources": [
+          [
+            "W3C WAI: accessible forms tutorial",
+            "https://www.w3.org/WAI/tutorials/forms/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-design-the-form-for-correction-as-well-as-submission",
+        "title": "Design the form for correction as well as submission",
+        "paragraphs": [
+          "Provide visible labels, explain unusual requirements and give useful feedback when a field needs correction. Keep entered information where practical so the visitor does not have to start the task again after one mistake.",
+          "Test with keyboard navigation and a phone. The form should still be understandable without placeholder text acting as the only label, and its confirmation should describe the next step without promising a response time the business cannot maintain."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: landing page experience",
+            "https://support.google.com/google-ads/answer/2404197"
+          ]
+        ]
+      },
+      {
+        "id": "practical-match-the-thank-you-experience-to-the-offer",
+        "title": "Match the thank-you experience to the offer",
+        "paragraphs": [
+          "Use the confirmation state to explain what was received and what the customer should expect next. If a booking, download or email confirmation is required, make that next action clear and verify that it actually works.",
+          "Pass relevant context into the response process using appropriate, minimal data. A landing page is part of an operational journey; the quality of the handover affects whether a promising submission becomes a useful customer conversation."
+        ],
+        "sources": [
+          [
+            "W3C WAI: accessible forms tutorial",
+            "https://www.w3.org/WAI/tutorials/forms/"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-track-leads-and-sales-in-ga4": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-choose-one-authoritative-source-for-each-business-fact",
+        "title": "Choose one authoritative source for each business fact",
+        "paragraphs": [
+          "Use the analytics implementation to describe website activity and the operational system to confirm whether an order or qualified lead exists. Record how the two records are compared, including time zone and reporting-period differences.",
+          "If totals disagree, investigate the event definition and collection path before forcing the reports to match. Consent choices, blocked requests, duplicate implementation and different business definitions can all produce differences that need explanation rather than cosmetic correction."
+        ],
+        "sources": [
+          [
+            "GA4 Help: understand key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-prevent-duplicate-purchase-and-form-completion-events",
+        "title": "Prevent duplicate purchase and form-completion events",
+        "paragraphs": [
+          "Trace which component sends each event and when it sends it. A thank-you page, tag-manager rule and application callback can accidentally report the same action more than once.",
+          "Test refreshes, back navigation and repeated clicks as well as a clean successful journey. For ecommerce, use the documented event parameters and transaction identifiers appropriately; for lead forms, define a completion state based on a successful submission rather than every attempt to press the button."
+        ],
+        "sources": [
+          [
+            "Google Developers: GA4 ecommerce measurement",
+            "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-campaign-naming-consistent-across-teams",
+        "title": "Keep campaign naming consistent across teams",
+        "paragraphs": [
+          "Agree a readable campaign naming system before distributing links through email, social media, partnerships and paid campaigns. Store the intended destination and naming conventions where contributors can reuse them.",
+          "Do not place personal information in campaign parameters or page URLs. Review the actual incoming values and group unexpected variations before drawing conclusions, because inconsistent naming can split one activity across several rows and make a simple campaign unnecessarily difficult to assess."
+        ],
+        "sources": [
+          [
+            "GA4 Help: understand key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-document-the-point-at-which-a-lead-becomes-useful",
+        "title": "Document the point at which a lead becomes useful",
+        "paragraphs": [
+          "Define qualification with the sales or service team: a valid contact, a relevant need, a suitable location or another appropriate business criterion. Keep this distinction separate from the initial website event.",
+          "Use the agreed definition consistently when reviewing channel performance. A channel with fewer submissions may still contribute more appropriate customers, and analytics reporting should help the team see that difference without exposing private customer details in event payloads."
+        ],
+        "sources": [
+          [
+            "Google Developers: GA4 ecommerce measurement",
+            "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-audit-a-google-ads-account": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-brand-demand-from-new-customer-discovery",
+        "title": "Separate brand demand from new customer discovery",
+        "paragraphs": [
+          "Review branded and non-branded search activity separately where the account structure and reporting allow it. Existing customers searching the business name have a different context from people comparing unfamiliar providers.",
+          "Do not assume that one group's efficiency represents the whole account. Record how each campaign contributes to the business objective and look for inappropriate overlap, unclear destinations or reporting choices that hide where new qualified demand is actually coming from."
+        ],
+        "sources": [
+          [
+            "Google Ads Help Center",
+            "https://support.google.com/google-ads/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-check-the-conversion-action-used-for-bidding",
+        "title": "Check the conversion action used for bidding",
+        "paragraphs": [
+          "Inspect which actions the campaign treats as meaningful outcomes and confirm that their implementation still matches the business goal. A historic test event, page visit or duplicate form signal can influence decisions if it remains configured as a valuable conversion.",
+          "Complete a realistic customer journey and follow the corresponding data. Document any proposed change before applying it so later performance comparisons account for a different measurement definition rather than attributing everything to the advertising strategy."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: search terms report",
+            "https://support.google.com/google-ads/answer/2472708"
+          ]
+        ]
+      },
+      {
+        "id": "practical-read-search-queries-with-the-service-team",
+        "title": "Read search queries with the service team",
+        "paragraphs": [
+          "Review a representative set of queries alongside someone who understands what the business actually sells. Identify requests that are outside scope, research-only searches and wording that reveals a genuine customer need.",
+          "Use those findings to improve targeting and landing-page information through a controlled change process. Do not exclude a query solely because it has not converted in a tiny sample; consider its relevance, intent and the quality of the destination first."
+        ],
+        "sources": [
+          [
+            "Google Ads Help Center",
+            "https://support.google.com/google-ads/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-leave-an-audit-trail-that-another-operator-can-follow",
+        "title": "Leave an audit trail that another operator can follow",
+        "paragraphs": [
+          "For each recommendation, record the affected campaign or page, evidence, proposed action, owner and verification step. Distinguish urgent measurement or access problems from experiments that need a period of observation.",
+          "Keep an export or appropriate record of the starting configuration before major edits. A useful audit should enable careful implementation and later explanation, rather than leaving the next operator with a list of unexplained changes and no way to interpret the results."
+        ],
+        "sources": [
+          [
+            "Google Ads Help: search terms report",
+            "https://support.google.com/google-ads/answer/2472708"
+          ]
+        ]
+      }
+    ]
+  },
+  "why-real-estate-businesses-need-seo": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-give-expired-and-sold-listings-an-intentional-lifecycle",
+        "title": "Give expired and sold listings an intentional lifecycle",
+        "paragraphs": [
+          "Decide how customers should be served when a property is no longer available. Depending on the content and business purpose, a page may explain the changed status, connect to genuinely relevant alternatives or be retired through an appropriate URL decision.",
+          "Avoid leaving outdated availability as though the property can still be viewed. Review the website, feeds and enquiry handling together so customers do not submit repeated requests for an offer the team knows is no longer available."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: representation guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      },
+      {
+        "id": "practical-build-area-information-from-real-local-knowledge",
+        "title": "Build area information from real local knowledge",
+        "paragraphs": [
+          "Describe the factors a buyer or tenant actually compares, such as transport connections, property types and the practical character of an area. Use accurate, reviewable information instead of copying the same neighbourhood description onto many pages.",
+          "Distinguish observed facts from promotional opinion, and keep time-sensitive details maintained. A useful area guide should help someone make a better property decision even before they contact your agency, rather than existing only to repeat a location keyword."
+        ],
+        "sources": [
+          [
+            "Google Search Central: duplicate URLs and canonicals",
+            "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+          ]
+        ]
+      },
+      {
+        "id": "practical-connect-listing-enquiries-to-the-specific-property",
+        "title": "Connect listing enquiries to the specific property",
+        "paragraphs": [
+          "Keep the property reference and page context attached to an enquiry in the system the team uses. A customer should not need to reconstruct which listing interested them after submitting its form.",
+          "Check telephone and messaging journeys as well as forms. If an agent receives the enquiry on a phone, verify that they can identify the listing, confirm its status and offer a relevant next step without asking the customer to search for it again."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: representation guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      },
+      {
+        "id": "practical-evaluate-organic-demand-by-useful-next-actions",
+        "title": "Evaluate organic demand by useful next actions",
+        "paragraphs": [
+          "Review which pages contribute to relevant viewings, valuation requests or qualified conversations, using the definitions your business can reliably maintain. Keep those outcomes separate from general traffic and accidental form submissions.",
+          "Compare property type, area and device where the data supports it. A page attracting fewer visits may still serve a commercially important audience, while a broad informational page may need a more appropriate route into the property or service the visitor actually wants."
+        ],
+        "sources": [
+          [
+            "Google Search Central: duplicate URLs and canonicals",
+            "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+          ]
+        ]
+      }
+    ]
+  },
+  "seo-vs-paid-advertising-for-clinics": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-check-policy-eligibility-before-producing-a-campaign",
+        "title": "Check policy eligibility before producing a campaign",
+        "paragraphs": [
+          "Healthcare advertising requirements can depend on the service, location, targeting and certification involved. Review the current platform policy for the specific offer rather than copying a campaign used by a different clinic or assuming every medical service is treated alike.",
+          "Keep the policy review with the campaign brief and route clinical wording through the clinic's designated reviewer. This reduces avoidable rework and prevents advertising promises from drifting beyond what the service can appropriately explain or deliver."
+        ],
+        "sources": [
+          [
+            "Google Ads: Healthcare and medicines policy",
+            "https://support.google.com/adspolicy/answer/176031"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-appointment-forms-separate-from-advertising-payloads",
+        "title": "Keep appointment forms separate from advertising payloads",
+        "paragraphs": [
+          "Review what information forms, URLs and marketing tags transmit. A patient-facing journey should not casually expose symptoms, appointment reasons or contact details through tracking parameters and general analytics events.",
+          "Use an appropriate booking or clinical system for information that belongs there, and involve the clinic's privacy and technical owners in the design. Marketing measurement can focus on suitable aggregate outcomes without copying private appointment content into an advertising dashboard."
+        ],
+        "sources": [
+          [
+            "Google Ads: Health in personalized advertising",
+            "https://support.google.com/adspolicy/answer/16701855"
+          ]
+        ]
+      },
+      {
+        "id": "practical-align-availability-with-the-services-being-promoted",
+        "title": "Align availability with the services being promoted",
+        "paragraphs": [
+          "Ask the operations team whether the advertised service has appointment capacity, relevant staff and a workable response process. A campaign can generate interest while making the patient experience worse if enquiries arrive for unavailable sessions.",
+          "Update the page and campaign when availability changes. Explain the next step accurately, distinguish an appointment request from a confirmed booking and avoid implying that submitting a form guarantees access to a particular clinician or time."
+        ],
+        "sources": [
+          [
+            "Google Ads: Healthcare and medicines policy",
+            "https://support.google.com/adspolicy/answer/176031"
+          ]
+        ]
+      },
+      {
+        "id": "practical-compare-patient-journeys-using-consistent-operational-definitions",
+        "title": "Compare patient journeys using consistent operational definitions",
+        "paragraphs": [
+          "Define what counts as an enquiry, a booked appointment and an attended appointment before comparing organic and paid channels. Keep those measures distinct and use a reporting approach appropriate to the clinic's handling requirements.",
+          "Review cancellations, response delays and service suitability alongside acquisition activity. The useful question is whether the channels help appropriate patients reach an appropriate service, not simply which source reports more clicks or the cheapest initial form submission."
+        ],
+        "sources": [
+          [
+            "Google Ads: Health in personalized advertising",
+            "https://support.google.com/adspolicy/answer/16701855"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-customer-support-fits-into-us-services-exports": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-identify-the-resident-supplier-before-describing-an-export",
+        "title": "Identify the resident supplier before describing an export",
+        "paragraphs": [
+          "The customer's language, telephone number or brand name does not determine the direction of international trade. Start with the residence of the supplier and buyer, and distinguish a cross-border service transaction from activity conducted through an affiliate.",
+          "For example, support sold by a non-US resident provider to a US resident business should not casually be described as a US export. Use the relevant statistical definitions when explaining the transaction rather than borrowing an impressive national headline."
+        ],
+        "sources": [
+          [
+            "US Bureau of Economic Analysis: international services definitions",
+            "https://www.bea.gov/international/international-services-definition"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-contract-delivery-from-the-statistical-service-category",
+        "title": "Separate contract delivery from the statistical service category",
+        "paragraphs": [
+          "A commercial support agreement may contain customer service, technical troubleshooting, software access and management activity together. Those practical workstreams do not automatically identify one statistical reporting category.",
+          "Record what is actually supplied and use the applicable reporting guidance if a formal classification is needed. A marketing description of the team is not a substitute for the definitions used by the agency collecting trade statistics or by the business preparing an official return."
+        ],
+        "sources": [
+          [
+            "BEA: international trade in services data",
+            "https://www.bea.gov/itable/international-transactions-services-and-investment-position"
+          ]
+        ]
+      },
+      {
+        "id": "practical-describe-service-quality-using-contract-evidence",
+        "title": "Describe service quality using contract evidence",
+        "paragraphs": [
+          "Use operational measures the contract can support, such as coverage, response handling, quality review and completion of agreed tasks. State how each measure is defined and which system records it.",
+          "Distinguish the team's delivery evidence from national services-trade totals. A large market figure cannot establish the quality, security or commercial value of a particular outsourcing arrangement, and a provider should be able to explain its own operating model without relying on unrelated statistics."
+        ],
+        "sources": [
+          [
+            "US Bureau of Economic Analysis: international services definitions",
+            "https://www.bea.gov/international/international-services-definition"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-the-operating-handover-clear-across-borders",
+        "title": "Keep the operating handover clear across borders",
+        "paragraphs": [
+          "Document the customer systems used, approved access, supervision, escalation and the handling of changes in coverage or workload. Assign ownership on both sides so an unresolved issue does not disappear between time zones.",
+          "Review the arrangement after real work begins. The business should know which requests the support team can complete, which decisions need approval and how service continuity is maintained when a staff member, tool or customer requirement changes."
+        ],
+        "sources": [
+          [
+            "BEA: international trade in services data",
+            "https://www.bea.gov/itable/international-transactions-services-and-investment-position"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-saas-companies-use-seo-to-generate-demos": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-distinguish-a-feature-page-from-a-buying-situation-page",
+        "title": "Distinguish a feature page from a buying-situation page",
+        "paragraphs": [
+          "A feature page explains a capability; a buying-situation page explains how a particular team would use it to solve a relevant problem. Connect the two where helpful rather than repeating the same feature list under many industry labels.",
+          "Use product facts the customer can verify, including the workflow, prerequisites and limits. This helps a prospective buyer decide whether a demonstration is worth their time without implying that every use case is supported out of the box."
+        ],
+        "sources": [
+          [
+            "Google Search Central: creating helpful content",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-integration-claims-synchronized-with-the-product",
+        "title": "Keep integration claims synchronized with the product",
+        "paragraphs": [
+          "Assign an owner to each integration page and review it when authentication, supported workflows or plan requirements change. An outdated connection claim can generate unsuitable demos and unnecessary sales effort.",
+          "Explain what the integration actually exchanges or automates and which party configures it. Where availability depends on a third-party account or implementation, make that boundary clear instead of treating a logo in an integrations grid as a complete technical specification."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-connect-demo-qualification-to-the-originating-question",
+        "title": "Connect demo qualification to the originating question",
+        "paragraphs": [
+          "Preserve appropriate page and campaign context when a prospect requests a demo. The sales team can then understand whether the person was researching a feature, replacing another system or evaluating a specific operational problem.",
+          "Ask for useful qualification information without turning the form into a full procurement questionnaire. Review the quality of the subsequent conversation, not only the number of bookings, when deciding which topics deserve more content and product evidence."
+        ],
+        "sources": [
+          [
+            "Google Search Central: creating helpful content",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-maintain-comparison-content-when-the-market-changes",
+        "title": "Maintain comparison content when the market changes",
+        "paragraphs": [
+          "Record the date, scope and evidence behind competitive comparisons. Explain the buying criteria and any limitations instead of publishing unsupported claims that your product is best in every situation.",
+          "Revisit comparison pages when your own product or the referenced alternatives change. Accurate comparisons can help customers evaluate fit, while stale feature tables create objections that the sales team must later correct during the very demos the content was meant to improve."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-ecommerce-brands-grow-with-category-page-seo": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-explain-the-range-before-repeating-product-descriptions",
+        "title": "Explain the range before repeating product descriptions",
+        "paragraphs": [
+          "A category page should help shoppers understand the selection, meaningful differences and available ways to narrow it. Avoid filling the page with generic copy that merely repeats the product name or pushes the merchandise far below the useful part of the screen.",
+          "Use concise guidance at the point where it helps a decision. More detailed buying information can be organized into an appropriate supporting section or guide, connected to the collection through a relevant internal link."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce site structure",
+            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+          ]
+        ]
+      },
+      {
+        "id": "practical-decide-which-filtered-combinations-deserve-a-public-page",
+        "title": "Decide which filtered combinations deserve a public page",
+        "paragraphs": [
+          "A useful shopping filter is not automatically a useful search landing page. Evaluate whether a combination has a distinct purpose, a worthwhile product range and information that helps someone arriving directly from search.",
+          "Coordinate the decision with crawl and URL handling. Publishing every possible filter combination can create a large inventory of overlapping destinations, while blocking all useful combinations without review can remove routes that serve real customer needs."
+        ],
+        "sources": [
+          [
+            "Google Search Central: managing faceted navigation",
+            "https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-category-availability-and-merchandising-aligned",
+        "title": "Keep category availability and merchandising aligned",
+        "paragraphs": [
+          "Review how a category behaves when much of its stock is unavailable or when a seasonal range changes. Customers should be able to understand what can be bought now and how to reach relevant alternatives.",
+          "Keep the content and linking model tied to the active catalogue. A collection that promises a wide range but repeatedly displays unavailable products may need operational attention before another round of keyword-focused copy is likely to help the shopping experience."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce site structure",
+            "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure"
+          ]
+        ]
+      },
+      {
+        "id": "practical-compare-category-outcomes-with-a-consistent-product-mix",
+        "title": "Compare category outcomes with a consistent product mix",
+        "paragraphs": [
+          "When reviewing a category's organic contribution, note changes in inventory, pricing, promotions and product visibility. A sales change may reflect the range available to buy as much as the search performance of the page.",
+          "Separate the page's discovery role from the later purchase outcome where your measurement supports it. Use that context to decide whether the next improvement belongs in search targeting, merchandising, product information or checkout rather than assigning every result to SEO alone."
+        ],
+        "sources": [
+          [
+            "Google Search Central: managing faceted navigation",
+            "https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-local-service-businesses-turn-search-into-enquiries": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-match-service-area-claims-to-the-work-you-can-deliver",
+        "title": "Match service-area claims to the work you can deliver",
+        "paragraphs": [
+          "Explain the places the business genuinely serves and any practical limits on travel, availability or the type of job accepted. Do not create dozens of near-identical town pages simply because nearby place names appear in keyword research.",
+          "Give each useful location page a reason to exist, such as specific service information or relevant local operating details. Visitors need to know whether the business can help them, not merely see their town inserted into a generic paragraph."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: local ranking guidance",
+            "https://support.google.com/business/answer/7091"
+          ]
+        ]
+      },
+      {
+        "id": "practical-measure-missed-calls-and-unanswered-forms",
+        "title": "Measure missed calls and unanswered forms",
+        "paragraphs": [
+          "Check whether enquiries generated during busy periods or outside ordinary hours receive a useful response. A telephone link can work correctly while the business still misses the opportunity because nobody owns the follow-up.",
+          "Record an appropriate operational status for the enquiry and review repeated handling problems. Improving customer response may increase the value of existing search demand before additional pages or advertising are needed to generate more traffic."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: eligibility and address guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      },
+      {
+        "id": "practical-make-urgent-and-planned-service-journeys-distinct",
+        "title": "Make urgent and planned-service journeys distinct",
+        "paragraphs": [
+          "Someone requesting an immediate repair needs different information from someone planning a larger project. Explain which requests the business accepts, the next step and what information is useful to prepare.",
+          "Keep any availability or response claim accurate. If urgent coverage is not offered, do not imply otherwise simply to capture a popular query. A clear service boundary helps both customers and the team avoid unsuitable enquiries and wasted follow-up."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: local ranking guidance",
+            "https://support.google.com/business/answer/7091"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-public-details-whenever-the-business-changes",
+        "title": "Review public details whenever the business changes",
+        "paragraphs": [
+          "A new telephone number, booking tool, address or service policy can affect profiles, directory entries and the website together. Keep a short list of important public destinations and assign an owner to update them.",
+          "Test the customer path from the listing to a real enquiry after the change. Accurate information at the top of search is only useful when the linked destination and the business's internal response process continue to support it."
+        ],
+        "sources": [
+          [
+            "Google Business Profile: eligibility and address guidelines",
+            "https://support.google.com/business/answer/3038177"
+          ]
+        ]
+      }
+    ]
+  },
+  "when-to-hire-an-seo-team-or-an-agency": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-strategic-advice-from-implementation-responsibility",
+        "title": "Separate strategic advice from implementation responsibility",
+        "paragraphs": [
+          "Ask who will change the website, write the content, resolve technical issues and validate the live result. A proposal can contain a thorough audit while leaving the business with no capacity to implement it.",
+          "Map the work to named roles before choosing a model. An internal team, agency or specialist combination can all be appropriate, but the arrangement should close the gap between a recommendation and a deployed improvement rather than producing an expanding backlog nobody owns."
+        ],
+        "sources": [
+          [
+            "Google Search Central: do you need an SEO?",
+            "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+          ]
+        ]
+      },
+      {
+        "id": "practical-ask-for-evidence-that-matches-the-proposed-work",
+        "title": "Ask for evidence that matches the proposed work",
+        "paragraphs": [
+          "Evaluate examples of the actual services being purchased. A strong visual portfolio does not by itself demonstrate technical diagnosis, and an attractive ranking chart does not explain content quality or lead suitability.",
+          "Ask how the provider established the starting point, selected the work and checked the result. Genuine examples should be presented with their context and limits, without asking you to accept a universal ranking promise or an unexplained performance claim."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-accounts-and-business-assets-recoverable",
+        "title": "Keep accounts and business assets recoverable",
+        "paragraphs": [
+          "Confirm ownership and access for the domain, website, analytics, Search Console and the files or content created during the engagement. Record what happens if the working relationship ends or a named contact leaves.",
+          "This is a continuity requirement, not a reason to avoid collaboration. A well-defined arrangement lets specialists do their work while preserving the business's ability to recover access, understand the implementation and transition responsibilities when circumstances change."
+        ],
+        "sources": [
+          [
+            "Google Search Central: do you need an SEO?",
+            "https://developers.google.com/search/docs/fundamentals/do-i-need-seo"
+          ]
+        ]
+      },
+      {
+        "id": "practical-agree-how-renewal-decisions-will-be-made",
+        "title": "Agree how renewal decisions will be made",
+        "paragraphs": [
+          "Set a review cadence that covers completed work, measured outcomes, unresolved dependencies and the next priorities. Distinguish tasks the provider can control from search-engine decisions and customer-side delays.",
+          "Review the usefulness of the engagement against those agreed responsibilities. Renewal should be an informed decision about ongoing needs and delivery, rather than a reaction to one volatile keyword or an attractive report that does not connect to the business's actual objectives."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-ai-search-changes-content-discovery": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-give-an-answer-enough-context-to-remain-accurate",
+        "title": "Give an answer enough context to remain accurate",
+        "paragraphs": [
+          "A definition or summary should identify what it covers, the conditions under which it applies and the important exceptions. A short sentence extracted from a page can become misleading when its scope is only explained much later.",
+          "Organize related qualifications beside the relevant claim and use a concrete example where it helps. This is a reader-focused editorial practice; it does not guarantee that an AI system will quote the page or retain every qualification."
+        ],
+        "sources": [
+          [
+            "Google Search Central: AI features and your website",
+            "https://developers.google.com/search/docs/appearance/ai-features"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-crawler-access-from-permission-to-perform-actions",
+        "title": "Separate crawler access from permission to perform actions",
+        "paragraphs": [
+          "A public article can be available for discovery without giving an automated assistant access to customer records or business systems. Review public content delivery and authenticated application permissions as different technical responsibilities.",
+          "Keep private information behind suitable access controls rather than relying on a public instruction file as a security boundary. If an assistant is connected to business tools, the application should enforce its own permitted actions independently of what the public website says."
+        ],
+        "sources": [
+          [
+            "Google Search Central: helpful, reliable content guidance",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-observations-about-ai-referrals-proportionate",
+        "title": "Keep observations about AI referrals proportionate",
+        "paragraphs": [
+          "Record identifiable referral visits and useful customer actions where the measurement supports them. Recognize that some discovery may not produce a click and that reports do not necessarily reveal the full answer-generation path.",
+          "Do not infer a site's total AI reach from a handful of prompts or one analytics row. Use those observations to generate sensible editorial questions, then compare them with the broader evidence about who reaches the site and what those visitors need."
+        ],
+        "sources": [
+          [
+            "Google Search Central: AI features and your website",
+            "https://developers.google.com/search/docs/appearance/ai-features"
+          ]
+        ]
+      },
+      {
+        "id": "practical-update-original-material-instead-of-multiplying-summaries",
+        "title": "Update original material instead of multiplying summaries",
+        "paragraphs": [
+          "Maintain the pages that contain your own explanations, operational detail, product facts and useful examples. A changed service or outdated specification deserves a clear update to its authoritative page, not a new collection of near-identical summaries.",
+          "Link supporting articles to that maintained source. Google's published AI search guidance continues to emphasize accessible, useful content and consistent underlying SEO practices, rather than a special file or markup that forces inclusion in generated answers."
+        ],
+        "sources": [
+          [
+            "Google Search Central: helpful, reliable content guidance",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-an-ai-chatbot-for-customer-support": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-approved-knowledge-from-customer-instructions",
+        "title": "Separate approved knowledge from customer instructions",
+        "paragraphs": [
+          "Treat retrieved documents, user messages and external pages as inputs with different trust levels. A customer asking the assistant to ignore its rules should not be able to change refund policy, reveal another person's information or grant tool access.",
+          "Enforce important boundaries in the application and connected services, not only in a prompt. OWASP's guidance on prompt injection and excessive agency is useful when reviewing how an otherwise helpful conversation could trigger an unintended action."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      },
+      {
+        "id": "practical-give-the-conversation-a-recoverable-state",
+        "title": "Give the conversation a recoverable state",
+        "paragraphs": [
+          "Store the context needed to continue the current task, such as the selected service or an unresolved question, without retaining every piece of personal information by default. Decide when that state expires or can be reset.",
+          "A misunderstood message should lead to a focused clarification or a handover option. Test whether the assistant can recover on the next turn instead of remaining stuck in a refusal loop after one uncertain or unsupported request."
+        ],
+        "sources": [
+          [
+            "OWASP: risks for LLM applications",
+            "https://genai.owasp.org/llm-top-10/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-test-answers-against-a-maintained-evaluation-set",
+        "title": "Test answers against a maintained evaluation set",
+        "paragraphs": [
+          "Build test conversations from genuine support tasks, known misunderstandings and important edge cases. Include follow-up questions, changed preferences and requests that the assistant should pass to a person.",
+          "For each test, define what a useful answer or handover looks like. Re-run the set when knowledge, prompts, model configuration or tool integrations change so an improvement in one topic does not silently break an established customer journey elsewhere."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      },
+      {
+        "id": "practical-measure-the-handover-as-part-of-the-product",
+        "title": "Measure the handover as part of the product",
+        "paragraphs": [
+          "Check whether a human receives the question, relevant context and the reason the assistant could not finish. A visible handover button is not enough if the customer must start again with no continuity.",
+          "Review unresolved and reopened conversations alongside response speed. A chatbot that answers quickly but sends people to the wrong service or repeatedly loses context can create more operational work than a slower, well-scoped assistant that resolves or escalates the task correctly."
+        ],
+        "sources": [
+          [
+            "OWASP: risks for LLM applications",
+            "https://genai.owasp.org/llm-top-10/"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-use-ai-for-keyword-research": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-keep-model-suggestions-separate-from-observed-demand",
+        "title": "Keep model suggestions separate from observed demand",
+        "paragraphs": [
+          "Label whether a phrase comes from a customer conversation, Search Console, a keyword tool or an AI-generated suggestion. Those inputs have different evidential value and should not be merged into an apparently verified demand table.",
+          "Use AI to propose language and organize possibilities, then validate important decisions with the available search and business evidence. A fluent explanation of a term does not establish its search volume, competition or suitability for your offer."
+        ],
+        "sources": [
+          [
+            "Google Search Console: Performance report",
+            "https://support.google.com/webmasters/answer/7576553"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-ambiguous-terms-before-clustering-them",
+        "title": "Review ambiguous terms before clustering them",
+        "paragraphs": [
+          "Ask whether similar wording describes the same task. A search for a software template, a managed service and a training course may share keywords while requiring different information and destinations.",
+          "Inspect representative results and compare the intent with what your business provides. Keep doubtful terms in a review group rather than letting an automated cluster assign them to a page simply because their language appears similar."
+        ],
+        "sources": [
+          [
+            "Google Search Central: helpful content guidance",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-turn-a-keyword-group-into-an-editorial-brief",
+        "title": "Turn a keyword group into an editorial brief",
+        "paragraphs": [
+          "For each approved group, describe the audience, main question, suitable page type, useful evidence and next action. Record which existing page owns the topic before asking a writer or AI tool to draft anything.",
+          "This gives the content a purpose beyond including a list of phrases. A good brief also explains what the page should leave out, helping avoid overlap with another service or guide that already serves the neighbouring question."
+        ],
+        "sources": [
+          [
+            "Google Search Console: Performance report",
+            "https://support.google.com/webmasters/answer/7576553"
+          ]
+        ]
+      },
+      {
+        "id": "practical-revisit-the-map-using-real-performance-and-sales-feedback",
+        "title": "Revisit the map using real performance and sales feedback",
+        "paragraphs": [
+          "After publication, compare incoming queries and useful customer actions with the intended purpose of the page. Ask the team whether new enquiries match the service described or reveal an important missing explanation.",
+          "Refine the brief and page map using that evidence. Do not continuously replace the strategy with a fresh batch of AI suggestions; preserve the record of what was tried and what the business learned from the resulting visitors."
+        ],
+        "sources": [
+          [
+            "Google Search Central: helpful content guidance",
+            "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+          ]
+        ]
+      }
+    ]
+  },
+  "where-human-review-fits-in-ai-assisted-content": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-review-claims-at-the-sentence-level",
+        "title": "Review claims at the sentence level",
+        "paragraphs": [
+          "Identify statements about prices, product capabilities, policies, statistics and outcomes, then check them against the appropriate original evidence. A paragraph can sound coherent while containing one unsupported detail that changes the reader's understanding.",
+          "Keep a source note for claims likely to need future maintenance. The reviewer should be able to distinguish verified facts from examples, interpretation and promotional language instead of approving the whole draft because its tone feels professional."
+        ],
+        "sources": [
+          [
+            "Google: Generative AI content guidance",
+            "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-test-whether-the-content-adds-anything-useful",
+        "title": "Test whether the content adds anything useful",
+        "paragraphs": [
+          "Compare the draft with the reader's actual task. Look for missing instructions, vague examples and passages that repeat a definition without helping someone decide or act.",
+          "Replace generic material with relevant explanations or remove it. Google's guidance on AI-assisted content emphasizes accuracy, quality and relevance; increasing the quantity of polished sentences does not by itself create additional value for the person who arrives from search."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      },
+      {
+        "id": "practical-check-the-final-page-rather-than-only-the-document",
+        "title": "Check the final page rather than only the document",
+        "paragraphs": [
+          "Review the published headings, source links, image descriptions, tables and calls to action after the content enters the website template. Errors can appear during formatting even when the approved draft is correct.",
+          "Make sure a chart or screenshot supports the nearby explanation and that an example is labelled appropriately. A final page review also catches broken links, inaccessible tables and an enquiry route that no longer matches the service described."
+        ],
+        "sources": [
+          [
+            "Google: Generative AI content guidance",
+            "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+          ]
+        ]
+      },
+      {
+        "id": "practical-assign-a-reviewer-when-the-underlying-facts-change",
+        "title": "Assign a reviewer when the underlying facts change",
+        "paragraphs": [
+          "Give time-sensitive pages an owner and a reason to revisit them, such as a platform update, product release or revised business policy. An updated date should reflect a substantive review or change rather than an automatic daily refresh.",
+          "Keep the review record concise: what was checked, which sources changed and what was corrected. This makes ongoing maintenance possible without relying on the original writer to remember how every statement was produced."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-ai-agents-can-do-for-small-businesses": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-distinguish-a-proposed-action-from-an-executed-action",
+        "title": "Distinguish a proposed action from an executed action",
+        "paragraphs": [
+          "An assistant can draft an email, suggest an invoice change or prepare a booking without being permitted to complete it automatically. Define which stage the customer or employee is seeing, and avoid a success message until the underlying system confirms the action.",
+          "Keep the action result separate from the model's explanation. A convincing sentence is not evidence that a payment, record update or message delivery actually occurred."
+        ],
+        "sources": [
+          [
+            "OWASP: LLM application risks",
+            "https://genai.owasp.org/llm-top-10/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-put-authorization-checks-in-the-connected-tool-layer",
+        "title": "Put authorization checks in the connected tool layer",
+        "paragraphs": [
+          "Give each connected service a narrow permission model appropriate to the task. Check the current user's authority and the action's constraints when the tool runs, even if the conversation appears to contain approval.",
+          "This protects against misunderstood instructions, injected content and stale context. The model can help interpret a request, but it should not be the only mechanism deciding whether someone may access another customer's record or perform a consequential business change."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      },
+      {
+        "id": "practical-design-retries-around-the-possibility-of-duplicate-work",
+        "title": "Design retries around the possibility of duplicate work",
+        "paragraphs": [
+          "A tool may complete an operation even when its response is delayed or lost. Before retrying an email, invoice, booking or record creation, check the system's actual state using a suitable identifier.",
+          "Build duplicate handling into the workflow and log the relationship between the request and the resulting action. This prevents a temporary connection problem from turning one customer instruction into several unintended operations."
+        ],
+        "sources": [
+          [
+            "OWASP: LLM application risks",
+            "https://genai.owasp.org/llm-top-10/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-start-with-a-reversible-task-and-review-exceptions",
+        "title": "Start with a reversible task and review exceptions",
+        "paragraphs": [
+          "Choose a bounded workflow where the output can be checked and a mistake can be corrected without a large operational consequence. Define the ordinary path and the conditions that require an employee to take over.",
+          "Review exceptions as well as time saved during the pilot. Expanding an agent's responsibilities should follow evidence that it handles the existing task reliably, not merely a demonstration in which every input is unusually clean."
+        ],
+        "sources": [
+          [
+            "NIST: AI Risk Management Framework",
+            "https://www.nist.gov/itl/ai-risk-management-framework"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-ai-appointment-booking-works": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-treat-a-booking-request-as-a-transaction",
+        "title": "Treat a booking request as a transaction",
+        "paragraphs": [
+          "Check availability again when the customer commits and distinguish a suggested slot from a confirmed reservation. A calendar query shows information at a moment in time; it does not by itself prevent another customer from taking the same slot.",
+          "Use the booking system's supported mechanisms to enforce the final decision. Only tell the customer the appointment is confirmed after the system returns an appropriate success result that can be checked later."
+        ],
+        "sources": [
+          [
+            "Google Calendar API: free and busy times",
+            "https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query"
+          ]
+        ]
+      },
+      {
+        "id": "practical-handle-a-delayed-response-without-creating-another-appointment",
+        "title": "Handle a delayed response without creating another appointment",
+        "paragraphs": [
+          "Give the operation an identifier and investigate its status when a request times out. Google Calendar's event-creation guidance explains how a suitable caller-provided event ID can help avoid duplicate creation after a partially observed success.",
+          "Apply the equivalent approach supported by the system you actually use. Do not simply repeat the same action because the conversation has not yet displayed a confirmation; the calendar may already contain the appointment."
+        ],
+        "sources": [
+          [
+            "Google Calendar API: create events",
+            "https://developers.google.com/workspace/calendar/api/guides/create-events"
+          ]
+        ]
+      },
+      {
+        "id": "practical-make-changes-and-cancellations-as-clear-as-the-first-booking",
+        "title": "Make changes and cancellations as clear as the first booking",
+        "paragraphs": [
+          "Confirm which appointment the customer wants to change, the new availability and the result returned by the booking service. Distinguish an updated reservation from a failed attempt that leaves the original appointment in place.",
+          "Explain the applicable business process without inventing cancellation exceptions or refund promises. If a request falls outside the assistant's authority, preserve the useful context and hand it to the team that can make the decision."
+        ],
+        "sources": [
+          [
+            "Google Calendar API: free and busy times",
+            "https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query"
+          ]
+        ]
+      },
+      {
+        "id": "practical-test-time-zone-and-calendar-boundary-cases",
+        "title": "Test time-zone and calendar-boundary cases",
+        "paragraphs": [
+          "Include users in different time zones, daylight-saving changes where relevant, blocked periods and appointments near the start or end of a working day. Display the relevant time zone explicitly when there could be ambiguity.",
+          "Review buffer time, service duration and staff or resource requirements with the operations team. A slot can look empty on one calendar while still being unsuitable for the actual service the customer is trying to book."
+        ],
+        "sources": [
+          [
+            "Google Calendar API: create events",
+            "https://developers.google.com/workspace/calendar/api/guides/create-events"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-evaluate-an-ai-website-builder": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-ask-the-tool-to-complete-an-ordinary-maintenance-task",
+        "title": "Ask the tool to complete an ordinary maintenance task",
+        "paragraphs": [
+          "After generating the first page, try changing a service, adding a longer heading and updating a shared contact detail. Check whether the change remains consistent across the relevant pages and whether the editor can explain what it modified.",
+          "This is a more useful ownership test than judging the first screenshot alone. A website that looks polished but is difficult to maintain may create more work every time the business needs an ordinary update."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-check-what-the-published-output-actually-contains",
+        "title": "Check what the published output actually contains",
+        "paragraphs": [
+          "Inspect the real page title, main content, links and loading behavior after publication. Confirm that the deployment uses the intended domain and that important pages have useful, directly reachable URLs.",
+          "Do not infer technical quality from the builder's preview. A convincing mockup is different from a public website with functioning navigation, sensible index controls, accessible forms and content that remains available when decorative effects are absent."
+        ],
+        "sources": [
+          [
+            "W3C WAI: easy checks for web accessibility",
+            "https://www.w3.org/WAI/test-evaluate/preliminary/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-follow-business-integrations-through-their-failure-states",
+        "title": "Follow business integrations through their failure states",
+        "paragraphs": [
+          "Test a form, booking or payment connection beyond the attractive front-end screen. Check where the information arrives, what confirms success and what the visitor sees when the external service does not respond.",
+          "Decide who owns configuration and support for each integration. An AI builder can accelerate interface creation, but the business still needs a working operational process and appropriate access to diagnose a failed submission or disconnected account."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-evaluate-the-exit-path-before-committing-to-a-platform",
+        "title": "Evaluate the exit path before committing to a platform",
+        "paragraphs": [
+          "Review the available export, domain, asset and content arrangements under the plan being considered. Distinguish a downloadable image of a page from editable source or content that another maintainer can actually use.",
+          "Record the recurring costs and the work required to move later. Portability is not identical across builders, so assess the documented capabilities of the specific product rather than assuming that all AI-generated websites can be transferred in the same way."
+        ],
+        "sources": [
+          [
+            "W3C WAI: easy checks for web accessibility",
+            "https://www.w3.org/WAI/test-evaluate/preliminary/"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-is-digital-marketing": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-distinguish-audience-growth-from-customer-acquisition",
+        "title": "Distinguish audience growth from customer acquisition",
+        "paragraphs": [
+          "An audience can be useful without producing an immediate sale, but its role should be explicit. Decide whether an activity is intended to introduce the business, answer a comparison question, generate a qualified enquiry or support an existing customer.",
+          "Choose evidence appropriate to that role and avoid treating every interaction as equivalent. A growing social following, a relevant service-page visit and a completed purchase describe different stages of the relationship, even when they appear in the same monthly report."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-one-accurate-offer-across-connected-channels",
+        "title": "Keep one accurate offer across connected channels",
+        "paragraphs": [
+          "Review whether the website, advertisements, email and social profiles describe the same current service, price conditions and next step. A customer should not encounter a different promise simply because they moved from one channel to another.",
+          "Assign an owner to changes in promotional or product information. Campaign production becomes easier when teams work from an approved offer brief instead of copying old text from whichever platform was updated most recently."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-build-the-response-process-before-increasing-demand",
+        "title": "Build the response process before increasing demand",
+        "paragraphs": [
+          "Decide how calls, forms, messages and booking requests are received, qualified and answered. Give staff the context needed to understand which service or campaign prompted the enquiry.",
+          "Then test the process with realistic inputs. Generating more demand is unlikely to solve missed notifications, unclear ownership or slow follow-up, and those operational problems can make an otherwise relevant campaign appear less valuable than it actually is."
+        ],
+        "sources": [
+          [
+            "Google Search Central: SEO starter guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-a-small-set-of-connected-decisions",
+        "title": "Review a small set of connected decisions",
+        "paragraphs": [
+          "Use reporting to answer practical questions: which audience responded, what they needed, what the business delivered and which improvement should happen next. Keep a record of the campaign and website changes that could explain the result.",
+          "Avoid adding metrics solely because a platform makes them available. A useful digital marketing review connects evidence to decisions and identifies what remains uncertain, rather than presenting a large dashboard with no agreed next action."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-google-search-updates-mean-for-site-owners": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-compare-the-timing-with-your-own-release-history",
+        "title": "Compare the timing with your own release history",
+        "paragraphs": [
+          "Place search-performance changes beside the dates of migrations, template releases, tracking changes and major content edits. An announced search update can coincide with an unrelated problem on your own website.",
+          "Inspect the affected page groups before assigning a cause. If only URLs using a recently changed template lose visibility, investigate that implementation alongside the update information rather than assuming that every decline needs a site-wide content rewrite."
+        ],
+        "sources": [
+          [
+            "Google Search Status Dashboard",
+            "https://status.search.google.com/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-a-reporting-change-from-a-traffic-change",
+        "title": "Separate a reporting change from a traffic change",
+        "paragraphs": [
+          "Check whether the same pattern appears across the appropriate search and operational reports. A broken analytics tag or changed event definition can alter a dashboard without the same change occurring in actual search visits or customer demand.",
+          "Keep the definitions consistent when comparing periods. Note differences in time zones, filters and available data, and avoid combining a measurement issue with a search-performance issue simply because both appear during the same week."
+        ],
+        "sources": [
+          [
+            "Google Search Central: debug search traffic drops",
+            "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-the-page-the-searcher-actually-needs",
+        "title": "Review the page the searcher actually needs",
+        "paragraphs": [
+          "Compare the affected page with the intent behind representative queries. Ask whether it provides a current, specific and useful answer, and whether another page on your site better serves the same task.",
+          "Improve genuine weaknesses in explanation, evidence or usability. Avoid cosmetic updates that only change a date or add generic paragraphs, because those changes do not resolve a mismatch between the visitor's need and what the page actually offers."
+        ],
+        "sources": [
+          [
+            "Google Search Status Dashboard",
+            "https://status.search.google.com/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-choose-a-measured-recovery-plan-instead-of-repeated-resets",
+        "title": "Choose a measured recovery plan instead of repeated resets",
+        "paragraphs": [
+          "Maintain a dated list of changes, their purpose and the pages affected. Prioritize diagnosed problems and give the implementation a consistent observation period appropriate to the data available.",
+          "Search visibility can change for several reasons, and improvement is not guaranteed by completing a checklist. A useful recovery process makes the website better, preserves evidence and avoids introducing a new set of technical or editorial problems through hurried, unexplained revisions."
+        ],
+        "sources": [
+          [
+            "Google Search Central: debug search traffic drops",
+            "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-privacy-changes-mean-for-marketing-analytics": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-check-what-happens-before-a-visitor-makes-a-choice",
+        "title": "Check what happens before a visitor makes a choice",
+        "paragraphs": [
+          "Inspect which tags load, which requests are sent and which default consent states apply before someone interacts with the consent interface. Compare the observed behavior with the implementation the business has approved.",
+          "Google's documentation distinguishes basic and advanced consent mode, including different behavior before consent is granted. Choose and review the configuration with the appropriate privacy owner; a banner's appearance alone does not establish what the underlying tracking implementation does."
+        ],
+        "sources": [
+          [
+            "Google: Consent mode overview",
+            "https://developers.google.com/tag-platform/security/concepts/consent-mode"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-form-content-out-of-general-tracking-fields",
+        "title": "Keep form content out of general tracking fields",
+        "paragraphs": [
+          "Review page URLs, event parameters and custom dimensions for names, email addresses, message text or other unnecessary personal information. A convenient debugging value can become an ongoing disclosure if it is sent with every customer interaction.",
+          "Use appropriate internal systems for information needed to deliver the service, and keep marketing measurement focused on suitable event context. Recheck this boundary when adding chat, booking or form integrations rather than assuming that a previously reviewed tag setup covers every new feature."
+        ],
+        "sources": [
+          [
+            "Google Analytics: Avoid sending personally identifiable information",
+            "https://support.google.com/analytics/answer/6366371"
+          ]
+        ]
+      },
+      {
+        "id": "practical-explain-modeled-and-directly-observed-data-separately",
+        "title": "Explain modeled and directly observed data separately",
+        "paragraphs": [
+          "When a platform reports estimates or modeled results, identify them as such where the reporting interface supports that distinction. Do not present every figure as though it came from a directly observed, individually tracked journey.",
+          "Compare trends with appropriate first-party business totals and document the remaining gaps. Privacy-conscious measurement is more useful when the team understands what is known and inferred, instead of treating a precise-looking dashboard as a complete record of every customer's activity."
+        ],
+        "sources": [
+          [
+            "Google: Consent mode overview",
+            "https://developers.google.com/tag-platform/security/concepts/consent-mode"
+          ]
+        ]
+      },
+      {
+        "id": "practical-recheck-implementation-when-the-marketing-stack-changes",
+        "title": "Recheck implementation when the marketing stack changes",
+        "paragraphs": [
+          "A new advertising pixel, consent manager or analytics integration can change the information collected and the way a visitor's choice is applied. Make those changes part of the release process rather than treating them as isolated marketing edits.",
+          "Keep the public explanation, technical configuration and internal data inventory aligned. Seek appropriate jurisdiction-specific advice where required; a particular software setting or server-side implementation does not by itself determine whether the business's overall handling is appropriate."
+        ],
+        "sources": [
+          [
+            "Google Analytics: Avoid sending personally identifiable information",
+            "https://support.google.com/analytics/answer/6366371"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-core-web-vitals-tell-you-about-your-website": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-choose-a-representative-template-before-optimizing",
+        "title": "Choose a representative template before optimizing",
+        "paragraphs": [
+          "Group pages by the components and delivery paths they share, such as articles, product pages and lead-generation pages. Test representative examples instead of assuming that a homepage score describes every important customer journey.",
+          "Record which element or interaction contributes to the problem and what changed after the fix. Template-level work can be more effective than manually compressing one page while the same expensive image or script pattern continues across the rest of the website."
+        ],
+        "sources": [
+          [
+            "web.dev: Web Vitals definitions and thresholds",
+            "https://web.dev/articles/vitals"
+          ]
+        ]
+      },
+      {
+        "id": "practical-reserve-layout-space-before-delayed-content-arrives",
+        "title": "Reserve layout space before delayed content arrives",
+        "paragraphs": [
+          "Check whether images, embeds, notices and third-party widgets have an appropriate place in the layout before they load. Unexpected movement can make a page difficult to read or cause someone to activate the wrong control.",
+          "Test with a slower connection and with the actual promotional, consent and chat components enabled. A page can appear stable during a fast local preview while shifting noticeably when the production integrations arrive in a different order."
+        ],
+        "sources": [
+          [
+            "Google Search Central: Core Web Vitals",
+            "https://developers.google.com/search/docs/appearance/core-web-vitals"
+          ]
+        ]
+      },
+      {
+        "id": "practical-investigate-interaction-work-rather-than-removing-all-animation",
+        "title": "Investigate interaction work rather than removing all animation",
+        "paragraphs": [
+          "For a slow interaction, identify the main-thread work, component updates or third-party activity happening around it. Measure the task the visitor is trying to complete instead of assuming that every visual effect is the cause.",
+          "Reduce unnecessary work and retest the affected interaction. A restrained animation can coexist with a responsive page, while a visually plain form can still feel slow if it triggers expensive processing or waits on an unrelated integration."
+        ],
+        "sources": [
+          [
+            "web.dev: Web Vitals definitions and thresholds",
+            "https://web.dev/articles/vitals"
+          ]
+        ]
+      },
+      {
+        "id": "practical-review-field-evidence-after-the-release-has-time-to-appear",
+        "title": "Review field evidence after the release has time to appear",
+        "paragraphs": [
+          "Keep laboratory testing and real-user field data distinct. A local test helps diagnose a change quickly, while field reporting reflects the conditions experienced by the users included in its reporting window.",
+          "Google's Web Vitals guidance recommends evaluating the relevant percentile across mobile and desktop experiences. Do not expect a deployed improvement to rewrite historical field data instantly; record the release date and continue checking both the implementation and the subsequent user evidence."
+        ],
+        "sources": [
+          [
+            "Google Search Central: Core Web Vitals",
+            "https://developers.google.com/search/docs/appearance/core-web-vitals"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-to-build-a-digital-marketing-plan-for-a-small-business": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-write-a-capacity-aware-offer-before-selecting-channels",
+        "title": "Write a capacity-aware offer before selecting channels",
+        "paragraphs": [
+          "Confirm what the business can deliver, who the service fits and how new enquiries will be handled. Include real limits on time, geography or available stock before producing a campaign that may promise more than operations can support.",
+          "Then select channels that can reach the relevant audience with a clear message. The plan should connect marketing activity to a deliverable service, not merely produce a schedule of posts and advertisements without an agreed commercial purpose."
+        ],
+        "sources": [
+          [
+            "US Small Business Administration: marketing and sales",
+            "https://www.sba.gov/business-guide/manage-your-business/marketing-sales"
+          ]
+        ]
+      },
+      {
+        "id": "practical-separate-a-learning-budget-from-an-ongoing-commitment",
+        "title": "Separate a learning budget from an ongoing commitment",
+        "paragraphs": [
+          "Describe what a small initial campaign is intended to reveal and which costs are included. Record the decisions it can inform, such as demand, message clarity or the suitability of a landing page.",
+          "Do not treat a limited test as proof of long-term performance. Use the findings to refine the next step, and distinguish setup work, reusable content and recurring media costs when deciding whether an activity should become part of the ordinary marketing budget."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      },
+      {
+        "id": "practical-create-a-content-plan-from-repeated-sales-questions",
+        "title": "Create a content plan from repeated sales questions",
+        "paragraphs": [
+          "Ask the customer-facing team which questions delay a decision, disqualify an enquiry or require the same explanation repeatedly. Organize those questions into useful service-page improvements and supporting content.",
+          "Give each planned item an audience, purpose and next action. This produces a more practical editorial calendar than publishing frequently without knowing which customer need the new article, email or video is supposed to answer."
+        ],
+        "sources": [
+          [
+            "US Small Business Administration: marketing and sales",
+            "https://www.sba.gov/business-guide/manage-your-business/marketing-sales"
+          ]
+        ]
+      },
+      {
+        "id": "practical-run-a-monthly-decision-review-with-a-short-agenda",
+        "title": "Run a monthly decision review with a short agenda",
+        "paragraphs": [
+          "Review what was delivered, what suitable customers did, what the team learned and which issue should be addressed next. Bring sales and service feedback alongside marketing reports so the plan reflects the whole customer journey.",
+          "Keep the resulting actions small enough to assign and complete. A plan becomes useful through consistent decisions and follow-through, rather than through repeatedly replacing the strategy whenever a platform launches a new format or feature."
+        ],
+        "sources": [
+          [
+            "Google Analytics Help: key events",
+            "https://support.google.com/analytics/answer/9267735"
+          ]
+        ]
+      }
+    ]
+  },
+  "how-search-and-social-platforms-are-changing-product-discovery": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-separate-inspiration-content-from-purchase-ready-information",
+        "title": "Separate inspiration content from purchase-ready information",
+        "paragraphs": [
+          "A visual post may introduce a product, while the product page must support comparison and purchase. Give each destination the information appropriate to its role instead of forcing the same creative text into every part of the journey.",
+          "Link inspiration to an accurate, relevant destination. A visitor who wants specifications, availability or delivery details should not have to search through unrelated posts to find the facts needed for the next decision."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce documentation",
+            "https://developers.google.com/search/docs/specialty/ecommerce/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-keep-product-facts-synchronized-across-feeds-and-pages",
+        "title": "Keep product facts synchronized across feeds and pages",
+        "paragraphs": [
+          "Assign an owner to changes in product identifiers, prices, availability and destination URLs across the website and connected catalogues. Review the live landing page as well as the feed submission.",
+          "Inconsistent details can confuse shoppers even when the individual entries look valid in their respective dashboards. Include a representative set of products in the publishing check, especially those with variants, temporary promotions or location-dependent fulfilment conditions."
+        ],
+        "sources": [
+          [
+            "Google Merchant Center: product data specification",
+            "https://support.google.com/merchants/answer/7052112"
+          ]
+        ]
+      },
+      {
+        "id": "practical-preserve-a-useful-path-when-a-social-post-outlives-an-offer",
+        "title": "Preserve a useful path when a social post outlives an offer",
+        "paragraphs": [
+          "Older posts, saved videos and shared links can continue sending visitors after a campaign ends. Decide whether the destination will explain the change, show appropriate alternatives or move through a relevant URL update.",
+          "Avoid leaving a popular entry point attached to unavailable pricing or a missing product page. Maintaining the destination is part of the campaign's lifecycle, even when the original platform no longer treats the post as new."
+        ],
+        "sources": [
+          [
+            "Google Search Central: ecommerce documentation",
+            "https://developers.google.com/search/docs/specialty/ecommerce/"
+          ]
+        ]
+      },
+      {
+        "id": "practical-use-customer-questions-to-improve-the-permanent-catalogue",
+        "title": "Use customer questions to improve the permanent catalogue",
+        "paragraphs": [
+          "Review recurring comments, messages and support questions for gaps in product information. A repeated question about size, compatibility or delivery may belong on the product page rather than being answered privately every time.",
+          "Distinguish a widespread information need from an isolated request, then update the authoritative product content. This helps customers arriving from search, social, email and direct visits receive the same useful explanation instead of a different answer in each channel."
+        ],
+        "sources": [
+          [
+            "Google Merchant Center: product data specification",
+            "https://support.google.com/merchants/answer/7052112"
+          ]
+        ]
+      }
+    ]
+  },
+  "what-is-search-engine-optimization": {
+    "updatedAt": "2026-11-28",
+    "sections": [
+      {
+        "id": "practical-give-every-important-page-a-distinct-business-purpose",
+        "title": "Give every important page a distinct business purpose",
+        "paragraphs": [
+          "Before choosing a target phrase, identify what the page should help someone understand or do. A service overview, detailed service page, comparison guide and contact page play different roles even when they share vocabulary.",
+          "Map related questions to the most useful existing destination and add another page only when it has a distinct purpose. This produces a clearer website for customers and helps the team avoid expanding the URL inventory with repetitive pages that provide no additional explanation."
+        ],
+        "sources": [
+          [
+            "Google: SEO Starter Guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-understand-branded-search-when-several-related-businesses-exist",
+        "title": "Understand branded search when several related businesses exist",
+        "paragraphs": [
+          "A parent company, product brand and specialist service may all mention the same name online. Make the relationship clear while giving each public website an accurate title, visible description and relevant links from the profiles that represent it.",
+          "An indexed website is not guaranteed to rank first for a brand query. Inspect the intended domain's performance and canonical signals before assuming that the appearance of a related company means a robots directive or schema error is blocking the site."
+        ],
+        "sources": [
+          [
+            "Google: URL Inspection tool",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      },
+      {
+        "id": "practical-plan-seo-maintenance-around-real-business-changes",
+        "title": "Plan SEO maintenance around real business changes",
+        "paragraphs": [
+          "A new service, retired product, revised location or website redesign can affect content, links, redirects and public listings together. Keep search maintenance connected to those operational changes rather than treating it only as a monthly ranking report.",
+          "Assign responsibility for checking the affected destinations after release. A small, accurate update to an important page can be more useful than publishing another generic article while the details customers actually need remain out of date."
+        ],
+        "sources": [
+          [
+            "Google: SEO Starter Guide",
+            "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+          ]
+        ]
+      },
+      {
+        "id": "practical-connect-reporting-to-the-next-useful-improvement",
+        "title": "Connect reporting to the next useful improvement",
+        "paragraphs": [
+          "Review discovery, relevant visits and suitable customer actions as related but different signals. Ask which page or journey needs attention and what evidence would show that the proposed change helped.",
+          "A practical report records completed work, unresolved dependencies and the next priority. SEO does not promise a particular search position or AI citation; it gives the business a disciplined way to improve accessible, useful pages and evaluate what happens when customers find them."
+        ],
+        "sources": [
+          [
+            "Google: URL Inspection tool",
+            "https://support.google.com/webmasters/answer/9012289"
+          ]
+        ]
+      }
+    ]
+  }
+}

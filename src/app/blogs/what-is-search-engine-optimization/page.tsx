@@ -9,14 +9,16 @@ import { formatPublicationDate, getPublishedPosts, seoGuideSlug, topics } from "
 import { ArticleSidebar, TypeTitle } from "./article-client";
 import { related, sections, SeoGuide } from "./seo-guide";
 import styles from "./article.module.css";
+import { getArticleAdditions } from "../article-additions";
 
 const post = getPublishedPosts().find(item => item.slug === seoGuideSlug);
 if (!post) throw new Error("SEO guide is missing from the published blog records.");
 
-export const metadata = blogSeo(post, "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement.");
+export const metadata = blogSeo(post, "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement.", getArticleAdditions(seoGuideSlug).updatedAt);
 
 const linkedin = process.env.NEXT_PUBLIC_ORBILECT_LINKEDIN ?? "https://www.linkedin.com/company/orbilect-seo/";
 const x = process.env.NEXT_PUBLIC_ORBILECT_X ?? "https://x.com/orbilectseo";
+const additions = getArticleAdditions(seoGuideSlug);
 
 export default function SeoGuidePage() {
   if (!post) return null;
@@ -25,7 +27,7 @@ export default function SeoGuidePage() {
 
   return (
     <main className={styles.page}>
-      <SeoJsonLd data={articleSchema(post, "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement.")} />
+      <SeoJsonLd data={{ ...articleSchema(post, "Learn what SEO is, how search engines work, and how to improve your website’s visibility with technical SEO, useful content, links, images, and measurement."), dateModified: additions.updatedAt, citation: [...new Map(additions.sections.flatMap(section => section.sources).map(source => [source[1], source])).values()].map(([name, url]) => ({ "@type": "CreativeWork", name, url })) }} />
       <header className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroCopy}>
@@ -35,6 +37,7 @@ export default function SeoGuidePage() {
             <p className={styles.deck}>Learn how search engines find your site, what makes a page worth visiting, and where to start if you want to bring in more qualified customers.</p>
             <div className={styles.byline}><div><strong>{post.author.name}</strong><span>{post.author.role}</span></div>
               <time dateTime={post.publishedAt}>{formatPublicationDate(post.publishedAt)}</time>
+              <span>Updated <time dateTime={additions.updatedAt}>{formatPublicationDate(additions.updatedAt)}</time></span>
             </div>
             <HeroAudit source="blog-hero-audit" />
           </div>

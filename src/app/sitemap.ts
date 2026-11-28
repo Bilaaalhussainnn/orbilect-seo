@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import { blogPath, siteUrl } from "@/lib/orbilect-search";
 import { seoGuideSlug } from "./blogs/blog-data";
 import { getPublishedGuides } from "./blogs/published-guides";
+import { getArticleAdditions } from "./blogs/article-additions";
 
 const publicPages = [
   "/",
@@ -66,8 +67,8 @@ const publicPages = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const updated = new Set(["/", "/industries", "/website-design-gallery", "/services/website-redesign", "/about", "/privacy-policy", "/terms-and-conditions", ...industries.map(item => "/industries/" + item.slug)]);
   const items: MetadataRoute.Sitemap = [
-    ...publicPages.map(route => ({ url: siteUrl(route), ...(route === "/" ? { lastModified: "2026-11-26" } : updated.has(route) ? { lastModified: "2026-11-22" } : {}) })),
-    ...getPublishedGuides().map(({ post }) => ({ url: siteUrl(blogPath(post.slug)), lastModified: "2026-11-22" })),
+    ...publicPages.map(route => ({ url: siteUrl(route), ...(route === blogPath(seoGuideSlug) ? { lastModified: getArticleAdditions(seoGuideSlug).updatedAt } : route === "/reviews" || route === "/blogs" ? { lastModified: "2026-11-28" } : route === "/" ? { lastModified: "2026-11-26" } : updated.has(route) ? { lastModified: "2026-11-22" } : {}) })),
+    ...getPublishedGuides().map(({ post, updatedAt }) => ({ url: siteUrl(blogPath(post.slug)), lastModified: updatedAt })),
   ];
   return [...new Map(items.map(item => [item.url, item])).values()];
 }
