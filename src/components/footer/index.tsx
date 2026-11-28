@@ -27,8 +27,7 @@ export default function SiteFooter() {
       </div>
       <div className={styles.footerBottom}><div className={styles.social}><p>Follow us for more</p><SocialLinks className={styles.icons}/></div><div className={styles.badges} aria-label="Agency recognition and reviews"><a className={styles.selectedBadge} href="https://selectedfirms.co/companies/seo?utm_source=orbilect_seo&amp;utm_medium=badge&amp;utm_campaign=seo&amp;utm_term=top_seo_company&amp;utm_content=agency_badge&amp;utm_marketing_tactic=badge_organic" target="_blank" rel="noopener noreferrer" aria-label="Top SEO Company badge — visit SelectedFirms (opens in a new tab)"><Image src="/review-platforms/selectedfirms-seo.webp" alt="SelectedFirms Top SEO Company" width={104} height={104} unoptimized /></a>
         <div className={styles.designRushBadge}>
-          <iframe src="/api/review-widgets/designrush" title="Orbilect SEO reviews on DesignRush" loading="lazy" width="340" height="200" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox" referrerPolicy="strict-origin-when-cross-origin" />
-          <a href="https://www.designrush.com/agency/profile/orbilect-seo#reviews" target="_blank" rel="noopener noreferrer" aria-label="Visit Orbilect SEO reviews on DesignRush (opens in a new tab)">Review us on DesignRush</a>
+          <iframe src="/api/review-widgets/designrush?theme=footer" title="Orbilect SEO reviews on DesignRush" loading="lazy" width="340" height="140" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div></div>
     </div>

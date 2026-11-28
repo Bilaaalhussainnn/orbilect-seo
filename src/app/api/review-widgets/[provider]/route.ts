@@ -22,12 +22,16 @@ const snippets = {
     <script src="https://widgets.smartcustomer.com/js/v2/widgets.js?id=6afe1782ac3ff" defer></script>`,
 } as const;
 
-export async function GET(_request: Request, { params }: { params: Promise<{ provider: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ provider: string }> }) {
   const { provider } = await params;
   if (!Object.prototype.hasOwnProperty.call(snippets, provider)) return new Response("Not found", { status: 404 });
-  const snippet = snippets[provider as keyof typeof snippets];
+  const footer = provider === "designrush" && new URL(request.url).searchParams.get("theme") === "footer";
+  const snippet = footer
+    ? snippets.designrush.replace('data-style="light"', 'data-style="dark"')
+    : snippets[provider as keyof typeof snippets];
   return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Orbilect SEO reviews</title><style>
     *{box-sizing:border-box}html,body{margin:0;min-width:0;background:#fff;color:#445267;font-family:Arial,sans-serif}body{padding:12px;min-height:200px;display:grid;align-content:center;gap:10px}body>div{max-width:100%;min-width:0}img,iframe{max-width:100%}iframe{border:0}a{color:#004aad}.fallback{font-size:12px;line-height:1.5;text-align:center}
+    ${footer ? 'html,body{background:transparent;color:#d1d7e1}body{padding:0;min-height:140px;height:140px;gap:0}body>div{display:flex;justify-content:center;align-items:center}a{color:#7aaff5}' : ''}
     </style></head><body>${snippet}</body></html>`, {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
