@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   async headers() {
     return [
-      { source: "/:path*", headers: [{ key: "X-Orbilect-SEO-Release", value: "search-v16" }] },
+      { source: "/:path*", headers: [{ key: "X-Orbilect-SEO-Release", value: "reliability-v21" }] },
       ...["/brand/:path*", "/technology-stack/:path*", "/service-showcase/logos/:path*", "/platform-logos/:path*", "/naila/:path*"].map(source => ({
         source,
         has: [{ type: "query" as const, key: "v", value: imageRelease.version }],
@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   // Only immutable, release-versioned assets receive a year-long cache lifetime.
-  images: { formats: ["image/avif", "image/webp"], localPatterns: [{ pathname: "/**", search: "" }, { pathname: "/**", search: "?v=" + imageRelease.version }] },
+  images: { unoptimized: true, formats: ["image/avif", "image/webp"], localPatterns: [{ pathname: "/**", search: "" }, { pathname: "/**", search: "?v=" + imageRelease.version }] },
   cacheComponents: true,
   partialPrefetching: true,
   experimental: { cpus: 2, workerThreads: false },

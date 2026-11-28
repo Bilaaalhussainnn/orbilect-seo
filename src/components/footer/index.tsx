@@ -1,3 +1,4 @@
+import DmcaBadge from "./dmca-badge";
 import TypingTagline from "@/components/typing-tagline";
 import Image from "@/components/optimized-image";
 import Link from "next/link";
@@ -29,6 +30,7 @@ export default function SiteFooter() {
         <div className={styles.designRushBadge}>
           <iframe src="/api/review-widgets/designrush?theme=footer" title="Orbilect SEO reviews on DesignRush" loading="lazy" width="340" height="140" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
+        <DmcaBadge />
       </div></div>
     </div>
     <div className={styles.legal}><div className={styles.wrap}><p>© {process.env.ORBILECT_COPYRIGHT_YEAR} Orbilect SEO. All rights reserved.</p><nav aria-label="Legal links"><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms-and-conditions">Terms and conditions</Link></nav></div></div>

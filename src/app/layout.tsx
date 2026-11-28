@@ -1,7 +1,6 @@
 import { humanChatAvailable } from "@/lib/naila/human-chat";
 import { rootSeo } from "@/lib/orbilect-search";
 import SiteHeader from "@/components/header";
-import SiteReadiness from "@/components/site-readiness";
 import "./brand-experience.css";
 import SiteFooter from "@/components/footer";
 import NailaVisitorTracking from "@/components/naila/visitor";
@@ -36,7 +35,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
       <body data-public-website="" suppressHydrationWarning={process.env.NODE_ENV === "development"}>
-        <SiteReadiness />
         <SiteHeader />
         <span id="site-content" tabIndex={-1} />
         {children}  <ScrollExperience />

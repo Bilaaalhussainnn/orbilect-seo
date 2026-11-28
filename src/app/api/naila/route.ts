@@ -1,3 +1,5 @@
+import { advanceContact, openContactDraft, sealContactDraft } from "@/lib/naila/lead-capture";
+import { notifyLead, parseLead, saveLead } from "@/lib/leads/server";
 import { recordChatEvent } from "@/lib/naila/chat-archive";
 import { closingMessage, declinesHelp, idleWarning } from "@/lib/naila/conversation";
 import { isNailaSiteRequest } from "@/lib/naila/request-origin";
@@ -16,7 +18,7 @@ import { createHmac, randomBytes, randomUUID, timingSafeEqual } from "node:crypt
 const secret = process.env.NAILA_SESSION_SECRET || randomBytes(32).toString("hex");
 const cookieName = "orbilect_naila";
 const day = 86400;
-type Session = { id: string; warnings: number; curses: number; expires: number; messages?: number; emailed?: boolean; submitted?: boolean };
+type Session = { id: string; warnings: number; curses: number; expires: number; messages?: number; emailed?: boolean; submitted?: boolean; lead?: string };
 
 function stamp(text: string) {
   return createHmac("sha256", secret).update(text).digest("hex");
@@ -85,7 +87,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const handoff = humanChatAvailable() && request.headers.get("x-naila-handoff") === "1";
-    const input = await readBody(request, handoff ? 524_288 : 65_536);
+    const input = await readBody(request, handoff ? 524_288 : 196_608);
     if (handoff && input?.action !== "human-start") return respond(request, state, { error: "Invalid handoff." }, 400);
     if (typeof input?.action === "string" && input.action.startsWith("human-")) {
       if (!humanChatAvailable()) return respond(request, state, { error: "Live support is currently unavailable." }, 503);
@@ -169,6 +171,31 @@ export async function POST(request: NextRequest) {
     if (input?.action !== "message" || typeof input.text !== "string" || !input.text.trim() || input.text.length > 1000) {
       return respond(request, state, { error: "Enter a message up to 1,000 characters." }, 400);
     }
+    const collection = advanceContact(input.text, openContactDraft(state.lead, secret));
+    if (collection) {
+      state.lead = collection.draft ? sealContactDraft(collection.draft, secret) : undefined;
+      if (collection.ready) {
+        const draft = collection.ready;
+        try {
+          const lead = parseLead({ id: draft.id, source: "naila-callback", name: draft.name,
+            email: draft.email, phone: draft.phone, website: draft.website, service: draft.service,
+            message: "Contact requested through Naila. Interest: " + draft.interest + "\nProject: " + draft.message,
+            page: typeof input.page === "string" ? input.page : "/" });
+          const saved = await saveLead(lead);
+          if (saved.emailStatus !== "accepted") after(() => notifyLead(lead.id).then(() => undefined));
+          state.lead = undefined;
+          return respond(request, state, { text: "Thanks! Your contact request has been received. Our product experts will get in touch within the next 24 hours. 🙂", leadSubmitted: true, code: saved.code });
+        } catch {
+          return respond(request, state, { error: "I couldn't submit your request just now. Your draft is still here; please reply yes to retry. I haven't confirmed submission." }, 503);
+        }
+      }
+      const response = collection.interrupted
+        ? answer(input.text, input.humor !== false, Array.isArray(input.recentMessages) ? input.recentMessages.filter((value: unknown): value is string => typeof value === "string").slice(-100).map((value: string) => value.slice(0, 400)) : [])
+        : collection.reply!;
+      return respond(request, state, { ...response,
+        text: response.text + (collection.interrupted ? "\n\nWhenever you're ready: " + collection.reply!.text : ""),
+        actions: response.actions?.filter(action => !action.href.startsWith("/contact")), collectingContact: Boolean(collection.draft) });
+    }
     // One unclear or frustrated message must not lock an ongoing customer out.
     state.warnings = 0;
     state.curses = 0;
@@ -182,7 +209,7 @@ export async function POST(request: NextRequest) {
     }
     const shouldClose = declinesHelp(input.text);
     const recentMessages = Array.isArray(input.recentMessages)
-      ? input.recentMessages.slice(-50).filter((item: unknown): item is string => typeof item === "string")
+      ? input.recentMessages.slice(-100).filter((item: unknown): item is string => typeof item === "string")
         .map((item: string) => item.slice(0, 400))
       : typeof input.previousMessage === "string" ? [input.previousMessage.slice(0, 400)] : [];
     const reply = shouldClose ? { text: closingMessage, endChat: true } :

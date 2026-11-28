@@ -1,3 +1,4 @@
+import { startContactReply } from "./lead-capture";
 import { glossaryReply, continuityReply } from "./knowledge-and-continuity";
 import { naturalConversation } from "./natural-conversation";
 import { ecommerceOperationsAnswers as ecommerce, staffingSupportAnswers as staffing } from "../customer-operations-faqs";
@@ -9,7 +10,6 @@ import { blogIndex, faqEntries } from "./intent-content";
 import type { Reply } from "./answers";
 
 const pricingChecklist = { text: "Open pricing checklist", href: "/pricing#pricing-checklist" };
-const callback = { text: "Open our Contact page", href: "/contact?request=Callback%20request#request-proposal" };
 const quote = { text: "Get a quote", href: "/pricing#pricing-checklist" };
 const terms = { text: "View Terms", href: "/terms-and-conditions" };
 const audit = { text: "Request a free SEO audit", href: "/#free-audit" };
@@ -157,7 +157,7 @@ function classify(q: string, previous: string, fallback: (q: string) => Reply): 
   if (!/[a-z0-9]/.test(q) || /^(?:what(?: the)?|how|why|where|can you|do you|i was wondering)[?.!\s]*$/.test(q)) return { text: clarify };
   if (/\b(?:hungry|weather forecast|tell me a joke|who won the game|what is your favorite food)\b/.test(q)) return { text: unrelated };
   if (/\b(?:call\s?back|(?:contact|call|phone|email|reach) me|(?:get in touch|reach out|follow up) with me|(?:reach out|speak) to me)\b/.test(q)) {
-    return { text: "Sure, kindly leave your details on our Contact page and one of our product strategists will get back to you within 24 hours.", actions: [callback] };
+    return startContactReply();
   }
   if (/\b(?:calculators?|cost estimators?|quote tools?|pricing tools?)\b/.test(q)) {
     return { text: "We have a pricing checklist you can use to select the work you need and request a tailored quote. It won’t generate an instant total.", actions: [pricingChecklist] };

@@ -121,10 +121,14 @@ export default function SiteScrollReveal() {
       });
 
       syncText();
-      mutations = new MutationObserver(() => {
-        if (!frame) frame = requestAnimationFrame(syncText);
+      mutations = new MutationObserver(records => {
+        // Ignore chat typing and character-by-character text changes. Only new
+        // content elements in the main article can require another scan.
+        const addedContent = records.some(record => Array.from(record.addedNodes).some(node =>
+          node instanceof Element && (node.matches(textSelector) || node.querySelector(textSelector))));
+        if (addedContent && !frame) frame = requestAnimationFrame(syncText);
       });
-      mutations.observe(document.body, { childList: true, subtree: true });
+      mutations.observe(document.querySelector("main") ?? document.body, { childList: true, subtree: true });
     }
 
     start();

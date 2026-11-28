@@ -102,7 +102,7 @@ const privacy: readonly LegalSection[] = [
     "naila",
     ["Naila chat", "and reporting"],
     [
-      "When you message Naila, the website sends your current message and up to 50 recent customer messages, limited to 400 characters each, to our chat endpoint to choose a reply. The current site uses a site knowledge base, a technical glossary, conversation context, and rules for replies. Adding example conversations updates our support logic and regression checks; it does not train an external language model on your messages. A signed session cookie supports chat continuity and request handling and expires after up to 24 hours. Browser storage can remember the current chat and session-related settings. An unclear question does not itself cause a persistent chat block.",
+      "When you message Naila, the website sends your current message and up to 100 recent customer messages, limited to 400 characters each, to our chat endpoint to choose a reply. The current site uses a site knowledge base, a technical glossary, conversation context, and rules for replies. Adding example conversations updates our support logic and regression checks; it does not train an external language model on your messages. A signed, HTTP-only session cookie supports chat continuity and request handling and expires after up to 24 hours. If you ask to be contacted, Naila collects your name, email, optional phone and website, service interest and project summary within the chat. The contact draft is encrypted in that session cookie. It is submitted as an enquiry only after you confirm permission to share it with our product experts. You can correct or cancel the draft before submission. Browser storage can remember the current chat and session-related settings. An unclear question does not itself cause a persistent chat block.",
       "We keep a private record of automated chat messages and replies for support, follow-up and troubleshooting. When a chat ends, the visible conversation clears and a new session starts the next time you open it. The retention section below explains how long we keep information. Please use your agreed project channel for confidential material.",
       "You can download a transcript in your browser. If you ask us to email one, the addresses and transcript you provide are passed to our email delivery provider. If you use Naila to request a proposal, we receive the submitted contact and project details through email. Share confidential project material through your agreed project channel.",
       "If you request live help and agree to share your chat, authorized support staff can see your transcript and replies in our private inbox. You may leave a private rating and review after the agent closes the chat. We use this information to answer the enquiry and improve support. Agent ratings are separate from public reviews of our services.",
@@ -424,7 +424,7 @@ export default function LegalPage({ kind }: { kind: "privacy" | "terms" }) {
     <main className={articleStyles.page + " " + styles.page}>
       <PageStructuredData route={isPrivacy ? "/privacy-policy" : "/terms-and-conditions"} />
       <LegalHero isPrivacy={isPrivacy} />
-      <p className={styles.reviewed}>Updated <time dateTime="2026-11-22">22 November 2026</time></p>
+      <p className={styles.reviewed}>Updated <time dateTime="2026-11-28">28 November 2026</time></p>
       <div className={articleStyles.layout}>
         <ArticleSidebar
           contentsLabel="On this page"

@@ -12,7 +12,7 @@ const share = origin + "/brand/orbilect-seo-social.jpg";
 const organizationId = origin + "/#organization";
 const websiteId = origin + "/#website";
 
-const homeTitle = "Orbilect SEO | SEO & Digital Marketing Services";
+const homeTitle = "SEO & Digital Marketing Services - Orbilect SEO";
 const homeDescription = "Orbilect SEO, a product of Orbilect Labs, helps businesses grow with SEO, PPC, content, ecommerce services and website design. Request a free SEO audit.";
 const entries: Record<string, [title: string, description: string]> = {
   "/": [homeTitle, homeDescription],
@@ -24,7 +24,7 @@ const entries: Record<string, [title: string, description: string]> = {
   "/media-pr-relations": ["Media & PR Relations", "Contact Orbilect SEO for press enquiries, interviews, expert commentary, and brand asset requests."],
   "/about": ["About Orbilect SEO", "Meet the Orbilect Labs team behind Orbilect SEO and see how we plan search, paid marketing, website design and conversion work."],
   "/blogs": ["SEO & Digital Marketing Blog", "Read practical Orbilect SEO guides on search indexing, XML sitemaps, ecommerce SEO, Google Business Profile, website performance, and paid search."],
-  "/services": ["SEO & Digital Marketing Services", "Explore technical SEO, on-page SEO, off-page SEO, ecommerce SEO, PPC management, content strategy, and website redesign for your business."],
+  "/services": ["Explore SEO & Digital Marketing Services", "Explore technical SEO, on-page SEO, off-page SEO, ecommerce SEO, PPC management, content strategy, and website redesign for your business."],
   "/website-design-gallery": ["Website Design Gallery & Landing Page Inspiration", "Explore responsive website and landing page designs across twelve industries. Discover a visual direction for your custom website redesign with Orbilect SEO."],
   "/industries": ["SEO Services by Industry", "Explore SEO for twelve industries: arts and entertainment, automotive, ecommerce, education, finance, food and beverages, healthcare, hospitality, logistics, manufacturing, real estate, and SaaS."],
   "/industries/arts-entertainment": ["Arts & Entertainment SEO & Website Design", "Help audiences discover your events, performers, and creative work with search-focused content, mobile-friendly design, and clearer ticket and enquiry journeys."],
@@ -72,7 +72,8 @@ function unbranded(title: string) {
 }
 
 export function brandedTitle(title: string) {
-  return /orbilect seo/i.test(title) ? title : title + " | " + brand;
+  const clean = unbranded(title).replace(/^Orbilect SEO\s*(?:\||[–—-])\s*/i, "");
+  return /orbilect seo/i.test(clean) ? clean : clean + " - " + brand;
 }
 
 export function pageSeo(route: string, previous: Metadata = {}): Metadata {
@@ -111,7 +112,7 @@ export function pageSeo(route: string, previous: Metadata = {}): Metadata {
 export const rootSeo: Metadata = {
   other: { "p:domain_verify": "8f47ab891c7e7cbb82e98425d42ab607" },
   metadataBase: new URL(origin),
-  title: { default: homeTitle, template: "%s | Orbilect SEO" },
+  title: { default: homeTitle, template: "%s - Orbilect SEO" },
   description: homeDescription,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };
@@ -120,7 +121,7 @@ export const homeSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization", "@id": organizationId, name: brand, url: origin + "/",
+      "@type": "Organization", "@id": organizationId, name: brand, alternateName: "OrbilectSEO", slogan: "The Intelligence Behind How Customers Find Your Brand", url: origin + "/",
       logo: { "@type": "ImageObject", url: logo, width: 423, height: 113 },
       description: businessDescription,
       email: "info@orbilectseo.com", telephone: "+1-646-640-0070",
@@ -128,6 +129,7 @@ export const homeSchema = {
       contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: "+1-646-640-0070", email: "info@orbilectseo.com", availableLanguage: ["en"], url: internationalWhatsApp.href },
       parentOrganization: { "@type": "Organization", name: "Orbilect Labs", url: "https://orbilectlabs.com/" },
       sameAs: [
+        "https://www.google.com/maps/search/?api=1&query=Orbilect%20SEO&query_place_id=ChIJQTaQVpRZwokRhRWr4hTB_po",
         "https://www.linkedin.com/company/orbilect-seo",
         "https://www.instagram.com/orbilectseo/",
         "https://www.facebook.com/orbilectseo/",

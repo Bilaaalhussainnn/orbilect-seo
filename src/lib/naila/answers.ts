@@ -1,3 +1,5 @@
+import { conversationQuestion } from "./recognize-conversation";
+import { isContactRequest, startContactReply } from "./lead-capture";
 import { paymentMethods } from "../payment-policy";
 import { resolveIntent } from "./intent-replies";
 import { siteFaqs } from "./site-faqs";
@@ -35,11 +37,17 @@ const ignored = new Set("a the an i im you your my it is are or of for to and on
 const words = (text: string) => [...new Set(text.toLowerCase().match(/[a-z0-9]+/g) ?? [])].filter(word => !ignored.has(word));
 
 export function answer(message: string, humor: boolean, recentMessages: readonly string[] = []): Reply {
+  message = conversationQuestion(message);
+  if (isContactRequest(message)) return startContactReply();
   return resolveIntent(message, recentMessages, question => answerQuestion(question, humor));
 }
 
 function answerQuestion(message: string, humor: boolean): Reply {
   const q = message.toLowerCase().replace(/’/g, "'");
+  if (/\b(?:custom )?crm(?: development| system| software)?\b/.test(q)) return {
+    text: "We can scope a custom CRM through Orbilect Labs. We start with your lead and customer workflows, team roles, reporting, existing systems and integrations. The proposal defines the features, access controls, migration, technology choices and delivery schedule. What would your team like to manage in the CRM?",
+    actions: [{ text: "Explore ecommerce and CRM services", href: "/services/ecommerce-management" }, { text: "Explore Orbilect Labs", href: "https://orbilectlabs.com/" }],
+  };
   if (/^(?:(?:thank you|thanks)(?: so much| a lot)?|thx|cheers|appreciate it)[.!\s]*$/.test(q)) {
     return { text: "You’re welcome!" };
   }

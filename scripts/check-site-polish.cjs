@@ -13,7 +13,7 @@ const page=route=>parse(fs.readFileSync('.next/server/app/'+route+'.html','utf8'
   for(const file of files){const m=await sharp('public/'+folder+'/'+file).metadata();assert.equal(m.width,960);assert.equal(m.height,540);assert.ok(fs.statSync('public/'+folder+'/'+file).size<100*1024);}
  }
  assert.ok(page('terms-and-conditions').querySelector('#naila-guidance'));
- assert.ok(page('privacy-policy').text.includes('up to 50 recent customer messages'));
+ assert.ok(page('privacy-policy').text.includes('up to 100 recent customer messages'));
  const index=require('../src/lib/naila/public-content.json');for(const route of ['/privacy-policy','/terms-and-conditions','/industries','/about'])assert.ok(index.find(x=>x.path===route)?.sections.length);
  console.log('Passed directory grid, shared gallery placement, four vertical home columns, pricing removal, 18 landscape assets, policy disclosure and public knowledge coverage.');
 })().catch(e=>{console.error(e.message);process.exitCode=1;});

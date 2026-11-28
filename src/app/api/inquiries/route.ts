@@ -1,3 +1,4 @@
+import { after } from "next/server";
 import { notifyLead, parseLead, saveLead } from "../../../lib/leads/server";
 
 async function readJson(request: Request): Promise<unknown> {
@@ -53,7 +54,8 @@ export async function POST(request: Request) {
     return Response.json({ accepted: false, error: "Lead storage is unavailable." }, { status: 503 });
   }
 
-  const teamNotified = saved.emailStatus === "accepted" || await notifyLead(lead.id);
+  const teamNotified = saved.emailStatus === "accepted";
+  if (!teamNotified) after(() => notifyLead(lead.id).then(() => undefined));
   return Response.json(
     { accepted: true, id: lead.id, code: saved.code, teamNotified },
     { status: saved.isNew ? 201 : 200 },

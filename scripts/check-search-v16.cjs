@@ -40,7 +40,7 @@ async function main() {
     const base = new URL(process.argv[3] || origin);
     const response = await fetch(base, { signal: AbortSignal.timeout(30000) });
     assert.equal(response.status, 200);
-    assert.equal(response.headers.get('x-orbilect-seo-release'), 'search-v16', 'Old/missing release header. Check Hostinger deployment, then purge HTML cache if needed.');
+    assert.equal(response.headers.get('x-orbilect-seo-release'), 'reliability-v21', 'Old/missing release header. Check Hostinger deployment, then purge HTML cache if needed.');
     assert.ok(!/noindex/i.test(response.headers.get('x-robots-tag') || ''));
     const row = check(await response.text(), normalize(base.pathname));
     console.log('Updated homepage metadata and release verified:', row.title);
@@ -56,7 +56,7 @@ async function main() {
   assert.equal(new Set(rows.map(r => r.title)).size, rows.length, 'Duplicate titles');
   assert.equal(new Set(rows.map(r => r.description)).size, rows.length, 'Duplicate descriptions');
   fs.mkdirSync('reports', { recursive: true });
-  fs.writeFileSync('reports/search-v16.json', JSON.stringify({ release: 'search-v16', pages: rows.length, rows }, null, 2));
+  fs.writeFileSync('reports/search-v16.json', JSON.stringify({ release: 'reliability-v21', pages: rows.length, rows }, null, 2));
   console.log('Passed metadata, self-contained schema, canonical and unique-title checks for ' + rows.length + ' public pages.');
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

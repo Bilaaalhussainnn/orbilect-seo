@@ -1,190 +1,618 @@
 {
   "/about/ranking-issues/buried-pages.png": {
-    "src": "/image-media/b7eb6b40a8d5-q68-1200.webp",
-    "srcSet": "/image-media/b7eb6b40a8d5-q68-480.webp 480w, /image-media/b7eb6b40a8d5-q68-960.webp 960w, /image-media/b7eb6b40a8d5-q68-1200.webp 1200w"
+    "src": "/image-media/b7eb6b40a8d5-v21-q70-1280.webp",
+    "srcSet": "/image-media/b7eb6b40a8d5-v21-q70-320.webp 320w, /image-media/b7eb6b40a8d5-v21-q70-640.webp 640w, /image-media/b7eb6b40a8d5-v21-q70-960.webp 960w, /image-media/b7eb6b40a8d5-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/competing-urls.png": {
-    "src": "/image-media/d4994e5539ec-q68-1200.webp",
-    "srcSet": "/image-media/d4994e5539ec-q68-480.webp 480w, /image-media/d4994e5539ec-q68-960.webp 960w, /image-media/d4994e5539ec-q68-1200.webp 1200w"
+    "src": "/image-media/d4994e5539ec-v21-q70-1280.webp",
+    "srcSet": "/image-media/d4994e5539ec-v21-q70-320.webp 320w, /image-media/d4994e5539ec-v21-q70-640.webp 640w, /image-media/d4994e5539ec-v21-q70-960.webp 960w, /image-media/d4994e5539ec-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/duplicate-titles.png": {
-    "src": "/image-media/68b2ad095851-q68-1200.webp",
-    "srcSet": "/image-media/68b2ad095851-q68-480.webp 480w, /image-media/68b2ad095851-q68-960.webp 960w, /image-media/68b2ad095851-q68-1200.webp 1200w"
+    "src": "/image-media/68b2ad095851-v21-q70-1280.webp",
+    "srcSet": "/image-media/68b2ad095851-v21-q70-320.webp 320w, /image-media/68b2ad095851-v21-q70-640.webp 640w, /image-media/68b2ad095851-v21-q70-960.webp 960w, /image-media/68b2ad095851-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/external-references.png": {
-    "src": "/image-media/2a6c5672bc3a-q68-1200.webp",
-    "srcSet": "/image-media/2a6c5672bc3a-q68-480.webp 480w, /image-media/2a6c5672bc3a-q68-960.webp 960w, /image-media/2a6c5672bc3a-q68-1200.webp 1200w"
+    "src": "/image-media/2a6c5672bc3a-v21-q70-1280.webp",
+    "srcSet": "/image-media/2a6c5672bc3a-v21-q70-320.webp 320w, /image-media/2a6c5672bc3a-v21-q70-640.webp 640w, /image-media/2a6c5672bc3a-v21-q70-960.webp 960w, /image-media/2a6c5672bc3a-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/indexing.png": {
-    "src": "/image-media/781a396d5824-q68-1200.webp",
-    "srcSet": "/image-media/781a396d5824-q68-480.webp 480w, /image-media/781a396d5824-q68-960.webp 960w, /image-media/781a396d5824-q68-1200.webp 1200w"
+    "src": "/image-media/781a396d5824-v21-q70-1280.webp",
+    "srcSet": "/image-media/781a396d5824-v21-q70-320.webp 320w, /image-media/781a396d5824-v21-q70-640.webp 640w, /image-media/781a396d5824-v21-q70-960.webp 960w, /image-media/781a396d5824-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/local-listings.png": {
-    "src": "/image-media/048ddeedbb9f-q68-1200.webp",
-    "srcSet": "/image-media/048ddeedbb9f-q68-480.webp 480w, /image-media/048ddeedbb9f-q68-960.webp 960w, /image-media/048ddeedbb9f-q68-1200.webp 1200w"
+    "src": "/image-media/048ddeedbb9f-v21-q70-1280.webp",
+    "srcSet": "/image-media/048ddeedbb9f-v21-q70-320.webp 320w, /image-media/048ddeedbb9f-v21-q70-640.webp 640w, /image-media/048ddeedbb9f-v21-q70-960.webp 960w, /image-media/048ddeedbb9f-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/mobile-layout.png": {
-    "src": "/image-media/56ac6a8baaff-q68-1200.webp",
-    "srcSet": "/image-media/56ac6a8baaff-q68-480.webp 480w, /image-media/56ac6a8baaff-q68-960.webp 960w, /image-media/56ac6a8baaff-q68-1200.webp 1200w"
+    "src": "/image-media/56ac6a8baaff-v21-q70-1280.webp",
+    "srcSet": "/image-media/56ac6a8baaff-v21-q70-320.webp 320w, /image-media/56ac6a8baaff-v21-q70-640.webp 640w, /image-media/56ac6a8baaff-v21-q70-960.webp 960w, /image-media/56ac6a8baaff-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/search-intent.png": {
-    "src": "/image-media/c3cfcae00219-q68-1200.webp",
-    "srcSet": "/image-media/c3cfcae00219-q68-480.webp 480w, /image-media/c3cfcae00219-q68-960.webp 960w, /image-media/c3cfcae00219-q68-1200.webp 1200w"
+    "src": "/image-media/c3cfcae00219-v21-q70-1280.webp",
+    "srcSet": "/image-media/c3cfcae00219-v21-q70-320.webp 320w, /image-media/c3cfcae00219-v21-q70-640.webp 640w, /image-media/c3cfcae00219-v21-q70-960.webp 960w, /image-media/c3cfcae00219-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/slow-pages.png": {
-    "src": "/image-media/a15439ec58da-q68-1200.webp",
-    "srcSet": "/image-media/a15439ec58da-q68-480.webp 480w, /image-media/a15439ec58da-q68-960.webp 960w, /image-media/a15439ec58da-q68-1200.webp 1200w"
+    "src": "/image-media/a15439ec58da-v21-q70-1280.webp",
+    "srcSet": "/image-media/a15439ec58da-v21-q70-320.webp 320w, /image-media/a15439ec58da-v21-q70-640.webp 640w, /image-media/a15439ec58da-v21-q70-960.webp 960w, /image-media/a15439ec58da-v21-q70-1280.webp 1200w"
   },
   "/about/ranking-issues/thin-content.png": {
-    "src": "/image-media/f897f22995db-q68-1200.webp",
-    "srcSet": "/image-media/f897f22995db-q68-480.webp 480w, /image-media/f897f22995db-q68-960.webp 960w, /image-media/f897f22995db-q68-1200.webp 1200w"
+    "src": "/image-media/f897f22995db-v21-q70-1280.webp",
+    "srcSet": "/image-media/f897f22995db-v21-q70-320.webp 320w, /image-media/f897f22995db-v21-q70-640.webp 640w, /image-media/f897f22995db-v21-q70-960.webp 960w, /image-media/f897f22995db-v21-q70-1280.webp 1200w"
+  },
+  "/bilal-hussain.jpg": {
+    "src": "/image-media/94d794aa0594-v21-q70-1280.webp",
+    "srcSet": "/image-media/94d794aa0594-v21-q70-320.webp 320w, /image-media/94d794aa0594-v21-q70-640.webp 640w, /image-media/94d794aa0594-v21-q70-960.webp 960w, /image-media/94d794aa0594-v21-q70-1280.webp 1122w"
+  },
+  "/blogs/10-web-hosting-platforms-compared.webp": {
+    "src": "/image-media/54d806797b14-v21-q70-1280.webp",
+    "srcSet": "/image-media/54d806797b14-v21-q70-320.webp 320w, /image-media/54d806797b14-v21-q70-640.webp 640w, /image-media/54d806797b14-v21-q70-960.webp 960w, /image-media/54d806797b14-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-ai-appointment-booking-works.webp": {
+    "src": "/image-media/4fa8d61391df-v21-q70-1280.webp",
+    "srcSet": "/image-media/4fa8d61391df-v21-q70-320.webp 320w, /image-media/4fa8d61391df-v21-q70-640.webp 640w, /image-media/4fa8d61391df-v21-q70-960.webp 960w, /image-media/4fa8d61391df-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-ai-search-changes-content-discovery.webp": {
+    "src": "/image-media/4396bed055fb-v21-q70-1280.webp",
+    "srcSet": "/image-media/4396bed055fb-v21-q70-320.webp 320w, /image-media/4396bed055fb-v21-q70-640.webp 640w, /image-media/4396bed055fb-v21-q70-960.webp 960w, /image-media/4396bed055fb-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-customer-support-fits-into-us-services-exports.webp": {
+    "src": "/image-media/7b042a278aec-v21-q70-1280.webp",
+    "srcSet": "/image-media/7b042a278aec-v21-q70-320.webp 320w, /image-media/7b042a278aec-v21-q70-640.webp 640w, /image-media/7b042a278aec-v21-q70-960.webp 960w, /image-media/7b042a278aec-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-ecommerce-brands-grow-with-category-page-seo.webp": {
+    "src": "/image-media/8aaa26109295-v21-q70-1280.webp",
+    "srcSet": "/image-media/8aaa26109295-v21-q70-320.webp 320w, /image-media/8aaa26109295-v21-q70-640.webp 640w, /image-media/8aaa26109295-v21-q70-960.webp 960w, /image-media/8aaa26109295-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-local-service-businesses-turn-search-into-enquiries.webp": {
+    "src": "/image-media/781e2dde78e8-v21-q70-1280.webp",
+    "srcSet": "/image-media/781e2dde78e8-v21-q70-320.webp 320w, /image-media/781e2dde78e8-v21-q70-640.webp 640w, /image-media/781e2dde78e8-v21-q70-960.webp 960w, /image-media/781e2dde78e8-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-long-does-google-take-to-index-a-website.webp": {
+    "src": "/image-media/99e1382e64b2-v21-q70-1280.webp",
+    "srcSet": "/image-media/99e1382e64b2-v21-q70-320.webp 320w, /image-media/99e1382e64b2-v21-q70-640.webp 640w, /image-media/99e1382e64b2-v21-q70-960.webp 960w, /image-media/99e1382e64b2-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-saas-companies-use-seo-to-generate-demos.webp": {
+    "src": "/image-media/ff9c1f88181d-v21-q70-1280.webp",
+    "srcSet": "/image-media/ff9c1f88181d-v21-q70-320.webp 320w, /image-media/ff9c1f88181d-v21-q70-640.webp 640w, /image-media/ff9c1f88181d-v21-q70-960.webp 960w, /image-media/ff9c1f88181d-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-search-and-social-platforms-are-changing-product-discovery.webp": {
+    "src": "/image-media/64b834a76228-v21-q70-1280.webp",
+    "srcSet": "/image-media/64b834a76228-v21-q70-320.webp 320w, /image-media/64b834a76228-v21-q70-640.webp 640w, /image-media/64b834a76228-v21-q70-960.webp 960w, /image-media/64b834a76228-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-audit-a-google-ads-account.webp": {
+    "src": "/image-media/f99a6452fbe6-v21-q70-1280.webp",
+    "srcSet": "/image-media/f99a6452fbe6-v21-q70-320.webp 320w, /image-media/f99a6452fbe6-v21-q70-640.webp 640w, /image-media/f99a6452fbe6-v21-q70-960.webp 960w, /image-media/f99a6452fbe6-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-digital-marketing-plan-for-a-small-business.webp": {
+    "src": "/image-media/71b04aa7ba13-v21-q70-1280.webp",
+    "srcSet": "/image-media/71b04aa7ba13-v21-q70-320.webp 320w, /image-media/71b04aa7ba13-v21-q70-640.webp 640w, /image-media/71b04aa7ba13-v21-q70-960.webp 960w, /image-media/71b04aa7ba13-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-framer-website.webp": {
+    "src": "/image-media/a635307d159d-v21-q70-1280.webp",
+    "srcSet": "/image-media/a635307d159d-v21-q70-320.webp 320w, /image-media/a635307d159d-v21-q70-640.webp 640w, /image-media/a635307d159d-v21-q70-960.webp 960w, /image-media/a635307d159d-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-shopify-store.webp": {
+    "src": "/image-media/691e90b5c374-v21-q70-1280.webp",
+    "srcSet": "/image-media/691e90b5c374-v21-q70-320.webp 320w, /image-media/691e90b5c374-v21-q70-640.webp 640w, /image-media/691e90b5c374-v21-q70-960.webp 960w, /image-media/691e90b5c374-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-squarespace-website.webp": {
+    "src": "/image-media/b6f2757025ef-v21-q70-1280.webp",
+    "srcSet": "/image-media/b6f2757025ef-v21-q70-320.webp 320w, /image-media/b6f2757025ef-v21-q70-640.webp 640w, /image-media/b6f2757025ef-v21-q70-960.webp 960w, /image-media/b6f2757025ef-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-webflow-website.webp": {
+    "src": "/image-media/4721911d60a0-v21-q70-1280.webp",
+    "srcSet": "/image-media/4721911d60a0-v21-q70-320.webp 320w, /image-media/4721911d60a0-v21-q70-640.webp 640w, /image-media/4721911d60a0-v21-q70-960.webp 960w, /image-media/4721911d60a0-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-wix-website.webp": {
+    "src": "/image-media/3740d3fabbe0-v21-q70-1280.webp",
+    "srcSet": "/image-media/3740d3fabbe0-v21-q70-320.webp 320w, /image-media/3740d3fabbe0-v21-q70-640.webp 640w, /image-media/3740d3fabbe0-v21-q70-960.webp 960w, /image-media/3740d3fabbe0-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-woocommerce-store.webp": {
+    "src": "/image-media/2fdcd1ad666b-v21-q70-1280.webp",
+    "srcSet": "/image-media/2fdcd1ad666b-v21-q70-320.webp 320w, /image-media/2fdcd1ad666b-v21-q70-640.webp 640w, /image-media/2fdcd1ad666b-v21-q70-960.webp 960w, /image-media/2fdcd1ad666b-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-a-wordpress-website.webp": {
+    "src": "/image-media/3aaf6f758d4c-v21-q70-1280.webp",
+    "srcSet": "/image-media/3aaf6f758d4c-v21-q70-320.webp 320w, /image-media/3aaf6f758d4c-v21-q70-640.webp 640w, /image-media/3aaf6f758d4c-v21-q70-960.webp 960w, /image-media/3aaf6f758d4c-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-build-an-ai-chatbot-for-customer-support.webp": {
+    "src": "/image-media/4fae4242ddf8-v21-q70-1280.webp",
+    "srcSet": "/image-media/4fae4242ddf8-v21-q70-320.webp 320w, /image-media/4fae4242ddf8-v21-q70-640.webp 640w, /image-media/4fae4242ddf8-v21-q70-960.webp 960w, /image-media/4fae4242ddf8-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-create-and-submit-an-xml-sitemap.webp": {
+    "src": "/image-media/55a3cd8d8895-v21-q70-1280.webp",
+    "srcSet": "/image-media/55a3cd8d8895-v21-q70-320.webp 320w, /image-media/55a3cd8d8895-v21-q70-640.webp 640w, /image-media/55a3cd8d8895-v21-q70-960.webp 960w, /image-media/55a3cd8d8895-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-evaluate-an-ai-website-builder.webp": {
+    "src": "/image-media/5435c71d4ecd-v21-q70-1280.webp",
+    "srcSet": "/image-media/5435c71d4ecd-v21-q70-320.webp 320w, /image-media/5435c71d4ecd-v21-q70-640.webp 640w, /image-media/5435c71d4ecd-v21-q70-960.webp 960w, /image-media/5435c71d4ecd-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-improve-your-website-conversion-rate.webp": {
+    "src": "/image-media/75af7a184dd5-v21-q70-1280.webp",
+    "srcSet": "/image-media/75af7a184dd5-v21-q70-320.webp 320w, /image-media/75af7a184dd5-v21-q70-640.webp 640w, /image-media/75af7a184dd5-v21-q70-960.webp 960w, /image-media/75af7a184dd5-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-set-up-your-google-business-profile.webp": {
+    "src": "/image-media/a9762fa3e309-v21-q70-1280.webp",
+    "srcSet": "/image-media/a9762fa3e309-v21-q70-320.webp 320w, /image-media/a9762fa3e309-v21-q70-640.webp 640w, /image-media/a9762fa3e309-v21-q70-960.webp 960w, /image-media/a9762fa3e309-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-submit-your-website-to-google-search-console.webp": {
+    "src": "/image-media/9e1fbe1b1662-v21-q70-1280.webp",
+    "srcSet": "/image-media/9e1fbe1b1662-v21-q70-320.webp 320w, /image-media/9e1fbe1b1662-v21-q70-640.webp 640w, /image-media/9e1fbe1b1662-v21-q70-960.webp 960w, /image-media/9e1fbe1b1662-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-tell-whether-ppc-is-profitable.webp": {
+    "src": "/image-media/2b78139fb33b-v21-q70-1280.webp",
+    "srcSet": "/image-media/2b78139fb33b-v21-q70-320.webp 320w, /image-media/2b78139fb33b-v21-q70-640.webp 640w, /image-media/2b78139fb33b-v21-q70-960.webp 960w, /image-media/2b78139fb33b-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-track-leads-and-sales-in-ga4.webp": {
+    "src": "/image-media/67eb0b9c12d1-v21-q70-1280.webp",
+    "srcSet": "/image-media/67eb0b9c12d1-v21-q70-320.webp 320w, /image-media/67eb0b9c12d1-v21-q70-640.webp 640w, /image-media/67eb0b9c12d1-v21-q70-960.webp 960w, /image-media/67eb0b9c12d1-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-use-ai-for-keyword-research.webp": {
+    "src": "/image-media/a2f10930ceba-v21-q70-1280.webp",
+    "srcSet": "/image-media/a2f10930ceba-v21-q70-320.webp 320w, /image-media/a2f10930ceba-v21-q70-640.webp 640w, /image-media/a2f10930ceba-v21-q70-960.webp 960w, /image-media/a2f10930ceba-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/how-to-write-a-landing-page-that-converts.webp": {
+    "src": "/image-media/bafa103774d7-v21-q70-1280.webp",
+    "srcSet": "/image-media/bafa103774d7-v21-q70-320.webp 320w, /image-media/bafa103774d7-v21-q70-640.webp 640w, /image-media/bafa103774d7-v21-q70-960.webp 960w, /image-media/bafa103774d7-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/meta-ads-in-2026.webp": {
+    "src": "/image-media/0d4bee55ebef-v21-q70-1280.webp",
+    "srcSet": "/image-media/0d4bee55ebef-v21-q70-320.webp 320w, /image-media/0d4bee55ebef-v21-q70-640.webp 640w, /image-media/0d4bee55ebef-v21-q70-960.webp 960w, /image-media/0d4bee55ebef-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/ppc-vs-organic-search.webp": {
+    "src": "/image-media/3ce4c54e7212-v21-q70-1280.webp",
+    "srcSet": "/image-media/3ce4c54e7212-v21-q70-320.webp 320w, /image-media/3ce4c54e7212-v21-q70-640.webp 640w, /image-media/3ce4c54e7212-v21-q70-960.webp 960w, /image-media/3ce4c54e7212-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/reference-screens/woo-product-data.webp": {
+    "src": "/image-media/108742fa5b65-v21-q70-960.webp",
+    "srcSet": "/image-media/108742fa5b65-v21-q70-320.webp 320w, /image-media/108742fa5b65-v21-q70-640.webp 640w, /image-media/108742fa5b65-v21-q70-960.webp 704w"
+  },
+  "/blogs/reference-screens/woo-product-page.webp": {
+    "src": "/image-media/4cf77d300f3a-v21-q70-960.webp",
+    "srcSet": "/image-media/4cf77d300f3a-v21-q70-320.webp 320w, /image-media/4cf77d300f3a-v21-q70-640.webp 640w, /image-media/4cf77d300f3a-v21-q70-960.webp 704w"
+  },
+  "/blogs/reference-screens/wp-inserter.webp": {
+    "src": "/image-media/94a4b76a096b-v21-q70-640.webp",
+    "srcSet": "/image-media/94a4b76a096b-v21-q70-320.webp 320w, /image-media/94a4b76a096b-v21-q70-640.webp 553w"
+  },
+  "/blogs/reference-screens/wp-overview.webp": {
+    "src": "/image-media/7a0fc3f5b54b-v21-q70-1280.webp",
+    "srcSet": "/image-media/7a0fc3f5b54b-v21-q70-320.webp 320w, /image-media/7a0fc3f5b54b-v21-q70-640.webp 640w, /image-media/7a0fc3f5b54b-v21-q70-960.webp 960w, /image-media/7a0fc3f5b54b-v21-q70-1280.webp 1024w"
+  },
+  "/blogs/seo-vs-aeo-vs-geo.webp": {
+    "src": "/image-media/dbde984e855d-v21-q70-1280.webp",
+    "srcSet": "/image-media/dbde984e855d-v21-q70-320.webp 320w, /image-media/dbde984e855d-v21-q70-640.webp 640w, /image-media/dbde984e855d-v21-q70-960.webp 960w, /image-media/dbde984e855d-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/seo-vs-paid-advertising-for-clinics.webp": {
+    "src": "/image-media/0204236e4708-v21-q70-1280.webp",
+    "srcSet": "/image-media/0204236e4708-v21-q70-320.webp 320w, /image-media/0204236e4708-v21-q70-640.webp 640w, /image-media/0204236e4708-v21-q70-960.webp 960w, /image-media/0204236e4708-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/the-on-page-seo-checklist-for-business-websites.webp": {
+    "src": "/image-media/85cbe549ed7e-v21-q70-1280.webp",
+    "srcSet": "/image-media/85cbe549ed7e-v21-q70-320.webp 320w, /image-media/85cbe549ed7e-v21-q70-640.webp 640w, /image-media/85cbe549ed7e-v21-q70-960.webp 960w, /image-media/85cbe549ed7e-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/walkthroughs/google-business-profile-search-maps.webp": {
+    "src": "/image-media/2fc43ef6bce5-v21-q70-1280.webp",
+    "srcSet": "/image-media/2fc43ef6bce5-v21-q70-320.webp 320w, /image-media/2fc43ef6bce5-v21-q70-640.webp 640w, /image-media/2fc43ef6bce5-v21-q70-960.webp 960w, /image-media/2fc43ef6bce5-v21-q70-1280.webp 1200w"
+  },
+  "/blogs/walkthroughs/google-url-inspection-noindex.png": {
+    "src": "/image-media/f620fb5dad0a-v21-q70-320.webp",
+    "srcSet": "/image-media/f620fb5dad0a-v21-q70-320.webp 276w"
+  },
+  "/blogs/what-ai-agents-can-do-for-small-businesses.webp": {
+    "src": "/image-media/f3b64fd15def-v21-q70-1280.webp",
+    "srcSet": "/image-media/f3b64fd15def-v21-q70-320.webp 320w, /image-media/f3b64fd15def-v21-q70-640.webp 640w, /image-media/f3b64fd15def-v21-q70-960.webp 960w, /image-media/f3b64fd15def-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/what-core-web-vitals-tell-you-about-your-website.webp": {
+    "src": "/image-media/05c4c881c3d6-v21-q70-1280.webp",
+    "srcSet": "/image-media/05c4c881c3d6-v21-q70-320.webp 320w, /image-media/05c4c881c3d6-v21-q70-640.webp 640w, /image-media/05c4c881c3d6-v21-q70-960.webp 960w, /image-media/05c4c881c3d6-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/what-google-search-updates-mean-for-site-owners.webp": {
+    "src": "/image-media/b2ea18657f8a-v21-q70-1280.webp",
+    "srcSet": "/image-media/b2ea18657f8a-v21-q70-320.webp 320w, /image-media/b2ea18657f8a-v21-q70-640.webp 640w, /image-media/b2ea18657f8a-v21-q70-960.webp 960w, /image-media/b2ea18657f8a-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/what-is-digital-marketing.webp": {
+    "src": "/image-media/80f1f07ae53e-v21-q70-1280.webp",
+    "srcSet": "/image-media/80f1f07ae53e-v21-q70-320.webp 320w, /image-media/80f1f07ae53e-v21-q70-640.webp 640w, /image-media/80f1f07ae53e-v21-q70-960.webp 960w, /image-media/80f1f07ae53e-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/what-is-search-engine-optimization.webp": {
+    "src": "/image-media/5920e3d4b079-v21-q70-1280.webp",
+    "srcSet": "/image-media/5920e3d4b079-v21-q70-320.webp 320w, /image-media/5920e3d4b079-v21-q70-640.webp 640w, /image-media/5920e3d4b079-v21-q70-960.webp 960w, /image-media/5920e3d4b079-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/what-privacy-changes-mean-for-marketing-analytics.webp": {
+    "src": "/image-media/38bdc25d2c92-v21-q70-1280.webp",
+    "srcSet": "/image-media/38bdc25d2c92-v21-q70-320.webp 320w, /image-media/38bdc25d2c92-v21-q70-640.webp 640w, /image-media/38bdc25d2c92-v21-q70-960.webp 960w, /image-media/38bdc25d2c92-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/when-to-hire-an-seo-team-or-an-agency.webp": {
+    "src": "/image-media/b9270cb1487c-v21-q70-1280.webp",
+    "srcSet": "/image-media/b9270cb1487c-v21-q70-320.webp 320w, /image-media/b9270cb1487c-v21-q70-640.webp 640w, /image-media/b9270cb1487c-v21-q70-960.webp 960w, /image-media/b9270cb1487c-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/where-human-review-fits-in-ai-assisted-content.webp": {
+    "src": "/image-media/ff1a4e0e2a40-v21-q70-1280.webp",
+    "srcSet": "/image-media/ff1a4e0e2a40-v21-q70-320.webp 320w, /image-media/ff1a4e0e2a40-v21-q70-640.webp 640w, /image-media/ff1a4e0e2a40-v21-q70-960.webp 960w, /image-media/ff1a4e0e2a40-v21-q70-1280.webp 1280w"
+  },
+  "/blogs/why-real-estate-businesses-need-seo.webp": {
+    "src": "/image-media/4a260207384f-v21-q70-1280.webp",
+    "srcSet": "/image-media/4a260207384f-v21-q70-320.webp 320w, /image-media/4a260207384f-v21-q70-640.webp 640w, /image-media/4a260207384f-v21-q70-960.webp 960w, /image-media/4a260207384f-v21-q70-1280.webp 1280w"
+  },
+  "/brand/orbilect-seo-organization.png": {
+    "src": "/image-media/347c9b373ac2-v21-q82-480.webp",
+    "srcSet": "/image-media/347c9b373ac2-v21-q82-96.webp 96w, /image-media/347c9b373ac2-v21-q82-240.webp 240w, /image-media/347c9b373ac2-v21-q82-480.webp 423w"
+  },
+  "/brand/orbilect-seo-social.jpg": {
+    "src": "/image-media/0aad6591a657-v21-q82-480.webp",
+    "srcSet": "/image-media/0aad6591a657-v21-q82-96.webp 96w, /image-media/0aad6591a657-v21-q82-240.webp 240w, /image-media/0aad6591a657-v21-q82-480.webp 480w"
   },
   "/brand/orbilect-seo-wordmark-dark.png": {
-    "src": "/image-media/b4b84ece80f4-q82-480.webp",
-    "srcSet": "/image-media/b4b84ece80f4-q82-240.webp 240w, /image-media/b4b84ece80f4-q82-480.webp 423w"
+    "src": "/image-media/b4b84ece80f4-v21-q82-480.webp",
+    "srcSet": "/image-media/b4b84ece80f4-v21-q82-96.webp 96w, /image-media/b4b84ece80f4-v21-q82-240.webp 240w, /image-media/b4b84ece80f4-v21-q82-480.webp 423w"
   },
   "/brand/orbilect-seo-wordmark.png": {
-    "src": "/image-media/347c9b373ac2-q82-480.webp",
-    "srcSet": "/image-media/347c9b373ac2-q82-240.webp 240w, /image-media/347c9b373ac2-q82-480.webp 423w"
+    "src": "/image-media/347c9b373ac2-v21-q82-480.webp",
+    "srcSet": "/image-media/347c9b373ac2-v21-q82-96.webp 96w, /image-media/347c9b373ac2-v21-q82-240.webp 240w, /image-media/347c9b373ac2-v21-q82-480.webp 423w"
   },
   "/industries/automotive.png": {
-    "src": "/image-media/a4d17a684321-q68-1200.webp",
-    "srcSet": "/image-media/a4d17a684321-q68-480.webp 480w, /image-media/a4d17a684321-q68-960.webp 960w, /image-media/a4d17a684321-q68-1200.webp 1200w"
+    "src": "/image-media/a4d17a684321-v21-q70-1280.webp",
+    "srcSet": "/image-media/a4d17a684321-v21-q70-320.webp 320w, /image-media/a4d17a684321-v21-q70-640.webp 640w, /image-media/a4d17a684321-v21-q70-960.webp 960w, /image-media/a4d17a684321-v21-q70-1280.webp 1200w"
   },
   "/industries/ecommerce.png": {
-    "src": "/image-media/26c62a787adc-q68-1200.webp",
-    "srcSet": "/image-media/26c62a787adc-q68-480.webp 480w, /image-media/26c62a787adc-q68-960.webp 960w, /image-media/26c62a787adc-q68-1200.webp 1200w"
+    "src": "/image-media/26c62a787adc-v21-q70-1280.webp",
+    "srcSet": "/image-media/26c62a787adc-v21-q70-320.webp 320w, /image-media/26c62a787adc-v21-q70-640.webp 640w, /image-media/26c62a787adc-v21-q70-960.webp 960w, /image-media/26c62a787adc-v21-q70-1280.webp 1200w"
   },
   "/industries/education.png": {
-    "src": "/image-media/1c91f940436b-q68-1200.webp",
-    "srcSet": "/image-media/1c91f940436b-q68-480.webp 480w, /image-media/1c91f940436b-q68-960.webp 960w, /image-media/1c91f940436b-q68-1200.webp 1200w"
+    "src": "/image-media/1c91f940436b-v21-q70-1280.webp",
+    "srcSet": "/image-media/1c91f940436b-v21-q70-320.webp 320w, /image-media/1c91f940436b-v21-q70-640.webp 640w, /image-media/1c91f940436b-v21-q70-960.webp 960w, /image-media/1c91f940436b-v21-q70-1280.webp 1200w"
   },
   "/industries/finance.png": {
-    "src": "/image-media/0af6febeed3f-q68-1200.webp",
-    "srcSet": "/image-media/0af6febeed3f-q68-480.webp 480w, /image-media/0af6febeed3f-q68-960.webp 960w, /image-media/0af6febeed3f-q68-1200.webp 1200w"
+    "src": "/image-media/0af6febeed3f-v21-q70-1280.webp",
+    "srcSet": "/image-media/0af6febeed3f-v21-q70-320.webp 320w, /image-media/0af6febeed3f-v21-q70-640.webp 640w, /image-media/0af6febeed3f-v21-q70-960.webp 960w, /image-media/0af6febeed3f-v21-q70-1280.webp 1200w"
   },
   "/industries/healthcare.png": {
-    "src": "/image-media/20f4362c114e-q68-1200.webp",
-    "srcSet": "/image-media/20f4362c114e-q68-480.webp 480w, /image-media/20f4362c114e-q68-960.webp 960w, /image-media/20f4362c114e-q68-1200.webp 1200w"
+    "src": "/image-media/20f4362c114e-v21-q70-1280.webp",
+    "srcSet": "/image-media/20f4362c114e-v21-q70-320.webp 320w, /image-media/20f4362c114e-v21-q70-640.webp 640w, /image-media/20f4362c114e-v21-q70-960.webp 960w, /image-media/20f4362c114e-v21-q70-1280.webp 1200w"
   },
   "/industries/hospitality.png": {
-    "src": "/image-media/c4e3b4f65ae2-q68-1200.webp",
-    "srcSet": "/image-media/c4e3b4f65ae2-q68-480.webp 480w, /image-media/c4e3b4f65ae2-q68-960.webp 960w, /image-media/c4e3b4f65ae2-q68-1200.webp 1200w"
+    "src": "/image-media/c4e3b4f65ae2-v21-q70-1280.webp",
+    "srcSet": "/image-media/c4e3b4f65ae2-v21-q70-320.webp 320w, /image-media/c4e3b4f65ae2-v21-q70-640.webp 640w, /image-media/c4e3b4f65ae2-v21-q70-960.webp 960w, /image-media/c4e3b4f65ae2-v21-q70-1280.webp 1200w"
   },
   "/industries/logistics.png": {
-    "src": "/image-media/aa627968080e-q68-1200.webp",
-    "srcSet": "/image-media/aa627968080e-q68-480.webp 480w, /image-media/aa627968080e-q68-960.webp 960w, /image-media/aa627968080e-q68-1200.webp 1200w"
+    "src": "/image-media/aa627968080e-v21-q70-1280.webp",
+    "srcSet": "/image-media/aa627968080e-v21-q70-320.webp 320w, /image-media/aa627968080e-v21-q70-640.webp 640w, /image-media/aa627968080e-v21-q70-960.webp 960w, /image-media/aa627968080e-v21-q70-1280.webp 1200w"
   },
   "/industries/manufacturing.png": {
-    "src": "/image-media/cb90115a8b9f-q68-1200.webp",
-    "srcSet": "/image-media/cb90115a8b9f-q68-480.webp 480w, /image-media/cb90115a8b9f-q68-960.webp 960w, /image-media/cb90115a8b9f-q68-1200.webp 1200w"
+    "src": "/image-media/cb90115a8b9f-v21-q70-1280.webp",
+    "srcSet": "/image-media/cb90115a8b9f-v21-q70-320.webp 320w, /image-media/cb90115a8b9f-v21-q70-640.webp 640w, /image-media/cb90115a8b9f-v21-q70-960.webp 960w, /image-media/cb90115a8b9f-v21-q70-1280.webp 1200w"
   },
   "/industries/real-estate.png": {
-    "src": "/image-media/761bf0d8fe0b-q68-1200.webp",
-    "srcSet": "/image-media/761bf0d8fe0b-q68-480.webp 480w, /image-media/761bf0d8fe0b-q68-960.webp 960w, /image-media/761bf0d8fe0b-q68-1200.webp 1200w"
+    "src": "/image-media/761bf0d8fe0b-v21-q70-1280.webp",
+    "srcSet": "/image-media/761bf0d8fe0b-v21-q70-320.webp 320w, /image-media/761bf0d8fe0b-v21-q70-640.webp 640w, /image-media/761bf0d8fe0b-v21-q70-960.webp 960w, /image-media/761bf0d8fe0b-v21-q70-1280.webp 1200w"
+  },
+  "/industry-covers/arts-entertainment.webp": {
+    "src": "/image-media/fbcd10725208-v21-q70-640.webp",
+    "srcSet": "/image-media/fbcd10725208-v21-q70-320.webp 320w, /image-media/fbcd10725208-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/automotive.webp": {
+    "src": "/image-media/1b4fad9d5d19-v21-q70-640.webp",
+    "srcSet": "/image-media/1b4fad9d5d19-v21-q70-320.webp 320w, /image-media/1b4fad9d5d19-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/ecommerce.webp": {
+    "src": "/image-media/d5d44bc65fb0-v21-q70-640.webp",
+    "srcSet": "/image-media/d5d44bc65fb0-v21-q70-320.webp 320w, /image-media/d5d44bc65fb0-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/education.webp": {
+    "src": "/image-media/2d3fa298d48f-v21-q70-640.webp",
+    "srcSet": "/image-media/2d3fa298d48f-v21-q70-320.webp 320w, /image-media/2d3fa298d48f-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/finance.webp": {
+    "src": "/image-media/ace0ac5031d1-v21-q70-640.webp",
+    "srcSet": "/image-media/ace0ac5031d1-v21-q70-320.webp 320w, /image-media/ace0ac5031d1-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/food-beverages.webp": {
+    "src": "/image-media/7cece988d852-v21-q70-640.webp",
+    "srcSet": "/image-media/7cece988d852-v21-q70-320.webp 320w, /image-media/7cece988d852-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/healthcare.webp": {
+    "src": "/image-media/6f99ff99fa35-v21-q70-640.webp",
+    "srcSet": "/image-media/6f99ff99fa35-v21-q70-320.webp 320w, /image-media/6f99ff99fa35-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/hospitality.webp": {
+    "src": "/image-media/a93104e9931b-v21-q70-640.webp",
+    "srcSet": "/image-media/a93104e9931b-v21-q70-320.webp 320w, /image-media/a93104e9931b-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/logistics.webp": {
+    "src": "/image-media/63329e66767f-v21-q70-640.webp",
+    "srcSet": "/image-media/63329e66767f-v21-q70-320.webp 320w, /image-media/63329e66767f-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/manufacturing.webp": {
+    "src": "/image-media/8b322c7a8ffc-v21-q70-640.webp",
+    "srcSet": "/image-media/8b322c7a8ffc-v21-q70-320.webp 320w, /image-media/8b322c7a8ffc-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/real-estate.webp": {
+    "src": "/image-media/bbcf154e1740-v21-q70-640.webp",
+    "srcSet": "/image-media/bbcf154e1740-v21-q70-320.webp 320w, /image-media/bbcf154e1740-v21-q70-640.webp 640w"
+  },
+  "/industry-covers/saas.webp": {
+    "src": "/image-media/1ee68f1b665d-v21-q70-640.webp",
+    "srcSet": "/image-media/1ee68f1b665d-v21-q70-320.webp 320w, /image-media/1ee68f1b665d-v21-q70-640.webp 640w"
+  },
+  "/industry-covers-landscape/arts-entertainment.webp": {
+    "src": "/image-media/675b7b9ac453-v21-q70-960.webp",
+    "srcSet": "/image-media/675b7b9ac453-v21-q70-320.webp 320w, /image-media/675b7b9ac453-v21-q70-640.webp 640w, /image-media/675b7b9ac453-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/automotive.webp": {
+    "src": "/image-media/8876a9ef0d52-v21-q70-960.webp",
+    "srcSet": "/image-media/8876a9ef0d52-v21-q70-320.webp 320w, /image-media/8876a9ef0d52-v21-q70-640.webp 640w, /image-media/8876a9ef0d52-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/ecommerce.webp": {
+    "src": "/image-media/7ba222236a03-v21-q70-960.webp",
+    "srcSet": "/image-media/7ba222236a03-v21-q70-320.webp 320w, /image-media/7ba222236a03-v21-q70-640.webp 640w, /image-media/7ba222236a03-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/education.webp": {
+    "src": "/image-media/f5c93db6dd25-v21-q70-960.webp",
+    "srcSet": "/image-media/f5c93db6dd25-v21-q70-320.webp 320w, /image-media/f5c93db6dd25-v21-q70-640.webp 640w, /image-media/f5c93db6dd25-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/finance.webp": {
+    "src": "/image-media/fc5e0a5d6767-v21-q70-960.webp",
+    "srcSet": "/image-media/fc5e0a5d6767-v21-q70-320.webp 320w, /image-media/fc5e0a5d6767-v21-q70-640.webp 640w, /image-media/fc5e0a5d6767-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/food-beverages.webp": {
+    "src": "/image-media/e8406a65a9da-v21-q70-960.webp",
+    "srcSet": "/image-media/e8406a65a9da-v21-q70-320.webp 320w, /image-media/e8406a65a9da-v21-q70-640.webp 640w, /image-media/e8406a65a9da-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/healthcare.webp": {
+    "src": "/image-media/12f1cc3fb37a-v21-q70-960.webp",
+    "srcSet": "/image-media/12f1cc3fb37a-v21-q70-320.webp 320w, /image-media/12f1cc3fb37a-v21-q70-640.webp 640w, /image-media/12f1cc3fb37a-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/hospitality.webp": {
+    "src": "/image-media/8188de3f1066-v21-q70-960.webp",
+    "srcSet": "/image-media/8188de3f1066-v21-q70-320.webp 320w, /image-media/8188de3f1066-v21-q70-640.webp 640w, /image-media/8188de3f1066-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/logistics.webp": {
+    "src": "/image-media/43a440d8a54a-v21-q70-960.webp",
+    "srcSet": "/image-media/43a440d8a54a-v21-q70-320.webp 320w, /image-media/43a440d8a54a-v21-q70-640.webp 640w, /image-media/43a440d8a54a-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/manufacturing.webp": {
+    "src": "/image-media/abbad57c17d6-v21-q70-960.webp",
+    "srcSet": "/image-media/abbad57c17d6-v21-q70-320.webp 320w, /image-media/abbad57c17d6-v21-q70-640.webp 640w, /image-media/abbad57c17d6-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/real-estate.webp": {
+    "src": "/image-media/36a9352f4219-v21-q70-960.webp",
+    "srcSet": "/image-media/36a9352f4219-v21-q70-320.webp 320w, /image-media/36a9352f4219-v21-q70-640.webp 640w, /image-media/36a9352f4219-v21-q70-960.webp 960w"
+  },
+  "/industry-covers-landscape/saas.webp": {
+    "src": "/image-media/422e5c554bba-v21-q70-960.webp",
+    "srcSet": "/image-media/422e5c554bba-v21-q70-320.webp 320w, /image-media/422e5c554bba-v21-q70-640.webp 640w, /image-media/422e5c554bba-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/brampton.webp": {
+    "src": "/image-media/5abfe38b0533-v21-q70-960.webp",
+    "srcSet": "/image-media/5abfe38b0533-v21-q70-320.webp 320w, /image-media/5abfe38b0533-v21-q70-640.webp 640w, /image-media/5abfe38b0533-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/doha.webp": {
+    "src": "/image-media/c3cc37e2139f-v21-q70-960.webp",
+    "srcSet": "/image-media/c3cc37e2139f-v21-q70-320.webp 320w, /image-media/c3cc37e2139f-v21-q70-640.webp 640w, /image-media/c3cc37e2139f-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/karachi.webp": {
+    "src": "/image-media/0eecf406b172-v21-q70-960.webp",
+    "srcSet": "/image-media/0eecf406b172-v21-q70-320.webp 320w, /image-media/0eecf406b172-v21-q70-640.webp 640w, /image-media/0eecf406b172-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/manchester.webp": {
+    "src": "/image-media/04e48f7f0367-v21-q70-960.webp",
+    "srcSet": "/image-media/04e48f7f0367-v21-q70-320.webp 320w, /image-media/04e48f7f0367-v21-q70-640.webp 640w, /image-media/04e48f7f0367-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/new-york.webp": {
+    "src": "/image-media/9437205e1277-v21-q70-960.webp",
+    "srcSet": "/image-media/9437205e1277-v21-q70-320.webp 320w, /image-media/9437205e1277-v21-q70-640.webp 640w, /image-media/9437205e1277-v21-q70-960.webp 960w"
+  },
+  "/locations-dark-v11/sydney.webp": {
+    "src": "/image-media/aa96a8a82a10-v21-q70-960.webp",
+    "srcSet": "/image-media/aa96a8a82a10-v21-q70-320.webp 320w, /image-media/aa96a8a82a10-v21-q70-640.webp 640w, /image-media/aa96a8a82a10-v21-q70-960.webp 960w"
+  },
+  "/naila/avatar.webp": {
+    "src": "/image-media/b39db12bc5f0-v21-q70-320.webp",
+    "srcSet": "/image-media/b39db12bc5f0-v21-q70-320.webp 192w"
+  },
+  "/naila/naila-portrait.webp": {
+    "src": "/image-media/ba218f1ba0df-v21-q70-320.webp",
+    "srcSet": "/image-media/ba218f1ba0df-v21-q70-320.webp 256w"
+  },
+  "/naila/orbilect-labs.jpg": {
+    "src": "/image-media/9c7f81cc613d-v21-q70-1280.webp",
+    "srcSet": "/image-media/9c7f81cc613d-v21-q70-320.webp 320w, /image-media/9c7f81cc613d-v21-q70-640.webp 640w, /image-media/9c7f81cc613d-v21-q70-960.webp 960w, /image-media/9c7f81cc613d-v21-q70-1280.webp 1280w"
   },
   "/newsroom/erp-platform.png": {
-    "src": "/image-media/daaa2d7ad2bc-q68-1200.webp",
-    "srcSet": "/image-media/daaa2d7ad2bc-q68-480.webp 480w, /image-media/daaa2d7ad2bc-q68-960.webp 960w, /image-media/daaa2d7ad2bc-q68-1200.webp 1200w"
+    "src": "/image-media/daaa2d7ad2bc-v21-q70-1280.webp",
+    "srcSet": "/image-media/daaa2d7ad2bc-v21-q70-320.webp 320w, /image-media/daaa2d7ad2bc-v21-q70-640.webp 640w, /image-media/daaa2d7ad2bc-v21-q70-960.webp 960w, /image-media/daaa2d7ad2bc-v21-q70-1280.webp 1200w"
   },
   "/newsroom/large-language-model.png": {
-    "src": "/image-media/1aac409dd3e2-q68-1200.webp",
-    "srcSet": "/image-media/1aac409dd3e2-q68-480.webp 480w, /image-media/1aac409dd3e2-q68-960.webp 960w, /image-media/1aac409dd3e2-q68-1200.webp 1200w"
+    "src": "/image-media/1aac409dd3e2-v21-q70-1280.webp",
+    "srcSet": "/image-media/1aac409dd3e2-v21-q70-320.webp 320w, /image-media/1aac409dd3e2-v21-q70-640.webp 640w, /image-media/1aac409dd3e2-v21-q70-960.webp 960w, /image-media/1aac409dd3e2-v21-q70-1280.webp 1200w"
   },
   "/newsroom/naila-ai.png": {
-    "src": "/image-media/30f4ee51514b-q68-1200.webp",
-    "srcSet": "/image-media/30f4ee51514b-q68-480.webp 480w, /image-media/30f4ee51514b-q68-960.webp 960w, /image-media/30f4ee51514b-q68-1200.webp 1200w"
+    "src": "/image-media/30f4ee51514b-v21-q70-1280.webp",
+    "srcSet": "/image-media/30f4ee51514b-v21-q70-320.webp 320w, /image-media/30f4ee51514b-v21-q70-640.webp 640w, /image-media/30f4ee51514b-v21-q70-960.webp 960w, /image-media/30f4ee51514b-v21-q70-1280.webp 1200w"
   },
   "/newsroom/orbilect-create.png": {
-    "src": "/image-media/bbc9030d6f24-q68-1200.webp",
-    "srcSet": "/image-media/bbc9030d6f24-q68-480.webp 480w, /image-media/bbc9030d6f24-q68-960.webp 960w, /image-media/bbc9030d6f24-q68-1200.webp 1200w"
+    "src": "/image-media/bbc9030d6f24-v21-q70-1280.webp",
+    "srcSet": "/image-media/bbc9030d6f24-v21-q70-320.webp 320w, /image-media/bbc9030d6f24-v21-q70-640.webp 640w, /image-media/bbc9030d6f24-v21-q70-960.webp 960w, /image-media/bbc9030d6f24-v21-q70-1280.webp 1200w"
   },
   "/newsroom/orbilect-reviews.png": {
-    "src": "/image-media/59d5301d430a-q68-1200.webp",
-    "srcSet": "/image-media/59d5301d430a-q68-480.webp 480w, /image-media/59d5301d430a-q68-960.webp 960w, /image-media/59d5301d430a-q68-1200.webp 1200w"
+    "src": "/image-media/59d5301d430a-v21-q70-1280.webp",
+    "srcSet": "/image-media/59d5301d430a-v21-q70-320.webp 320w, /image-media/59d5301d430a-v21-q70-640.webp 640w, /image-media/59d5301d430a-v21-q70-960.webp 960w, /image-media/59d5301d430a-v21-q70-1280.webp 1200w"
   },
   "/process/assessment.png": {
-    "src": "/image-media/1b063df7a6b8-q68-1200.webp",
-    "srcSet": "/image-media/1b063df7a6b8-q68-480.webp 480w, /image-media/1b063df7a6b8-q68-960.webp 960w, /image-media/1b063df7a6b8-q68-1200.webp 1200w"
+    "src": "/image-media/1b063df7a6b8-v21-q70-1280.webp",
+    "srcSet": "/image-media/1b063df7a6b8-v21-q70-320.webp 320w, /image-media/1b063df7a6b8-v21-q70-640.webp 640w, /image-media/1b063df7a6b8-v21-q70-960.webp 960w, /image-media/1b063df7a6b8-v21-q70-1280.webp 1200w"
   },
   "/process/discovery.png": {
-    "src": "/image-media/6d5d94a778f7-q68-1200.webp",
-    "srcSet": "/image-media/6d5d94a778f7-q68-480.webp 480w, /image-media/6d5d94a778f7-q68-960.webp 960w, /image-media/6d5d94a778f7-q68-1200.webp 1200w"
+    "src": "/image-media/6d5d94a778f7-v21-q70-1280.webp",
+    "srcSet": "/image-media/6d5d94a778f7-v21-q70-320.webp 320w, /image-media/6d5d94a778f7-v21-q70-640.webp 640w, /image-media/6d5d94a778f7-v21-q70-960.webp 960w, /image-media/6d5d94a778f7-v21-q70-1280.webp 1200w"
   },
   "/process/kickoff.png": {
-    "src": "/image-media/03c172973270-q68-1200.webp",
-    "srcSet": "/image-media/03c172973270-q68-480.webp 480w, /image-media/03c172973270-q68-960.webp 960w, /image-media/03c172973270-q68-1200.webp 1200w"
+    "src": "/image-media/03c172973270-v21-q70-1280.webp",
+    "srcSet": "/image-media/03c172973270-v21-q70-320.webp 320w, /image-media/03c172973270-v21-q70-640.webp 640w, /image-media/03c172973270-v21-q70-960.webp 960w, /image-media/03c172973270-v21-q70-1280.webp 1200w"
   },
   "/process/nda.png": {
-    "src": "/image-media/f6ab26fe5018-q68-1200.webp",
-    "srcSet": "/image-media/f6ab26fe5018-q68-480.webp 480w, /image-media/f6ab26fe5018-q68-960.webp 960w, /image-media/f6ab26fe5018-q68-1200.webp 1200w"
+    "src": "/image-media/f6ab26fe5018-v21-q70-1280.webp",
+    "srcSet": "/image-media/f6ab26fe5018-v21-q70-320.webp 320w, /image-media/f6ab26fe5018-v21-q70-640.webp 640w, /image-media/f6ab26fe5018-v21-q70-960.webp 960w, /image-media/f6ab26fe5018-v21-q70-1280.webp 1200w"
   },
   "/process/payment.png": {
-    "src": "/image-media/42559495d777-q68-1200.webp",
-    "srcSet": "/image-media/42559495d777-q68-480.webp 480w, /image-media/42559495d777-q68-960.webp 960w, /image-media/42559495d777-q68-1200.webp 1200w"
+    "src": "/image-media/42559495d777-v21-q70-1280.webp",
+    "srcSet": "/image-media/42559495d777-v21-q70-320.webp 320w, /image-media/42559495d777-v21-q70-640.webp 640w, /image-media/42559495d777-v21-q70-960.webp 960w, /image-media/42559495d777-v21-q70-1280.webp 1200w"
   },
   "/process/scope.png": {
-    "src": "/image-media/93e85a34919b-q68-1200.webp",
-    "srcSet": "/image-media/93e85a34919b-q68-480.webp 480w, /image-media/93e85a34919b-q68-960.webp 960w, /image-media/93e85a34919b-q68-1200.webp 1200w"
+    "src": "/image-media/93e85a34919b-v21-q70-1280.webp",
+    "srcSet": "/image-media/93e85a34919b-v21-q70-320.webp 320w, /image-media/93e85a34919b-v21-q70-640.webp 640w, /image-media/93e85a34919b-v21-q70-960.webp 960w, /image-media/93e85a34919b-v21-q70-1280.webp 1200w"
+  },
+  "/review-platforms/bbb.png": {
+    "src": "/image-media/4f0a20e74c8d-v21-q82-96.webp",
+    "srcSet": "/image-media/4f0a20e74c8d-v21-q82-96.webp 96w"
+  },
+  "/review-platforms/bing.png": {
+    "src": "/image-media/1654162ad911-v21-q82-96.webp",
+    "srcSet": "/image-media/1654162ad911-v21-q82-96.webp 32w"
+  },
+  "/review-platforms/clutch.png": {
+    "src": "/image-media/35aed903f2db-v21-q82-240.webp",
+    "srcSet": "/image-media/35aed903f2db-v21-q82-96.webp 96w, /image-media/35aed903f2db-v21-q82-240.webp 120w"
+  },
+  "/review-platforms/designrush.png": {
+    "src": "/image-media/e0b945956b98-v21-q82-96.webp",
+    "srcSet": "/image-media/e0b945956b98-v21-q82-96.webp 48w"
+  },
+  "/review-platforms/findbestfirms.png": {
+    "src": "/image-media/3d0ea42622d0-v21-q82-240.webp",
+    "srcSet": "/image-media/3d0ea42622d0-v21-q82-96.webp 96w, /image-media/3d0ea42622d0-v21-q82-240.webp 240w"
+  },
+  "/review-platforms/goodfirms.png": {
+    "src": "/image-media/015b8ee1eb33-v21-q82-96.webp",
+    "srcSet": "/image-media/015b8ee1eb33-v21-q82-96.webp 16w"
+  },
+  "/review-platforms/google-profile.png": {
+    "src": "/image-media/b616e2ccdc91-v21-q82-480.webp",
+    "srcSet": "/image-media/b616e2ccdc91-v21-q82-96.webp 96w, /image-media/b616e2ccdc91-v21-q82-240.webp 240w, /image-media/b616e2ccdc91-v21-q82-480.webp 480w"
+  },
+  "/review-platforms/reviewsio.png": {
+    "src": "/image-media/c9917e376a82-v21-q82-240.webp",
+    "srcSet": "/image-media/c9917e376a82-v21-q82-96.webp 96w, /image-media/c9917e376a82-v21-q82-240.webp 128w"
+  },
+  "/review-platforms/rightfirms-company.webp": {
+    "src": "/image-media/98ea3ba6d148-v21-q82-480.webp",
+    "srcSet": "/image-media/98ea3ba6d148-v21-q82-96.webp 96w, /image-media/98ea3ba6d148-v21-q82-240.webp 240w, /image-media/98ea3ba6d148-v21-q82-480.webp 480w"
+  },
+  "/review-platforms/rightfirms-reviews.webp": {
+    "src": "/image-media/7f39312255d3-v21-q82-480.webp",
+    "srcSet": "/image-media/7f39312255d3-v21-q82-96.webp 96w, /image-media/7f39312255d3-v21-q82-240.webp 240w, /image-media/7f39312255d3-v21-q82-480.webp 480w"
+  },
+  "/review-platforms/selectedfirms-seo.webp": {
+    "src": "/image-media/260b23702f14-v21-q82-240.webp",
+    "srcSet": "/image-media/260b23702f14-v21-q82-96.webp 96w, /image-media/260b23702f14-v21-q82-240.webp 208w"
+  },
+  "/review-platforms/semfirms.png": {
+    "src": "/image-media/ddc84be26a03-v21-q82-240.webp",
+    "srcSet": "/image-media/ddc84be26a03-v21-q82-96.webp 96w, /image-media/ddc84be26a03-v21-q82-240.webp 190w"
+  },
+  "/review-platforms/softwareworld.png": {
+    "src": "/image-media/709d95c844c2-v21-q82-240.webp",
+    "srcSet": "/image-media/709d95c844c2-v21-q82-96.webp 96w, /image-media/709d95c844c2-v21-q82-240.webp 120w"
+  },
+  "/review-platforms/truefirms.png": {
+    "src": "/image-media/0cde2897d641-v21-q82-480.webp",
+    "srcSet": "/image-media/0cde2897d641-v21-q82-96.webp 96w, /image-media/0cde2897d641-v21-q82-240.webp 240w, /image-media/0cde2897d641-v21-q82-480.webp 480w"
+  },
+  "/review-platforms/trusteditfirms.webp": {
+    "src": "/image-media/3937537e32b9-v21-q82-480.webp",
+    "srcSet": "/image-media/3937537e32b9-v21-q82-96.webp 96w, /image-media/3937537e32b9-v21-q82-240.webp 240w, /image-media/3937537e32b9-v21-q82-480.webp 320w"
+  },
+  "/review-platforms/trustradius.png": {
+    "src": "/image-media/88f15ca8af81-v21-q82-96.webp",
+    "srcSet": "/image-media/88f15ca8af81-v21-q82-96.webp 96w"
+  },
+  "/service-covers-landscape/digital-marketing.webp": {
+    "src": "/image-media/ed122a6c6a31-v21-q70-960.webp",
+    "srcSet": "/image-media/ed122a6c6a31-v21-q70-320.webp 320w, /image-media/ed122a6c6a31-v21-q70-640.webp 640w, /image-media/ed122a6c6a31-v21-q70-960.webp 960w"
+  },
+  "/service-covers-landscape/ecommerce-seo.webp": {
+    "src": "/image-media/00a6f2d5bb6e-v21-q70-960.webp",
+    "srcSet": "/image-media/00a6f2d5bb6e-v21-q70-320.webp 320w, /image-media/00a6f2d5bb6e-v21-q70-640.webp 640w, /image-media/00a6f2d5bb6e-v21-q70-960.webp 960w"
+  },
+  "/service-covers-landscape/off-page-seo.webp": {
+    "src": "/image-media/541963854e85-v21-q70-960.webp",
+    "srcSet": "/image-media/541963854e85-v21-q70-320.webp 320w, /image-media/541963854e85-v21-q70-640.webp 640w, /image-media/541963854e85-v21-q70-960.webp 960w"
+  },
+  "/service-covers-landscape/on-page-seo.webp": {
+    "src": "/image-media/d1c7df1bc645-v21-q70-960.webp",
+    "srcSet": "/image-media/d1c7df1bc645-v21-q70-320.webp 320w, /image-media/d1c7df1bc645-v21-q70-640.webp 640w, /image-media/d1c7df1bc645-v21-q70-960.webp 960w"
+  },
+  "/service-covers-landscape/technical-seo.webp": {
+    "src": "/image-media/97c2c4b7f243-v21-q70-960.webp",
+    "srcSet": "/image-media/97c2c4b7f243-v21-q70-320.webp 320w, /image-media/97c2c4b7f243-v21-q70-640.webp 640w, /image-media/97c2c4b7f243-v21-q70-960.webp 960w"
+  },
+  "/service-covers-landscape/website-redesign.webp": {
+    "src": "/image-media/d161b6d7114e-v21-q70-960.webp",
+    "srcSet": "/image-media/d161b6d7114e-v21-q70-320.webp 320w, /image-media/d161b6d7114e-v21-q70-640.webp 640w, /image-media/d161b6d7114e-v21-q70-960.webp 960w"
   },
   "/service-showcase/logos/apollo.png": {
-    "src": "/image-media/9a88248eb6cb-q82-96.webp",
-    "srcSet": "/image-media/9a88248eb6cb-q82-96.webp 88w"
+    "src": "/image-media/9a88248eb6cb-v21-q82-96.webp",
+    "srcSet": "/image-media/9a88248eb6cb-v21-q82-96.webp 88w"
   },
   "/service-showcase/logos/instantly.png": {
-    "src": "/image-media/57b100f68677-q82-96.webp",
-    "srcSet": "/image-media/57b100f68677-q82-96.webp 88w"
+    "src": "/image-media/57b100f68677-v21-q82-96.webp",
+    "srcSet": "/image-media/57b100f68677-v21-q82-96.webp 88w"
   },
   "/service-showcase/logos/klaviyo.png": {
-    "src": "/image-media/0ee82750dc65-q82-96.webp",
-    "srcSet": "/image-media/0ee82750dc65-q82-96.webp 88w"
+    "src": "/image-media/0ee82750dc65-v21-q82-96.webp",
+    "srcSet": "/image-media/0ee82750dc65-v21-q82-96.webp 88w"
   },
   "/services/digital-marketing.png": {
-    "src": "/image-media/8aaf01e57a71-q68-1200.webp",
-    "srcSet": "/image-media/8aaf01e57a71-q68-480.webp 480w, /image-media/8aaf01e57a71-q68-960.webp 960w, /image-media/8aaf01e57a71-q68-1200.webp 1200w"
+    "src": "/image-media/8aaf01e57a71-v21-q70-1280.webp",
+    "srcSet": "/image-media/8aaf01e57a71-v21-q70-320.webp 320w, /image-media/8aaf01e57a71-v21-q70-640.webp 640w, /image-media/8aaf01e57a71-v21-q70-960.webp 960w, /image-media/8aaf01e57a71-v21-q70-1280.webp 1200w"
   },
   "/services/ecommerce-seo.png": {
-    "src": "/image-media/b1300d6d0b90-q68-1200.webp",
-    "srcSet": "/image-media/b1300d6d0b90-q68-480.webp 480w, /image-media/b1300d6d0b90-q68-960.webp 960w, /image-media/b1300d6d0b90-q68-1200.webp 1200w"
+    "src": "/image-media/b1300d6d0b90-v21-q70-1280.webp",
+    "srcSet": "/image-media/b1300d6d0b90-v21-q70-320.webp 320w, /image-media/b1300d6d0b90-v21-q70-640.webp 640w, /image-media/b1300d6d0b90-v21-q70-960.webp 960w, /image-media/b1300d6d0b90-v21-q70-1280.webp 1200w"
   },
   "/services/off-page-seo.png": {
-    "src": "/image-media/68c6468bc66c-q68-1200.webp",
-    "srcSet": "/image-media/68c6468bc66c-q68-480.webp 480w, /image-media/68c6468bc66c-q68-960.webp 960w, /image-media/68c6468bc66c-q68-1200.webp 1200w"
+    "src": "/image-media/68c6468bc66c-v21-q70-1280.webp",
+    "srcSet": "/image-media/68c6468bc66c-v21-q70-320.webp 320w, /image-media/68c6468bc66c-v21-q70-640.webp 640w, /image-media/68c6468bc66c-v21-q70-960.webp 960w, /image-media/68c6468bc66c-v21-q70-1280.webp 1200w"
   },
   "/services/on-page-seo.png": {
-    "src": "/image-media/25c3e61d0f2c-q68-1200.webp",
-    "srcSet": "/image-media/25c3e61d0f2c-q68-480.webp 480w, /image-media/25c3e61d0f2c-q68-960.webp 960w, /image-media/25c3e61d0f2c-q68-1200.webp 1200w"
+    "src": "/image-media/25c3e61d0f2c-v21-q70-1280.webp",
+    "srcSet": "/image-media/25c3e61d0f2c-v21-q70-320.webp 320w, /image-media/25c3e61d0f2c-v21-q70-640.webp 640w, /image-media/25c3e61d0f2c-v21-q70-960.webp 960w, /image-media/25c3e61d0f2c-v21-q70-1280.webp 1200w"
   },
   "/services/technical-seo.png": {
-    "src": "/image-media/9c789f377867-q68-1200.webp",
-    "srcSet": "/image-media/9c789f377867-q68-480.webp 480w, /image-media/9c789f377867-q68-960.webp 960w, /image-media/9c789f377867-q68-1200.webp 1200w"
+    "src": "/image-media/9c789f377867-v21-q70-1280.webp",
+    "srcSet": "/image-media/9c789f377867-v21-q70-320.webp 320w, /image-media/9c789f377867-v21-q70-640.webp 640w, /image-media/9c789f377867-v21-q70-960.webp 960w, /image-media/9c789f377867-v21-q70-1280.webp 1200w"
   },
   "/services/website-redesign.png": {
-    "src": "/image-media/76805c3f8560-q68-1200.webp",
-    "srcSet": "/image-media/76805c3f8560-q68-480.webp 480w, /image-media/76805c3f8560-q68-960.webp 960w, /image-media/76805c3f8560-q68-1200.webp 1200w"
+    "src": "/image-media/76805c3f8560-v21-q70-1280.webp",
+    "srcSet": "/image-media/76805c3f8560-v21-q70-320.webp 320w, /image-media/76805c3f8560-v21-q70-640.webp 640w, /image-media/76805c3f8560-v21-q70-960.webp 960w, /image-media/76805c3f8560-v21-q70-1280.webp 1200w"
   },
   "/team/abdul-ghaffar.png": {
-    "src": "/image-media/37a1203fd786-q68-1200.webp",
-    "srcSet": "/image-media/37a1203fd786-q68-480.webp 480w, /image-media/37a1203fd786-q68-960.webp 960w, /image-media/37a1203fd786-q68-1200.webp 1122w"
+    "src": "/image-media/37a1203fd786-v21-q70-1280.webp",
+    "srcSet": "/image-media/37a1203fd786-v21-q70-320.webp 320w, /image-media/37a1203fd786-v21-q70-640.webp 640w, /image-media/37a1203fd786-v21-q70-960.webp 960w, /image-media/37a1203fd786-v21-q70-1280.webp 1122w"
   },
   "/team/ali-ahmed-farooqui.png": {
-    "src": "/image-media/454cc6625355-q68-1200.webp",
-    "srcSet": "/image-media/454cc6625355-q68-480.webp 480w, /image-media/454cc6625355-q68-960.webp 960w, /image-media/454cc6625355-q68-1200.webp 1122w"
+    "src": "/image-media/454cc6625355-v21-q70-1280.webp",
+    "srcSet": "/image-media/454cc6625355-v21-q70-320.webp 320w, /image-media/454cc6625355-v21-q70-640.webp 640w, /image-media/454cc6625355-v21-q70-960.webp 960w, /image-media/454cc6625355-v21-q70-1280.webp 1122w"
   },
   "/team/bilal-ahmed.png": {
-    "src": "/image-media/443eea85e8fd-q68-1200.webp",
-    "srcSet": "/image-media/443eea85e8fd-q68-480.webp 480w, /image-media/443eea85e8fd-q68-960.webp 960w, /image-media/443eea85e8fd-q68-1200.webp 1122w"
+    "src": "/image-media/443eea85e8fd-v21-q70-1280.webp",
+    "srcSet": "/image-media/443eea85e8fd-v21-q70-320.webp 320w, /image-media/443eea85e8fd-v21-q70-640.webp 640w, /image-media/443eea85e8fd-v21-q70-960.webp 960w, /image-media/443eea85e8fd-v21-q70-1280.webp 1122w"
+  },
+  "/team/bilalhussain.jpg": {
+    "src": "/image-media/94d794aa0594-v21-q70-1280.webp",
+    "srcSet": "/image-media/94d794aa0594-v21-q70-320.webp 320w, /image-media/94d794aa0594-v21-q70-640.webp 640w, /image-media/94d794aa0594-v21-q70-960.webp 960w, /image-media/94d794aa0594-v21-q70-1280.webp 1122w"
   },
   "/team/shahzad-afridi.png": {
-    "src": "/image-media/f5521920c83f-q68-1200.webp",
-    "srcSet": "/image-media/f5521920c83f-q68-480.webp 480w, /image-media/f5521920c83f-q68-960.webp 960w, /image-media/f5521920c83f-q68-1200.webp 1122w"
+    "src": "/image-media/f5521920c83f-v21-q70-1280.webp",
+    "srcSet": "/image-media/f5521920c83f-v21-q70-320.webp 320w, /image-media/f5521920c83f-v21-q70-640.webp 640w, /image-media/f5521920c83f-v21-q70-960.webp 960w, /image-media/f5521920c83f-v21-q70-1280.webp 1122w"
   },
   "/technology-stack/ahrefs.png": {
-    "src": "/image-media/c59f181e725f-q82-192.webp",
-    "srcSet": "/image-media/c59f181e725f-q82-96.webp 96w, /image-media/c59f181e725f-q82-192.webp 192w"
+    "src": "/image-media/c59f181e725f-v21-q82-480.webp",
+    "srcSet": "/image-media/c59f181e725f-v21-q82-96.webp 96w, /image-media/c59f181e725f-v21-q82-240.webp 240w, /image-media/c59f181e725f-v21-q82-480.webp 480w"
   },
   "/technology-stack/semrush.png": {
-    "src": "/image-media/1673caaec9c5-q82-192.webp",
-    "srcSet": "/image-media/1673caaec9c5-q82-96.webp 96w, /image-media/1673caaec9c5-q82-192.webp 192w"
+    "src": "/image-media/1673caaec9c5-v21-q82-480.webp",
+    "srcSet": "/image-media/1673caaec9c5-v21-q82-96.webp 96w, /image-media/1673caaec9c5-v21-q82-240.webp 240w, /image-media/1673caaec9c5-v21-q82-480.webp 480w"
   }
 }

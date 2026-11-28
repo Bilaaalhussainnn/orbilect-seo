@@ -1,4 +1,5 @@
 export const leadSources = {
+  "naila-callback": { name: "Naila — In-chat contact request", kind: "proposal" },
   "starter-offer": { name: "Starter Offer — Free SEO Audit", kind: "audit" },
   "contact-proposal": { name: "Contact — Proposal Request", kind: "proposal" },
   "starter-plan-proposal": { name: "Pricing — Starter Plan Request", kind: "proposal" },

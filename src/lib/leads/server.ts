@@ -60,13 +60,14 @@ export function parseLead(value: unknown): Lead {
   if (!emailPattern.test(email)) throw new Error("Enter a valid email address.");
   if (kind === "proposal" || leadSource === "starter-offer") {
     const digits = phone.replace(/\D/g, "").length;
-    if (!name || digits < 7 || digits > 15 || !/^\+?[\d().\s-]+$/.test(phone)) {
+    if (!name || (!(leadSource === "naila-callback" && !phone) && (digits < 7 || digits > 15 || !/^\+?[\d().\s-]+$/.test(phone)))) {
       throw new Error("Enter your full name and a valid phone number.");
     }
   }
 
-  let website: URL;
+  let website: URL | undefined;
   try {
+    if (!(leadSource === "naila-callback" && !address)) {
     if (!address || /\s/.test(address)) throw new Error();
     const hasScheme = /^[a-z][a-z\d+.-]*:\/\//i.test(address);
     website = new URL(hasScheme ? address : "https://" + address);
@@ -75,6 +76,7 @@ export function parseLead(value: unknown): Lead {
       !website.hostname.includes(".") ||
       website.username || website.password
     ) throw new Error();
+    }
   } catch {
     throw new Error("Enter a website URL such as example.com.");
   }
@@ -92,7 +94,7 @@ export function parseLead(value: unknown): Lead {
     name: name || null,
     email,
     phone: phone || null,
-    website: website.href,
+    website: website?.href ?? "",
     service,
     message,
   };
@@ -110,7 +112,7 @@ async function database(query: URLSearchParams, init: RequestInit = {}) {
   if (!key.startsWith("sb_secret_")) headers.set("Authorization", "Bearer " + key);
   headers.set("Content-Type", "application/json");
 
-  const response = await fetch(url, { ...init, headers, cache: "no-store", signal: AbortSignal.timeout(6000) });
+  const response = await fetch(url, { ...init, headers, cache: "no-store", signal: init.signal ? AbortSignal.any([init.signal, AbortSignal.timeout(4000)]) : AbortSignal.timeout(4000) });
   if (!response.ok) throw new Error("Lead database returned HTTP " + response.status);
   return response;
 }
@@ -174,6 +176,7 @@ async function sendNotification(lead: StoredLead) {
     attachments: [transcriptBrandAttachment],
   });
 
+  const deadline = AbortSignal.timeout(8000);
   const send = (payload: string) => fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -182,7 +185,7 @@ async function sendNotification(lead: StoredLead) {
       "Idempotency-Key": "orbilect-seo-lead/" + lead.id,
     },
     body: payload,
-    signal: AbortSignal.timeout(5000),
+    signal: AbortSignal.any([deadline, AbortSignal.timeout(5000)]),
   }).catch(() => null);
 
   for (let attempt = 0; attempt < 2; attempt += 1) {

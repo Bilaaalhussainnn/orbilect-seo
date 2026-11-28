@@ -110,7 +110,7 @@ const flows = [
     ["That will be all for now, thank you", isClosing],
   ]],
   ["Callback request", [
-    ["Call me", /product strategists.*within 24 hours/i, "/contact?request=Callback%20request#request-proposal"],
+    ["Call me", /product experts.*within the next 24 hours.*full name/i],
     ["Thank you", /you’re welcome/i],
   ]],
   ["Website knowledge and privacy", [
