@@ -25,7 +25,12 @@ export default function SiteFooter() {
           <h3>Pakistan</h3><a href="tel:+923092152810"><Phone/>+92 309 215-2810</a><a href="mailto:info@orbilectseo.com"><Mail/>info@orbilectseo.com</a><p><MapPin/>{pakistanAddress}</p>
         </section>
       </div>
-      <div className={styles.footerBottom}><div className={styles.social}><p>Follow us for more</p><SocialLinks className={styles.icons}/></div><a className={styles.selectedBadge} href="https://selectedfirms.co/companies/seo?utm_source=orbilect_seo&amp;utm_medium=badge&amp;utm_campaign=seo&amp;utm_term=top_seo_company&amp;utm_content=agency_badge&amp;utm_marketing_tactic=badge_organic" target="_blank" rel="noopener noreferrer" aria-label="Top SEO Company badge — visit SelectedFirms (opens in a new tab)"><Image src="/review-platforms/selectedfirms-seo.webp" alt="SelectedFirms Top SEO Company" width={104} height={104} unoptimized /></a></div>
+      <div className={styles.footerBottom}><div className={styles.social}><p>Follow us for more</p><SocialLinks className={styles.icons}/></div><div className={styles.badges} aria-label="Agency recognition and reviews"><a className={styles.selectedBadge} href="https://selectedfirms.co/companies/seo?utm_source=orbilect_seo&amp;utm_medium=badge&amp;utm_campaign=seo&amp;utm_term=top_seo_company&amp;utm_content=agency_badge&amp;utm_marketing_tactic=badge_organic" target="_blank" rel="noopener noreferrer" aria-label="Top SEO Company badge — visit SelectedFirms (opens in a new tab)"><Image src="/review-platforms/selectedfirms-seo.webp" alt="SelectedFirms Top SEO Company" width={104} height={104} unoptimized /></a>
+        <div className={styles.designRushBadge}>
+          <iframe src="/api/review-widgets/designrush" title="Orbilect SEO reviews on DesignRush" loading="lazy" width="340" height="200" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox" referrerPolicy="strict-origin-when-cross-origin" />
+          <a href="https://www.designrush.com/agency/profile/orbilect-seo#reviews" target="_blank" rel="noopener noreferrer" aria-label="Visit Orbilect SEO reviews on DesignRush (opens in a new tab)">Review us on DesignRush</a>
+        </div>
+      </div></div>
     </div>
     <div className={styles.legal}><div className={styles.wrap}><p>© {process.env.ORBILECT_COPYRIGHT_YEAR} Orbilect SEO. All rights reserved.</p><nav aria-label="Legal links"><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms-and-conditions">Terms and conditions</Link></nav></div></div>
   </footer>;
